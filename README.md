@@ -1,4 +1,4 @@
-# promject
+# Google Solution Challenge '22
 
 A new Flutter project.
 
