@@ -1,4 +1,4 @@
-# GDSC Solution Challenge '22
+# promject
 
 A new Flutter project.
 
