@@ -45,7 +45,7 @@ class _ScreenholderState extends State<Screenholder> {
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite),
             label: "Feed",
-            backgroundColor: Colors.blue,
+            backgroundColor: Colors.red,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.chat),

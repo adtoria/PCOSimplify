@@ -1,66 +1,89 @@
 import 'package:flutter/material.dart';
 
 class ProfilePageIcons extends StatelessWidget {
-  ProfilePageIcons({required this.icon,required this.lable});
+  ProfilePageIcons({required this.lable});
 
-  final IconData icon;
   final String lable;
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisSize: MainAxisSize.max,
-      children: [
-        Container(
-          width: MediaQuery.of(context).size.width,
-          height: 50,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            shape: BoxShape.rectangle,
-            borderRadius: BorderRadius.circular(3.0),
-            border: Border.all(
-              color: Color(0xFFEFEFEF),
-              width: 1,
-            ),
-          ),
-          child: Row(
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              Padding(
-                padding:
-                EdgeInsetsDirectional.fromSTEB(12, 0, 0, 0),
-                child: Icon(
-                  icon,
-                  color: Color(0xFF4B39EF),
-                  size: 24,
-                ),
-              ),
-              Padding(
-                padding:
-                EdgeInsetsDirectional.fromSTEB(12, 0, 0, 0),
-                child: Text(
-                  lable,
-                  style: TextStyle(
-                    color: Colors.blue,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w900,
-                  ),
-                ),
-              ),
-              Expanded(
-                child: Align(
-                  alignment: AlignmentDirectional(0.9, 0),
-                  child: Icon(
-                    Icons.arrow_forward_ios,
-                    color: Color(0xFF95A1AC),
-                    size: 18,
-                  ),
-                ),
-              ),
-            ],
-          ),
+    return Padding(
+      padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+      child: MaterialButton(
+        onPressed: () {
+          print('Button pressed ...');
+        },
+        minWidth: double.maxFinite,
+        height: 50.0,
+        //color: Color(0xFF4B39EF),
+        elevation: 2,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(8.0),
         ),
-      ],
+        child: Row(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Material(
+              color: Colors.transparent,
+              elevation: 0,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: Container(
+                width: MediaQuery.of(context).size.width * 0.9,
+                height: 60,
+                decoration: BoxDecoration(
+                  color: Color(0xFF262D34),
+                  borderRadius: BorderRadius.circular(8),
+                  border: Border.all(
+                    color: Color(0xFF090F13),
+                    width: 2,
+                  ),
+                ),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(16, 0, 4, 0),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        lable,
+                        style: TextStyle(
+                          fontFamily: 'Lexend Deca',
+                          color: Colors.white,
+                          fontSize: 14,
+                          fontWeight: FontWeight.normal,
+                        ),
+                      ),
+
+                      Icon(
+                        Icons.chevron_right_rounded,
+                        color: Color(0xFF95A1AC),
+                        size: 20,
+                      ),
+
+                      // MaterialButton(
+                      //   onPressed: () {
+                      //     print('Button pressed ...');
+                      //   },
+                      //   minWidth: 70.0,
+                      //   height: 50.0,
+                      //   color: Color(0xFF4B39EF),
+                      //   elevation: 2,
+                      //   shape: RoundedRectangleBorder(
+                      //     borderRadius: BorderRadius.circular(30.0),
+                      //   ),
+                      //
+                      // ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

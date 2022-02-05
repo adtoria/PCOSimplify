@@ -26,28 +26,84 @@ class _ProfilePageState extends State<ProfilePage> {
            child: SingleChildScrollView(
             child: Column(
               children: [
-                Row(
-                  children: [
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(24, 12, 0, 12),
-                      child: Text(
-                        'Account Settings',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
+                Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: 130,
+                  decoration: BoxDecoration(
+                    color: Color(0xFF39D2C0),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Card(
+                          clipBehavior: Clip.antiAliasWithSaveLayer,
+                          color: Color(0xFF30B2A3),
+                          elevation: 0,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(2, 2, 2, 2),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(8),
+                              child: Image.network(
+                                'https://picsum.photos/seed/339/600',
+                                width: 80,
+                                height: 80,
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
                         ),
-                      ),
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(8, 0, 0, 0),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  '[Username]',
+                                  style: TextStyle(
+                                    fontFamily: 'Lexend Deca',
+                                    color: Colors.white,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
+                                  child: Text(
+                                    '[Email_Address]',
+                                    style: TextStyle(
+                                      fontFamily: 'Lexend Deca',
+                                      color: Color(0xB4FFFFFF),
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.normal,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
-                  ],
+                  ),
                 ),
-                ProfilePageIcons(icon: Icons.subtitles_rounded, lable: "Order History"),
-                ProfilePageIcons(icon: Icons.settings_rounded, lable: "My Settings"),
-                ProfilePageIcons(icon: Icons.settings_rounded, lable: 'My Notifications'),
-                ProfilePageIcons(icon: Icons.text_snippet, lable: 'Terms of Service'),
+
+                ProfilePageIcons(lable: "Order History"),
+                ProfilePageIcons(lable: "My Settings"),
+                ProfilePageIcons(lable: 'My Notifications'),
+                ProfilePageIcons(lable: 'Terms of Service'),
 
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 20),
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 20),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -68,14 +124,13 @@ class _ProfilePageState extends State<ProfilePage> {
                         color: Color(0xFF4B39EF),
                         elevation: 3,
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(35.0),
+                          borderRadius: BorderRadius.circular(8.0),
                         ),
 
                       ),
                     ],
                   ),
-                )
-
+                ),
 
               ],
             ),

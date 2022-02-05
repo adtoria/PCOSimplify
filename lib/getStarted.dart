@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-class started extends StatefulWidget {
+class Started extends StatefulWidget {
   // started({this.padding});
   //
   // final double padding;
 
   @override
-  _startedState createState() => _startedState();
+  _StartedState createState() => _StartedState();
 }
 
-class _startedState extends State<started> {
+class _StartedState extends State<Started> {
   PageController pageViewController = PageController();
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
