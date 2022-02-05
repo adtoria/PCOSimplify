@@ -24,8 +24,8 @@ class _startedState extends State<started> {
       ),
       body: SafeArea(
         child: Container(
-          width: double.infinity,
-          height: double.infinity,
+          width: double.maxFinite,
+          height: double.maxFinite,
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [Color(0xFFFBC8D1), Color(0xFF7D5847)],
