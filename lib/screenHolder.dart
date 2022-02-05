@@ -1,28 +1,27 @@
 import 'package:flutter/material.dart';
-import 'profilepage.dart';
+import 'profilePage.dart';
 
-class Screenholder extends StatefulWidget {
-
+class ScreenHolder extends StatefulWidget {
   @override
-  _ScreenholderState createState() => _ScreenholderState();
+  _ScreenHolderState createState() => _ScreenHolderState();
 }
 
-class _ScreenholderState extends State<Screenholder> {
-  int currentindex=0;
+class _ScreenHolderState extends State<ScreenHolder> {
+  int currentIndex = 0;
 
-  final screens=[
-    Center(child:Text("A",style: TextStyle(fontSize: 60.0))),
-    Center(child:Text("B",style: TextStyle(fontSize: 60.0))),
-    Center(child:Text("C",style: TextStyle(fontSize: 60.0))),
+  final screens = [
+    Center(child: Text("A", style: TextStyle(fontSize: 60.0))),
+    Center(child: Text("B", style: TextStyle(fontSize: 60.0))),
+    Center(child: Text("C", style: TextStyle(fontSize: 60.0))),
     ProfilePage()
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: screens[currentindex],
+      body: screens[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: currentindex,
+        currentIndex: currentIndex,
         backgroundColor: Colors.blue,
         type: BottomNavigationBarType.fixed,
         selectedItemColor: Colors.white,
@@ -30,10 +29,9 @@ class _ScreenholderState extends State<Screenholder> {
         showSelectedLabels: true,
         showUnselectedLabels: true,
         iconSize: 40.0,
-
-        onTap: (index){
+        onTap: (index) {
           setState(() {
-            currentindex=index;
+            currentIndex = index;
           });
         },
         items: [

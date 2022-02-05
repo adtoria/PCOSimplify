@@ -111,16 +111,15 @@ class _StartedState extends State<Started> {
                     ),
                   ),
                 ),
-
                 SizedBox(
                   height: 10.0,
                 ),
-
                 MaterialButton(
                   onPressed: () {
                     print('Button pressed ...');
                   },
-                  child: Text("Get Started",
+                  child: Text(
+                    "Get Started",
                     style: TextStyle(
                       fontSize: 22.0,
                       color: Colors.white,
@@ -134,9 +133,7 @@ class _StartedState extends State<Started> {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(35.0),
                   ),
-
                 ),
-
                 SizedBox(
                   height: 25.0,
                 )

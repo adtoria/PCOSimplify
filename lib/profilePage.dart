@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'profilepagehelp.dart';
+import 'profilePageHelp.dart';
 
 class ProfilePage extends StatefulWidget {
-
   @override
   _ProfilePageState createState() => _ProfilePageState();
 }
@@ -12,18 +11,18 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-         child: Container(
-           width: double.maxFinite,
-           height: double.maxFinite,
-           decoration: BoxDecoration(
-             gradient: LinearGradient(
-               colors: [Color(0xFFFBC8D1), Color(0xFF7D5847)],
-               stops: [0, 1],
-               begin: AlignmentDirectional(1, -1),
-               end: AlignmentDirectional(-1, 1),
-             ),
-           ),
-           child: SingleChildScrollView(
+        child: Container(
+          width: double.maxFinite,
+          height: double.maxFinite,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Color(0xFFFBC8D1), Color(0xFF7D5847)],
+              stops: [0, 1],
+              begin: AlignmentDirectional(1, -1),
+              end: AlignmentDirectional(-1, 1),
+            ),
+          ),
+          child: SingleChildScrollView(
             child: Column(
               children: [
                 Container(
@@ -77,7 +76,8 @@ class _ProfilePageState extends State<ProfilePage> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 4, 0, 0),
                                   child: Text(
                                     '[Email_Address]',
                                     style: TextStyle(
@@ -96,12 +96,10 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                   ),
                 ),
-
                 ProfilePageIcons(lable: "Order History"),
                 ProfilePageIcons(lable: "My Settings"),
                 ProfilePageIcons(lable: 'My Notifications'),
                 ProfilePageIcons(lable: 'Terms of Service'),
-
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 20),
                   child: Row(
@@ -112,7 +110,8 @@ class _ProfilePageState extends State<ProfilePage> {
                         onPressed: () {
                           print('Button pressed ...');
                         },
-                        child: Text("Log Out",
+                        child: Text(
+                          "Log Out",
                           style: TextStyle(
                             fontSize: 22.0,
                             color: Colors.white,
@@ -126,18 +125,15 @@ class _ProfilePageState extends State<ProfilePage> {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8.0),
                         ),
-
                       ),
                     ],
                   ),
                 ),
-
               ],
             ),
-           ),
-         ),
+          ),
+        ),
       ),
     );
   }
 }
-
