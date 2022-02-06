@@ -1,18 +1,17 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'screenHolder.dart';
-import 'registrationPage.dart';
 
-class LoginPage extends StatefulWidget {
-  static const String id = 'login_page';
-  const LoginPage({Key? key}) : super(key: key);
+class Register extends StatefulWidget {
+  static const String id = 'registration_page';
+  const Register({Key? key}) : super(key: key);
 
   @override
-  _LoginPageState createState() => _LoginPageState();
+  _RegisterState createState() => _RegisterState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _RegisterState extends State<Register> {
   TextEditingController emailAddressController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   bool passwordVisibility = false;
@@ -112,6 +111,73 @@ class _LoginPageState extends State<LoginPage> {
                               fontSize: 14,
                               fontWeight: FontWeight.normal,
                             ),
+                            hintText: 'Confirm your password...]',
+                            hintStyle: TextStyle(
+                              fontFamily: 'Lexend Deca',
+                              color: Color(0xFF95A1AC),
+                              fontSize: 14,
+                              fontWeight: FontWeight.normal,
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Color(0xFFDBE2E7),
+                                width: 2,
+                              ),
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Color(0xFFDBE2E7),
+                                width: 2,
+                              ),
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            filled: true,
+                            fillColor: Colors.white,
+                            contentPadding:
+                                EdgeInsetsDirectional.fromSTEB(16, 24, 24, 24),
+                            suffixIcon: InkWell(
+                              onTap: () => setState(
+                                () => passwordVisibility = !passwordVisibility,
+                              ),
+                              child: Icon(
+                                passwordVisibility
+                                    ? Icons.visibility_outlined
+                                    : Icons.visibility_off_outlined,
+                                color: Color(0xFF95A1AC),
+                                size: 22,
+                              ),
+                            ),
+                          ),
+                          style: TextStyle(
+                            fontFamily: 'Lexend Deca',
+                            color: Color(0xFF2B343A),
+                            fontSize: 14,
+                            fontWeight: FontWeight.normal,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 16, 0, 0),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        child: TextFormField(
+                          controller: passwordController,
+                          obscureText: !passwordVisibility,
+                          decoration: InputDecoration(
+                            labelText: 'Confirm Password',
+                            labelStyle: TextStyle(
+                              fontFamily: 'Lexend Deca',
+                              color: Color(0xFF95A1AC),
+                              fontSize: 14,
+                              fontWeight: FontWeight.normal,
+                            ),
                             hintText: 'Enter your password here...]',
                             hintStyle: TextStyle(
                               fontFamily: 'Lexend Deca',
@@ -165,14 +231,14 @@ class _LoginPageState extends State<LoginPage> {
                   padding: EdgeInsetsDirectional.fromSTEB(0, 24, 0, 0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       MaterialButton(
                         onPressed: () {
                           Navigator.pushNamed(context, ScreenHolder.id);
                         },
                         child: Text(
-                          'Login',
+                          'Sign Up',
                           style: TextStyle(
                             fontFamily: 'Lexend Deca',
                             color: Colors.white,
@@ -188,38 +254,17 @@ class _LoginPageState extends State<LoginPage> {
                           borderRadius: BorderRadius.circular(10.0),
                         ),
                       ),
-                      MaterialButton(
-                        onPressed: () {
-                          print('Button-ForgotPassword pressed ...');
-                        },
-                        child: Text(
-                          'Forgot Password?',
-                          style: TextStyle(
-                            fontFamily: 'Lexend Deca',
-                            color: Colors.white,
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        minWidth: 170,
-                        height: 30,
-                        color: Color(0x00FFFFFF),
-                        elevation: 0,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10.0),
-                        ),
-                      ),
                     ],
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 15),
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 25),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Sign In with Google',
+                        'OR',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontFamily: 'Lexend Deca',
@@ -259,7 +304,7 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                           ),
                           Text(
-                            'Sign in with Google',
+                            'Sign up with Google',
                             style: TextStyle(
                               fontFamily: 'Lexend Deca',
                               color: Color(0xFF2B343A),
@@ -277,45 +322,6 @@ class _LoginPageState extends State<LoginPage> {
                         borderRadius: BorderRadius.circular(10.0),
                       ),
                     ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 24),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Don\'t have an account?',
-                        style: TextStyle(
-                          fontFamily: 'Lexend Deca',
-                          color: Colors.white,
-                          fontSize: 14,
-                          fontWeight: FontWeight.normal,
-                        ),
-                      ),
-                      MaterialButton(
-                        onPressed: () {
-                          Navigator.pushNamed(context, Register.id);
-                        },
-                        child: Text(
-                          'Register',
-                          style: TextStyle(
-                            fontFamily: 'Lexend Deca',
-                            color: Color(0xFF39D2C0),
-                            fontSize: 14,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        minWidth: 90,
-                        height: 30,
-                        color: Color(0x00FFFFFF),
-                        elevation: 0,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10.0),
-                        ),
-                      ),
-                    ],
                   ),
                 ),
               ],
