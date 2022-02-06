@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'profilePageHelp.dart';
 
 class ProfilePage extends StatefulWidget {
+  static const String id = 'profile_page';
   @override
   _ProfilePageState createState() => _ProfilePageState();
 }

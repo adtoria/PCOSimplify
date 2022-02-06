@@ -62,20 +62,6 @@ class ProfilePageIcons extends StatelessWidget {
                         color: Color(0xFF95A1AC),
                         size: 20,
                       ),
-
-                      // MaterialButton(
-                      //   onPressed: () {
-                      //     print('Button pressed ...');
-                      //   },
-                      //   minWidth: 70.0,
-                      //   height: 50.0,
-                      //   color: Color(0xFF4B39EF),
-                      //   elevation: 2,
-                      //   shape: RoundedRectangleBorder(
-                      //     borderRadius: BorderRadius.circular(30.0),
-                      //   ),
-                      //
-                      // ),
                     ],
                   ),
                 ),

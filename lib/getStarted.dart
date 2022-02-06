@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:promject/loginPage.dart';
+import 'package:promject/screenHolder.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class Started extends StatefulWidget {
-  // started({this.padding});
-  //
-  // final double padding;
+  static const String id = "get_started";
 
   @override
   _StartedState createState() => _StartedState();
@@ -116,7 +116,7 @@ class _StartedState extends State<Started> {
                 ),
                 MaterialButton(
                   onPressed: () {
-                    print('Button pressed ...');
+                    Navigator.pushNamed(context, LoginPage.id);
                   },
                   child: Text(
                     "Get Started",

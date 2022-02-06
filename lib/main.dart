@@ -12,7 +12,14 @@ class AppName extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: LoginPage(),
+      //home: Started(),
+      initialRoute: Started.id,
+      routes: {
+        Started.id: (context) => Started(),
+        LoginPage.id: (context) => LoginPage(),
+        ProfilePage.id: (context) => ProfilePage(),
+        ScreenHolder.id: (context) => ScreenHolder(),
+      },
     );
   }
 }

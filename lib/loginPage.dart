@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'screenHolder.dart';
 
 class LoginPage extends StatefulWidget {
+  static const String id = 'login_page';
   const LoginPage({Key? key}) : super(key: key);
 
   @override
@@ -110,7 +112,7 @@ class _LoginPageState extends State<LoginPage> {
                               fontSize: 14,
                               fontWeight: FontWeight.normal,
                             ),
-                            hintText: 'Enter your email here...',
+                            hintText: 'Enter your password here...]',
                             hintStyle: TextStyle(
                               fontFamily: 'Lexend Deca',
                               color: Color(0xFF95A1AC),
@@ -167,7 +169,7 @@ class _LoginPageState extends State<LoginPage> {
                     children: [
                       MaterialButton(
                         onPressed: () {
-                          print('Button-Login pressed ...');
+                          Navigator.pushNamed(context, ScreenHolder.id);
                         },
                         child: Text(
                           'Login',
@@ -211,7 +213,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 60, 0, 15),
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 15),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -229,47 +231,50 @@ class _LoginPageState extends State<LoginPage> {
                     ],
                   ),
                 ),
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                  child: MaterialButton(
-                    onPressed: () {
-                      print('Button pressed ...');
-                    },
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Container(
-                            width: 22,
-                            height: 22,
-                            clipBehavior: Clip.antiAlias,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                            ),
-                            child: Image.network(
-                              'https://i0.wp.com/nanophorm.com/wp-content/uploads/2018/04/google-logo-icon-PNG-Transparent-Background.png?w=1000&ssl=1',
-                              fit: BoxFit.contain,
+                FractionallySizedBox(
+                  widthFactor: 0.55,
+                  child: Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                    child: MaterialButton(
+                      onPressed: () {
+                        print('Button pressed ...');
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
+                            child: Container(
+                              width: 22,
+                              height: 22,
+                              clipBehavior: Clip.antiAlias,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                              ),
+                              child: Image.network(
+                                'https://i0.wp.com/nanophorm.com/wp-content/uploads/2018/04/google-logo-icon-PNG-Transparent-Background.png?w=1000&ssl=1',
+                                fit: BoxFit.contain,
+                              ),
                             ),
                           ),
-                        ),
-                        Text(
-                          'Sign in with Google',
-                          style: TextStyle(
-                            fontFamily: 'Lexend Deca',
-                            color: Color(0xFF2B343A),
-                            fontSize: 14,
-                            fontWeight: FontWeight.normal,
+                          Text(
+                            'Sign in with Google',
+                            style: TextStyle(
+                              fontFamily: 'Lexend Deca',
+                              color: Color(0xFF2B343A),
+                              fontSize: 15,
+                              fontWeight: FontWeight.normal,
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                    minWidth: 230,
-                    height: 44,
-                    color: Colors.white,
-                    elevation: 4,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10.0),
+                        ],
+                      ),
+                      minWidth: 230,
+                      height: 44,
+                      color: Colors.white,
+                      elevation: 4,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
                     ),
                   ),
                 ),

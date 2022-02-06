@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'profilePage.dart';
 
 class ScreenHolder extends StatefulWidget {
+  static const String id = 'screen_holder';
   @override
   _ScreenHolderState createState() => _ScreenHolderState();
 }
