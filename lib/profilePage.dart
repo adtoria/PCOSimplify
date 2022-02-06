@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'profilePageHelp.dart';
+import 'drawer.dart';
 
 class ProfilePage extends StatefulWidget {
   static const String id = 'profile_page';
@@ -11,6 +12,10 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: OurDrawer(),
+      appBar: AppBar(
+        title: Text("Profile page"),
+      ),
       body: SafeArea(
         child: Container(
           width: double.maxFinite,

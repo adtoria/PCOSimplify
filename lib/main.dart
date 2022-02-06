@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:promject/screenHolder.dart';
-import 'welcomeScreen.dart';
 import 'getStarted.dart';
 import 'screenHolder.dart';
 import 'profilePage.dart';
