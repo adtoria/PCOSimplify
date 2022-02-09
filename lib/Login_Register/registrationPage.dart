@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
-import 'screenHolder.dart';
+import '../screenHolder.dart';
 
 class Register extends StatefulWidget {
   static const String id = 'registration_page';
