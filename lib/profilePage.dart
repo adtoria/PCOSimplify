@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'profilePageHelp.dart';
-import 'Drawer/drawer.dart';
+import 'drawer.dart';
 
 class ProfilePage extends StatefulWidget {
   static const String id = 'profile_page';
