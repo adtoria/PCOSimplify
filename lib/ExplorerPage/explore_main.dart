@@ -8,7 +8,7 @@ class ExplorerMain extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Color(0xFFD7B4F3),
         body: Explorer(height: 108.0),
       ),
     );

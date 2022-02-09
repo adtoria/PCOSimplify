@@ -14,7 +14,8 @@ class AppName extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: ExplorerMain(),
+      //home: ExplorerMain(),
+      home: Started(),
       //initialRoute: Started.id,
       routes: {
         Started.id: (context) => Started(),

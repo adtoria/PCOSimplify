@@ -12,13 +12,13 @@ class Tiles extends StatelessWidget {
         launch(articleUrl);
       },
       child: Padding(
-        padding: EdgeInsetsDirectional.fromSTEB(10, 0, 10, 10),
+        padding: EdgeInsetsDirectional.fromSTEB(5, 0, 5, 20),
         child: Container(
           //margin: EdgeInsets.only(right: 14),
           child: Stack(
             children: <Widget>[
               ClipRRect(
-                borderRadius: BorderRadius.circular(5),
+                borderRadius: BorderRadius.circular(15),
                 child: Image.network(
                   imageUrl,
                   height: 130,
@@ -31,7 +31,7 @@ class Tiles extends StatelessWidget {
                 height: 130,
                 width: 180,
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
+                    borderRadius: BorderRadius.circular(15),
                     color: Colors.black26
                 ),
                 child: Text(

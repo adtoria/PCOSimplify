@@ -202,7 +202,7 @@ class _ExplorerState extends State<Explorer> {
             width: 10,
           ),
           _exploreTiles(
-            title: '  IGTV  ',
+            title: 'IGTV',
             context: context,
             index: 0,
           ),
@@ -256,35 +256,45 @@ class _ExplorerState extends State<Explorer> {
     required String title,
     required BuildContext context,
   }) {
-    return GestureDetector(
-      onTap: (){
-        pageViewController.animateToPage(index,
-            duration: Duration(milliseconds: 10),
-            curve: Curves.linear);
-      },
-      child: Center(
-        child: Container(
-          margin: EdgeInsets.only(right: 5),
-          padding: EdgeInsets.symmetric(horizontal: 5),
-          height: 38,
-          decoration: BoxDecoration(
-            color: Theme.of(context).primaryColorDark,
-            borderRadius: BorderRadius.circular(10),
-            border: Border.all(color: Colors.white),
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text(
-                title,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold,
-                ),
+    return Padding(
+      padding: EdgeInsetsDirectional.fromSTEB(2.5, 0, 2.5, 0),
+      child: GestureDetector(
+        onTap: (){
+          pageViewController.animateToPage(index,
+              duration: Duration(milliseconds: 10),
+              curve: Curves.linear);
+        },
+        child: Center(
+          child: Container(
+            margin: EdgeInsets.only(right: 5),
+            padding: EdgeInsets.symmetric(horizontal: 5),
+            height: 33.5,
+            decoration: BoxDecoration(
+              color: Color(0xFF4C03C8),
+              borderRadius: BorderRadius.circular(25),
+              border: Border.all(
+                  color: Color(0xFF340143),
+                style: BorderStyle.solid,
+                width: 3,
               ),
-            ],
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(8, 3, 8, 3),
+                  child: Text(
+                    title,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18.5,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
