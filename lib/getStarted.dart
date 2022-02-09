@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:promject/Login_Register/loginPage.dart';
+import 'package:promject/LoginRegister/loginPage.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class Started extends StatefulWidget {
