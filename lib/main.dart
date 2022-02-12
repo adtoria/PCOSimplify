@@ -7,8 +7,13 @@ import 'profilePage.dart';
 import 'LoginRegister/loginPage.dart';
 import 'LoginRegister/registrationPage.dart';
 import 'ExplorePage/exploreMain.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() => runApp(AppName());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(AppName());
+}
 
 class AppName extends StatelessWidget {
   @override

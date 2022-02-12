@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import '../screenHolder.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class Register extends StatefulWidget {
   static const String id = 'registration_page';
@@ -12,9 +13,10 @@ class Register extends StatefulWidget {
 }
 
 class _RegisterState extends State<Register> {
-  String? email;
-  String? password;
-  String? confirmPw;
+  final _auth = FirebaseAuth.instance;
+  String email = "";
+  String password = "";
+  String confirmPw = "";
 
   TextEditingController emailAddressController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
@@ -284,9 +286,18 @@ class _RegisterState extends State<Register> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         MaterialButton(
-                          onPressed: () {
+                          onPressed: () async {
                             if (_formKey.currentState!.validate()) {
-                              Navigator.pushNamed(context, ScreenHolder.id);
+                              try {
+                                final newUser =
+                                    await _auth.createUserWithEmailAndPassword(
+                                        email: email, password: password);
+                                if (newUser != null) {
+                                  Navigator.pushNamed(context, ScreenHolder.id);
+                                }
+                              } catch (e) {
+                                print(e);
+                              }
                             }
                           },
                           child: Text(

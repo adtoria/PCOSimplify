@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import '../screenHolder.dart';
 import 'registrationPage.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class LoginPage extends StatefulWidget {
   static const String id = 'login_page';
@@ -13,8 +14,10 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  String? email;
-  String? password;
+  final _auth = FirebaseAuth.instance;
+  String email = "";
+  String password = "";
+  bool loginFail = false;
 
   TextEditingController emailAddressController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
@@ -136,6 +139,11 @@ class _LoginPageState extends State<LoginPage> {
                             controller: passwordController,
                             obscureText: !passwordVisibility,
                             decoration: InputDecoration(
+                              errorText:
+                                  loginFail ? 'Incorrect password' : null,
+                              errorStyle: TextStyle(
+                                color: Colors.red,
+                              ),
                               labelText: 'Password',
                               labelStyle: TextStyle(
                                 fontFamily: 'Lexend Deca',
@@ -200,9 +208,20 @@ class _LoginPageState extends State<LoginPage> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         MaterialButton(
-                          onPressed: () {
+                          onPressed: () async {
                             if (_formKey.currentState!.validate()) {
-                              Navigator.pushNamed(context, ScreenHolder.id);
+                              try {
+                                final newUser =
+                                    await _auth.signInWithEmailAndPassword(
+                                        email: email, password: password);
+                                if (newUser != null) {
+                                  Navigator.pushNamed(context, ScreenHolder.id);
+                                }
+                              } catch (e) {
+                                setState(() {
+                                  loginFail = true;
+                                });
+                              }
                             }
                           },
                           child: Text(
