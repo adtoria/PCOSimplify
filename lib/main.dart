@@ -14,16 +14,16 @@ class AppName extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: ExploreMain(),
-      //home: Started(),
+      //home: ExploreMain(),
+      home: LoginPage(),
       //initialRoute: Started.id,
-      // routes: {
-      //   Started.id: (context) => Started(),
-      //   LoginPage.id: (context) => LoginPage(),
-      //   Register.id: (context) => Register(),
-      //   ProfilePage.id: (context) => ProfilePage(),
-      //   ScreenHolder.id: (context) => ScreenHolder(),
-      // },
+      routes: {
+        Started.id: (context) => Started(),
+        LoginPage.id: (context) => LoginPage(),
+        Register.id: (context) => Register(),
+        ProfilePage.id: (context) => ProfilePage(),
+        ScreenHolder.id: (context) => ScreenHolder(),
+      },
     );
   }
 }
