@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "701196602653",
+    "project_id": "gdsc-27141",
+    "storage_bucket": "gdsc-27141.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:701196602653:android:510eda642ccc78489fa5f4",
+        "android_client_info": {
+          "package_name": "com.PCOSimplifyDASA.promject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "701196602653-man0l73lpg03eq204sq2m39f27eopq07.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4HhDGRcSWxxjDcPjeSeqvmCViluiyPO8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "701196602653-man0l73lpg03eq204sq2m39f27eopq07.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
