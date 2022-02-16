@@ -27,17 +27,20 @@ class _ExplorerState extends State<Explorer> {
           snapshot.docs.map((doc) => User.fromJson(doc.data())).toList());
 
   Widget buildUser(User user) => Padding(
-        padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
+        padding: EdgeInsetsDirectional.fromSTEB(10, 5, 10, 5),
         child: ListTile(
-          title: Text(
-            user.title,
-            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+          title: Padding(
+            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
+            child: Text(
+              user.title,
+              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+            ),
           ),
           subtitle: Text(
             user.name,
             style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
           ),
-          tileColor: Colors.pinkAccent,
+          tileColor: Color(0xFFF4ACC4),
           onTap: () => Navigator.push(
               context,
               MaterialPageRoute(
@@ -46,10 +49,13 @@ class _ExplorerState extends State<Explorer> {
                         name: user.name,
                         body: user.body,
                       ))),
-          contentPadding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
+          contentPadding: EdgeInsetsDirectional.fromSTEB(15, 5, 15, 5),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(30),
-          ),
+              borderRadius: BorderRadius.circular(15),
+              side: BorderSide(
+                color: Color(0xFF595B82),
+                width: 3.0,
+              )),
         ),
       );
 
@@ -64,9 +70,60 @@ class _ExplorerState extends State<Explorer> {
           child: Column(
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 13),
+                padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 8),
                 child: _exploreOptionList(context),
               ),
+
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(10, 5, 10, 5),
+                child: ListTile(
+                  leading: Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                    child: Container(
+                      width: 50,
+                      height: 50,
+                      clipBehavior: Clip.antiAlias,
+                      decoration: BoxDecoration(
+                        color: Colors.purpleAccent,
+                        shape: BoxShape.circle,
+                      ),
+                      child: Icon(
+                        Icons.add,
+                        color: Colors.white,
+                        size: 30,
+                      )
+                    ),
+                  ),
+                  title: Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
+                    child: Center(
+                      child: Text(
+                        "Share your Stories",
+                        style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                      ),
+                    )
+                  ),
+                  subtitle: Center(
+                    child: Text(
+                      "Share your Stories",
+                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  tileColor: Color(0xFFF4ACC4),
+                  onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => AddPost())),
+                  contentPadding: EdgeInsetsDirectional.fromSTEB(15, 5, 15, 5),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15),
+                      side: BorderSide(
+                        color: Color(0xFF595B82),
+                        width: 3.0,
+                      )),
+                ),
+              ),
+
               StreamBuilder<List<User>>(
                 stream: readData(),
                 builder: (context, snapshot) {
@@ -92,115 +149,146 @@ class _ExplorerState extends State<Explorer> {
           child: Column(
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 13),
+                padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 10),
                 child: _exploreOptionList(context),
               ),
               SingleChildScrollView(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Tiles(
-                          articleUrl:
-                              'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
-                          imageUrl: 'https://picsum.photos/seed/903/600',
-                          categoryName: "Pregnancy",
-                        ),
-                        Tiles(
-                          articleUrl:
-                              'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
-                          imageUrl: 'https://picsum.photos/seed/903/600',
-                          categoryName: "New articles",
-                        )
-                      ],
+                    Expanded(
+                      child: Column(
+                        //crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(5, 5, 10, 5),
+                            child: SizedBox(
+                              height: 100,
+                              child: Tiles(
+                                articleUrl:
+                                    'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                                categoryName: "Pregnancy",
+                                source: "Youtube",
+                              ),
+                            ),
+                          ),
+
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(5, 5, 10, 5),
+                            child: SizedBox(
+                              height: 200,
+                              child: Tiles(
+                                articleUrl:
+                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                                categoryName: "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
+                                source: "Youtube",
+                              ),
+                            ),
+                          ),
+
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(5, 5, 10, 5),
+                            child: SizedBox(
+                              height: 300,
+                              child: Tiles(
+                                articleUrl:
+                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                                categoryName: "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
+                                source: "Youtube",
+                              ),
+                            ),
+                          ),
+
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(5, 5, 10, 5),
+                            child: SizedBox(
+                              height: 150,
+                              child: Tiles(
+                                articleUrl:
+                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                                categoryName: "Pregnancy fkb",
+                                source: "Youtube",
+                              ),
+                            ),
+                          ),
+
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(5, 5, 10, 5),
+                            child: SizedBox(
+                              height: 500,
+                              child: Tiles(
+                                articleUrl:
+                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                                categoryName: "Pregnancy fkb",
+                                source: "Youtube",
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Tiles(
-                          articleUrl:
-                              'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
-                          imageUrl: 'https://picsum.photos/seed/903/600',
-                          categoryName: "New articles",
-                        ),
-                        Tiles(
-                          articleUrl:
-                              'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
-                          imageUrl: 'https://picsum.photos/seed/903/600',
-                          categoryName: "New articles",
-                        )
-                      ],
+
+                    Expanded(
+                      child: Column(
+                        //crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(5, 5, 10, 5),
+                            child: SizedBox(
+                              height: 350,
+                              child: Tiles(
+                                articleUrl:
+                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                                categoryName: "Pregnancy",
+                                source: "Youtube",
+                              ),
+                            ),
+                          ),
+
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(5, 5, 10, 5),
+                            child: SizedBox(
+                              height: 480,
+                              child: Tiles(
+                                articleUrl:
+                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                                categoryName: "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
+                                source: "Youtube",
+                              ),
+                            ),
+                          ),
+
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(5, 5, 10, 5),
+                            child: SizedBox(
+                              height: 510,
+                              child: Tiles(
+                                articleUrl:
+                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                                categoryName: "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
+                                source: "Youtube",
+                              ),
+                            ),
+                          ),
+
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(5, 5, 10, 5),
+                            child: SizedBox(
+                              height: 461,
+                              child: Tiles(
+                                articleUrl:
+                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                                categoryName: "Pregnancy fkb",
+                                source: "Youtube",
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Tiles(
-                          articleUrl:
-                              'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
-                          imageUrl: 'https://picsum.photos/seed/903/600',
-                          categoryName: "New articles",
-                        ),
-                        Tiles(
-                          articleUrl:
-                              'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
-                          imageUrl: 'https://picsum.photos/seed/903/600',
-                          categoryName: "New articles",
-                        )
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Tiles(
-                          articleUrl:
-                              'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
-                          imageUrl: 'https://picsum.photos/seed/903/600',
-                          categoryName: "New articles",
-                        ),
-                        Tiles(
-                          articleUrl:
-                              'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
-                          imageUrl: 'https://picsum.photos/seed/903/600',
-                          categoryName: "New articles",
-                        )
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Tiles(
-                          articleUrl:
-                              'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
-                          imageUrl: 'https://picsum.photos/seed/903/600',
-                          categoryName: "New articles",
-                        ),
-                        Tiles(
-                          articleUrl:
-                              'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
-                          imageUrl: 'https://picsum.photos/seed/903/600',
-                          categoryName: "New articles",
-                        )
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Tiles(
-                          articleUrl:
-                              'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
-                          imageUrl: 'https://picsum.photos/seed/903/600',
-                          categoryName: "New articles",
-                        ),
-                        Tiles(
-                          articleUrl:
-                              'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
-                          imageUrl: 'https://picsum.photos/seed/903/600',
-                          categoryName: "New articles",
-                        )
-                      ],
-                    ),
+
+
                   ],
                 ),
               ),
@@ -252,7 +340,7 @@ class _ExplorerState extends State<Explorer> {
             width: 10,
           ),
           _exploreTiles(
-            title: 'All',
+            title: 'Your Stories',
             context: context,
             index: 0,
           ),
@@ -306,6 +394,7 @@ class _ExplorerState extends State<Explorer> {
     required String title,
     required BuildContext context,
   }) {
+
     return Padding(
       padding: EdgeInsetsDirectional.fromSTEB(2.5, 0, 2.5, 0),
       child: GestureDetector(

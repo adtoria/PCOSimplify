@@ -23,7 +23,7 @@ class AppName extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: CalendarWidget(),
+      home: ScreenHolder(),
       //initialRoute: Started.id,
       routes: {
         Started.id: (context) => Started(),

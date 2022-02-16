@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SeeStories extends StatelessWidget {
@@ -12,21 +13,35 @@ class SeeStories extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text(title),
-          elevation: 0.0,
+          title: Text("$name's Story"),
+          elevation: 3.0,
         ),
-        body: Column(
-          children: [
-            Text(name),
-            Text(body),
-          ],
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 0),
+                child: Center(
+                  child: Text(title,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 25,
+                    ),
+                  ),
+                ),
+              ),
+
+              Divider(
+                thickness: 2,
+                indent: 170,
+                endIndent: 170,
+                color: Colors.black,
+              ),
+
+              Text(body),
+            ],
+          ),
         ),
-        // floatingActionButton: FloatingActionButton(onPressed: (){
-        //     Navigator.pop(context);
-        // },
-        //   child: Icon(Icons.keyboard_return, color: Colors.white,),
-        //   backgroundColor: Colors.red,
-        //   tooltip: "Go Back",),
       ),
     );
   }

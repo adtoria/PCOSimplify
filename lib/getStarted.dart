@@ -18,20 +18,12 @@ class _StartedState extends State<Started> {
     return Scaffold(
       key: scaffoldKey,
       backgroundColor: Colors.transparent,
-      drawer: Drawer(
-        elevation: 16,
-      ),
       body: SafeArea(
         child: Container(
           width: double.maxFinite,
           height: double.maxFinite,
           decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [Color(0xFFFBC8D1), Color(0xFF7D5847)],
-              stops: [0, 1],
-              begin: AlignmentDirectional(1, -1),
-              end: AlignmentDirectional(-1, 1),
-            ),
+            color: Colors.white,
           ),
           child: GestureDetector(
             onTap: () => FocusScope.of(context).unfocus(),

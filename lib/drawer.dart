@@ -35,8 +35,8 @@ class OurDrawer extends StatelessWidget {
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
-                    text: 'Favourites',
-                    icon: Icons.favorite_border,
+                    text: 'Settings',
+                    icon: Icons.settings,
                     onClicked: () => selectedItem(context, 1),
                   ),
                   const SizedBox(height: 16),

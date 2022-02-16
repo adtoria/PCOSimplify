@@ -34,7 +34,7 @@ class _AddPostState extends State<AddPost> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Add Your Story"),
-        elevation: 0.0,
+        elevation: 3.0,
       ),
       body: Form(
           key: _formKey,
