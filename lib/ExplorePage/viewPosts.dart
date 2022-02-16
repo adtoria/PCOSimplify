@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 
-
 class SeeStories extends StatelessWidget {
   final String title;
   final String name;
   final String body;
 
-  SeeStories({required this.name,required this.title, required this.body});
+  SeeStories({required this.name, required this.title, required this.body});
 
   @override
   Widget build(BuildContext context) {

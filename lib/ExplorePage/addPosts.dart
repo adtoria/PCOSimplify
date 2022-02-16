@@ -7,23 +7,26 @@ class AddPost extends StatefulWidget {
 }
 
 class _AddPostState extends State<AddPost> {
-  String title="";
-  String name="";
-  String body="";
-  bool accept=true;
-  GlobalKey<FormState> _formkey = GlobalKey<FormState>();
+  String title = "";
+  String name = "";
+  String body = "";
+  bool accept = true;
+  GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
-  Future SavetoDatabase({required String title,required String name,required String body}) async {
-      final user = FirebaseFirestore.instance.collection('users').doc();
+  Future saveToDatabase(
+      {required String title,
+      required String name,
+      required String body}) async {
+    final user = FirebaseFirestore.instance.collection('users').doc();
 
-      final json = {
-        'id': user.id,
-        'name': name,
-        'title': title,
-        'body': body,
-      };
+    final json = {
+      'id': user.id,
+      'name': name,
+      'title': title,
+      'body': body,
+    };
 
-      await user.set(json);
+    await user.set(json);
   }
 
   @override
@@ -34,30 +37,30 @@ class _AddPostState extends State<AddPost> {
         elevation: 0.0,
       ),
       body: Form(
-          key: _formkey,
+          key: _formKey,
           child: ListView(
             children: <Widget>[
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
                   decoration: InputDecoration(
-                      labelText: "Title of Your Story",
-                      border: OutlineInputBorder()
+                    labelText: "Title of Your Story",
+                    border: OutlineInputBorder(),
                   ),
-                  validator: (String? value){
+                  validator: (String? value) {
                     if (value == null) {
-                      accept=false;
+                      accept = false;
                       return "* Required";
                     } else if (value.length < 1) {
-                      accept=false;
+                      accept = false;
                       return "* Required";
                     } else {
                       return null;
                     }
                   },
-                  onChanged: (val){
+                  onChanged: (val) {
                     //post.title = val
-                    title=val;
+                    title = val;
                   },
                 ),
               ),
@@ -65,23 +68,21 @@ class _AddPostState extends State<AddPost> {
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
                   decoration: InputDecoration(
-                      labelText: "Your Name",
-                      border: OutlineInputBorder()
-                  ),
-                  validator: (String? value){
+                      labelText: "Your Name", border: OutlineInputBorder()),
+                  validator: (String? value) {
                     if (value == null) {
-                      accept=false;
+                      accept = false;
                       return "* Required";
                     } else if (value.length < 1) {
-                      accept=false;
+                      accept = false;
                       return "* Required";
                     } else {
                       return null;
                     }
                   },
-                  onChanged: (val){
+                  onChanged: (val) {
                     //post.title = val
-                    name=val;
+                    name = val;
                   },
                 ),
               ),
@@ -90,38 +91,40 @@ class _AddPostState extends State<AddPost> {
                 child: TextFormField(
                   maxLines: 20,
                   decoration: InputDecoration(
-                      labelText: "Your Story",
-                      border: OutlineInputBorder()
-                  ),
-                  validator: (String? value){
+                      labelText: "Your Story", border: OutlineInputBorder()),
+                  validator: (String? value) {
                     if (value == null) {
-                      accept=false;
+                      accept = false;
                       return "* Required";
                     } else if (value.length < 1) {
-                      accept=false;
+                      accept = false;
                       return "* Required";
                     } else {
                       return null;
                     }
                   },
-                  onChanged: (val){
+                  onChanged: (val) {
                     //post.body = val
-                    body=val;
+                    body = val;
                   },
                 ),
               ),
             ],
           )),
-      floatingActionButton: FloatingActionButton(onPressed: (){
-        if (_formkey.currentState!.validate()){
-           SavetoDatabase(title: title, name: name, body: body);
-           Navigator.pop(context);
-        }
-      },
-        child: Icon(Icons.add, color: Colors.white,),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          if (_formKey.currentState!.validate()) {
+            saveToDatabase(title: title, name: name, body: body);
+            Navigator.pop(context);
+          }
+        },
+        child: Icon(
+          Icons.add,
+          color: Colors.white,
+        ),
         backgroundColor: Colors.red,
-        tooltip: "Add Story",),
+        tooltip: "Add Story",
+      ),
     );
   }
-
 }
