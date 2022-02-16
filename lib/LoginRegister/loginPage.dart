@@ -272,7 +272,7 @@ class _LoginPageState extends State<LoginPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          'Sign In with Google',
+                          'Sign in with Google',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontFamily: 'Lexend Deca',

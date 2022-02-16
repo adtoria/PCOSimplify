@@ -5,11 +5,11 @@ class OurDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final name = 'Shivam Harjani';
-    final urlImage ='https://picsum.photos/seed/509/600';
+    final urlImage = 'https://picsum.photos/seed/509/600';
 
     return Drawer(
       child: Material(
-        color: Color.fromRGBO(50, 75, 205, 1),
+        color: Colors.white,
         child: ListView(
           children: <Widget>[
             buildHeader(
@@ -52,7 +52,10 @@ class OurDrawer extends StatelessWidget {
                     onClicked: () => selectedItem(context, 3),
                   ),
                   const SizedBox(height: 24),
-                  Divider(color: Colors.white70),
+                  Divider(
+                    color: Colors.black,
+                    thickness: 2.0,
+                  ),
                   const SizedBox(height: 24),
                   buildMenuItem(
                     text: 'Plugins',
@@ -80,6 +83,7 @@ class OurDrawer extends StatelessWidget {
   }) =>
       Container(
         padding: padding.add(EdgeInsets.symmetric(vertical: 40)),
+        color: Color(0xFFD4F4F6),
         child: Row(
           //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           //mainAxisSize: MainAxisSize.min,
@@ -88,7 +92,7 @@ class OurDrawer extends StatelessWidget {
             SizedBox(width: 20),
             Text(
               name,
-              style: TextStyle(fontSize: 20, color: Colors.white),
+              style: TextStyle(fontSize: 20, color: Colors.black),
             ),
           ],
         ),
@@ -99,8 +103,8 @@ class OurDrawer extends StatelessWidget {
     required IconData icon,
     VoidCallback? onClicked,
   }) {
-    final color = Colors.white;
-    final hoverColor = Colors.white70;
+    final color = Colors.black;
+    final hoverColor = Color(0xFF85d1d6);
 
     return ListTile(
       leading: Icon(icon, color: color),

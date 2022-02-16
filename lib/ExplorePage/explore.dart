@@ -40,7 +40,7 @@ class _ExplorerState extends State<Explorer> {
             user.name,
             style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
           ),
-          tileColor: Color(0xFFF4ACC4),
+          tileColor: Color(0xFFA6C1EE),
           onTap: () => Navigator.push(
               context,
               MaterialPageRoute(
@@ -73,57 +73,54 @@ class _ExplorerState extends State<Explorer> {
                 padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 8),
                 child: _exploreOptionList(context),
               ),
-
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(10, 5, 10, 5),
                 child: ListTile(
                   leading: Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
                     child: Container(
-                      width: 50,
-                      height: 50,
-                      clipBehavior: Clip.antiAlias,
-                      decoration: BoxDecoration(
-                        color: Colors.purpleAccent,
-                        shape: BoxShape.circle,
-                      ),
-                      child: Icon(
-                        Icons.add,
-                        color: Colors.white,
-                        size: 30,
-                      )
-                    ),
+                        width: 50,
+                        height: 50,
+                        clipBehavior: Clip.antiAlias,
+                        decoration: BoxDecoration(
+                          color: Color(0xFF1E233C),
+                          shape: BoxShape.circle,
+                        ),
+                        child: Icon(
+                          Icons.add,
+                          color: Colors.white,
+                          size: 30,
+                        )),
                   ),
                   title: Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
                     child: Center(
                       child: Text(
                         "Share your Stories",
-                        style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            fontSize: 25, fontWeight: FontWeight.bold),
                       ),
-                    )
+                    ),
                   ),
                   subtitle: Center(
                     child: Text(
                       "Share your Stories",
-                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                     ),
                   ),
-                  tileColor: Color(0xFFF4ACC4),
-                  onTap: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => AddPost())),
+                  tileColor: Color(0xFFFFD3E1),
+                  onTap: () => Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => AddPost())),
                   contentPadding: EdgeInsetsDirectional.fromSTEB(15, 5, 15, 5),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15),
                       side: BorderSide(
-                        color: Color(0xFF595B82),
+                        color: Colors.black,
                         width: 3.0,
                       )),
                 ),
               ),
-
               StreamBuilder<List<User>>(
                 stream: readData(),
                 builder: (context, snapshot) {
@@ -162,7 +159,8 @@ class _ExplorerState extends State<Explorer> {
                         //crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(5, 5, 10, 5),
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(5, 5, 10, 5),
                             child: SizedBox(
                               height: 100,
                               child: Tiles(
@@ -173,53 +171,55 @@ class _ExplorerState extends State<Explorer> {
                               ),
                             ),
                           ),
-
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(5, 5, 10, 5),
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(5, 5, 10, 5),
                             child: SizedBox(
                               height: 200,
                               child: Tiles(
                                 articleUrl:
-                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
-                                categoryName: "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
+                                    'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                                categoryName:
+                                    "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
                                 source: "Youtube",
                               ),
                             ),
                           ),
-
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(5, 5, 10, 5),
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(5, 5, 10, 5),
                             child: SizedBox(
                               height: 300,
                               child: Tiles(
                                 articleUrl:
-                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
-                                categoryName: "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
+                                    'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                                categoryName:
+                                    "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
                                 source: "Youtube",
                               ),
                             ),
                           ),
-
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(5, 5, 10, 5),
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(5, 5, 10, 5),
                             child: SizedBox(
                               height: 150,
                               child: Tiles(
                                 articleUrl:
-                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                                    'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
                                 categoryName: "Pregnancy fkb",
                                 source: "Youtube",
                               ),
                             ),
                           ),
-
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(5, 5, 10, 5),
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(5, 5, 10, 5),
                             child: SizedBox(
                               height: 500,
                               child: Tiles(
                                 articleUrl:
-                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                                    'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
                                 categoryName: "Pregnancy fkb",
                                 source: "Youtube",
                               ),
@@ -228,57 +228,59 @@ class _ExplorerState extends State<Explorer> {
                         ],
                       ),
                     ),
-
                     Expanded(
                       child: Column(
                         //crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(5, 5, 10, 5),
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(5, 5, 10, 5),
                             child: SizedBox(
                               height: 350,
                               child: Tiles(
                                 articleUrl:
-                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                                    'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
                                 categoryName: "Pregnancy",
                                 source: "Youtube",
                               ),
                             ),
                           ),
-
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(5, 5, 10, 5),
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(5, 5, 10, 5),
                             child: SizedBox(
                               height: 480,
                               child: Tiles(
                                 articleUrl:
-                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
-                                categoryName: "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
+                                    'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                                categoryName:
+                                    "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
                                 source: "Youtube",
                               ),
                             ),
                           ),
-
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(5, 5, 10, 5),
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(5, 5, 10, 5),
                             child: SizedBox(
                               height: 510,
                               child: Tiles(
                                 articleUrl:
-                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
-                                categoryName: "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
+                                    'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                                categoryName:
+                                    "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
                                 source: "Youtube",
                               ),
                             ),
                           ),
-
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(5, 5, 10, 5),
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(5, 5, 10, 5),
                             child: SizedBox(
                               height: 461,
                               child: Tiles(
                                 articleUrl:
-                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                                    'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
                                 categoryName: "Pregnancy fkb",
                                 source: "Youtube",
                               ),
@@ -287,8 +289,6 @@ class _ExplorerState extends State<Explorer> {
                         ],
                       ),
                     ),
-
-
                   ],
                 ),
               ),
@@ -394,7 +394,6 @@ class _ExplorerState extends State<Explorer> {
     required String title,
     required BuildContext context,
   }) {
-
     return Padding(
       padding: EdgeInsetsDirectional.fromSTEB(2.5, 0, 2.5, 0),
       child: GestureDetector(
@@ -408,7 +407,7 @@ class _ExplorerState extends State<Explorer> {
             padding: EdgeInsets.symmetric(horizontal: 5),
             height: 33.5,
             decoration: BoxDecoration(
-              color: Colors.black,
+              color: Color(0xFF9F86C0),
               borderRadius: BorderRadius.circular(25),
               border: Border.all(
                 color: Colors.black,
@@ -425,7 +424,7 @@ class _ExplorerState extends State<Explorer> {
                   child: Text(
                     title,
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.black,
                       fontSize: 18.5,
                       fontWeight: FontWeight.w500,
                     ),

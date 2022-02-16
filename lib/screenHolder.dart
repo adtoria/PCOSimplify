@@ -27,10 +27,10 @@ class _ScreenHolderState extends State<ScreenHolder> {
       body: screens[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,
-        backgroundColor: Colors.blue,
+        backgroundColor: Color(0xFFFFD3E1),
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.white70,
+        selectedItemColor: Color(0xFF1E233C),
+        unselectedItemColor: Color(0xFF9F86C0),
         showSelectedLabels: true,
         showUnselectedLabels: true,
         iconSize: 40.0,

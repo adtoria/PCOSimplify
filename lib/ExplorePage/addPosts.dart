@@ -32,8 +32,13 @@ class _AddPostState extends State<AddPost> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFFDDE3FD),
       appBar: AppBar(
-        title: Text("Add Your Story"),
+        title: Text(
+          "Add Your Story",
+        ),
+        foregroundColor: Colors.black,
+        backgroundColor: Color(0xFFFFD3E1),
         elevation: 3.0,
       ),
       body: Form(
@@ -44,7 +49,23 @@ class _AddPostState extends State<AddPost> {
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
                   decoration: InputDecoration(
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Color(0xFF9F86C0),
+                        width: 2.0,
+                      ),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Color(0xFF1E233C),
+                        width: 3.0,
+                      ),
+                    ),
                     labelText: "Title of Your Story",
+                    labelStyle: TextStyle(
+                      fontSize: 17.0,
+                      color: Color(0xFF9F86C0),
+                    ),
                     border: OutlineInputBorder(),
                   ),
                   validator: (String? value) {
@@ -68,7 +89,25 @@ class _AddPostState extends State<AddPost> {
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
                   decoration: InputDecoration(
-                      labelText: "Your Name", border: OutlineInputBorder()),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Color(0xFF9F86C0),
+                        width: 2.0,
+                      ),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Color(0xFF1E233C),
+                        width: 3.0,
+                      ),
+                    ),
+                    labelText: "Your Name",
+                    labelStyle: TextStyle(
+                      fontSize: 17.0,
+                      color: Color(0xFF9F86C0),
+                    ),
+                    border: OutlineInputBorder(),
+                  ),
                   validator: (String? value) {
                     if (value == null) {
                       accept = false;
@@ -91,7 +130,25 @@ class _AddPostState extends State<AddPost> {
                 child: TextFormField(
                   maxLines: 20,
                   decoration: InputDecoration(
-                      labelText: "Your Story", border: OutlineInputBorder()),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Color(0xFF9F86C0),
+                        width: 2.0,
+                      ),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Color(0xFF1E233C),
+                        width: 3.0,
+                      ),
+                    ),
+                    labelText: "Your Story",
+                    labelStyle: TextStyle(
+                      fontSize: 17.0,
+                      color: Color(0xFF9F86C0),
+                    ),
+                    border: OutlineInputBorder(),
+                  ),
                   validator: (String? value) {
                     if (value == null) {
                       accept = false;
@@ -122,7 +179,7 @@ class _AddPostState extends State<AddPost> {
           Icons.add,
           color: Colors.white,
         ),
-        backgroundColor: Colors.red,
+        backgroundColor: Color(0xFF1E233C),
         tooltip: "Add Story",
       ),
     );
