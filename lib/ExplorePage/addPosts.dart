@@ -70,7 +70,7 @@ class _AddPostState extends State<AddPost> {
                   ),
                   validator: (String? value) {
                     if (value == null) {
-                      accept = false;
+                      //name="Anonymous";
                       return "* Required";
                     } else if (value.length < 1) {
                       accept = false;
@@ -110,18 +110,18 @@ class _AddPostState extends State<AddPost> {
                   ),
                   validator: (String? value) {
                     if (value == null) {
-                      accept = false;
-                      return "* Required";
+                      name="Anonymous";
+                      return null;
                     } else if (value.length < 1) {
-                      accept = false;
-                      return "* Required";
+                      name="Anonymous";
+                      return null;
                     } else {
                       return null;
                     }
                   },
                   onChanged: (val) {
                     //post.title = val
-                    name = val;
+                        name = val;
                   },
                 ),
               ),
