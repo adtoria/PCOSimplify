@@ -32,13 +32,13 @@ class _AddPostState extends State<AddPost> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFDDE3FD),
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(
           "Add Your Story",
         ),
-        foregroundColor: Colors.black,
-        backgroundColor: Color(0xFFFFD3E1),
+        foregroundColor: Colors.white,
+        backgroundColor: Color(0xFF1E233C),
         elevation: 3.0,
       ),
       body: Form(

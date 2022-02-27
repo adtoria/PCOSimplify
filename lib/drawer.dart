@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:promject/LoginRegister/loginPage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -12,7 +13,7 @@ class OurDrawer extends StatelessWidget {
 
     return Drawer(
       child: Material(
-        color: Colors.white,
+        color: Color(0xFFDDE3FD),
         child: ListView(
           children: <Widget>[
             buildHeader(
@@ -58,11 +59,13 @@ class OurDrawer extends StatelessWidget {
                   Divider(
                     color: Colors.black,
                     thickness: 2.0,
+                    indent: 0,
+                    endIndent: 0,
                   ),
                   const SizedBox(height: 24),
                   buildMenuItem(
                     text: 'Log Out',
-                    icon: Icons.power_settings_new,
+                    icon: Icons.logout,
                     onClicked: () => selectedItem(context, 4),
                   ),
                   const SizedBox(height: 16),
@@ -86,7 +89,7 @@ class OurDrawer extends StatelessWidget {
   }) =>
       Container(
         padding: padding.add(EdgeInsets.symmetric(vertical: 40)),
-        color: Color(0xFFD4F4F6),
+        color: Color(0xFF1E233C),
         child: Row(
           //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           //mainAxisSize: MainAxisSize.min,
@@ -95,7 +98,12 @@ class OurDrawer extends StatelessWidget {
             SizedBox(width: 20),
             Text(
               name,
-              style: TextStyle(fontSize: 20, color: Colors.black),
+              style: TextStyle(
+                fontFamily: 'Lexend Deca',
+                fontSize: 24,
+                color: Colors.white,
+                fontWeight: FontWeight.w500,
+              ),
             ),
           ],
         ),
@@ -107,11 +115,16 @@ class OurDrawer extends StatelessWidget {
     VoidCallback? onClicked,
   }) {
     final color = Colors.black;
-    final hoverColor = Color(0xFF85d1d6);
+    final hoverColor = Colors.black;
 
     return ListTile(
       leading: Icon(icon, color: color),
-      title: Text(text, style: TextStyle(color: color)),
+      title: Text(text,
+          style: TextStyle(
+            color: color,
+            fontSize: 18,
+            fontWeight: FontWeight.w500,
+          )),
       hoverColor: hoverColor,
       onTap: onClicked,
     );
@@ -130,9 +143,7 @@ class OurDrawer extends StatelessWidget {
       case 1:
         //print("Favourites page");
         Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) => ForgotPassword()));
+            context, MaterialPageRoute(builder: (context) => ForgotPassword()));
         break;
       case 4:
         FirebaseAuth.instance.signOut();

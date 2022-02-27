@@ -27,13 +27,13 @@ class _ScreenHolderState extends State<ScreenHolder> {
       body: screens[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,
-        backgroundColor: Color(0xFFFFD3E1),
+        backgroundColor: Color(0xFF1E233C),
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: Color(0xFF1E233C),
         unselectedItemColor: Color(0xFF9F86C0),
+        selectedItemColor: Colors.white,
         showSelectedLabels: true,
         showUnselectedLabels: true,
-        iconSize: 40.0,
+        iconSize: 37.0,
         onTap: (index) {
           setState(() {
             currentIndex = index;
@@ -41,22 +41,34 @@ class _ScreenHolderState extends State<ScreenHolder> {
         },
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0, 2, 0, 0),
+              child: Icon(Icons.home),
+            ),
             label: "Home",
             backgroundColor: Colors.blue,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
+            icon: Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0, 2, 0, 0),
+              child: Icon(Icons.favorite),
+            ),
             label: "Feed",
             backgroundColor: Colors.red,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.chat),
+            icon: Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0, 2, 0, 0),
+              child: Icon(Icons.chat),
+            ),
             label: "Chat",
             backgroundColor: Colors.blue,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
+            icon: Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0, 2, 0, 0),
+              child: Icon(Icons.person),
+            ),
             label: "Explore",
             backgroundColor: Colors.blue,
           ),

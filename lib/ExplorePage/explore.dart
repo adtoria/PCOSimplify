@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'articleTiles.dart';
+import 'leftArticleTiles.dart';
 import 'userClass.dart';
-import 'addPosts.dart';
+import 'addStory.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'viewPosts.dart';
+import 'viewStory.dart';
+import 'rightArticleTile.dart';
 
 class Explorer extends StatefulWidget implements PreferredSizeWidget {
   Explorer({required this.height});
@@ -27,7 +28,7 @@ class _ExplorerState extends State<Explorer> {
           snapshot.docs.map((doc) => User.fromJson(doc.data())).toList());
 
   Widget buildUser(User user) => Padding(
-        padding: EdgeInsetsDirectional.fromSTEB(10, 5, 10, 5),
+        padding: EdgeInsetsDirectional.fromSTEB(12, 7, 12, 7),
         child: ListTile(
           title: Padding(
             padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
@@ -40,7 +41,7 @@ class _ExplorerState extends State<Explorer> {
             user.name,
             style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
           ),
-          tileColor: Color(0xFFA6C1EE),
+          tileColor: Color(0xFFDDE3FD),
           onTap: () => Navigator.push(
               context,
               MaterialPageRoute(
@@ -73,52 +74,56 @@ class _ExplorerState extends State<Explorer> {
                 padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 8),
                 child: _exploreOptionList(context),
               ),
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(10, 5, 10, 5),
-                child: ListTile(
-                  leading: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
-                    child: Container(
-                        width: 50,
-                        height: 50,
-                        clipBehavior: Clip.antiAlias,
-                        decoration: BoxDecoration(
-                          color: Color(0xFF1E233C),
-                          shape: BoxShape.circle,
+              SizedBox(
+                width: 300,
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(12, 8, 12, 12),
+                  child: ListTile(
+                    leading: Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                      child: Container(
+                          width: 50,
+                          height: 50,
+                          clipBehavior: Clip.antiAlias,
+                          decoration: BoxDecoration(
+                            color: Color(0xFF1E233C),
+                            shape: BoxShape.circle,
+                          ),
+                          child: Icon(
+                            Icons.add,
+                            color: Colors.white,
+                            size: 30,
+                          )),
+                    ),
+                    title: Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
+                      //child: Center(
+                        child: Text(
+                          "Add your story",
+                          style: TextStyle(
+                              fontSize: 25, fontWeight: FontWeight.bold),
                         ),
-                        child: Icon(
-                          Icons.add,
-                          color: Colors.white,
-                          size: 30,
-                        )),
-                  ),
-                  title: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
-                    child: Center(
-                      child: Text(
-                        "Share your Stories",
-                        style: TextStyle(
-                            fontSize: 25, fontWeight: FontWeight.bold),
-                      ),
+                      //),
                     ),
+                    // subtitle: Center(
+                    //   child: Text(
+                    //     "Share your Stories",
+                    //     style:
+                    //         TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                    //   ),
+                    // ),
+                    //tileColor: Color(0xFFFFD3E1),
+                    onTap: () => Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => AddPost())),
+                    contentPadding: EdgeInsetsDirectional.fromSTEB(15, 5, 15, 5),
+                    // shape: RoundedRectangleBorder(
+                    //     borderRadius: BorderRadius.circular(15),
+                    //     side: BorderSide(
+                    //       color: Colors.black,
+                    //       width: 3.0,
+                    //     ),
+                    //    ),
                   ),
-                  subtitle: Center(
-                    child: Text(
-                      "Share your Stories",
-                      style:
-                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                  tileColor: Color(0xFFFFD3E1),
-                  onTap: () => Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => AddPost())),
-                  contentPadding: EdgeInsetsDirectional.fromSTEB(15, 5, 15, 5),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15),
-                      side: BorderSide(
-                        color: Colors.black,
-                        width: 3.0,
-                      )),
                 ),
               ),
               StreamBuilder<List<User>>(
@@ -158,72 +163,35 @@ class _ExplorerState extends State<Explorer> {
                       child: Column(
                         //crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(5, 5, 10, 5),
-                            child: SizedBox(
-                              height: 100,
-                              child: Tiles(
-                                articleUrl:
-                                    'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
-                                categoryName: "Pregnancy",
-                                source: "Youtube",
-                              ),
-                            ),
+                          LeftTiles(
+                            height: 100,
+                            articleUrl:
+                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                            categoryName: "Pregnancy",
+                            source: "Youtube",
                           ),
-                          Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(5, 5, 10, 5),
-                            child: SizedBox(
-                              height: 200,
-                              child: Tiles(
-                                articleUrl:
-                                    'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
-                                categoryName:
-                                    "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
-                                source: "Youtube",
-                              ),
-                            ),
+                          LeftTiles(
+                            height: 200,
+                            articleUrl:
+                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                            categoryName:
+                                "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
+                            source: "Youtube",
                           ),
-                          Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(5, 5, 10, 5),
-                            child: SizedBox(
-                              height: 300,
-                              child: Tiles(
-                                articleUrl:
-                                    'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
-                                categoryName:
-                                    "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
-                                source: "Youtube",
-                              ),
-                            ),
+                          LeftTiles(
+                            height: 300,
+                            articleUrl:
+                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                            categoryName:
+                                "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
+                            source: "Youtube",
                           ),
-                          Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(5, 5, 10, 5),
-                            child: SizedBox(
-                              height: 150,
-                              child: Tiles(
-                                articleUrl:
-                                    'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
-                                categoryName: "Pregnancy fkb",
-                                source: "Youtube",
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(5, 5, 10, 5),
-                            child: SizedBox(
-                              height: 500,
-                              child: Tiles(
-                                articleUrl:
-                                    'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
-                                categoryName: "Pregnancy fkb",
-                                source: "Youtube",
-                              ),
-                            ),
+                          LeftTiles(
+                            height: 150,
+                            articleUrl:
+                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                            categoryName: "Pregnancy fkb",
+                            source: "Youtube",
                           ),
                         ],
                       ),
@@ -232,59 +200,20 @@ class _ExplorerState extends State<Explorer> {
                       child: Column(
                         //crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(5, 5, 10, 5),
-                            child: SizedBox(
-                              height: 350,
-                              child: Tiles(
-                                articleUrl:
-                                    'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
-                                categoryName: "Pregnancy",
-                                source: "Youtube",
-                              ),
-                            ),
+                          RightTiles(
+                            height: 350,
+                            articleUrl:
+                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                            categoryName: "Pregnancy",
+                            source: "Youtube",
                           ),
-                          Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(5, 5, 10, 5),
-                            child: SizedBox(
-                              height: 480,
-                              child: Tiles(
-                                articleUrl:
-                                    'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
-                                categoryName:
-                                    "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
-                                source: "Youtube",
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(5, 5, 10, 5),
-                            child: SizedBox(
-                              height: 510,
-                              child: Tiles(
-                                articleUrl:
-                                    'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
-                                categoryName:
-                                    "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
-                                source: "Youtube",
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(5, 5, 10, 5),
-                            child: SizedBox(
-                              height: 461,
-                              child: Tiles(
-                                articleUrl:
-                                    'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
-                                categoryName: "Pregnancy fkb",
-                                source: "Youtube",
-                              ),
-                            ),
+                          RightTiles(
+                            height: 480,
+                            articleUrl:
+                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                            categoryName:
+                                "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
+                            source: "Youtube",
                           ),
                         ],
                       ),
@@ -405,10 +334,10 @@ class _ExplorerState extends State<Explorer> {
           child: Container(
             margin: EdgeInsets.only(right: 5),
             padding: EdgeInsets.symmetric(horizontal: 5),
-            height: 33.5,
+            height: 38,
             decoration: BoxDecoration(
-              color: Color(0xFF9F86C0),
-              borderRadius: BorderRadius.circular(25),
+              color: Color(0xFF1E233C),
+              borderRadius: BorderRadius.circular(30),
               border: Border.all(
                 color: Colors.black,
                 style: BorderStyle.solid,
@@ -424,7 +353,7 @@ class _ExplorerState extends State<Explorer> {
                   child: Text(
                     title,
                     style: TextStyle(
-                      color: Colors.black,
+                      color: Colors.white,
                       fontSize: 18.5,
                       fontWeight: FontWeight.w500,
                     ),

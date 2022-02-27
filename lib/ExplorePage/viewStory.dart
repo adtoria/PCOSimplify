@@ -12,11 +12,11 @@ class SeeStories extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color(0xFFDDE3FD),
+        backgroundColor: Colors.white,
         appBar: AppBar(
           title: Text("$name's Story"),
-          backgroundColor: Color(0xFFFFD3E1),
-          foregroundColor: Colors.black,
+          backgroundColor: Color(0xFF1E233C),
+          foregroundColor: Colors.white,
           elevation: 3.0,
         ),
         body: SingleChildScrollView(

@@ -10,7 +10,7 @@ import 'LoginRegister/loginPage.dart';
 import 'LoginRegister/registrationPage.dart';
 import 'ExplorePage/exploreMain.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'ExplorePage/addPosts.dart';
+import 'ExplorePage/addStory.dart';
 import 'ExplorePage/homePosts.dart';
 import 'LoginRegister/forgotPassword.dart';
 

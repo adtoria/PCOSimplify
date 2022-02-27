@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -41,7 +42,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Colors.black,
+        backgroundColor: Color(0xFF1E233C),
         title: Text("Reset Password"),
       ),
       
@@ -52,10 +53,18 @@ class _ForgotPasswordState extends State<ForgotPassword> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("Receieve an email to\nreset your password.",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 24,
+              Container(
+                color: Color(0xFF9F86C0),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
+                  child: Text("Enter your email address that you used to register. "
+                      "We'll send you an email with a link to reset your password.",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 17,
+                      fontWeight: FontWeight.w700
+                    ),
+                  ),
                 ),
               ),
               SizedBox(height: 20.0,),
@@ -79,16 +88,23 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                   }
                 }
               ),
-              SizedBox(height: 20.0,),
-              ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(
-                  minimumSize: Size.fromHeight(50),
+              SizedBox(height: 45.0,),
+              SizedBox(
+                width: 155,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    minimumSize: Size.fromHeight(50),
+                    primary: Color(0xFF1E233C),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)
+                    )
+                  ),
+                  //icon: Icon(Icons.email_outlined),
+                  child: Text("Send",
+                    style: TextStyle(fontSize: 24),
+                  ),
+                  onPressed: resetPassword,
                 ),
-                icon: Icon(Icons.email_outlined),
-                label: Text("Reset Password",
-                  style: TextStyle(fontSize: 24),
-                ),
-                onPressed: resetPassword,
               )
             ],
           ),

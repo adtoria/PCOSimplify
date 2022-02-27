@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'userClass.dart';
-import 'addPosts.dart';
-import 'viewPosts.dart';
+import 'addStory.dart';
+import 'viewStory.dart';
 
 class PostView extends StatefulWidget {
   @override
