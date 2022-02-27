@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:promject/LoginRegister/loginPage.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'LoginRegister/forgotPassword.dart';
 
 class OurDrawer extends StatelessWidget {
   final padding = EdgeInsets.symmetric(horizontal: 20);
@@ -35,7 +38,7 @@ class OurDrawer extends StatelessWidget {
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
-                    text: 'Settings',
+                    text: 'Change Password',
                     icon: Icons.settings,
                     onClicked: () => selectedItem(context, 1),
                   ),
@@ -58,8 +61,8 @@ class OurDrawer extends StatelessWidget {
                   ),
                   const SizedBox(height: 24),
                   buildMenuItem(
-                    text: 'Plugins',
-                    icon: Icons.account_tree_outlined,
+                    text: 'Log Out',
+                    icon: Icons.power_settings_new,
                     onClicked: () => selectedItem(context, 4),
                   ),
                   const SizedBox(height: 16),
@@ -125,10 +128,17 @@ class OurDrawer extends StatelessWidget {
         // ));
         break;
       case 1:
-        print("Favourites page");
-        // Navigator.of(context).push(MaterialPageRoute(
-        //   builder: (context) => FavouritesPage(),
-        // ));
+        //print("Favourites page");
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => ForgotPassword()));
+        break;
+      case 4:
+        FirebaseAuth.instance.signOut();
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => LoginPage(),
+        ));
         break;
     }
   }

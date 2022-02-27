@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:promject/LoginRegister/forgotPassword.dart';
 import '../screenHolder.dart';
 import 'registrationPage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -78,7 +79,7 @@ class _LoginPageState extends State<LoginPage> {
                               labelStyle: TextStyle(
                                 fontFamily: 'Lexend Deca',
                                 color: Color(0xFF95A1AC),
-                                fontSize: 14,
+                                fontSize: 16,
                                 fontWeight: FontWeight.normal,
                               ),
                               hintText: 'Enter your email here...',
@@ -129,7 +130,11 @@ class _LoginPageState extends State<LoginPage> {
                             validator: (String? value) {
                               if (value == null) {
                                 return "* Required";
-                              } else {
+                              }
+                              else if (value.length < 6) {
+                                return "Password should be atleast 6 characters";
+                              }
+                              else {
                                 return null;
                               }
                             },
@@ -148,10 +153,10 @@ class _LoginPageState extends State<LoginPage> {
                               labelStyle: TextStyle(
                                 fontFamily: 'Lexend Deca',
                                 color: Color(0xFF95A1AC),
-                                fontSize: 14,
+                                fontSize: 16,
                                 fontWeight: FontWeight.normal,
                               ),
-                              hintText: 'Enter your password here...]',
+                              hintText: 'Enter your password here...',
                               hintStyle: TextStyle(
                                 fontFamily: 'Lexend Deca',
                                 color: Color(0xFF95A1AC),
@@ -243,7 +248,10 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                         MaterialButton(
                           onPressed: () {
-                            print('Button-ForgotPassword pressed ...');
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => ForgotPassword()));
                           },
                           child: Text(
                             'Forgot Password?',
