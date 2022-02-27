@@ -91,8 +91,8 @@ class _StartedState extends State<Started> {
                                 radius: 16,
                                 dotWidth: 16,
                                 dotHeight: 16,
-                                dotColor: Color(0xFFA89FFF),
-                                activeDotColor: Color(0xFF311E69),
+                                dotColor: Color(0xFF9F86C0),
+                                activeDotColor: Color(0xFF1E233C),
                                 paintStyle: PaintingStyle.fill,
                               ),
                             ),
@@ -112,14 +112,14 @@ class _StartedState extends State<Started> {
                   child: Text(
                     "Get Started",
                     style: TextStyle(
-                      fontSize: 22.0,
+                      fontSize: 24.0,
                       color: Colors.white,
-                      fontWeight: FontWeight.w900,
+                      fontWeight: FontWeight.w700,
                     ),
                   ),
                   minWidth: 225.0,
                   height: 50.0,
-                  color: Color(0xFF311E69),
+                  color: Color(0xFF1E233C),
                   elevation: 2,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(35.0),

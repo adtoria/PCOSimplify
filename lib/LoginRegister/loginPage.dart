@@ -36,7 +36,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFFFCECE),
+      backgroundColor: Color(0xFF9F86C0),
       body: SafeArea(
         child: Padding(
           padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
@@ -235,7 +235,7 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                           minWidth: 130,
                           height: 60,
-                          color: Color(0xFF710193),
+                          color: Color(0xFF1E233C),
                           elevation: 3,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10.0),
@@ -355,7 +355,7 @@ class _LoginPageState extends State<LoginPage> {
                             'Register',
                             style: TextStyle(
                               fontFamily: 'Lexend Deca',
-                              color: Color(0xFF39D2C0),
+                              color: Color(0xFF1E233C),
                               fontSize: 14,
                               fontWeight: FontWeight.bold,
                             ),

@@ -37,7 +37,7 @@ class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFA79AFF),
+      backgroundColor: Color(0xFF9F86C0),
       body: SafeArea(
         child: Padding(
           padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
@@ -311,7 +311,7 @@ class _RegisterState extends State<Register> {
                           ),
                           minWidth: 130,
                           height: 60,
-                          color: Color(0xFF090F13),
+                          color: Color(0xFF1E233C),
                           elevation: 3,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10.0),
