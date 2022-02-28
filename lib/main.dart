@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:promject/ExplorePage/explore.dart';
 import 'package:promject/ExplorePage/exploreMain.dart';
+import 'package:promject/Health/foodMain.dart';
 import 'package:promject/Tracker/calendarWidget.dart';
 import 'package:promject/screenHolder.dart';
 import 'getStarted.dart';
@@ -25,7 +26,7 @@ class AppName extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       //scaffoldMessengerKey: Utilss.messengerKey,
-      home: ScreenHolder(),
+      home: FoodMain(),
       //initialRoute: Started.id,
       routes: {
         Started.id: (context) => Started(),
