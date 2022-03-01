@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:promject/ExplorePage/exploreMain.dart';
+import 'package:promject/Tracker/calendarWidget.dart';
 import 'profilePage.dart';
 import 'drawer.dart';
 
@@ -14,7 +15,8 @@ class _ScreenHolderState extends State<ScreenHolder> {
 
   final screens = [
     Center(child: Text("A", style: TextStyle(fontSize: 60.0))),
-    Center(child: Text("B", style: TextStyle(fontSize: 60.0))),
+    //Center(child: Text("B", style: TextStyle(fontSize: 60.0))),
+    CalendarWidget(),
     Center(child: Text("C", style: TextStyle(fontSize: 60.0))),
     //ProfilePage()
     ExploreMain()
@@ -53,7 +55,7 @@ class _ScreenHolderState extends State<ScreenHolder> {
               padding: EdgeInsetsDirectional.fromSTEB(0, 2, 0, 0),
               child: Icon(Icons.favorite),
             ),
-            label: "Feed",
+            label: "Tracker",
             backgroundColor: Colors.red,
           ),
           BottomNavigationBarItem(

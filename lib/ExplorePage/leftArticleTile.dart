@@ -7,7 +7,7 @@ class LeftTiles extends StatelessWidget {
       required this.categoryName,
       required this.source,
       required this.height});
-  final String articleUrl, categoryName,source;
+  final String articleUrl, categoryName, source;
   final double height;
 
   @override
@@ -38,7 +38,7 @@ class LeftTiles extends StatelessWidget {
                 color: Color(0xFF595B82),
                 width: 4,
               )),
-          onTap: (){
+          onTap: () {
             launch(articleUrl);
           },
         ),

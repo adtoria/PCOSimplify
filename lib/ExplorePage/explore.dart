@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'leftArticleTiles.dart';
+import 'leftArticleTile.dart';
 import 'userClass.dart';
 import 'addStory.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -98,11 +98,11 @@ class _ExplorerState extends State<Explorer> {
                     title: Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
                       //child: Center(
-                        child: Text(
-                          "Add your story",
-                          style: TextStyle(
-                              fontSize: 25, fontWeight: FontWeight.bold),
-                        ),
+                      child: Text(
+                        "Add your story",
+                        style: TextStyle(
+                            fontSize: 25, fontWeight: FontWeight.bold),
+                      ),
                       //),
                     ),
                     // subtitle: Center(
@@ -115,7 +115,8 @@ class _ExplorerState extends State<Explorer> {
                     //tileColor: Color(0xFFFFD3E1),
                     onTap: () => Navigator.push(context,
                         MaterialPageRoute(builder: (context) => AddPost())),
-                    contentPadding: EdgeInsetsDirectional.fromSTEB(15, 5, 15, 5),
+                    contentPadding:
+                        EdgeInsetsDirectional.fromSTEB(15, 5, 15, 5),
                     // shape: RoundedRectangleBorder(
                     //     borderRadius: BorderRadius.circular(15),
                     //     side: BorderSide(

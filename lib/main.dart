@@ -3,7 +3,9 @@ import 'package:promject/ExplorePage/explore.dart';
 import 'package:promject/ExplorePage/exploreMain.dart';
 import 'package:promject/Health/foodMain.dart';
 import 'package:promject/Tracker/calendarWidget.dart';
+import 'package:promject/Tracker/eventProvider.dart';
 import 'package:promject/screenHolder.dart';
+import 'package:provider/provider.dart';
 import 'getStarted.dart';
 import 'screenHolder.dart';
 import 'profilePage.dart';
@@ -24,17 +26,19 @@ void main() async {
 class AppName extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      //scaffoldMessengerKey: Utilss.messengerKey,
-      home: FoodMain(),
-      //initialRoute: Started.id,
-      routes: {
-        Started.id: (context) => Started(),
-        LoginPage.id: (context) => LoginPage(),
-        Register.id: (context) => Register(),
-        ProfilePage.id: (context) => ProfilePage(),
-        ScreenHolder.id: (context) => ScreenHolder(),
-      },
+    return ChangeNotifierProvider(
+      create: (context) => EventProvider(),
+      child: MaterialApp(
+        home: ScreenHolder(),
+        //initialRoute: Started.id,
+        routes: {
+          Started.id: (context) => Started(),
+          LoginPage.id: (context) => LoginPage(),
+          Register.id: (context) => Register(),
+          ProfilePage.id: (context) => ProfilePage(),
+          ScreenHolder.id: (context) => ScreenHolder(),
+        },
+      ),
     );
   }
 }
