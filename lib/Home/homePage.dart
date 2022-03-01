@@ -12,7 +12,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-
   _onTap() {
     Navigator.of(context).push(
       MaterialPageRoute(
@@ -39,7 +38,6 @@ class _HomeState extends State<Home> {
         backgroundColor: Color(0xFF1E233C),
         title: Text("Home"),
       ),
-
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         backgroundColor: Color(0xFF1E233C),
@@ -67,7 +65,7 @@ class _HomeState extends State<Home> {
           BottomNavigationBarItem(
             icon: Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0, 2, 0, 0),
-              child: Icon(Icons.favorite),
+              child: Icon(Icons.alarm),
             ),
             label: "Tracker",
             backgroundColor: Colors.red,
@@ -75,15 +73,15 @@ class _HomeState extends State<Home> {
           BottomNavigationBarItem(
             icon: Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0, 2, 0, 0),
-              child: Icon(Icons.chat),
+              child: Icon(Icons.favorite),
             ),
-            label: "Chat",
+            label: "Health",
             backgroundColor: Colors.blue,
           ),
           BottomNavigationBarItem(
             icon: Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0, 2, 0, 0),
-              child: Icon(Icons.person),
+              child: Icon(Icons.travel_explore),
             ),
             label: "Explore",
             backgroundColor: Colors.blue,
