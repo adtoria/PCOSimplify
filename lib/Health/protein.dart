@@ -16,12 +16,15 @@ class _ProteinState extends State<Protein> {
     return SafeArea(
         child: Scaffold(
           appBar: AppBar(
+            foregroundColor: Colors.white,
+            backgroundColor: Color(0xFF1E233C),
             title: Text("Protein rich food"),
           ),
-          body: Column(
-            children: [
-              Expanded(
-                child: ListView.builder(
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                ListView.builder(
+                  shrinkWrap: true,
                   itemCount: items.length,
                   itemBuilder: (context,index){
                     final item=items[index];
@@ -48,9 +51,9 @@ class _ProteinState extends State<Protein> {
                       ),
                     );
                   },
-                ),
-              )
-            ],
+                )
+              ],
+            ),
           ),
         )
     );

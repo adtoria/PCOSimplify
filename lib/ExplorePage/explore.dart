@@ -65,7 +65,7 @@ class _ExplorerState extends State<Explorer> {
     return PageView(
       controller: pageViewController,
       children: [
-        //Page 1
+        //Page 0
         SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Column(
@@ -147,7 +147,7 @@ class _ExplorerState extends State<Explorer> {
           ),
         ),
 
-        //Page 2
+        //Page 1
         SingleChildScrollView(
           child: Column(
             children: [
@@ -226,6 +226,24 @@ class _ExplorerState extends State<Explorer> {
           ),
         ),
 
+        //Page 2
+        Column(
+          children: [
+            Container(
+              margin: EdgeInsets.only(top: 10),
+              //height: height - 20,
+              child: Column(
+                children: [
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 10),
+                    child: _exploreOptionList(context),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+
         //Page 3
         Column(
           children: [
@@ -234,7 +252,10 @@ class _ExplorerState extends State<Explorer> {
               //height: height - 20,
               child: Column(
                 children: [
-                  _exploreOptionList(context),
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 10),
+                    child: _exploreOptionList(context),
+                  ),
                 ],
               ),
             ),
@@ -249,11 +270,93 @@ class _ExplorerState extends State<Explorer> {
               //height: height - 20,
               child: Column(
                 children: [
-                  _exploreOptionList(context),
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 10),
+                    child: _exploreOptionList(context),
+                  ),
                 ],
               ),
             ),
           ],
+        ),
+
+        //Page 5
+        SingleChildScrollView(
+          child: Column(
+            children: [
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 10),
+                child: _exploreOptionList(context),
+              ),
+              SingleChildScrollView(
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      child: Column(
+                        //crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          LeftTiles(
+                            height: 180,
+                            articleUrl:
+                            'https://www.healthstatus.com/health_blog/pcos/7-ways-to-lower-stress-with-pcos/',
+                            categoryName: "7 Ways To Lower Stress With PCOS",
+                            source: "healthstatus.com",
+                          ),
+                          LeftTiles(
+                            height: 200,
+                            articleUrl:
+                            'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                            categoryName:
+                            "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
+                            source: "Youtube",
+                          ),
+                          LeftTiles(
+                            height: 300,
+                            articleUrl:
+                            'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                            categoryName:
+                            "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
+                            source: "Youtube",
+                          ),
+                          LeftTiles(
+                            height: 150,
+                            articleUrl:
+                            'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                            categoryName: "Pregnancy fkb",
+                            source: "Youtube",
+                          ),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      child: Column(
+                        //crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          RightTiles(
+                            height: 350,
+                            articleUrl:
+                            'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                            categoryName: "Pregnancy",
+                            source: "Youtube",
+                          ),
+                          RightTiles(
+                            height: 480,
+                            articleUrl:
+                            'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                            categoryName:
+                            "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
+                            source: "Youtube",
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ],
     );
@@ -285,34 +388,49 @@ class _ExplorerState extends State<Explorer> {
             index: 2,
           ),
           _exploreTiles(
-            title: 'Exercises',
+            title: 'Acne/Haircare',
             context: context,
             index: 3,
           ),
           _exploreTiles(
-            title: 'Diet',
+            title: 'Gut Health',
             context: context,
             index: 4,
           ),
           _exploreTiles(
-            title: 'Food',
+            title: 'Stress Management',
             context: context,
             index: 5,
           ),
           _exploreTiles(
-            title: 'Art',
+            title: 'Sleep Management',
             context: context,
             index: 6,
           ),
           _exploreTiles(
-            title: 'Style',
+            title: 'Periods',
             context: context,
             index: 7,
           ),
           _exploreTiles(
-            title: 'TV & Movies',
+            title: 'Hirsutism',
             context: context,
             index: 8,
+          ),
+          _exploreTiles(
+            title: 'Transgender',
+            context: context,
+            index: 9,
+          ),
+          _exploreTiles(
+            title: 'Diabetes',
+            context: context,
+            index: 10,
+          ),
+          _exploreTiles(
+            title: 'Workout',
+            context: context,
+            index: 11,
           ),
         ],
       ),

@@ -9,6 +9,8 @@ class FoodPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        foregroundColor: Colors.white,
+        backgroundColor: Color(0xFF1E233C),
         title: Text(item.title),
       ),
       body: Text(item.text),

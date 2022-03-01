@@ -69,6 +69,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
               ),
               SizedBox(height: 20.0,),
               TextFormField(
+                keyboardType: TextInputType.emailAddress,
                 controller: emailController,
                 cursorColor: Colors.white,
                 textInputAction: TextInputAction.done,

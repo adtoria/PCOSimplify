@@ -33,7 +33,7 @@ class OurDrawer extends StatelessWidget {
                   Divider(color: Colors.white70),
                   const SizedBox(height: 12),
                   buildMenuItem(
-                    text: 'People',
+                    text: 'ADD',
                     icon: Icons.people,
                     onClicked: () => selectedItem(context, 0),
                   ),
@@ -45,13 +45,13 @@ class OurDrawer extends StatelessWidget {
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
-                    text: 'Users Page',
+                    text: 'ADD',
                     icon: Icons.add_comment_outlined,
                     onClicked: () => selectedItem(context, 2),
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
-                    text: 'Updates',
+                    text: 'ADD',
                     icon: Icons.update,
                     onClicked: () => selectedItem(context, 3),
                   ),
@@ -70,7 +70,7 @@ class OurDrawer extends StatelessWidget {
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
-                    text: 'Notifications',
+                    text: 'ADD',
                     icon: Icons.notifications_outlined,
                     onClicked: () => selectedItem(context, 5),
                   ),

@@ -42,90 +42,95 @@ class _FoodMainState extends State<FoodMain> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        drawer: OurDrawer(),
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
-                child: Row(
+        // drawer: OurDrawer(),
+        appBar: AppBar(
+          foregroundColor: Colors.white,
+          backgroundColor: Color(0xFF1E233C),
+          automaticallyImplyLeading: false,
+          title: Padding(
+            padding: EdgeInsetsDirectional.fromSTEB(0, 15, 0, 15),
+            child: Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(
                   mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Column(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 12, 0, 0),
-                          child: Text(
-                            'Food',
-                            style: TextStyle(
-                              fontFamily: 'Lexend Deca',
-                              color: Colors.black,
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 2),
+                      child: Text(
+                        'Food',
+                        style: TextStyle(
+                          fontFamily: 'Lexend Deca',
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
                         ),
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 12, 0, 0),
-                          child: Container(
-                            width: 90,
-                            height: 3,
-                            decoration: BoxDecoration(
-                              color: Colors.red,
-                              borderRadius: BorderRadius.circular(2),
-                            ),
-                          ),
-                        ),
-                      ],
+                      ),
                     ),
-                    Column(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 2, 0, 0),
-                          child: MaterialButton(
-                            onPressed: () {
-                              Navigator.pushReplacement(
-                                  context,
-                                  PageRouteBuilder(
-                                    pageBuilder:
-                                        (context, animation1, animation2) =>
-                                            WorkoutMain(),
-                                    transitionDuration: Duration.zero,
-                                    reverseTransitionDuration: Duration.zero,
-                                  ));
-                            },
-                            child: Text(
-                              'Workout',
-                              style: TextStyle(
-                                fontFamily: 'Lexend Deca',
-                                color: Colors.black,
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            minWidth: 100,
-                            height: 50,
-                          ),
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
+                      child: Container(
+                        width: 90,
+                        height: 3,
+                        decoration: BoxDecoration(
+                          color: Colors.red,
+                          borderRadius: BorderRadius.circular(2),
                         ),
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 7, 0, 0),
-                          child: Container(
-                            width: 90,
-                            height: 3,
-                            decoration: BoxDecoration(
-                              //color: Color(0xFF4B39EF),
-                              borderRadius: BorderRadius.circular(2),
-                            ),
-                          ),
-                        ),
-                      ],
+                      ),
                     ),
                   ],
                 ),
-              ),
+                Column(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                      child: MaterialButton(
+                        onPressed: () {
+                          Navigator.pushReplacement(
+                              context,
+                              PageRouteBuilder(
+                                pageBuilder:
+                                    (context, animation1, animation2) =>
+                                    WorkoutMain(),
+                                transitionDuration: Duration.zero,
+                                reverseTransitionDuration: Duration.zero,
+                              ));
+                        },
+                        child: Text(
+                          'Workout',
+                          style: TextStyle(
+                            fontFamily: 'Lexend Deca',
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        minWidth: 100,
+                        height: 50,
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                      child: Container(
+                        width: 90,
+                        height: 3,
+                        decoration: BoxDecoration(
+                          //color: Color(0xFF4B39EF),
+                          borderRadius: BorderRadius.circular(2),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ),
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
               Column(
                 children: [
                   Container(
@@ -152,7 +157,7 @@ class _FoodMainState extends State<FoodMain> {
                                   padding: const EdgeInsets.all(8.0),
                                   child: Icon(
                                     Icons.search_off,
-                                    size: 160,
+                                    size: 130,
                                   ),
                                 ),
                                 Padding(

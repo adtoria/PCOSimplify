@@ -35,6 +35,8 @@ class _HomeState extends State<Home> {
     return Scaffold(
       drawer: OurDrawer(),
       appBar: AppBar(
+        foregroundColor: Colors.white,
+        backgroundColor: Color(0xFF1E233C),
         title: Text("Home"),
       ),
 
