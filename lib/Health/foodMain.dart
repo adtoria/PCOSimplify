@@ -4,6 +4,7 @@ import 'nutrientList.dart';
 import 'package:promject/Tracker/calendarWidget.dart';
 import 'package:promject/ExplorePage/exploreMain.dart';
 import 'package:promject/drawer.dart';
+import 'package:promject/Home/homePage.dart';
 
 class FoodMain extends StatefulWidget {
   @override
@@ -23,7 +24,7 @@ class _FoodMainState extends State<FoodMain> {
   }
 
   final List<Widget> _children = [
-    ExploreMain(),
+    Home(),
     CalendarWidget(),
     FoodMain(),
     ExploreMain()

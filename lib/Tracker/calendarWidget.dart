@@ -8,6 +8,7 @@ import 'eventProvider.dart';
 import 'package:promject/ExplorePage/exploreMain.dart';
 import 'package:promject/Health/foodMain.dart';
 import 'package:promject/drawer.dart';
+import 'package:promject/Home/homePage.dart';
 
 class CalendarWidget extends StatefulWidget {
   static const String id = "calendar_widget";
@@ -26,7 +27,7 @@ class _CalendarWidgetState extends State<CalendarWidget> {
   }
 
   final List<Widget> _children = [
-    ExploreMain(),
+    Home(),
     CalendarWidget(),
     FoodMain(),
     ExploreMain()

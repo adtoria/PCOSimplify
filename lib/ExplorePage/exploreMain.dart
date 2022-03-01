@@ -3,6 +3,7 @@ import 'explore.dart';
 import 'package:promject/drawer.dart';
 import 'package:promject/Health/foodMain.dart';
 import 'package:promject/Tracker/calendarWidget.dart';
+import 'package:promject/Home/homePage.dart';
 
 class ExploreMain extends StatefulWidget {
   const ExploreMain({Key? key}) : super(key: key);
@@ -21,7 +22,7 @@ class _ExploreMainState extends State<ExploreMain> {
   }
 
   final List<Widget> _children = [
-    ExploreMain(),
+    Home(),
     CalendarWidget(),
     FoodMain(),
     ExploreMain()

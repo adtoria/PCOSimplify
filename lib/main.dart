@@ -16,6 +16,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'ExplorePage/addStory.dart';
 import 'ExplorePage/homePosts.dart';
 import 'LoginRegister/forgotPassword.dart';
+import 'package:promject/Home/homePage.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -29,7 +30,7 @@ class AppName extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => EventProvider(),
       child: MaterialApp(
-        home: CalendarWidget(),
+        home: Home(),
         //initialRoute: Started.id,
         routes: {
           Started.id: (context) => Started(),

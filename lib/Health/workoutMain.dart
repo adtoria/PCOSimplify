@@ -3,6 +3,7 @@ import 'package:promject/Health/foodMain.dart';
 import 'package:promject/Tracker/calendarWidget.dart';
 import 'package:promject/ExplorePage/exploreMain.dart';
 import 'package:promject/drawer.dart';
+import 'package:promject/Home/homePage.dart';
 
 class WorkoutMain extends StatefulWidget {
   @override
@@ -19,7 +20,7 @@ class _WorkoutMainState extends State<WorkoutMain> {
   }
 
   final List<Widget> _children = [
-    ExploreMain(),
+    Home(),
     CalendarWidget(),
     FoodMain(),
     ExploreMain()
@@ -32,10 +33,6 @@ class _WorkoutMainState extends State<WorkoutMain> {
     return SafeArea(
       child: Scaffold(
         drawer: OurDrawer(),
-        appBar: AppBar(
-          title: Center(child: Text("Health")),
-          automaticallyImplyLeading: false,
-        ),
         body: Padding(
           padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
           child: Row(

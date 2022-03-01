@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import '../screenHolder.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:promject/Home/homePage.dart';
 
 class Register extends StatefulWidget {
   static const String id = 'registration_page';
@@ -293,7 +294,10 @@ class _RegisterState extends State<Register> {
                                     await _auth.createUserWithEmailAndPassword(
                                         email: email, password: password);
                                 if (newUser != null) {
-                                  Navigator.pushNamed(context, ScreenHolder.id);
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => Home()));
                                 }
                               } catch (e) {
                                 print(e);

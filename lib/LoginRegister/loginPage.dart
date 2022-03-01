@@ -5,6 +5,7 @@ import 'package:promject/LoginRegister/forgotPassword.dart';
 import '../screenHolder.dart';
 import 'registrationPage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:promject/Home/homePage.dart';
 
 class LoginPage extends StatefulWidget {
   static const String id = 'login_page';
@@ -220,7 +221,10 @@ class _LoginPageState extends State<LoginPage> {
                                     await _auth.signInWithEmailAndPassword(
                                         email: email, password: password);
                                 if (newUser != null) {
-                                  Navigator.pushNamed(context, ScreenHolder.id);
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => Home()));
                                 }
                               } catch (e) {
                                 setState(() {
