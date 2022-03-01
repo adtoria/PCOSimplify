@@ -1,12 +1,37 @@
 import 'package:flutter/material.dart';
 import 'package:promject/Health/foodMain.dart';
+import 'package:promject/Tracker/calendarWidget.dart';
+import 'package:promject/ExplorePage/exploreMain.dart';
+import 'package:promject/drawer.dart';
 
-class WorkoutMain extends StatelessWidget {
+class WorkoutMain extends StatefulWidget {
+  @override
+  State<WorkoutMain> createState() => _WorkoutMainState();
+}
+
+class _WorkoutMainState extends State<WorkoutMain> {
+  _onTap() {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (BuildContext context) => _children[_currentIndex],
+      ),
+    ); // this has changed
+  }
+
+  final List<Widget> _children = [
+    ExploreMain(),
+    CalendarWidget(),
+    FoodMain(),
+    ExploreMain()
+  ];
+
+  int _currentIndex = 2;
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        drawer: OurDrawer(),
         appBar: AppBar(
           title: Center(child: Text("Health")),
           automaticallyImplyLeading: false,
@@ -25,18 +50,21 @@ class WorkoutMain extends StatelessWidget {
                       Navigator.pushReplacement(
                           context,
                           PageRouteBuilder(
-                            pageBuilder: (context, animation1, animation2) => FoodMain(),
+                            pageBuilder: (context, animation1, animation2) =>
+                                FoodMain(),
                             transitionDuration: Duration.zero,
                             reverseTransitionDuration: Duration.zero,
                           ));
                     },
-                    child: Text('Food',
+                    child: Text(
+                      'Food',
                       style: TextStyle(
                         fontFamily: 'Lexend Deca',
                         color: Colors.black,
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
-                      ),),
+                      ),
+                    ),
                     // options: FFButtonOptions(
                     minWidth: 100,
                     height: 50,
@@ -50,8 +78,7 @@ class WorkoutMain extends StatelessWidget {
                     //),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(
-                        0, 12, 0, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 12, 0, 0),
                     child: Container(
                       width: 90,
                       height: 3,
@@ -79,8 +106,7 @@ class WorkoutMain extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(
-                        0, 12, 0, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 12, 0, 0),
                     child: Container(
                       width: 90,
                       height: 3,
@@ -94,6 +120,56 @@ class WorkoutMain extends StatelessWidget {
               ),
             ],
           ),
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          currentIndex: _currentIndex,
+          backgroundColor: Color(0xFF1E233C),
+          type: BottomNavigationBarType.fixed,
+          unselectedItemColor: Color(0xFF9F86C0),
+          selectedItemColor: Colors.white,
+          showSelectedLabels: true,
+          showUnselectedLabels: true,
+          iconSize: 37.0,
+          onTap: (index) {
+            setState(() {
+              _currentIndex = index;
+            });
+            _onTap();
+          },
+          items: [
+            BottomNavigationBarItem(
+              icon: Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 2, 0, 0),
+                child: Icon(Icons.home),
+              ),
+              label: "Home",
+              backgroundColor: Colors.blue,
+            ),
+            BottomNavigationBarItem(
+              icon: Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 2, 0, 0),
+                child: Icon(Icons.favorite),
+              ),
+              label: "Tracker",
+              backgroundColor: Colors.red,
+            ),
+            BottomNavigationBarItem(
+              icon: Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 2, 0, 0),
+                child: Icon(Icons.chat),
+              ),
+              label: "Chat",
+              backgroundColor: Colors.blue,
+            ),
+            BottomNavigationBarItem(
+              icon: Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 2, 0, 0),
+                child: Icon(Icons.person),
+              ),
+              label: "Explore",
+              backgroundColor: Colors.blue,
+            ),
+          ],
         ),
       ),
     );

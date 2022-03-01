@@ -29,7 +29,7 @@ class AppName extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => EventProvider(),
       child: MaterialApp(
-        home: ScreenHolder(),
+        home: CalendarWidget(),
         //initialRoute: Started.id,
         routes: {
           Started.id: (context) => Started(),
