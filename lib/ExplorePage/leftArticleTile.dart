@@ -19,17 +19,17 @@ class LeftTiles extends StatelessWidget {
         child: ListTile(
           tileColor: Color(0xFFFFD3E1),
           title: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 5),
+            padding: EdgeInsetsDirectional.fromSTEB(0, 15, 0, 5),
             child: Text(
               categoryName,
               style: TextStyle(
                   color: Color(0xFF1E233C),
-                  fontSize: 20,
+                  fontSize: 23,
                   fontWeight: FontWeight.bold),
             ),
           ),
           subtitle: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 5),
+            padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 10),
             child: Text(
               "Source: $source",
               style: TextStyle(

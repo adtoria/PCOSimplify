@@ -298,33 +298,26 @@ class _ExplorerState extends State<Explorer> {
                         //crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           LeftTiles(
-                            height: 180,
+                            height: 197,
                             articleUrl:
                             'https://www.healthstatus.com/health_blog/pcos/7-ways-to-lower-stress-with-pcos/',
                             categoryName: "7 Ways To Lower Stress With PCOS",
                             source: "healthstatus.com",
                           ),
                           LeftTiles(
-                            height: 200,
+                            height: 250,
                             articleUrl:
-                            'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                            'https://www.youtube.com/watch?v=G_VE2OZrgNg',
                             categoryName:
-                            "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
+                            "Stress in PCOS and its Effects on Fertility Potential",
                             source: "Youtube",
                           ),
                           LeftTiles(
-                            height: 300,
+                            height: 245,
                             articleUrl:
-                            'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                            'https://www.youtube.com/watch?v=j_zWoGEqLbc',
                             categoryName:
-                            "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
-                            source: "Youtube",
-                          ),
-                          LeftTiles(
-                            height: 150,
-                            articleUrl:
-                            'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
-                            categoryName: "Pregnancy fkb",
+                            "Mental health with Clinical Psychologist Ms. Seema Hingorrany",
                             source: "Youtube",
                           ),
                         ],
@@ -335,18 +328,34 @@ class _ExplorerState extends State<Explorer> {
                         //crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           RightTiles(
-                            height: 350,
+                            height: 175,
                             articleUrl:
-                            'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
-                            categoryName: "Pregnancy",
+                            'https://madeleineshaw.com/stress-and-pcos/',
+                            categoryName:
+                            "Stress and PCOS",
+                            source: "madeleineshaw.com",
+                          ),
+                          RightTiles(
+                            height: 165,
+                            articleUrl:
+                            'https://www.youtube.com/watch?v=G87wihFwYXc',
+                            categoryName:
+                            "PCOS and Cortisol",
                             source: "Youtube",
                           ),
                           RightTiles(
-                            height: 480,
+                            height: 180,
                             articleUrl:
-                            'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                            'https://www.healthline.com/health/depression/pcos-and-depression#Does-PCOS-cause-depression?',
+                            categoryName: "PCOS and Depression",
+                            source: "Healthline.com",
+                          ),
+                          RightTiles(
+                            height: 190,
+                            articleUrl:
+                            'https://www.youtube.com/watch?v=hJbRpHZr_d0',
                             categoryName:
-                            "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
+                            "Yoga for Anxiety and Stress",
                             source: "Youtube",
                           ),
                         ],
