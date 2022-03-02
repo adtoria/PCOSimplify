@@ -300,25 +300,25 @@ class _ExplorerState extends State<Explorer> {
                           LeftTiles(
                             height: 197,
                             articleUrl:
-                            'https://www.healthstatus.com/health_blog/pcos/7-ways-to-lower-stress-with-pcos/',
+                                'https://www.healthstatus.com/health_blog/pcos/7-ways-to-lower-stress-with-pcos/',
                             categoryName: "7 Ways To Lower Stress With PCOS",
                             source: "healthstatus.com",
                           ),
                           LeftTiles(
                             height: 250,
                             articleUrl:
-                            'https://www.youtube.com/watch?v=G_VE2OZrgNg',
+                                'https://www.youtube.com/watch?v=G_VE2OZrgNg',
                             categoryName:
-                            "Stress in PCOS and its Effects on Fertility Potential",
-                            source: "Youtube",
+                                "Stress in PCOS and its Effects on Fertility Potential",
+                            source: "youtube.com",
                           ),
                           LeftTiles(
                             height: 245,
                             articleUrl:
-                            'https://www.youtube.com/watch?v=j_zWoGEqLbc',
+                                'https://www.youtube.com/watch?v=j_zWoGEqLbc',
                             categoryName:
-                            "Mental health with Clinical Psychologist Ms. Seema Hingorrany",
-                            source: "Youtube",
+                                "Mental health with Clinical Psychologist Ms. Seema Hingorrany",
+                            source: "youtube.com",
                           ),
                         ],
                       ),
@@ -330,33 +330,205 @@ class _ExplorerState extends State<Explorer> {
                           RightTiles(
                             height: 175,
                             articleUrl:
-                            'https://madeleineshaw.com/stress-and-pcos/',
-                            categoryName:
-                            "Stress and PCOS",
+                                'https://madeleineshaw.com/stress-and-pcos/',
+                            categoryName: "Stress and PCOS",
                             source: "madeleineshaw.com",
                           ),
                           RightTiles(
                             height: 165,
                             articleUrl:
-                            'https://www.youtube.com/watch?v=G87wihFwYXc',
-                            categoryName:
-                            "PCOS and Cortisol",
-                            source: "Youtube",
+                                'https://www.youtube.com/watch?v=G87wihFwYXc',
+                            categoryName: "PCOS and Cortisol",
+                            source: "youtube.com",
                           ),
                           RightTiles(
                             height: 180,
                             articleUrl:
-                            'https://www.healthline.com/health/depression/pcos-and-depression#Does-PCOS-cause-depression?',
+                                'https://www.healthline.com/health/depression/pcos-and-depression#Does-PCOS-cause-depression?',
                             categoryName: "PCOS and Depression",
                             source: "Healthline.com",
                           ),
                           RightTiles(
                             height: 190,
                             articleUrl:
-                            'https://www.youtube.com/watch?v=hJbRpHZr_d0',
+                                'https://www.youtube.com/watch?v=hJbRpHZr_d0',
+                            categoryName: "Yoga for Anxiety and Stress",
+                            source: "youtube.com",
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+
+        //Page 6
+        Column(
+          children: [
+            Container(
+              margin: EdgeInsets.only(top: 10),
+              //height: height - 20,
+              child: Column(
+                children: [
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 10),
+                    child: _exploreOptionList(context),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+
+        //Page 7
+        Column(
+          children: [
+            Container(
+              margin: EdgeInsets.only(top: 10),
+              //height: height - 20,
+              child: Column(
+                children: [
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 10),
+                    child: _exploreOptionList(context),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+
+        //Page 8
+        Column(
+          children: [
+            Container(
+              margin: EdgeInsets.only(top: 10),
+              //height: height - 20,
+              child: Column(
+                children: [
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 10),
+                    child: _exploreOptionList(context),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+
+        //Page 9
+        Column(
+          children: [
+            Container(
+              margin: EdgeInsets.only(top: 10),
+              //height: height - 20,
+              child: Column(
+                children: [
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 10),
+                    child: _exploreOptionList(context),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+
+        //Page 10
+        Column(
+          children: [
+            Container(
+              margin: EdgeInsets.only(top: 10),
+              //height: height - 20,
+              child: Column(
+                children: [
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 10),
+                    child: _exploreOptionList(context),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+
+        //Page 11
+        SingleChildScrollView(
+          child: Column(
+            children: [
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 10),
+                child: _exploreOptionList(context),
+              ),
+              SingleChildScrollView(
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      child: Column(
+                        children: [
+                          LeftTiles(
+                            height: 197,
+                            articleUrl:
+                                'https://www.rmact.com/fertility-blog/pcos-fitness-guide',
                             categoryName:
-                            "Yoga for Anxiety and Stress",
-                            source: "Youtube",
+                                "Best Workout for Managing PCOS Symptoms",
+                            source: "rmact.com",
+                          ),
+                          LeftTiles(
+                            height: 200,
+                            articleUrl:
+                                'https://www.youtube.com/watch?v=4xrDxxg5jv4',
+                            categoryName:
+                                "5 Best Yoga Poses for PCOS Treatment",
+                            source: "youtube.com",
+                          ),
+                          LeftTiles(
+                            height: 190,
+                            articleUrl:
+                                'https://www.healthline.com/health/womens-health/exercise-for-pcos',
+                            categoryName: "Best Exercises for PCOS",
+                            source: "healthline.com",
+                          ),
+                          LeftTiles(
+                            height: 190,
+                            articleUrl:
+                                'https://www.youtube.com/watch?v=hNkqaMw8YCc',
+                            categoryName: "Yoga for PCOS with Rashmi Ramesh",
+                            source: "youtube.com",
+                          ),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      child: Column(
+                        //crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          RightTiles(
+                            height: 225,
+                            articleUrl:
+                                'https://www.verywellhealth.com/setting-up-your-exercise-routine-2616476',
+                            categoryName:
+                                "Benefits of Exercising When You Have PCOS",
+                            source: "verywellhealth.com",
+                          ),
+                          RightTiles(
+                            height: 180,
+                            articleUrl:
+                                'https://www.wellcurve.in/blog/yoga-poses-asanas-for-pcos/',
+                            categoryName: "10 Yoga Poses for PCOS",
+                            source: "wellcurve.in",
+                          ),
+                          RightTiles(
+                            height: 205,
+                            articleUrl:
+                                'https://www.youtube.com/watch?v=Tkc2PP37c3U',
+                            categoryName: "PCOS Workout with Sheba Devaraj",
+                            source: "youtube.com",
                           ),
                         ],
                       ),
