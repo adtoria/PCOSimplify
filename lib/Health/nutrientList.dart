@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'protein.dart';
+import 'fibre.dart';
 
 class Items{
   final String title;
@@ -10,8 +11,8 @@ class Items{
 
 List<Items> allItems = [
   Items(
-    title: "Protein",
-    route: Protein(),
+    title: "High fibre food",
+    route: Fibre(),
   ),
   Items(
     title: "Iron",

@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'ProteinDisplayPage.dart';
-import 'proteinList.dart';
+import 'fibreDisplayPage.dart';
+import 'fibreList.dart';
 
-class Protein extends StatefulWidget {
-  const Protein({Key? key}) : super(key: key);
+class Fibre extends StatefulWidget {
+  const Fibre({Key? key}) : super(key: key);
 
   @override
-  _ProteinState createState() => _ProteinState();
+  _FibreState createState() => _FibreState();
 }
 
-class _ProteinState extends State<Protein> {
-  List<ProteinItems> items = allItems;
+class _FibreState extends State<Fibre> {
+  List<FibreItems> items = allItems;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -18,7 +18,7 @@ class _ProteinState extends State<Protein> {
           appBar: AppBar(
             foregroundColor: Colors.white,
             backgroundColor: Color(0xFF1E233C),
-            title: Text("Protein rich food"),
+            title: Text("High fibre food"),
           ),
           body: SingleChildScrollView(
             child: Column(
@@ -40,7 +40,7 @@ class _ProteinState extends State<Protein> {
                         onTap: (){
                           Navigator.push(context,
                               MaterialPageRoute(
-                                builder: (context) => ProteinDisplay(item: item),
+                                builder: (context) => FibreDisplay(item: item),
                               )
                           );
                         },

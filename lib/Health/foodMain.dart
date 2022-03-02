@@ -53,53 +53,15 @@ class _FoodMainState extends State<FoodMain> {
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Column(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 2),
-                      child: Text(
-                        'Food',
-                        style: TextStyle(
-                          fontFamily: 'Lexend Deca',
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
-                      child: Container(
-                        width: 90,
-                        height: 3,
-                        decoration: BoxDecoration(
-                          color: Colors.red,
-                          borderRadius: BorderRadius.circular(2),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                Column(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                      child: MaterialButton(
-                        onPressed: () {
-                          Navigator.pushReplacement(
-                              context,
-                              PageRouteBuilder(
-                                pageBuilder:
-                                    (context, animation1, animation2) =>
-                                        WorkoutMain(),
-                                transitionDuration: Duration.zero,
-                                reverseTransitionDuration: Duration.zero,
-                              ));
-                        },
+                Expanded(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 6),
                         child: Text(
-                          'Workout',
+                          'Food',
                           style: TextStyle(
                             fontFamily: 'Lexend Deca',
                             color: Colors.white,
@@ -107,22 +69,66 @@ class _FoodMainState extends State<FoodMain> {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        minWidth: 100,
-                        height: 50,
                       ),
-                    ),
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                      child: Container(
-                        width: 90,
-                        height: 3,
-                        decoration: BoxDecoration(
-                          //color: Color(0xFF4B39EF),
-                          borderRadius: BorderRadius.circular(2),
+                      // Padding(
+                      //   padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
+                      //   child: Container(
+                      //     width: 90,
+                      //     height: 3,
+                      //     decoration: BoxDecoration(
+                      //       color: Colors.red,
+                      //       borderRadius: BorderRadius.circular(2),
+                      //     ),
+                      //   ),
+                      // ),
+                    ],
+                  ),
+                ),
+                Expanded(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                        child: MaterialButton(
+                          onPressed: () {
+                            Navigator.pushReplacement(
+                                context,
+                                PageRouteBuilder(
+                                  pageBuilder:
+                                      (context, animation1, animation2) =>
+                                          WorkoutMain(),
+                                  transitionDuration: Duration.zero,
+                                  reverseTransitionDuration: Duration.zero,
+                                ));
+                          },
+                          child: Text(
+                            'Workout',
+                            style: TextStyle(
+                              fontFamily: 'Lexend Deca',
+                              color: Color(0xFF9F86C0),
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          //minWidth: 100,
+                          //height: 50,
                         ),
                       ),
-                    ),
-                  ],
+                      // Padding(
+                      //   padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                      //   child: Container(
+                      //     width: 90,
+                      //     height: 3,
+                      //     decoration: BoxDecoration(
+                      //       //color: Color(0xFF4B39EF),
+                      //       borderRadius: BorderRadius.circular(2),
+                      //     ),
+                      //   ),
+                      // ),
+                    ],
+                  ),
                 ),
               ],
             ),

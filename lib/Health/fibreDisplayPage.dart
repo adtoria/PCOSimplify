@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'proteinList.dart';
+import 'fibreList.dart';
 
-class FoodPage extends StatelessWidget {
-  final ProteinItems item;
-  const FoodPage({Key? key,required this.item}) : super(key: key);
+class FibreDisplay extends StatelessWidget {
+  final FibreItems item;
+  const FibreDisplay({Key? key,required this.item}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

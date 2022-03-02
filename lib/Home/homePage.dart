@@ -38,6 +38,38 @@ class _HomeState extends State<Home> {
         backgroundColor: Color(0xFF1E233C),
         title: Text("Home"),
       ),
+      body: Column(
+        children: [
+          MaterialButton(
+            color: Colors.deepOrange,
+            onPressed: () {
+              showDialog(
+                context: context,
+                builder: (context) {
+                  return Dialog(
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
+                    elevation: 16,
+                    child: Container(
+                      color: Colors.blue,
+                      child: ListView(
+                        shrinkWrap: true,
+                        children: <Widget>[
+                          Center(child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 20),
+                            child: Text('What is PCOS??'),
+                            //Content
+                          )),
+                        ],
+                      ),
+                    ),
+                  );
+                },
+              );
+            },
+            child: Text('Show dialog'),
+          ),
+        ],
+      ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         backgroundColor: Color(0xFF1E233C),

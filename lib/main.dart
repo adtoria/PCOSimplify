@@ -30,7 +30,7 @@ class AppName extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => EventProvider(),
       child: MaterialApp(
-        home: Home(),
+        home: FoodMain(),
         //initialRoute: Started.id,
         routes: {
           Started.id: (context) => Started(),

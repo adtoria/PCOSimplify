@@ -10,6 +10,7 @@ class OurDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     final name = 'Shivam Harjani';
     final urlImage = 'https://picsum.photos/seed/509/600';
+    print("hi");
 
     return Drawer(
       child: Material(
