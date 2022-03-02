@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:promject/LoginRegister/forgotPassword.dart';
+import 'package:provider/provider.dart';
 import '../screenHolder.dart';
+import 'googleSignIn.dart';
 import 'registrationPage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:promject/Home/homePage.dart';
@@ -131,11 +133,9 @@ class _LoginPageState extends State<LoginPage> {
                             validator: (String? value) {
                               if (value == null) {
                                 return "* Required";
-                              }
-                              else if (value.length < 6) {
+                              } else if (value.length < 6) {
                                 return "Password should be atleast 6 characters";
-                              }
-                              else {
+                              } else {
                                 return null;
                               }
                             },
@@ -253,9 +253,11 @@ class _LoginPageState extends State<LoginPage> {
                         MaterialButton(
                           onPressed: () {
                             Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => ForgotPassword()));
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ForgotPassword(),
+                              ),
+                            );
                           },
                           child: Text(
                             'Forgot Password?',
@@ -302,7 +304,12 @@ class _LoginPageState extends State<LoginPage> {
                       padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                       child: MaterialButton(
                         onPressed: () {
-                          print('Button pressed ...');
+                          final provider = Provider.of<GoogleSignInProvider>(
+                              context,
+                              listen: false);
+                          provider.googleLogin();
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => Home()));
                         },
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,

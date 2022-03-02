@@ -45,6 +45,8 @@ dependencies:
   syncfusion_flutter_calendar: ^19.4.50
   intl: ^0.17.0
   provider: ^6.0.2
+  google_sign_in: ^5.2.4
+  font_awesome_flutter: ^9.2.0
 
 dev_dependencies:
   flutter_test:
