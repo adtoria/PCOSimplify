@@ -34,12 +34,12 @@ class _ExplorerState extends State<Explorer> {
             padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
             child: Text(
               user.title,
-              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
           ),
           subtitle: Text(
-            user.name,
-            style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+            'Written by - ' + user.name,
+            style: TextStyle(fontSize: 15),
           ),
           tileColor: Color(0xFFDDE3FD),
           onTap: () => Navigator.push(
@@ -82,8 +82,8 @@ class _ExplorerState extends State<Explorer> {
                     leading: Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                       child: Container(
-                          width: 50,
-                          height: 50,
+                          width: 40,
+                          height: 40,
                           clipBehavior: Clip.antiAlias,
                           decoration: BoxDecoration(
                             color: Color(0xFF1E233C),
@@ -92,7 +92,7 @@ class _ExplorerState extends State<Explorer> {
                           child: Icon(
                             Icons.add,
                             color: Colors.white,
-                            size: 30,
+                            size: 25,
                           )),
                     ),
                     title: Padding(
@@ -101,29 +101,14 @@ class _ExplorerState extends State<Explorer> {
                       child: Text(
                         "Add your story",
                         style: TextStyle(
-                            fontSize: 25, fontWeight: FontWeight.bold),
+                            fontSize: 20, fontWeight: FontWeight.bold),
                       ),
                       //),
                     ),
-                    // subtitle: Center(
-                    //   child: Text(
-                    //     "Share your Stories",
-                    //     style:
-                    //         TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
-                    //   ),
-                    // ),
-                    //tileColor: Color(0xFFFFD3E1),
                     onTap: () => Navigator.push(context,
                         MaterialPageRoute(builder: (context) => AddPost())),
                     contentPadding:
                         EdgeInsetsDirectional.fromSTEB(15, 5, 15, 5),
-                    // shape: RoundedRectangleBorder(
-                    //     borderRadius: BorderRadius.circular(15),
-                    //     side: BorderSide(
-                    //       color: Colors.black,
-                    //       width: 3.0,
-                    //     ),
-                    //    ),
                   ),
                 ),
               ),

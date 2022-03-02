@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'protein.dart';
-import 'fibre.dart';
+import 'fiber.dart';
 
-class Items{
+class Items {
   final String title;
   final Widget route;
 
-  Items({required this.title,required this.route});
+  Items({required this.title, required this.route});
 }
 
 List<Items> allItems = [
@@ -23,7 +23,7 @@ List<Items> allItems = [
     route: Protein(),
   ),
   Items(
-    title: "Proteins",
+    title: "Fiber",
     route: Protein(),
   ),
   Items(

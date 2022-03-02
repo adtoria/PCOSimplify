@@ -8,8 +8,11 @@ class OurDrawer extends StatelessWidget {
   final padding = EdgeInsets.symmetric(horizontal: 20);
   @override
   Widget build(BuildContext context) {
-    final name = 'Shivam Harjani';
-    final urlImage = 'https://picsum.photos/seed/509/600';
+    final user = FirebaseAuth.instance.currentUser!;
+    if (user == null)
+      print(user.displayName);
+    else
+      print(user.displayName);
     print("hi");
 
     return Drawer(
@@ -17,15 +20,32 @@ class OurDrawer extends StatelessWidget {
         color: Color(0xFFDDE3FD),
         child: ListView(
           children: <Widget>[
-            buildHeader(
-              urlImage: urlImage,
-              name: name,
-              //     Navigator.of(context).push(MaterialPageRoute(
-              //   builder: (context) => UserPage(
-              //     name: 'Sarah Abs',
-              //     urlImage: urlImage,
-              //   ),
-              // )),
+            // buildHeader(
+            //   urlImage: urlImage,
+            //   name: name,
+            // ),
+            Container(
+              padding: padding.add(EdgeInsets.symmetric(vertical: 40)),
+              color: Color(0xFF1E233C),
+              child: Row(
+                //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                //mainAxisSize: MainAxisSize.min,
+                children: [
+                  CircleAvatar(
+                      radius: 30,
+                      backgroundImage: NetworkImage(user.photoURL!)),
+                  SizedBox(width: 20),
+                  Text(
+                    user.displayName!,
+                    style: TextStyle(
+                      fontFamily: 'Lexend Deca',
+                      fontSize: 24,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ],
+              ),
             ),
             Container(
               padding: padding,
@@ -84,31 +104,31 @@ class OurDrawer extends StatelessWidget {
     );
   }
 
-  Widget buildHeader({
-    required String urlImage,
-    required String name,
-  }) =>
-      Container(
-        padding: padding.add(EdgeInsets.symmetric(vertical: 40)),
-        color: Color(0xFF1E233C),
-        child: Row(
-          //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          //mainAxisSize: MainAxisSize.min,
-          children: [
-            CircleAvatar(radius: 30, backgroundImage: NetworkImage(urlImage)),
-            SizedBox(width: 20),
-            Text(
-              name,
-              style: TextStyle(
-                fontFamily: 'Lexend Deca',
-                fontSize: 24,
-                color: Colors.white,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-          ],
-        ),
-      );
+  // Widget buildHeader({
+  //   required String urlImage,
+  //   required String name,
+  // }) =>
+  //     Container(
+  //       padding: padding.add(EdgeInsets.symmetric(vertical: 40)),
+  //       color: Color(0xFF1E233C),
+  //       child: Row(
+  //         //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+  //         //mainAxisSize: MainAxisSize.min,
+  //         children: [
+  //           CircleAvatar(radius: 30, backgroundImage: NetworkImage(urlImage)),
+  //           SizedBox(width: 20),
+  //           Text(
+  //             name,
+  //             style: TextStyle(
+  //               fontFamily: 'Lexend Deca',
+  //               fontSize: 24,
+  //               color: Colors.white,
+  //               fontWeight: FontWeight.w500,
+  //             ),
+  //           ),
+  //         ],
+  //       ),
+  //     );
 
   Widget buildMenuItem({
     required String text,

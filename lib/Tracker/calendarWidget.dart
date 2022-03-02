@@ -112,7 +112,7 @@ class _CalendarWidgetState extends State<CalendarWidget> {
         ),
         floatingActionButton: FloatingActionButton(
           child: Icon(Icons.add, color: Colors.white),
-          backgroundColor: Colors.red,
+          backgroundColor: Color(0xFF1E233C),
           onPressed: () => Navigator.of(context).push(
             MaterialPageRoute(builder: (context) => EventEditingPage()),
           ),

@@ -1,10 +1,8 @@
-import 'package:flutter/material.dart';
-
-class FibreItems{
+class FibreItems {
   final String title;
   final String text;
 
-  FibreItems({required this.title,required this.text});
+  FibreItems({required this.title, required this.text});
 }
 
 List<FibreItems> allItems = [

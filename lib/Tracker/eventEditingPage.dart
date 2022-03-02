@@ -55,6 +55,7 @@ class _EventEditingPageState extends State<EventEditingPage> {
         appBar: AppBar(
           leading: CloseButton(),
           actions: buildEditingActions(),
+          backgroundColor: Color(0xFF1E233C),
         ),
         body: SingleChildScrollView(
           padding: EdgeInsets.all(12),
