@@ -9,21 +9,19 @@ class OurDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final user = FirebaseAuth.instance.currentUser!;
-    if (user == null)
-      print(user.displayName);
-    else
-      print(user.displayName);
-    print("hi");
+    String flag="";
+    Future<String> getAuthType() async {
+      String authType = user.providerData[0].providerId;
+      flag=authType;
+      return authType;
+    }
+    final String check="password";
 
     return Drawer(
       child: Material(
         color: Color(0xFFDDE3FD),
         child: ListView(
           children: <Widget>[
-            // buildHeader(
-            //   urlImage: urlImage,
-            //   name: name,
-            // ),
             Container(
               padding: padding.add(EdgeInsets.symmetric(vertical: 40)),
               color: Color(0xFF1E233C),
@@ -31,19 +29,36 @@ class OurDrawer extends StatelessWidget {
                 //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 //mainAxisSize: MainAxisSize.min,
                 children: [
+                  check != flag ?
                   CircleAvatar(
                       radius: 30,
-                      backgroundImage: NetworkImage(user.photoURL.toString())),
+                      backgroundImage: NetworkImage('https://picsum.photos/seed/509/600'))
+                  :
+                  CircleAvatar(
+                      radius: 30,
+                      backgroundImage: NetworkImage(user.photoURL!)),
+
                   SizedBox(width: 20),
+                  check != flag ?
                   Text(
-                    user.displayName.toString(),
+                    'Shivam Harjani',
                     style: TextStyle(
                       fontFamily: 'Lexend Deca',
                       fontSize: 24,
                       color: Colors.white,
                       fontWeight: FontWeight.w500,
                     ),
-                  ),
+                  )
+                      :
+                  Text(
+                    user.displayName!,
+                    style: TextStyle(
+                      fontFamily: 'Lexend Deca',
+                      fontSize: 24,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  )
                 ],
               ),
             ),

@@ -307,7 +307,7 @@ class _LoginPageState extends State<LoginPage> {
                           final provider = Provider.of<GoogleSignInProvider>(
                               context,
                               listen: false);
-                          provider.googleLogin();
+                          provider.googleLogin(context: context);
                         },
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,

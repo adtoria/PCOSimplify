@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:promject/LoginRegister/fetchSignInDetails.dart';
 import 'package:promject/Tracker/calendarWidget.dart';
 import 'package:promject/Health/foodMain.dart';
 import 'package:promject/ExplorePage/exploreMain.dart';
