@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:promject/Health/foodMain.dart';
 import 'package:promject/LoginRegister/googleSignIn.dart';
 import 'package:promject/Tracker/eventProvider.dart';
 import 'package:promject/screenHolder.dart';
@@ -26,7 +27,7 @@ class AppName extends StatelessWidget {
         ChangeNotifierProvider(create: (context) => GoogleSignInProvider()),
       ],
       child: MaterialApp(
-        home: LoginPage(),
+        home: FoodMain(),
         //initialRoute: Started.id,
         routes: {
           Started.id: (context) => Started(),

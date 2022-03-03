@@ -4,18 +4,18 @@ import 'package:flutter/cupertino.dart';
 
 class EventProvider extends ChangeNotifier {
   final List<Event> _events = [
-    Event(
-      title: 'Learn Flutter',
-      description: 'Watch Flutter YouTube Videos',
-      from: DateTime.now(),
-      to: DateTime.now().add(Duration(hours: 2)),
-    ),
-    Event(
-      title: 'Meeting With Daniel',
-      description: 'Tea Time! 🍵',
-      from: DateTime.now().subtract(Duration(hours: 6)),
-      to: DateTime.now().add(Duration(hours: 4)),
-    )
+    // Event(
+    //   title: 'Learn Flutter',
+    //   description: 'Watch Flutter YouTube Videos',
+    //   from: DateTime.now(),
+    //   to: DateTime.now().add(Duration(hours: 2)),
+    // ),
+    // Event(
+    //   title: 'Meeting With Daniel',
+    //   description: 'Tea Time! 🍵',
+    //   from: DateTime.now().subtract(Duration(hours: 6)),
+    //   to: DateTime.now().add(Duration(hours: 4)),
+    // )
   ];
 
   DateTime _selectedDate = DateTime.now();

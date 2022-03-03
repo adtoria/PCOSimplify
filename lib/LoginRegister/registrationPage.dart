@@ -356,7 +356,7 @@ class _RegisterState extends State<Register> {
                           children: [
                             Padding(
                               padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
+                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                               child: Container(
                                 width: 22,
                                 height: 22,

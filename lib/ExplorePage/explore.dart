@@ -150,14 +150,12 @@ class _ExplorerState extends State<Explorer> {
                         //crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           LeftTiles(
-                            height: 100,
                             articleUrl:
                                 'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
                             categoryName: "Pregnancy",
                             source: "Youtube",
                           ),
                           LeftTiles(
-                            height: 200,
                             articleUrl:
                                 'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
                             categoryName:
@@ -165,7 +163,6 @@ class _ExplorerState extends State<Explorer> {
                             source: "Youtube",
                           ),
                           LeftTiles(
-                            height: 300,
                             articleUrl:
                                 'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
                             categoryName:
@@ -173,7 +170,6 @@ class _ExplorerState extends State<Explorer> {
                             source: "Youtube",
                           ),
                           LeftTiles(
-                            height: 150,
                             articleUrl:
                                 'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
                             categoryName: "Pregnancy fkb",
@@ -187,14 +183,12 @@ class _ExplorerState extends State<Explorer> {
                         //crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           RightTiles(
-                            height: 350,
                             articleUrl:
                                 'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
                             categoryName: "Pregnancy",
                             source: "Youtube",
                           ),
                           RightTiles(
-                            height: 480,
                             articleUrl:
                                 'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
                             categoryName:
@@ -230,21 +224,88 @@ class _ExplorerState extends State<Explorer> {
         ),
 
         //Page 3
-        Column(
-          children: [
-            Container(
-              margin: EdgeInsets.only(top: 10),
-              //height: height - 20,
-              child: Column(
-                children: [
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 10),
-                    child: _exploreOptionList(context),
-                  ),
-                ],
+        SingleChildScrollView(
+          child: Column(
+            children: [
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 10),
+                child: _exploreOptionList(context),
               ),
-            ),
-          ],
+              SingleChildScrollView(
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      child: Column(
+                        //crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          LeftTiles( //DONE
+                            articleUrl:
+                            'https://www.healthline.com/health/pcos-acne',
+                            categoryName: "Polycystic Ovary Syndrome (PCOS) and Acne: Connection, Treatment, and More",
+                            source: "healthline.com",
+                          ),
+                          LeftTiles(  //DONE
+                            articleUrl:
+                            'https://www.youtube.com/watch?v=CCxp8SsiIbQ',
+                            categoryName:
+                            "How I Got Rid of Acne & Facial Hair",
+                            source: "youtube.com",
+                          ),
+                          LeftTiles( //DONE
+                            articleUrl:
+                            'https://www.youtube.com/watch?v=nNYVPhzqnSU',
+                            categoryName:
+                            "How I Healed My Cystic Acne NATURALLY (PCOS & Hormonal Acne)",
+                            source: "youtube.com",
+                          ),
+                          LeftTiles( //DONE
+                            articleUrl:
+                            'https://www.youtube.com/watch?v=u1UY_MHFz2c',
+                            categoryName:
+                            "PCOS Hair Loss Treatment",
+                            source: "youtube.com",
+                          ),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      child: Column(
+                        //crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          RightTiles( //DONE
+                            articleUrl:
+                            'https://www.womenshairlossproject.com/',
+                            categoryName: "The Women's Hair Loss Project",
+                            source: "womenshairlossproject.com",
+                          ),
+                          RightTiles( //DONE
+                            articleUrl:
+                            'https://www.youtube.com/watch?v=htJg4A-7BQo',
+                            categoryName: "PCOS & Skin | Dermatologist Review",
+                            source: "youtube.com",
+                          ),
+                          RightTiles( //DONE
+                            articleUrl:
+                            'https://www.healthline.com/health/pcos-hair-loss-2',
+                            categoryName: "How to Manage PCOS Related Hair Loss",
+                            source: "Healthline.com",
+                          ),
+                          RightTiles(
+                            articleUrl:
+                            'https://www.youtube.com/watch?v=dbY1LflgTl4',
+                            categoryName: "5 Haircare Secrets that MASSIVELY REDUCED MY PCOS Hairfall",
+                            source: "youtube.com",
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
 
         //Page 4
@@ -283,14 +344,12 @@ class _ExplorerState extends State<Explorer> {
                         //crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           LeftTiles(
-                            height: 197,
                             articleUrl:
                                 'https://www.healthstatus.com/health_blog/pcos/7-ways-to-lower-stress-with-pcos/',
                             categoryName: "7 Ways To Lower Stress With PCOS",
                             source: "healthstatus.com",
                           ),
                           LeftTiles(
-                            height: 250,
                             articleUrl:
                                 'https://www.youtube.com/watch?v=G_VE2OZrgNg',
                             categoryName:
@@ -298,7 +357,6 @@ class _ExplorerState extends State<Explorer> {
                             source: "youtube.com",
                           ),
                           LeftTiles(
-                            height: 245,
                             articleUrl:
                                 'https://www.youtube.com/watch?v=j_zWoGEqLbc',
                             categoryName:
@@ -313,28 +371,24 @@ class _ExplorerState extends State<Explorer> {
                         //crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           RightTiles(
-                            height: 175,
                             articleUrl:
                                 'https://madeleineshaw.com/stress-and-pcos/',
                             categoryName: "Stress and PCOS",
                             source: "madeleineshaw.com",
                           ),
                           RightTiles(
-                            height: 165,
                             articleUrl:
                                 'https://www.youtube.com/watch?v=G87wihFwYXc',
                             categoryName: "PCOS and Cortisol",
                             source: "youtube.com",
                           ),
                           RightTiles(
-                            height: 180,
                             articleUrl:
                                 'https://www.healthline.com/health/depression/pcos-and-depression#Does-PCOS-cause-depression?',
                             categoryName: "PCOS and Depression",
                             source: "Healthline.com",
                           ),
                           RightTiles(
-                            height: 190,
                             articleUrl:
                                 'https://www.youtube.com/watch?v=hJbRpHZr_d0',
                             categoryName: "Yoga for Anxiety and Stress",
@@ -457,7 +511,6 @@ class _ExplorerState extends State<Explorer> {
                       child: Column(
                         children: [
                           LeftTiles(
-                            height: 197,
                             articleUrl:
                                 'https://www.rmact.com/fertility-blog/pcos-fitness-guide',
                             categoryName:
@@ -465,7 +518,6 @@ class _ExplorerState extends State<Explorer> {
                             source: "rmact.com",
                           ),
                           LeftTiles(
-                            height: 200,
                             articleUrl:
                                 'https://www.youtube.com/watch?v=4xrDxxg5jv4',
                             categoryName:
@@ -473,14 +525,12 @@ class _ExplorerState extends State<Explorer> {
                             source: "youtube.com",
                           ),
                           LeftTiles(
-                            height: 190,
                             articleUrl:
                                 'https://www.healthline.com/health/womens-health/exercise-for-pcos',
                             categoryName: "Best Exercises for PCOS",
                             source: "healthline.com",
                           ),
                           LeftTiles(
-                            height: 190,
                             articleUrl:
                                 'https://www.youtube.com/watch?v=hNkqaMw8YCc',
                             categoryName: "Yoga for PCOS with Rashmi Ramesh",
@@ -494,7 +544,6 @@ class _ExplorerState extends State<Explorer> {
                         //crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           RightTiles(
-                            height: 225,
                             articleUrl:
                                 'https://www.verywellhealth.com/setting-up-your-exercise-routine-2616476',
                             categoryName:
@@ -502,14 +551,12 @@ class _ExplorerState extends State<Explorer> {
                             source: "verywellhealth.com",
                           ),
                           RightTiles(
-                            height: 180,
                             articleUrl:
                                 'https://www.wellcurve.in/blog/yoga-poses-asanas-for-pcos/',
                             categoryName: "10 Yoga Poses for PCOS",
                             source: "wellcurve.in",
                           ),
                           RightTiles(
-                            height: 205,
                             articleUrl:
                                 'https://www.youtube.com/watch?v=Tkc2PP37c3U',
                             categoryName: "PCOS Workout with Sheba Devaraj",

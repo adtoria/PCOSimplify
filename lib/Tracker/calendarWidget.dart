@@ -50,7 +50,7 @@ class _CalendarWidgetState extends State<CalendarWidget> {
           cellBorderColor: Colors.white,
           todayHighlightColor: Colors.pinkAccent,
           backgroundColor: Colors.white,
-          onLongPress: (details) {
+          onTap: (details) {
             final provider = Provider.of<EventProvider>(context, listen: false);
 
             provider.setDate(details.date!);

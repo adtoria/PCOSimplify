@@ -33,10 +33,10 @@ class OurDrawer extends StatelessWidget {
                 children: [
                   CircleAvatar(
                       radius: 30,
-                      backgroundImage: NetworkImage(user.photoURL!)),
+                      backgroundImage: NetworkImage(user.photoURL.toString())),
                   SizedBox(width: 20),
                   Text(
-                    user.displayName!,
+                    user.displayName.toString(),
                     style: TextStyle(
                       fontFamily: 'Lexend Deca',
                       fontSize: 24,

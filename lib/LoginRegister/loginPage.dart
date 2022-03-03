@@ -308,15 +308,13 @@ class _LoginPageState extends State<LoginPage> {
                               context,
                               listen: false);
                           provider.googleLogin();
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => Home()));
                         },
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Padding(
                               padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
+                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                               child: Container(
                                 width: 22,
                                 height: 22,
