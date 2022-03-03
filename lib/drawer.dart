@@ -16,6 +16,10 @@ class OurDrawer extends StatelessWidget {
       return authType;
     }
     final String check="password";
+    getAuthType();
+
+    print(flag);
+    print(check);
 
     return Drawer(
       child: Material(
@@ -29,7 +33,7 @@ class OurDrawer extends StatelessWidget {
                 //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 //mainAxisSize: MainAxisSize.min,
                 children: [
-                  check != flag ?
+                  check == flag ?
                   CircleAvatar(
                       radius: 30,
                       backgroundImage: NetworkImage('https://picsum.photos/seed/509/600'))
@@ -39,7 +43,7 @@ class OurDrawer extends StatelessWidget {
                       backgroundImage: NetworkImage(user.photoURL!)),
 
                   SizedBox(width: 20),
-                  check != flag ?
+                  check == flag ?
                   Text(
                     'Shivam Harjani',
                     style: TextStyle(
