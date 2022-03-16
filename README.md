@@ -3,6 +3,6 @@
 A Flutter Application to help people understand and deal with Polycystic Ovary Syndrome (PCOS).
 
 Features:
-1.
-    1.1
-2.
+- Homepage
+- Tracker
+- Explore page
