@@ -240,31 +240,34 @@ class _ExplorerState extends State<Explorer> {
                       child: Column(
                         //crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          LeftTiles( //DONE
+                          LeftTiles(
+                            //DONE
                             articleUrl:
-                            'https://www.healthline.com/health/pcos-acne',
-                            categoryName: "Polycystic Ovary Syndrome (PCOS) and Acne: Connection, Treatment, and More",
+                                'https://www.healthline.com/health/pcos-acne',
+                            categoryName:
+                                "Polycystic Ovary Syndrome (PCOS) and Acne: Connection, Treatment, and More",
                             source: "healthline.com",
                           ),
-                          LeftTiles(  //DONE
+                          LeftTiles(
+                            //DONE
                             articleUrl:
-                            'https://www.youtube.com/watch?v=CCxp8SsiIbQ',
-                            categoryName:
-                            "How I Got Rid of Acne & Facial Hair",
+                                'https://www.youtube.com/watch?v=CCxp8SsiIbQ',
+                            categoryName: "How I Got Rid of Acne & Facial Hair",
                             source: "youtube.com",
                           ),
-                          LeftTiles( //DONE
+                          LeftTiles(
+                            //DONE
                             articleUrl:
-                            'https://www.youtube.com/watch?v=nNYVPhzqnSU',
+                                'https://www.youtube.com/watch?v=nNYVPhzqnSU',
                             categoryName:
-                            "How I Healed My Cystic Acne NATURALLY (PCOS & Hormonal Acne)",
+                                "How I Healed My Cystic Acne NATURALLY (PCOS & Hormonal Acne)",
                             source: "youtube.com",
                           ),
-                          LeftTiles( //DONE
+                          LeftTiles(
+                            //DONE
                             articleUrl:
-                            'https://www.youtube.com/watch?v=u1UY_MHFz2c',
-                            categoryName:
-                            "PCOS Hair Loss Treatment",
+                                'https://www.youtube.com/watch?v=u1UY_MHFz2c',
+                            categoryName: "PCOS Hair Loss Treatment",
                             source: "youtube.com",
                           ),
                         ],
@@ -274,28 +277,33 @@ class _ExplorerState extends State<Explorer> {
                       child: Column(
                         //crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          RightTiles( //DONE
+                          RightTiles(
+                            //DONE
                             articleUrl:
-                            'https://www.womenshairlossproject.com/',
+                                'https://www.womenshairlossproject.com/',
                             categoryName: "The Women's Hair Loss Project",
                             source: "womenshairlossproject.com",
                           ),
-                          RightTiles( //DONE
+                          RightTiles(
+                            //DONE
                             articleUrl:
-                            'https://www.youtube.com/watch?v=htJg4A-7BQo',
+                                'https://www.youtube.com/watch?v=htJg4A-7BQo',
                             categoryName: "PCOS & Skin | Dermatologist Review",
                             source: "youtube.com",
                           ),
-                          RightTiles( //DONE
+                          RightTiles(
+                            //DONE
                             articleUrl:
-                            'https://www.healthline.com/health/pcos-hair-loss-2',
-                            categoryName: "How to Manage PCOS Related Hair Loss",
+                                'https://www.healthline.com/health/pcos-hair-loss-2',
+                            categoryName:
+                                "How to Manage PCOS Related Hair Loss",
                             source: "Healthline.com",
                           ),
                           RightTiles(
                             articleUrl:
-                            'https://www.youtube.com/watch?v=dbY1LflgTl4',
-                            categoryName: "5 Haircare Secrets that MASSIVELY REDUCED MY PCOS Hairfall",
+                                'https://www.youtube.com/watch?v=dbY1LflgTl4',
+                            categoryName:
+                                "5 Haircare Secrets that MASSIVELY REDUCED MY PCOS Hairfall",
                             source: "youtube.com",
                           ),
                         ],
@@ -309,21 +317,96 @@ class _ExplorerState extends State<Explorer> {
         ),
 
         //Page 4
-        Column(
-          children: [
-            Container(
-              margin: EdgeInsets.only(top: 10),
-              //height: height - 20,
-              child: Column(
-                children: [
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 10),
-                    child: _exploreOptionList(context),
-                  ),
-                ],
+        SingleChildScrollView(
+          child: Column(
+            children: [
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 10),
+                child: _exploreOptionList(context),
               ),
-            ),
-          ],
+              SingleChildScrollView(
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      child: Column(
+                        //crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          LeftTiles(
+                            articleUrl:
+                                'https://thepcosnutritionist.com/blog/pcos-and-gut-health/',
+                            categoryName:
+                                "Is Your Gut Bacteria The Secret To Your PCOS Weight Loss?",
+                            source: "thepcosnutritionist.com",
+                          ),
+                          // LeftTiles(
+                          //   articleUrl:
+                          //       'https://jilliangreaves.com/blog/2020/5/5/the-pcos-gut-health-connection',
+                          //   categoryName: "The PCOS Gut Health Connection",
+                          //   source: "jilliangreaves.com",
+                          // ),
+                          LeftTiles(
+                            articleUrl:
+                                'https://www.youtube.com/watch?v=vLJvCTIcUVw',
+                            categoryName:
+                                "The best Probiotic foods to improve gut health",
+                            source: "youtube.com",
+                          ),
+                          LeftTiles(
+                            articleUrl:
+                                'https://www.youtube.com/watch?v=PWgLGhkfcM8',
+                            categoryName: "PCOS Gut Health",
+                            source: "youtube.com",
+                          ),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      child: Column(
+                        //crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          RightTiles(
+                            articleUrl:
+                                'https://apollosugar.com/world-of-diabetes/all-about-gut-health-in-pcos/',
+                            categoryName: "All about gut health in PCOS",
+                            source: "apollosugar.com",
+                          ),
+                          RightTiles(
+                            articleUrl:
+                                'https://www.youtube.com/watch?v=XD8jjQEeSc8',
+                            categoryName:
+                                "Gut Health: The SECRET to Looking and Feeling GREAT!",
+                            source: "youtube.com",
+                          ),
+                          RightTiles(
+                            articleUrl:
+                                'https://jilliangreaves.com/blog/2020/5/5/the-pcos-gut-health-connection',
+                            categoryName: "The PCOS Gut Health Connection",
+                            source: "jilliangreaves.com",
+                          ),
+                          // RightTiles(
+                          //   articleUrl:
+                          //       'https://thepcosnutritionist.com/blog/pcos-and-gut-health/',
+                          //   categoryName:
+                          //       "Is Your Gut Bacteria The Secret To Your PCOS Weight Loss?",
+                          //   source: "thepcosnutritionist.com",
+                          // ),
+                          RightTiles(
+                            articleUrl:
+                                'https://www.youtube.com/watch?v=dqA6LXNkgXE',
+                            categoryName:
+                                "Gut health and PCOS: 3 dietary strategies you should consider",
+                            source: "youtube.com",
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
 
         //Page 5
@@ -423,39 +506,167 @@ class _ExplorerState extends State<Explorer> {
         ),
 
         //Page 7
-        Column(
-          children: [
-            Container(
-              margin: EdgeInsets.only(top: 10),
-              //height: height - 20,
-              child: Column(
-                children: [
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 10),
-                    child: _exploreOptionList(context),
-                  ),
-                ],
+        SingleChildScrollView(
+          child: Column(
+            children: [
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 10),
+                child: _exploreOptionList(context),
               ),
-            ),
-          ],
+              SingleChildScrollView(
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      child: Column(
+                        //crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          LeftTiles(
+                            articleUrl:
+                                'https://www.northsidegynaecology.com.au/what-are-periods-like-when-you-have-pcos/',
+                            categoryName:
+                                "What are periods like when you have PCOS?",
+                            source: "northsidegynaecology.com.au",
+                          ),
+                          LeftTiles(
+                            articleUrl:
+                                'https://www.youtube.com/watch?v=MXi7mtC7AAk',
+                            categoryName:
+                                "PCOS Affects More Than Just Your Period: Two Women Share Their Stories | The Quint",
+                            source: "youtube.com",
+                          ),
+                          LeftTiles(
+                            articleUrl:
+                                'https://www.verywellhealth.com/why-do-women-with-pcos-have-irregular-periods-2616650',
+                            categoryName:
+                                "Why Women with PCOS Have Irregular Periods",
+                            source: "verywellhealth.com",
+                          ),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      child: Column(
+                        //crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          RightTiles(
+                            articleUrl:
+                                'https://www.jeanhailes.org.au/health-a-z/pcos/irregular-periods-management-treatment',
+                            categoryName:
+                                "Irregular periods - Management & Treatment",
+                            source: "jeanhailes.org.au",
+                          ),
+                          RightTiles(
+                            articleUrl:
+                                'https://www.youtube.com/watch?v=3XW2I-M3-jc',
+                            categoryName:
+                                "What causes missed periods for months in PCOD patients and its management?",
+                            source: "youtube.com",
+                          ),
+                          RightTiles(
+                            articleUrl:
+                                'https://perlahealth.com/pcos-menstruation-ovulation/',
+                            categoryName:
+                                "How PCOS Can Affect Your Menstruation and Ovulation",
+                            source: "perlahealth.com",
+                          ),
+                          RightTiles(
+                            articleUrl:
+                                'https://www.youtube.com/watch?v=RLTEyvwpaRg',
+                            categoryName:
+                                "How To Lose Weight & Get Periods Regularly!",
+                            source: "youtube.com",
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
 
         //Page 8
-        Column(
-          children: [
-            Container(
-              margin: EdgeInsets.only(top: 10),
-              //height: height - 20,
-              child: Column(
-                children: [
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 10),
-                    child: _exploreOptionList(context),
-                  ),
-                ],
+        SingleChildScrollView(
+          child: Column(
+            children: [
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 10),
+                child: _exploreOptionList(context),
               ),
-            ),
-          ],
+              SingleChildScrollView(
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      child: Column(
+                        //crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          LeftTiles(
+                            articleUrl:
+                                'https://www.medicalnewstoday.com/articles/182659#cosmetic-approaches',
+                            categoryName: "What to know about Hirsutism",
+                            source: "medicalnewstoday.com",
+                          ),
+                          LeftTiles(
+                            articleUrl:
+                                'https://www.youtube.com/watch?v=ZY8rok_I-Ho',
+                            categoryName:
+                                "How to Manage Hirsutism if You Have PCOS",
+                            source: "youtube.com",
+                          ),
+                          LeftTiles(
+                            articleUrl:
+                                'https://www.mayoclinic.org/diseases-conditions/hirsutism/symptoms-causes/syc-20354935',
+                            categoryName: "Hirsutism",
+                            source: "mayoclinic.org",
+                          ),
+                          LeftTiles(
+                            articleUrl:
+                                'https://www.youtube.com/watch?v=KyJqZo6o0iM',
+                            categoryName:
+                                "Is it true mint helps in hair reduction in women with PCOS? - Dr. Chetali Samant",
+                            source: "youtube.com",
+                          ),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      child: Column(
+                        //crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          RightTiles(
+                            articleUrl:
+                                'https://www.youtube.com/watch?v=oB4xg75Edcs',
+                            categoryName:
+                                "What are the treatment options available to manage Hirsutism in PCOS",
+                            source: "youtube.com",
+                          ),
+                          RightTiles(
+                            articleUrl:
+                                'https://www.verywellhealth.com/hirsutism-in-women-with-pcos-2616644',
+                            categoryName:
+                                "Treating Hirsutism in Women With PCOS",
+                            source: "verywellhealth.com",
+                          ),
+                          RightTiles(
+                            articleUrl:
+                                'https://www.youtube.com/watch?v=8J3KxaUNHZw',
+                            categoryName:
+                                "PCOS Facial Hair and Hair Loss | Causes, Treatments, & Natural Ways to Reduce Hirsutism & Hair Loss",
+                            source: "youtube.com",
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
 
         //Page 9
