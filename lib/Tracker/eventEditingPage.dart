@@ -30,7 +30,7 @@ class _EventEditingPageState extends State<EventEditingPage> {
 
     if (widget.event == null) {
       fromDate = DateTime.now();
-      toDate = DateTime.now().add(Duration(hours: 2));
+      toDate = DateTime.now().add(Duration(days: 7));
     } else {
       final event = widget.event!;
 

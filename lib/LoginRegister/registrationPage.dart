@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:auto_size_text/auto_size_text.dart';
-import '../screenHolder.dart';
+import 'package:promject/LoginRegister/googleSignIn.dart';
+import 'package:promject/drawer.dart';
+import 'package:provider/provider.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:promject/Home/homePage.dart';
+import 'googleSignIn.dart';
 
 class Register extends StatefulWidget {
   static const String id = 'registration_page';
@@ -18,8 +20,10 @@ class _RegisterState extends State<Register> {
   String email = "";
   String password = "";
   String confirmPw = "";
+  String username = "";
 
   TextEditingController emailAddressController = TextEditingController();
+  TextEditingController usernameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   TextEditingController confirmPwController = TextEditingController();
   GlobalKey<FormState> _formKey = GlobalKey<FormState>();
@@ -32,6 +36,7 @@ class _RegisterState extends State<Register> {
     emailAddressController = TextEditingController();
     passwordController = TextEditingController();
     confirmPwController = TextEditingController();
+    usernameController = TextEditingController();
     passwordVisibility = false;
   }
 
@@ -128,6 +133,64 @@ class _RegisterState extends State<Register> {
                       children: [
                         Expanded(
                           child: TextFormField(
+                            onChanged: (value) {
+                              username = value;
+                            },
+                            controller: usernameController,
+                            //obscureText: !passwordVisibility,
+                            decoration: InputDecoration(
+                              labelText: 'Username',
+                              labelStyle: TextStyle(
+                                fontFamily: 'Lexend Deca',
+                                color: Color(0xFF95A1AC),
+                                fontSize: 14,
+                                fontWeight: FontWeight.normal,
+                              ),
+                              hintText: 'Enter your username...',
+                              hintStyle: TextStyle(
+                                fontFamily: 'Lexend Deca',
+                                color: Color(0xFF95A1AC),
+                                fontSize: 14,
+                                fontWeight: FontWeight.normal,
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Color(0xFFDBE2E7),
+                                  width: 2,
+                                ),
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Color(0xFFDBE2E7),
+                                  width: 2,
+                                ),
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              filled: true,
+                              fillColor: Colors.white,
+                              contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                  16, 24, 24, 24),
+                            ),
+                            style: TextStyle(
+                              fontFamily: 'Lexend Deca',
+                              color: Color(0xFF2B343A),
+                              fontSize: 14,
+                              fontWeight: FontWeight.normal,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 16, 0, 0),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Expanded(
+                          child: TextFormField(
                             validator: (String? value) {
                               if (value == null) {
                                 return "* Required";
@@ -150,7 +213,7 @@ class _RegisterState extends State<Register> {
                                 fontSize: 14,
                                 fontWeight: FontWeight.normal,
                               ),
-                              hintText: 'Confirm your password...]',
+                              hintText: 'Enter your password...',
                               hintStyle: TextStyle(
                                 fontFamily: 'Lexend Deca',
                                 color: Color(0xFF95A1AC),
@@ -230,7 +293,7 @@ class _RegisterState extends State<Register> {
                                 fontSize: 14,
                                 fontWeight: FontWeight.normal,
                               ),
-                              hintText: 'Enter your password here...]',
+                              hintText: 'Re-enter your password ...',
                               hintStyle: TextStyle(
                                 fontFamily: 'Lexend Deca',
                                 color: Color(0xFF95A1AC),
@@ -349,7 +412,10 @@ class _RegisterState extends State<Register> {
                       padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                       child: MaterialButton(
                         onPressed: () {
-                          print('Button pressed ...');
+                          final provider = Provider.of<GoogleSignInProvider>(
+                              context,
+                              listen: false);
+                          provider.googleLogin(context: context);
                         },
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,

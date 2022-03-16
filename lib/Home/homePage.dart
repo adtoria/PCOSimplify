@@ -7,8 +7,6 @@ import 'package:promject/ExplorePage/exploreMain.dart';
 import 'package:promject/drawer.dart';
 
 class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
-
   @override
   _HomeState createState() => _HomeState();
 }
@@ -49,15 +47,18 @@ class _HomeState extends State<Home> {
                 context: context,
                 builder: (context) {
                   return Dialog(
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(40)),
                     elevation: 16,
                     child: Container(
                       color: Colors.blue,
                       child: ListView(
                         shrinkWrap: true,
                         children: <Widget>[
-                          Center(child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 20),
+                          Center(
+                              child: Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(0, 20, 0, 20),
                             child: Text('What is PCOS??'),
                             //Content
                           )),

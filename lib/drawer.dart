@@ -9,13 +9,14 @@ class OurDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final user = FirebaseAuth.instance.currentUser!;
-    String flag="";
+    String flag = "";
     Future<String> getAuthType() async {
       String authType = user.providerData[0].providerId;
-      flag=authType;
+      flag = authType;
       return authType;
     }
-    final String check="password";
+
+    final String check = "password";
     getAuthType();
 
     print(flag);
@@ -33,36 +34,34 @@ class OurDrawer extends StatelessWidget {
                 //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 //mainAxisSize: MainAxisSize.min,
                 children: [
-                  check == flag ?
-                  CircleAvatar(
-                      radius: 30,
-                      backgroundImage: NetworkImage('https://picsum.photos/seed/509/600'))
-                  :
-                  CircleAvatar(
-                      radius: 30,
-                      backgroundImage: NetworkImage(user.photoURL!)),
-
+                  check == flag
+                      ? CircleAvatar(
+                          radius: 30,
+                          backgroundImage: NetworkImage(
+                              'https://picsum.photos/seed/509/600'))
+                      : CircleAvatar(
+                          radius: 30,
+                          backgroundImage: NetworkImage(user.photoURL!)),
                   SizedBox(width: 20),
-                  check == flag ?
-                  Text(
-                    'Shivam Harjani',
-                    style: TextStyle(
-                      fontFamily: 'Lexend Deca',
-                      fontSize: 24,
-                      color: Colors.white,
-                      fontWeight: FontWeight.w500,
-                    ),
-                  )
-                      :
-                  Text(
-                    user.displayName!,
-                    style: TextStyle(
-                      fontFamily: 'Lexend Deca',
-                      fontSize: 24,
-                      color: Colors.white,
-                      fontWeight: FontWeight.w500,
-                    ),
-                  )
+                  check == flag
+                      ? Text(
+                          "skh",
+                          style: TextStyle(
+                            fontFamily: 'Lexend Deca',
+                            fontSize: 24,
+                            color: Colors.white,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        )
+                      : Text(
+                          user.displayName!,
+                          style: TextStyle(
+                            fontFamily: 'Lexend Deca',
+                            fontSize: 24,
+                            color: Colors.white,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        )
                 ],
               ),
             ),
