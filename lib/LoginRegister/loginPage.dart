@@ -310,7 +310,7 @@ class _LoginPageState extends State<LoginPage> {
                           provider.googleLogin(context: context);
                         },
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Padding(
                               padding:

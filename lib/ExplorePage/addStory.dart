@@ -17,7 +17,7 @@ class _AddPostState extends State<AddPost> {
       {required String title,
       required String name,
       required String body}) async {
-    final user = FirebaseFirestore.instance.collection('users').doc();
+    final user = FirebaseFirestore.instance.collection('stories').doc();
 
     final json = {
       'id': user.id,
@@ -110,10 +110,10 @@ class _AddPostState extends State<AddPost> {
                   ),
                   validator: (String? value) {
                     if (value == null) {
-                      name="Anonymous";
+                      name = "Anonymous";
                       return null;
                     } else if (value.length < 1) {
-                      name="Anonymous";
+                      name = "Anonymous";
                       return null;
                     } else {
                       return null;
@@ -121,7 +121,7 @@ class _AddPostState extends State<AddPost> {
                   },
                   onChanged: (val) {
                     //post.title = val
-                        name = val;
+                    name = val;
                   },
                 ),
               ),

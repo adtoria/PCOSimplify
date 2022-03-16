@@ -418,7 +418,7 @@ class _RegisterState extends State<Register> {
                           provider.googleLogin(context: context);
                         },
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Padding(
                               padding:

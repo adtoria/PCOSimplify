@@ -22,7 +22,7 @@ class _ExplorerState extends State<Explorer> {
   PageController pageViewController = PageController();
 
   Stream<List<User>> readData() => FirebaseFirestore.instance
-      .collection('users')
+      .collection('stories')
       .snapshots()
       .map((snapshot) =>
           snapshot.docs.map((doc) => User.fromJson(doc.data())).toList());
@@ -206,21 +206,76 @@ class _ExplorerState extends State<Explorer> {
         ),
 
         //Page 2
-        Column(
-          children: [
-            Container(
-              margin: EdgeInsets.only(top: 10),
-              //height: height - 20,
-              child: Column(
-                children: [
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 10),
-                    child: _exploreOptionList(context),
-                  ),
-                ],
+        SingleChildScrollView(
+          child: Column(
+            children: [
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 10),
+                child: _exploreOptionList(context),
               ),
-            ),
-          ],
+              SingleChildScrollView(
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      child: Column(
+                        //crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          LeftTiles(
+                            articleUrl:
+                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                            categoryName: "Pregnancy",
+                            source: "Youtube",
+                          ),
+                          LeftTiles(
+                            articleUrl:
+                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                            categoryName:
+                                "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
+                            source: "Youtube",
+                          ),
+                          LeftTiles(
+                            articleUrl:
+                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                            categoryName:
+                                "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
+                            source: "Youtube",
+                          ),
+                          LeftTiles(
+                            articleUrl:
+                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                            categoryName: "Pregnancy fkb",
+                            source: "Youtube",
+                          ),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      child: Column(
+                        //crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          RightTiles(
+                            articleUrl:
+                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                            categoryName: "Pregnancy",
+                            source: "Youtube",
+                          ),
+                          RightTiles(
+                            articleUrl:
+                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                            categoryName:
+                                "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
+                            source: "Youtube",
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
 
         //Page 3
@@ -670,21 +725,76 @@ class _ExplorerState extends State<Explorer> {
         ),
 
         //Page 9
-        Column(
-          children: [
-            Container(
-              margin: EdgeInsets.only(top: 10),
-              //height: height - 20,
-              child: Column(
-                children: [
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 10),
-                    child: _exploreOptionList(context),
-                  ),
-                ],
+        SingleChildScrollView(
+          child: Column(
+            children: [
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 10),
+                child: _exploreOptionList(context),
               ),
-            ),
-          ],
+              SingleChildScrollView(
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      child: Column(
+                        //crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          LeftTiles(
+                            articleUrl:
+                                'https://helloclue.com/articles/cycle-a-z/what\'s-it-like-to-have-pcos-when-you\'re-trans',
+                            categoryName:
+                                "What it's like to have PCOS when you’re trans",
+                            source: "helloclue.com",
+                          ),
+                          LeftTiles(
+                            articleUrl:
+                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                            categoryName:
+                                "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
+                            source: "Youtube",
+                          ),
+                          LeftTiles(
+                            articleUrl:
+                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                            categoryName:
+                                "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
+                            source: "Youtube",
+                          ),
+                          LeftTiles(
+                            articleUrl:
+                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                            categoryName: "Pregnancy fkb",
+                            source: "Youtube",
+                          ),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      child: Column(
+                        children: [
+                          RightTiles(
+                            articleUrl:
+                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                            categoryName: "Pregnancy",
+                            source: "Youtube",
+                          ),
+                          RightTiles(
+                            articleUrl:
+                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                            categoryName:
+                                "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
+                            source: "Youtube",
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
 
         //Page 10

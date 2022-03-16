@@ -11,7 +11,7 @@ class PostView extends StatefulWidget {
 
 class _PostViewState extends State<PostView> {
   Stream<List<User>> readData() => FirebaseFirestore.instance
-      .collection('users')
+      .collection('stories')
       .snapshots()
       .map((snapshot) =>
           snapshot.docs.map((doc) => User.fromJson(doc.data())).toList());
