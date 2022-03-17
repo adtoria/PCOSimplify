@@ -3,7 +3,7 @@ import 'package:promject/Tracker/tasksWidget.dart';
 import 'package:provider/provider.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
 import 'eventDataSource.dart';
-import 'eventEditingPage.dart';
+import 'periodEditingPage.dart';
 import 'eventProvider.dart';
 import 'package:promject/ExplorePage/exploreMain.dart';
 import 'package:promject/Health/foodMain.dart';

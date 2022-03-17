@@ -1,4 +1,4 @@
-import 'event.dart';
+import 'periodEvent.dart';
 import 'eventProvider.dart';
 import 'utils.dart';
 import 'package:flutter/material.dart';

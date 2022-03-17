@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:promject/LoginRegister/fetchSignInDetails.dart';
 import 'package:promject/Tracker/calendarWidget.dart';
 import 'package:promject/Health/foodMain.dart';
 import 'package:promject/ExplorePage/exploreMain.dart';
@@ -131,6 +130,19 @@ class _HomeState extends State<Home> {
                 return Center(child: CircularProgressIndicator());
               }
             },
+          ),
+          MaterialButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ExploreMain()),
+              );
+            },
+            child: Text("Direct to explore section"),
+            color: Colors.lightBlue,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(30),
+            ),
           ),
         ],
       ),

@@ -1,5 +1,5 @@
-import 'event.dart';
-import 'eventEditingPage.dart';
+import 'periodEvent.dart';
+import 'periodEditingPage.dart';
 import 'eventProvider.dart';
 import 'utils.dart';
 import 'package:flutter/material.dart';
