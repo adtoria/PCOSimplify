@@ -43,13 +43,15 @@ class _ExplorerState extends State<Explorer> {
           ),
           tileColor: Color(0xFFDDE3FD),
           onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => SeeStories(
-                        title: user.title,
-                        name: user.name,
-                        body: user.body,
-                      ))),
+            context,
+            MaterialPageRoute(
+              builder: (context) => SeeStories(
+                title: user.title,
+                name: user.name,
+                body: user.body,
+              ),
+            ),
+          ),
           contentPadding: EdgeInsetsDirectional.fromSTEB(15, 5, 15, 5),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
@@ -76,40 +78,50 @@ class _ExplorerState extends State<Explorer> {
                 child: _exploreOptionList(context),
               ),
               SizedBox(
-                width: 300,
+                width: 260,
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(12, 8, 12, 12),
                   child: ListTile(
+                    tileColor: Color(0xFF1E233C),
                     leading: Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                       child: Container(
-                          width: 40,
-                          height: 40,
-                          clipBehavior: Clip.antiAlias,
-                          decoration: BoxDecoration(
-                            color: Color(0xFF1E233C),
-                            shape: BoxShape.circle,
-                          ),
-                          child: Icon(
-                            Icons.add,
-                            color: Colors.white,
-                            size: 25,
-                          )),
+                        width: 40,
+                        height: 40,
+                        clipBehavior: Clip.antiAlias,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          shape: BoxShape.circle,
+                        ),
+                        child: Icon(
+                          Icons.add,
+                          color: Color(0xFF1E233C),
+                          size: 22,
+                        ),
+                      ),
                     ),
                     title: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
-                      //child: Center(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                       child: Text(
                         "Share Your Story",
                         style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold),
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
+                        ),
                       ),
-                      //),
                     ),
-                    onTap: () => Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => AddPost())),
+                    onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => AddPost(),
+                      ),
+                    ),
                     contentPadding:
                         EdgeInsetsDirectional.fromSTEB(15, 5, 15, 5),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(35.0),
+                    ),
                   ),
                 ),
               ),
@@ -615,9 +627,9 @@ class _ExplorerState extends State<Explorer> {
                           ),
                           RightTiles(
                             articleUrl:
-                            'https://www.youtube.com/watch?v=MnXWpoFrGa4',
+                                'https://www.youtube.com/watch?v=MnXWpoFrGa4',
                             categoryName:
-                            "Why PCOS Kills Your Sleep & How You Can Fix It",
+                                "Why PCOS Kills Your Sleep & How You Can Fix It",
                             source: "youtube.com",
                           ),
                         ],
@@ -1134,13 +1146,13 @@ class _ExplorerState extends State<Explorer> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(8, 3, 8, 3),
+                  padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
                   child: Text(
                     title,
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 18.5,
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14.5,
                     ),
                   ),
                 ),
