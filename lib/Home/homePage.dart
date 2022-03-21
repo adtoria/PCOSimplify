@@ -9,6 +9,7 @@ import 'package:promject/ExplorePage/userClass.dart';
 import 'package:promject/ExplorePage/viewStory.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'customAlertDialog.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -225,8 +226,197 @@ class _HomeState extends State<Home> {
               thickness: 6,
               color: Color(0xFFedf1f7),
             ),
-            SizedBox(
-              height: 25,
+            // SizedBox(
+            //   height: 25,
+            // ),
+            Column(
+              children: [
+                Row(
+                  children: [
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(15, 25, 0, 10),
+                      child: Text(
+                        "Explore Articles",
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      //Pregnancy
+                      GestureDetector(
+                        onTap: () {
+                          launch(
+                              "https://www.healthline.com/health/pregnancy/pcos");
+                        },
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(8, 0, 8, 0),
+                          child: Container(
+                            width: 120,
+                            height: 120,
+                            clipBehavior: Clip.antiAlias,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                            ),
+                            child: Image.network(
+                              'https://picsum.photos/seed/910/600',
+                            ),
+                          ),
+                        ),
+                      ),
+                      //Diabetes
+                      GestureDetector(
+                        onTap: () {
+                          launch("https://www.youtube.com/watch?v=O_bhGDeOa_k");
+                        },
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(8, 0, 8, 0),
+                          child: Container(
+                            width: 120,
+                            height: 120,
+                            clipBehavior: Clip.antiAlias,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                            ),
+                            child: Image.network(
+                              'https://picsum.photos/seed/910/600',
+                            ),
+                          ),
+                        ),
+                      ),
+                      //Hirsuitism
+                      GestureDetector(
+                        onTap: () {
+                          launch("https://www.womenshairlossproject.com/");
+                        },
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(8, 0, 8, 0),
+                          child: Container(
+                            width: 120,
+                            height: 120,
+                            clipBehavior: Clip.antiAlias,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                            ),
+                            child: Image.network(
+                              'https://picsum.photos/seed/910/600',
+                            ),
+                          ),
+                        ),
+                      ),
+                      //Periods
+                      GestureDetector(
+                        onTap: () {
+                          launch("https://www.youtube.com/watch?v=MXi7mtC7AAk");
+                        },
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(8, 0, 8, 0),
+                          child: Container(
+                            width: 120,
+                            height: 120,
+                            clipBehavior: Clip.antiAlias,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                            ),
+                            child: Image.network(
+                              'https://picsum.photos/seed/910/600',
+                            ),
+                          ),
+                        ),
+                      ),
+                      //Workout
+                      GestureDetector(
+                        onTap: () {
+                          launch("https://www.verywellhealth.com/setting-up-your-exercise-routine-2616476");
+                        },
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(8, 0, 8, 0),
+                          child: Container(
+                            width: 120,
+                            height: 120,
+                            clipBehavior: Clip.antiAlias,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                            ),
+                            child: Image.network(
+                              'https://picsum.photos/seed/910/600',
+                            ),
+                          ),
+                        ),
+                      ),
+                      //Acne
+                      GestureDetector(
+                        onTap: () {
+                          launch("https://www.youtube.com/watch?v=dbY1LflgTl4");
+                        },
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(8, 0, 8, 0),
+                          child: Container(
+                            width: 120,
+                            height: 120,
+                            clipBehavior: Clip.antiAlias,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                            ),
+                            child: Image.network(
+                              'https://picsum.photos/seed/910/600',
+                            ),
+                          ),
+                        ),
+                      ),
+                      //Gut
+                      GestureDetector(
+                        onTap: () {
+                          launch("https://jilliangreaves.com/blog/2020/5/5/the-pcos-gut-health-connection");
+                        },
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(8, 0, 8, 0),
+                          child: Container(
+                            width: 120,
+                            height: 120,
+                            clipBehavior: Clip.antiAlias,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                            ),
+                            child: Image.network(
+                              'https://picsum.photos/seed/910/600',
+                            ),
+                          ),
+                        ),
+                      ),
+                      //Sleep
+                      GestureDetector(
+                        onTap: () {
+                          launch("https://www.youtube.com/watch?v=2hCMrp11vio");
+                        },
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(8, 0, 8, 0),
+                          child: Container(
+                            width: 120,
+                            height: 120,
+                            clipBehavior: Clip.antiAlias,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                            ),
+                            child: Image.network(
+                              'https://picsum.photos/seed/910/600',
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                )
+              ],
             ),
             SizedBox(
               height: 25,

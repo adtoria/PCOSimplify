@@ -582,13 +582,6 @@ class _ExplorerState extends State<Explorer> {
                           ),
                           LeftTiles(
                             articleUrl:
-                                'https://www.youtube.com/watch?v=MnXWpoFrGa4',
-                            categoryName:
-                                "Why PCOS Kills Your Sleep & How You Can Fix It",
-                            source: "youtube.com",
-                          ),
-                          LeftTiles(
-                            articleUrl:
                                 'https://www.hormones-australia.org.au/2019/09/13/sleep-disturbances-in-women-with-polycystic-ovary-syndrome-pcos/',
                             categoryName:
                                 "Sleep disturbances in women with Polycystic Ovary Syndrome",
@@ -619,6 +612,13 @@ class _ExplorerState extends State<Explorer> {
                                 'https://www.pennmedicine.org/updates/blogs/fertility-blog/2014/may/pcos-and-sleep-apnea',
                             categoryName: "PCOS and Sleep Apnea",
                             source: "pennmedicine.org",
+                          ),
+                          RightTiles(
+                            articleUrl:
+                            'https://www.youtube.com/watch?v=MnXWpoFrGa4',
+                            categoryName:
+                            "Why PCOS Kills Your Sleep & How You Can Fix It",
+                            source: "youtube.com",
                           ),
                         ],
                       ),
