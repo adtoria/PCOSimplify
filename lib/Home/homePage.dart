@@ -193,10 +193,12 @@ class _HomeState extends State<Home> {
                 ),
                 TextButton(
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisSize: MainAxisSize.min,
                     children: [
                       Container(
-                        width: 40,
-                        height: 40,
+                        width: 35,
+                        height: 35,
                         clipBehavior: Clip.antiAlias,
                         decoration: BoxDecoration(
                           color: Colors.white,
@@ -205,8 +207,11 @@ class _HomeState extends State<Home> {
                         child: Icon(
                           Icons.add,
                           color: Color(0xFF1E233C),
-                          size: 22,
+                          size: 24,
                         ),
+                      ),
+                      SizedBox(
+                        width: 4,
                       ),
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
@@ -244,15 +249,12 @@ class _HomeState extends State<Home> {
               thickness: 6,
               color: Color(0xFFedf1f7),
             ),
-            // SizedBox(
-            //   height: 25,
-            // ),
             Column(
               children: [
                 Row(
                   children: [
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(15, 25, 0, 10),
+                      padding: EdgeInsetsDirectional.fromSTEB(15, 27, 0, 10),
                       child: Text(
                         "Explore Articles",
                         style: TextStyle(
@@ -270,14 +272,14 @@ class _HomeState extends State<Home> {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      //Pregnancy
+                      // Pregnancy
                       GestureDetector(
                         onTap: () {
                           launch(
                               "https://www.healthline.com/health/pregnancy/pcos");
                         },
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(8, 0, 8, 0),
+                          padding: EdgeInsetsDirectional.fromSTEB(10, 0, 8, 0),
                           child: Container(
                             width: 120,
                             height: 120,
@@ -285,13 +287,13 @@ class _HomeState extends State<Home> {
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
                             ),
-                            child: Image.network(
-                              'https://picsum.photos/seed/910/600',
+                            child: Image(
+                              image: AssetImage('assets/images/pregnancy.png'),
                             ),
                           ),
                         ),
                       ),
-                      //Diabetes
+                      // Diabetes
                       GestureDetector(
                         onTap: () {
                           launch("https://www.youtube.com/watch?v=O_bhGDeOa_k");
@@ -305,13 +307,13 @@ class _HomeState extends State<Home> {
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
                             ),
-                            child: Image.network(
-                              'https://picsum.photos/seed/910/600',
+                            child: Image(
+                              image: AssetImage('assets/images/pregnancy.png'),
                             ),
                           ),
                         ),
                       ),
-                      //Hirsuitism
+                      // Hirsutism
                       GestureDetector(
                         onTap: () {
                           launch("https://www.womenshairlossproject.com/");
@@ -325,13 +327,13 @@ class _HomeState extends State<Home> {
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
                             ),
-                            child: Image.network(
-                              'https://picsum.photos/seed/910/600',
+                            child: Image(
+                              image: AssetImage('assets/images/hirtuism.png'),
                             ),
                           ),
                         ),
                       ),
-                      //Periods
+                      // Periods
                       GestureDetector(
                         onTap: () {
                           launch("https://www.youtube.com/watch?v=MXi7mtC7AAk");
@@ -345,13 +347,13 @@ class _HomeState extends State<Home> {
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
                             ),
-                            child: Image.network(
-                              'https://picsum.photos/seed/910/600',
+                            child: Image(
+                              image: AssetImage('assets/images/pregnancy.png'),
                             ),
                           ),
                         ),
                       ),
-                      //Workout
+                      // Workout
                       GestureDetector(
                         onTap: () {
                           launch(
@@ -366,13 +368,13 @@ class _HomeState extends State<Home> {
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
                             ),
-                            child: Image.network(
-                              'https://picsum.photos/seed/910/600',
+                            child: Image(
+                              image: AssetImage('assets/images/workout.png'),
                             ),
                           ),
                         ),
                       ),
-                      //Acne
+                      // Acne
                       GestureDetector(
                         onTap: () {
                           launch("https://www.youtube.com/watch?v=dbY1LflgTl4");
@@ -386,13 +388,13 @@ class _HomeState extends State<Home> {
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
                             ),
-                            child: Image.network(
-                              'https://picsum.photos/seed/910/600',
+                            child: Image(
+                              image: AssetImage('assets/images/acne.png'),
                             ),
                           ),
                         ),
                       ),
-                      //Gut
+                      // Gut Health
                       GestureDetector(
                         onTap: () {
                           launch(
@@ -407,13 +409,13 @@ class _HomeState extends State<Home> {
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
                             ),
-                            child: Image.network(
-                              'https://picsum.photos/seed/910/600',
+                            child: Image(
+                              image: AssetImage('assets/images/pregnancy.png'),
                             ),
                           ),
                         ),
                       ),
-                      //Sleep
+                      // Sleep
                       GestureDetector(
                         onTap: () {
                           launch("https://www.youtube.com/watch?v=2hCMrp11vio");
@@ -427,8 +429,9 @@ class _HomeState extends State<Home> {
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
                             ),
-                            child: Image.network(
-                              'https://picsum.photos/seed/910/600',
+                            child: Image(
+                              image: AssetImage(
+                                  'assets/images/sleepmanagement.png'),
                             ),
                           ),
                         ),
