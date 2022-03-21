@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:promject/ExplorePage/addStory.dart';
 import 'package:promject/Tracker/calendarWidget.dart';
 import 'package:promject/Health/foodMain.dart';
 import 'package:promject/ExplorePage/exploreMain.dart';
@@ -6,6 +8,7 @@ import 'package:promject/drawer.dart';
 import 'package:promject/ExplorePage/userClass.dart';
 import 'package:promject/ExplorePage/viewStory.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'customAlertDialog.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -43,12 +46,34 @@ class _HomeState extends State<Home> {
             padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
             child: Text(
               user.title,
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
           subtitle: Text(
-            'Written by - ' + user.name,
+            'By ' + user.name,
             style: TextStyle(fontSize: 15),
+          ),
+          trailing: FloatingActionButton(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0),
+            ),
+            child: Center(
+              child: Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(15, 5, 5, 5),
+                child: Text(
+                  "Add Your Story",
+                  style: TextStyle(
+                    fontSize: 10,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+            onPressed: () => Navigator.push(
+                context, MaterialPageRoute(builder: (context) => AddPost())),
           ),
           tileColor: Color(0xFFDDE3FD),
           onTap: () => Navigator.push(
@@ -61,10 +86,10 @@ class _HomeState extends State<Home> {
                       ))),
           contentPadding: EdgeInsetsDirectional.fromSTEB(15, 5, 15, 5),
           shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(15),
+              borderRadius: BorderRadius.circular(10),
               side: BorderSide(
-                color: Color(0xFF595B82),
-                width: 3.0,
+                color: Colors.grey,
+                width: 0.5,
               )),
         ),
       );
@@ -76,44 +101,76 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         foregroundColor: Colors.white,
         backgroundColor: Color(0xFF1E233C),
-        title: Text("Home"),
+        title: Text("PCOSimplify"),
       ),
       body: Column(
         children: [
-          MaterialButton(
-            color: Colors.deepOrange,
-            onPressed: () {
-              showDialog(
-                context: context,
-                builder: (context) {
-                  return Column(
-                    children: [
-                      Dialog(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(40)),
-                        elevation: 16,
-                        child: Container(
-                          color: Colors.blue,
-                          child: ListView(
-                            shrinkWrap: true,
-                            children: <Widget>[
-                              Center(
-                                  child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0, 20, 0, 20),
-                                child: Text('What is PCOS??'),
-                                //Content
-                              )),
-                            ],
-                          ),
+          ListTile(
+            title: Center(
+              child: Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 9, 0, 5),
+                child: Text(
+                  "Polycystic Ovary Syndrome",
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+            subtitle: Column(
+              children: [
+                SizedBox(
+                  child: Center(
+                    child: Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
+                      child: Text(
+                        "Polycystic Ovary Syndrome (PCOS) is a hormonal disorder common among women of reproductive age. Women with PCOS may have disturbed menstrual periods or excess androgen (male hormone) levels.",
+                        style: TextStyle(
+                          color: Colors.black87,
+                          fontSize: 14,
                         ),
                       ),
-                    ],
-                  );
-                },
-              );
-            },
-            child: Text('Show dialog'),
+                    ),
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    TextButton(
+                      child: Text("Read more..."),
+                      onPressed: () => showDialog(
+                        barrierColor: Colors.black26,
+                        context: context,
+                        builder: (context) {
+                          return CustomAlertDialog(
+                            title: "Polycystic Ovary Syndrome",
+                            description:
+                                "Polycystic Ovary Syndrome (PCOS) is a hormonal disorder common among women of reproductive age. Women with PCOS may have disturbed menstrual periods or excess androgen (male hormone) levels. The ovaries may develop numerous small collections of fluid and fail to regularly release eggs.",
+                          );
+                        },
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(15, 9, 0, 0),
+                child: Text(
+                  "New story!",
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.italic,
+                  ),
+                ),
+              ),
+            ],
           ),
           StreamBuilder<List<User>>(
             stream: readData(),
@@ -138,8 +195,8 @@ class _HomeState extends State<Home> {
                 MaterialPageRoute(builder: (context) => ExploreMain()),
               );
             },
-            child: Text("Direct to explore section"),
-            color: Colors.lightBlue,
+            child: Text("Explore more articles!"),
+            color: Theme.of(context).primaryColor,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30),
             ),
