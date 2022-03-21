@@ -74,7 +74,7 @@ flutter:
   assets:
     - assets/images/acne.png
     - assets/images/hairfall.png
-    - assets/images/hirtuism.png
+    - assets/images/hirsutism.png
     - assets/images/pain.png
     - assets/images/pregnancy.png
     - assets/images/sleepmanagement.png

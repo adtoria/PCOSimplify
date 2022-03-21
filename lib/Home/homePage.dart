@@ -328,7 +328,7 @@ class _HomeState extends State<Home> {
                               shape: BoxShape.circle,
                             ),
                             child: Image(
-                              image: AssetImage('assets/images/hirtuism.png'),
+                              image: AssetImage('assets/images/hirsutism.png'),
                             ),
                           ),
                         ),
@@ -438,7 +438,7 @@ class _HomeState extends State<Home> {
                       ),
                     ],
                   ),
-                )
+                ),
               ],
             ),
             SizedBox(
