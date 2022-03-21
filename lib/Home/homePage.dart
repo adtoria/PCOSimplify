@@ -62,7 +62,7 @@ class _HomeState extends State<Home> {
             ),
             child: Center(
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(15, 5, 5, 5),
+                padding: EdgeInsetsDirectional.fromSTEB(10, 5, 5, 5),
                 child: Text(
                   "Add Your Story",
                   style: TextStyle(
@@ -162,11 +162,11 @@ class _HomeState extends State<Home> {
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(15, 9, 0, 0),
                 child: Text(
-                  "New story!",
+                  "Latest User Story",
                   style: TextStyle(
-                    fontSize: 15,
+                    fontSize: 20,
                     fontWeight: FontWeight.bold,
-                    fontStyle: FontStyle.italic,
+                    //fontStyle: FontStyle.italic,
                   ),
                 ),
               ),

@@ -132,7 +132,7 @@ class _ExplorerState extends State<Explorer> {
           ),
         ),
 
-        //Page 1
+        //Page 1 DONE
         SingleChildScrollView(
           child: Column(
             children: [
@@ -151,29 +151,23 @@ class _ExplorerState extends State<Explorer> {
                         children: [
                           LeftTiles(
                             articleUrl:
-                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
-                            categoryName: "Pregnancy",
-                            source: "Youtube",
+                                'https://www.healthline.com/health/pregnancy/pcos',
+                            categoryName: "What You Should Know About Polycystic Ovarian Syndrome (PCOS) and Pregnancy",
+                            source: "healthline.com",
                           ),
                           LeftTiles(
                             articleUrl:
-                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                                'https://www.youtube.com/watch?v=SrrWW1LmNAs',
                             categoryName:
-                                "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
-                            source: "Youtube",
+                                "How do women with PCOS get pregnant?",
+                            source: "youtube.com",
                           ),
                           LeftTiles(
                             articleUrl:
-                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                                'https://www.pregnancybirthbaby.org.au/pcos-and-pregnancy',
                             categoryName:
-                                "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
-                            source: "Youtube",
-                          ),
-                          LeftTiles(
-                            articleUrl:
-                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
-                            categoryName: "Pregnancy fkb",
-                            source: "Youtube",
+                                "PCOS and pregnancy",
+                            source: "pregnancybirthbaby.org.au",
                           ),
                         ],
                       ),
@@ -184,16 +178,30 @@ class _ExplorerState extends State<Explorer> {
                         children: [
                           RightTiles(
                             articleUrl:
-                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
-                            categoryName: "Pregnancy",
-                            source: "Youtube",
+                                'https://www.nichd.nih.gov/health/topics/pcos/more_information/FAQs/pregnancy',
+                            categoryName: "Does PCOS affect pregnancy?",
+                            source: "nichd.nih.gov",
                           ),
                           RightTiles(
                             articleUrl:
-                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                                'https://www.youtube.com/watch?v=HPRq5y5NnRc',
                             categoryName:
-                                "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
-                            source: "Youtube",
+                                "3 TIPS ON GETTING PREGNANT WITH PCOS",
+                            source: "youtube.com",
+                          ),
+                          RightTiles(
+                            articleUrl:
+                            'https://www.webmd.com/infertility-and-reproduction/polycystic-ovary-syndrome-fertility',
+                            categoryName:
+                            "PCOS and Your Fertility and What You Can Do About It",
+                            source: "webmd.com",
+                          ),
+                          RightTiles(
+                            articleUrl:
+                            'https://www.youtube.com/watch?v=KW6gWv2gOa4',
+                            categoryName:
+                            "What happens if I have PCOS and I get pregnant?",
+                            source: "youtube.com",
                           ),
                         ],
                       ),
@@ -244,9 +252,9 @@ class _ExplorerState extends State<Explorer> {
                           ),
                           LeftTiles(
                             articleUrl:
-                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
-                            categoryName: "Pregnancy fkb",
-                            source: "Youtube",
+                                'https://www.hormones-australia.org.au/2019/09/13/sleep-disturbances-in-women-with-polycystic-ovary-syndrome-pcos/',
+                            categoryName: "Sleep disturbances in women with Polycystic Ovary Syndrome",
+                            source: "hormones-australia.org.au",
                           ),
                         ],
                       ),
@@ -278,7 +286,7 @@ class _ExplorerState extends State<Explorer> {
           ),
         ),
 
-        //Page 3
+        //Page 3 DONE
         SingleChildScrollView(
           child: Column(
             children: [
@@ -371,7 +379,7 @@ class _ExplorerState extends State<Explorer> {
           ),
         ),
 
-        //Page 4
+        //Page 4 DONE
         SingleChildScrollView(
           child: Column(
             children: [
@@ -464,7 +472,7 @@ class _ExplorerState extends State<Explorer> {
           ),
         ),
 
-        //Page 5
+        //Page 5 DONE
         SingleChildScrollView(
           child: Column(
             children: [
@@ -542,25 +550,86 @@ class _ExplorerState extends State<Explorer> {
           ),
         ),
 
-        //Page 6
-        Column(
-          children: [
-            Container(
-              margin: EdgeInsets.only(top: 10),
-              //height: height - 20,
-              child: Column(
-                children: [
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 10),
-                    child: _exploreOptionList(context),
-                  ),
-                ],
+        //Page 6 DONE
+        SingleChildScrollView(
+          child: Column(
+            children: [
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 10),
+                child: _exploreOptionList(context),
               ),
-            ),
-          ],
+              SingleChildScrollView(
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      child: Column(
+                        //crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          LeftTiles(
+                            articleUrl:
+                            'https://www.youtube.com/watch?v=B5JKXyW6_sw',
+                            categoryName: "Doctor's Prescription For PCOD",
+                            source: "youtube.com",
+                          ),
+                          LeftTiles(
+                            articleUrl:
+                            'https://www.verywellhealth.com/pcos-and-sleep-disturbances-2616639',
+                            categoryName:
+                            "Is PCOS Disturbing Your Sleep?",
+                            source: "verywellhealth.com",
+                          ),
+                          LeftTiles(
+                            articleUrl:
+                            'https://www.youtube.com/watch?v=MnXWpoFrGa4',
+                            categoryName:
+                            "Why PCOS Kills Your Sleep & How You Can Fix It",
+                            source: "youtube.com",
+                          ),
+                          LeftTiles(
+                            articleUrl:
+                            'https://www.hormones-australia.org.au/2019/09/13/sleep-disturbances-in-women-with-polycystic-ovary-syndrome-pcos/',
+                            categoryName: "Sleep disturbances in women with Polycystic Ovary Syndrome",
+                            source: "hormones-australia.org.au",
+                          ),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      child: Column(
+                        //crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          RightTiles(
+                            articleUrl:
+                            'https://bebodywise.com/blog/pcos-sleep-hormones-affecting-sleep/',
+                            categoryName: "PCOS & Sleep | Hormones Affecting Sleep",
+                            source: "bebodywise.com",
+                          ),
+                          RightTiles(
+                            articleUrl:
+                            'https://www.youtube.com/watch?v=2hCMrp11vio',
+                            categoryName: "Sleep and PCOS",
+                            source: "youtube.com",
+                          ),
+                          RightTiles(
+                            articleUrl:
+                            'https://www.pennmedicine.org/updates/blogs/fertility-blog/2014/may/pcos-and-sleep-apnea',
+                            categoryName:
+                            "PCOS and Sleep Apnea",
+                            source: "pennmedicine.org",
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
 
-        //Page 7
+        //Page 7 DONE
         SingleChildScrollView(
           child: Column(
             children: [
@@ -643,7 +712,7 @@ class _ExplorerState extends State<Explorer> {
           ),
         ),
 
-        //Page 8
+        //Page 8 DONE
         SingleChildScrollView(
           child: Column(
             children: [
@@ -797,25 +866,85 @@ class _ExplorerState extends State<Explorer> {
           ),
         ),
 
-        //Page 10
-        Column(
-          children: [
-            Container(
-              margin: EdgeInsets.only(top: 10),
-              //height: height - 20,
-              child: Column(
-                children: [
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 10),
-                    child: _exploreOptionList(context),
-                  ),
-                ],
+        //Page 10 DONE
+        SingleChildScrollView(
+          child: Column(
+            children: [
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 10),
+                child: _exploreOptionList(context),
               ),
-            ),
-          ],
+              SingleChildScrollView(
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      child: Column(
+                        children: [
+                          LeftTiles(
+                            articleUrl:
+                            'https://helloclue.com/articles/cycle-a-z/the-link-between-pcos-and-insulin-resistance',
+                            categoryName:
+                            "The link between PCOS and insulin resistance",
+                            source: "helloclue.com",
+                          ),
+                          LeftTiles(
+                            articleUrl:
+                            'https://www.youtube.com/watch?v=OjlWNvE7Qq8',
+                            categoryName:
+                            "PCOS & Insulin Resistance | Maitri",
+                            source: "youtube.com",
+                          ),
+                          LeftTiles(
+                            articleUrl:
+                            'https://www.verywellhealth.com/pcos-and-insulin-resistance-2616319',
+                            categoryName: "Insulin Resistance and PCOS",
+                            source: "verywellhealth.com",
+                          ),
+                          LeftTiles(
+                            articleUrl:
+                            'https://www.youtube.com/watch?v=O_bhGDeOa_k',
+                            categoryName: "PCOS/PCOD Diet Science + Plan For Weight Loss | BeerBiceps Women's Health",
+                            source: "youtube.com",
+                          ),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      child: Column(
+                        //crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          RightTiles(
+                            articleUrl:
+                            'https://www.healthline.com/health/diabetes/are-pcos-and-diabetes-connected',
+                            categoryName:
+                            "What’s the Connection Between Polycystic Ovarian Syndrome (PCOS) and Diabetes?",
+                            source: "healthline.com",
+                          ),
+                          RightTiles(
+                            articleUrl:
+                            'https://www.youtube.com/watch?v=iVAraoiCjiw',
+                            categoryName: "PCOS/PCOD and Diabetes: What's the Link?",
+                            source: "youtube.com",
+                          ),
+                          RightTiles(
+                            articleUrl:
+                            'https://www.medicalnewstoday.com/articles/326185',
+                            categoryName: "What to know about PCOS and diabetes",
+                            source: "medicalnewstoday.com",
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
 
-        //Page 11
+        //Page 11 DONE
         SingleChildScrollView(
           child: Column(
             children: [
@@ -912,12 +1041,12 @@ class _ExplorerState extends State<Explorer> {
             index: 0,
           ),
           _exploreTiles(
-            title: 'Pain',
+            title: 'Pregnancy',
             context: context,
             index: 1,
           ),
           _exploreTiles(
-            title: 'Pregnancy',
+            title: 'Pain',
             context: context,
             index: 2,
           ),
