@@ -236,8 +236,14 @@ class _ExplorerState extends State<Explorer> {
           child: Column(
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 10),
+                padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
                 child: _exploreOptionList(context),
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 7),
+                child: Image(
+                  image: AssetImage('assets/images/pain.png'),
+                ),
               ),
               SingleChildScrollView(
                 child: Row(
@@ -1103,27 +1109,27 @@ class _ExplorerState extends State<Explorer> {
                         children: [
                           LeftTiles(
                             articleUrl:
-                            'https://www.rmact.com/fertility-blog/pcos-fitness-guide',
+                                'https://www.rmact.com/fertility-blog/pcos-fitness-guide',
                             categoryName:
-                            "Best Workout for Managing PCOS Symptoms",
+                                "Best Workout for Managing PCOS Symptoms",
                             source: "rmact.com",
                           ),
                           LeftTiles(
                             articleUrl:
-                            'https://www.youtube.com/watch?v=4xrDxxg5jv4',
+                                'https://www.youtube.com/watch?v=4xrDxxg5jv4',
                             categoryName:
-                            "5 Best Yoga Poses for PCOS Treatment",
+                                "5 Best Yoga Poses for PCOS Treatment",
                             source: "youtube.com",
                           ),
                           LeftTiles(
                             articleUrl:
-                            'https://www.healthline.com/health/womens-health/exercise-for-pcos',
+                                'https://www.healthline.com/health/womens-health/exercise-for-pcos',
                             categoryName: "Best Exercises for PCOS",
                             source: "healthline.com",
                           ),
                           LeftTiles(
                             articleUrl:
-                            'https://www.youtube.com/watch?v=hNkqaMw8YCc',
+                                'https://www.youtube.com/watch?v=hNkqaMw8YCc',
                             categoryName: "Yoga for PCOS with Rashmi Ramesh",
                             source: "youtube.com",
                           ),
@@ -1136,20 +1142,20 @@ class _ExplorerState extends State<Explorer> {
                         children: [
                           RightTiles(
                             articleUrl:
-                            'https://www.verywellhealth.com/setting-up-your-exercise-routine-2616476',
+                                'https://www.verywellhealth.com/setting-up-your-exercise-routine-2616476',
                             categoryName:
-                            "Benefits of Exercising When You Have PCOS",
+                                "Benefits of Exercising When You Have PCOS",
                             source: "verywellhealth.com",
                           ),
                           RightTiles(
                             articleUrl:
-                            'https://www.wellcurve.in/blog/yoga-poses-asanas-for-pcos/',
+                                'https://www.wellcurve.in/blog/yoga-poses-asanas-for-pcos/',
                             categoryName: "10 Yoga Poses for PCOS",
                             source: "wellcurve.in",
                           ),
                           RightTiles(
                             articleUrl:
-                            'https://www.youtube.com/watch?v=Tkc2PP37c3U',
+                                'https://www.youtube.com/watch?v=Tkc2PP37c3U',
                             categoryName: "PCOS Workout with Sheba Devaraj",
                             source: "youtube.com",
                           ),
