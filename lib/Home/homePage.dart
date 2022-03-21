@@ -192,14 +192,32 @@ class _HomeState extends State<Home> {
                   height: 10,
                 ),
                 TextButton(
-                  child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
-                    child: Text(
-                      "Share Your Story",
-                      style: TextStyle(
-                        color: Colors.white,
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 40,
+                        height: 40,
+                        clipBehavior: Clip.antiAlias,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          shape: BoxShape.circle,
+                        ),
+                        child: Icon(
+                          Icons.add,
+                          color: Color(0xFF1E233C),
+                          size: 22,
+                        ),
                       ),
-                    ),
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
+                        child: Text(
+                          "Share Your Story",
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                   onPressed: () => Navigator.push(
                     context,
@@ -336,7 +354,8 @@ class _HomeState extends State<Home> {
                       //Workout
                       GestureDetector(
                         onTap: () {
-                          launch("https://www.verywellhealth.com/setting-up-your-exercise-routine-2616476");
+                          launch(
+                              "https://www.verywellhealth.com/setting-up-your-exercise-routine-2616476");
                         },
                         child: Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(8, 0, 8, 0),
@@ -376,7 +395,8 @@ class _HomeState extends State<Home> {
                       //Gut
                       GestureDetector(
                         onTap: () {
-                          launch("https://jilliangreaves.com/blog/2020/5/5/the-pcos-gut-health-connection");
+                          launch(
+                              "https://jilliangreaves.com/blog/2020/5/5/the-pcos-gut-health-connection");
                         },
                         child: Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(8, 0, 8, 0),
