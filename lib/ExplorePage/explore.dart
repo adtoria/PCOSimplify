@@ -52,11 +52,12 @@ class _ExplorerState extends State<Explorer> {
                       ))),
           contentPadding: EdgeInsetsDirectional.fromSTEB(15, 5, 15, 5),
           shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(15),
-              side: BorderSide(
-                color: Color(0xFF595B82),
-                width: 3.0,
-              )),
+            borderRadius: BorderRadius.circular(10),
+            side: BorderSide(
+              color: Color(0xFF595B82),
+              width: 0.5,
+            ),
+          ),
         ),
       );
 
@@ -99,7 +100,7 @@ class _ExplorerState extends State<Explorer> {
                       padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
                       //child: Center(
                       child: Text(
-                        "Add your story",
+                        "Share Your Story",
                         style: TextStyle(
                             fontSize: 20, fontWeight: FontWeight.bold),
                       ),
@@ -147,12 +148,12 @@ class _ExplorerState extends State<Explorer> {
                   children: [
                     Expanded(
                       child: Column(
-                        //crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           LeftTiles(
                             articleUrl:
                                 'https://www.healthline.com/health/pregnancy/pcos',
-                            categoryName: "What You Should Know About Polycystic Ovarian Syndrome (PCOS) and Pregnancy",
+                            categoryName:
+                                "What You Should Know About Polycystic Ovarian Syndrome (PCOS) and Pregnancy",
                             source: "healthline.com",
                           ),
                           LeftTiles(
@@ -165,8 +166,7 @@ class _ExplorerState extends State<Explorer> {
                           LeftTiles(
                             articleUrl:
                                 'https://www.pregnancybirthbaby.org.au/pcos-and-pregnancy',
-                            categoryName:
-                                "PCOS and pregnancy",
+                            categoryName: "PCOS and pregnancy",
                             source: "pregnancybirthbaby.org.au",
                           ),
                         ],
@@ -191,16 +191,16 @@ class _ExplorerState extends State<Explorer> {
                           ),
                           RightTiles(
                             articleUrl:
-                            'https://www.webmd.com/infertility-and-reproduction/polycystic-ovary-syndrome-fertility',
+                                'https://www.webmd.com/infertility-and-reproduction/polycystic-ovary-syndrome-fertility',
                             categoryName:
-                            "PCOS and Your Fertility and What You Can Do About It",
+                                "PCOS and Your Fertility and What You Can Do About It",
                             source: "webmd.com",
                           ),
                           RightTiles(
                             articleUrl:
-                            'https://www.youtube.com/watch?v=KW6gWv2gOa4',
+                                'https://www.youtube.com/watch?v=KW6gWv2gOa4',
                             categoryName:
-                            "What happens if I have PCOS and I get pregnant?",
+                                "What happens if I have PCOS and I get pregnant?",
                             source: "youtube.com",
                           ),
                         ],
@@ -253,7 +253,8 @@ class _ExplorerState extends State<Explorer> {
                           LeftTiles(
                             articleUrl:
                                 'https://www.hormones-australia.org.au/2019/09/13/sleep-disturbances-in-women-with-polycystic-ovary-syndrome-pcos/',
-                            categoryName: "Sleep disturbances in women with Polycystic Ovary Syndrome",
+                            categoryName:
+                                "Sleep disturbances in women with Polycystic Ovary Syndrome",
                             source: "hormones-australia.org.au",
                           ),
                         ],
@@ -569,28 +570,28 @@ class _ExplorerState extends State<Explorer> {
                         children: [
                           LeftTiles(
                             articleUrl:
-                            'https://www.youtube.com/watch?v=B5JKXyW6_sw',
+                                'https://www.youtube.com/watch?v=B5JKXyW6_sw',
                             categoryName: "Doctor's Prescription For PCOD",
                             source: "youtube.com",
                           ),
                           LeftTiles(
                             articleUrl:
-                            'https://www.verywellhealth.com/pcos-and-sleep-disturbances-2616639',
-                            categoryName:
-                            "Is PCOS Disturbing Your Sleep?",
+                                'https://www.verywellhealth.com/pcos-and-sleep-disturbances-2616639',
+                            categoryName: "Is PCOS Disturbing Your Sleep?",
                             source: "verywellhealth.com",
                           ),
                           LeftTiles(
                             articleUrl:
-                            'https://www.youtube.com/watch?v=MnXWpoFrGa4',
+                                'https://www.youtube.com/watch?v=MnXWpoFrGa4',
                             categoryName:
-                            "Why PCOS Kills Your Sleep & How You Can Fix It",
+                                "Why PCOS Kills Your Sleep & How You Can Fix It",
                             source: "youtube.com",
                           ),
                           LeftTiles(
                             articleUrl:
-                            'https://www.hormones-australia.org.au/2019/09/13/sleep-disturbances-in-women-with-polycystic-ovary-syndrome-pcos/',
-                            categoryName: "Sleep disturbances in women with Polycystic Ovary Syndrome",
+                                'https://www.hormones-australia.org.au/2019/09/13/sleep-disturbances-in-women-with-polycystic-ovary-syndrome-pcos/',
+                            categoryName:
+                                "Sleep disturbances in women with Polycystic Ovary Syndrome",
                             source: "hormones-australia.org.au",
                           ),
                         ],
@@ -602,21 +603,21 @@ class _ExplorerState extends State<Explorer> {
                         children: [
                           RightTiles(
                             articleUrl:
-                            'https://bebodywise.com/blog/pcos-sleep-hormones-affecting-sleep/',
-                            categoryName: "PCOS & Sleep | Hormones Affecting Sleep",
+                                'https://bebodywise.com/blog/pcos-sleep-hormones-affecting-sleep/',
+                            categoryName:
+                                "PCOS & Sleep | Hormones Affecting Sleep",
                             source: "bebodywise.com",
                           ),
                           RightTiles(
                             articleUrl:
-                            'https://www.youtube.com/watch?v=2hCMrp11vio',
+                                'https://www.youtube.com/watch?v=2hCMrp11vio',
                             categoryName: "Sleep and PCOS",
                             source: "youtube.com",
                           ),
                           RightTiles(
                             articleUrl:
-                            'https://www.pennmedicine.org/updates/blogs/fertility-blog/2014/may/pcos-and-sleep-apnea',
-                            categoryName:
-                            "PCOS and Sleep Apnea",
+                                'https://www.pennmedicine.org/updates/blogs/fertility-blog/2014/may/pcos-and-sleep-apnea',
+                            categoryName: "PCOS and Sleep Apnea",
                             source: "pennmedicine.org",
                           ),
                         ],
@@ -884,28 +885,28 @@ class _ExplorerState extends State<Explorer> {
                         children: [
                           LeftTiles(
                             articleUrl:
-                            'https://helloclue.com/articles/cycle-a-z/the-link-between-pcos-and-insulin-resistance',
+                                'https://helloclue.com/articles/cycle-a-z/the-link-between-pcos-and-insulin-resistance',
                             categoryName:
-                            "The link between PCOS and insulin resistance",
+                                "The link between PCOS and insulin resistance",
                             source: "helloclue.com",
                           ),
                           LeftTiles(
                             articleUrl:
-                            'https://www.youtube.com/watch?v=OjlWNvE7Qq8',
-                            categoryName:
-                            "PCOS & Insulin Resistance | Maitri",
+                                'https://www.youtube.com/watch?v=OjlWNvE7Qq8',
+                            categoryName: "PCOS & Insulin Resistance | Maitri",
                             source: "youtube.com",
                           ),
                           LeftTiles(
                             articleUrl:
-                            'https://www.verywellhealth.com/pcos-and-insulin-resistance-2616319',
+                                'https://www.verywellhealth.com/pcos-and-insulin-resistance-2616319',
                             categoryName: "Insulin Resistance and PCOS",
                             source: "verywellhealth.com",
                           ),
                           LeftTiles(
                             articleUrl:
-                            'https://www.youtube.com/watch?v=O_bhGDeOa_k',
-                            categoryName: "PCOS/PCOD Diet Science + Plan For Weight Loss | BeerBiceps Women's Health",
+                                'https://www.youtube.com/watch?v=O_bhGDeOa_k',
+                            categoryName:
+                                "PCOS/PCOD Diet Science + Plan For Weight Loss | BeerBiceps Women's Health",
                             source: "youtube.com",
                           ),
                         ],
@@ -917,21 +918,23 @@ class _ExplorerState extends State<Explorer> {
                         children: [
                           RightTiles(
                             articleUrl:
-                            'https://www.healthline.com/health/diabetes/are-pcos-and-diabetes-connected',
+                                'https://www.healthline.com/health/diabetes/are-pcos-and-diabetes-connected',
                             categoryName:
-                            "What’s the Connection Between Polycystic Ovarian Syndrome (PCOS) and Diabetes?",
+                                "What’s the Connection Between Polycystic Ovarian Syndrome (PCOS) and Diabetes?",
                             source: "healthline.com",
                           ),
                           RightTiles(
                             articleUrl:
-                            'https://www.youtube.com/watch?v=iVAraoiCjiw',
-                            categoryName: "PCOS/PCOD and Diabetes: What's the Link?",
+                                'https://www.youtube.com/watch?v=iVAraoiCjiw',
+                            categoryName:
+                                "PCOS/PCOD and Diabetes: What's the Link?",
                             source: "youtube.com",
                           ),
                           RightTiles(
                             articleUrl:
-                            'https://www.medicalnewstoday.com/articles/326185',
-                            categoryName: "What to know about PCOS and diabetes",
+                                'https://www.medicalnewstoday.com/articles/326185',
+                            categoryName:
+                                "What to know about PCOS and diabetes",
                             source: "medicalnewstoday.com",
                           ),
                         ],

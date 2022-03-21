@@ -36,11 +36,12 @@ class LeftTiles extends StatelessWidget {
         ),
         contentPadding: EdgeInsetsDirectional.fromSTEB(15, 5, 15, 5),
         shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(15),
-            side: BorderSide(
-              color: Color(0xFF595B82),
-              width: 4,
-            )),
+          borderRadius: BorderRadius.circular(10),
+          side: BorderSide(
+            color: Color(0xFF595B82),
+            width: 0.5,
+          ),
+        ),
         onTap: () {
           launch(articleUrl);
         },
