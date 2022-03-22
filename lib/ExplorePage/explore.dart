@@ -231,7 +231,7 @@ class _ExplorerState extends State<Explorer> {
           ),
         ),
 
-        //Page 2
+        //Page 2 DONE
         SingleChildScrollView(
           child: Column(
             children: [
@@ -256,30 +256,23 @@ class _ExplorerState extends State<Explorer> {
                         children: [
                           LeftTiles(
                             articleUrl:
-                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
-                            categoryName: "Pregnancy",
-                            source: "Youtube",
+                                'https://www.healthline.com/health/womens-health/ovarian-cyst-treatment-at-home',
+                            categoryName: "11 Home Treatments for Ovarian Cyst Symptoms",
+                            source: "healthline.com",
                           ),
                           LeftTiles(
                             articleUrl:
-                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                                'https://www.youtube.com/watch?v=6dG5Qhuqa3I',
                             categoryName:
-                                "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
-                            source: "Youtube",
+                                "Therapies for Endometriosis, PCOS, Period Pain",
+                            source: "youtube.com",
                           ),
                           LeftTiles(
                             articleUrl:
-                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                            'https://www.healthline.com/health/womens-health/what-does-ovarian-cyst-pain-feel-like',
                             categoryName:
-                                "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
-                            source: "Youtube",
-                          ),
-                          LeftTiles(
-                            articleUrl:
-                                'https://www.hormones-australia.org.au/2019/09/13/sleep-disturbances-in-women-with-polycystic-ovary-syndrome-pcos/',
-                            categoryName:
-                                "Sleep disturbances in women with Polycystic Ovary Syndrome",
-                            source: "hormones-australia.org.au",
+                            "What Does Ovarian Cyst Pain Feel Like?",
+                            source: "healthline.com",
                           ),
                         ],
                       ),
@@ -290,16 +283,23 @@ class _ExplorerState extends State<Explorer> {
                         children: [
                           RightTiles(
                             articleUrl:
-                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
-                            categoryName: "Pregnancy",
-                            source: "Youtube",
+                                'https://www.youtube.com/watch?v=Dy6sYZXOWus',
+                            categoryName: "Endometriosis Why Pelvic pain should not be Ignored",
+                            source: "youtube.com",
                           ),
                           RightTiles(
                             articleUrl:
-                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                                'https://www.youtube.com/watch?v=SCgLamlP4Sw',
                             categoryName:
-                                "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
-                            source: "Youtube",
+                                "Obstetrics and Gynecology – Pelvic Pain",
+                            source: "youtube.com",
+                          ),
+                          RightTiles(
+                            articleUrl:
+                            'https://www.youtube.com/watch?v=qkIaToLO5U0',
+                            categoryName:
+                            "YOGA FOR PCOS + PERIOD PAIN",
+                            source: "youtube.com",
                           ),
                         ],
                       ),
@@ -352,16 +352,8 @@ class _ExplorerState extends State<Explorer> {
                           LeftTiles(
                             //DONE
                             articleUrl:
-                                'https://www.youtube.com/watch?v=nNYVPhzqnSU',
-                            categoryName:
-                                "How I Healed My Cystic Acne NATURALLY (PCOS & Hormonal Acne)",
-                            source: "youtube.com",
-                          ),
-                          LeftTiles(
-                            //DONE
-                            articleUrl:
-                                'https://www.youtube.com/watch?v=u1UY_MHFz2c',
-                            categoryName: "PCOS Hair Loss Treatment",
+                            'https://www.youtube.com/watch?v=htJg4A-7BQo',
+                            categoryName: "PCOS & Skin | Dermatologist Review",
                             source: "youtube.com",
                           ),
                         ],
@@ -374,31 +366,24 @@ class _ExplorerState extends State<Explorer> {
                           RightTiles(
                             //DONE
                             articleUrl:
-                                'https://www.womenshairlossproject.com/',
-                            categoryName: "The Women's Hair Loss Project",
-                            source: "womenshairlossproject.com",
+                            'https://www.health.harvard.edu/blog/polycystic-ovarian-syndrome-and-the-skin-2021042922502',
+                            categoryName: "Polycystic ovary syndrome and the skin",
+                            source: "health.harvard.edu",
                           ),
                           RightTiles(
                             //DONE
                             articleUrl:
-                                'https://www.youtube.com/watch?v=htJg4A-7BQo',
-                            categoryName: "PCOS & Skin | Dermatologist Review",
+                            'https://www.youtube.com/watch?v=nNYVPhzqnSU',
+                            categoryName:
+                            "How I Healed My Cystic Acne NATURALLY (PCOS & Hormonal Acne)",
                             source: "youtube.com",
                           ),
                           RightTiles(
                             //DONE
                             articleUrl:
-                                'https://www.healthline.com/health/pcos-hair-loss-2',
-                            categoryName:
-                                "How to Manage PCOS Related Hair Loss",
-                            source: "Healthline.com",
-                          ),
-                          RightTiles(
-                            articleUrl:
-                                'https://www.youtube.com/watch?v=dbY1LflgTl4',
-                            categoryName:
-                                "5 Haircare Secrets that MASSIVELY REDUCED MY PCOS Hairfall",
-                            source: "youtube.com",
+                            'https://www.medicalnewstoday.com/articles/pcos-acne#pcos-and-acne',
+                            categoryName: "What to know about PCOS and Acne",
+                            source: "medicalnewstoday.com",
                           ),
                         ],
                       ),
@@ -874,23 +859,17 @@ class _ExplorerState extends State<Explorer> {
                           ),
                           LeftTiles(
                             articleUrl:
-                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                                'https://www.endocrine-abstracts.org/ea/0041/ea0041ep682',
                             categoryName:
-                                "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
-                            source: "Youtube",
+                                "Polycystic ovary syndrome (Pcos) in female-to-male (Ftm) transsexual persons",
+                            source: "endocrine-abstracts.org",
                           ),
                           LeftTiles(
                             articleUrl:
-                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                                'https://www.gayparentstobe.com/gay-parenting-blog/pcos-and-lgbtqia/',
                             categoryName:
-                                "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
-                            source: "Youtube",
-                          ),
-                          LeftTiles(
-                            articleUrl:
-                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
-                            categoryName: "Pregnancy fkb",
-                            source: "Youtube",
+                                "PCOS and the LGBTQIA+ Community",
+                            source: "gayparentstobe.com",
                           ),
                         ],
                       ),
@@ -900,16 +879,30 @@ class _ExplorerState extends State<Explorer> {
                         children: [
                           RightTiles(
                             articleUrl:
-                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
-                            categoryName: "Pregnancy",
-                            source: "Youtube",
+                                'https://www.youtube.com/watch?v=8UM9yVFu2lI',
+                            categoryName: "Case Discussion: PCOS Management in a Transgender Man",
+                            source: "youtube.com",
                           ),
                           RightTiles(
                             articleUrl:
-                                'https://docs.flutter.io/flutter/services/UrlLauncher-class.html',
+                                'https://www.hysto.net/polycystic-ovarian-syndrome-transmen.htm',
                             categoryName:
-                                "Pregnancy fkbsdkfjbdsjbf fjdsbkjfbdjlsfb fdslbgldlgkn ",
-                            source: "Youtube",
+                                "Polycystic Ovarian Syndrome and Trans Men: Is There a Link?",
+                            source: "hysto.net",
+                          ),
+                          RightTiles(
+                            articleUrl:
+                            'https://www.youtube.com/watch?v=dRm9c2EOnXI',
+                            categoryName:
+                            "FTM Transgender With PCOS",
+                            source: "youtube.com",
+                          ),
+                          RightTiles(
+                            articleUrl:
+                            'https://www.youtube.com/watch?v=6KxaI1c92O0',
+                            categoryName:
+                            "FTM Transgender With PCOS #2",
+                            source: "youtube.com",
                           ),
                         ],
                       ),
@@ -1085,7 +1078,7 @@ class _ExplorerState extends State<Explorer> {
           ),
         ),
 
-        //Hairfall
+        //Hairfall DONE
         SingleChildScrollView(
           child: Column(
             children: [
@@ -1109,28 +1102,27 @@ class _ExplorerState extends State<Explorer> {
                         children: [
                           LeftTiles(
                             articleUrl:
-                                'https://www.rmact.com/fertility-blog/pcos-fitness-guide',
-                            categoryName:
-                                "Best Workout for Managing PCOS Symptoms",
-                            source: "rmact.com",
+                            'https://www.womenshairlossproject.com/',
+                            categoryName: "The Women's Hair Loss Project",
+                            source: "womenshairlossproject.com",
                           ),
                           LeftTiles(
                             articleUrl:
-                                'https://www.youtube.com/watch?v=4xrDxxg5jv4',
-                            categoryName:
-                                "5 Best Yoga Poses for PCOS Treatment",
+                            'https://www.youtube.com/watch?v=CCxp8SsiIbQ',
+                            categoryName: "How I Got Rid of Acne & Facial Hair",
                             source: "youtube.com",
                           ),
                           LeftTiles(
                             articleUrl:
-                                'https://www.healthline.com/health/womens-health/exercise-for-pcos',
-                            categoryName: "Best Exercises for PCOS",
-                            source: "healthline.com",
+                            'https://www.healthline.com/health/pcos-hair-loss-2',
+                            categoryName:
+                            "How to Manage PCOS Related Hair Loss",
+                            source: "Healthline.com",
                           ),
                           LeftTiles(
                             articleUrl:
-                                'https://www.youtube.com/watch?v=hNkqaMw8YCc',
-                            categoryName: "Yoga for PCOS with Rashmi Ramesh",
+                            'https://www.youtube.com/watch?v=u1UY_MHFz2c',
+                            categoryName: "PCOS Hair Loss Treatment",
                             source: "youtube.com",
                           ),
                         ],
@@ -1142,22 +1134,23 @@ class _ExplorerState extends State<Explorer> {
                         children: [
                           RightTiles(
                             articleUrl:
-                                'https://www.verywellhealth.com/setting-up-your-exercise-routine-2616476',
+                                'https://flo.health/pcos/pcos-hair-loss',
                             categoryName:
-                                "Benefits of Exercising When You Have PCOS",
-                            source: "verywellhealth.com",
+                                "PCOS Hair Loss: Effective Treatment Options for Hair Loss",
+                            source: "flo.health",
                           ),
                           RightTiles(
                             articleUrl:
-                                'https://www.wellcurve.in/blog/yoga-poses-asanas-for-pcos/',
-                            categoryName: "10 Yoga Poses for PCOS",
-                            source: "wellcurve.in",
-                          ),
-                          RightTiles(
-                            articleUrl:
-                                'https://www.youtube.com/watch?v=Tkc2PP37c3U',
-                            categoryName: "PCOS Workout with Sheba Devaraj",
+                            'https://www.youtube.com/watch?v=dbY1LflgTl4',
+                            categoryName:
+                            "5 Haircare Secrets that MASSIVELY REDUCED MY PCOS Hairfall",
                             source: "youtube.com",
+                          ),
+                          RightTiles(
+                            articleUrl:
+                                'https://www.health.com/condition/pcos/pcos-hair-loss',
+                            categoryName: "PCOS and Hair Loss: Why It Happens and What to Do About It, According to Experts",
+                            source: "health.com",
                           ),
                         ],
                       ),
