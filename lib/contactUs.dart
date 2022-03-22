@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'Home/homePage.dart';
 
 class ContactUs extends StatefulWidget {
   @override
@@ -80,11 +81,15 @@ class _ContactUsState extends State<ContactUs> {
                       letterSpacing: 0.5,
                     ),
                   ),
-                  onPressed: () => sendEmail(
-                    name: controllerName.text,
-                    email: controllerEmail.text,
-                    message: controllerMessage.text,
-                  ),
+                  onPressed: () {
+                    sendEmail(
+                      name: controllerName.text,
+                      email: controllerEmail.text,
+                      message: controllerMessage.text,
+                    );
+                    Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => Home()));
+                  }
                 ),
               ),
             ],
@@ -97,9 +102,9 @@ class _ContactUsState extends State<ContactUs> {
     required String email,
     required String message,
   }) async {
-    final serviceId = 'service_sp715lw';
-    final templateId = 'template_cwgqkxm';
-    final userId = 'user_jdZsfT5MkhM0qDGQBOweT';
+    final serviceId = 'service_gpog28i';
+    final templateId = 'template_izddwnp';
+    final userId = '_8q3MgbgdLudlraWi';
 
     final url = Uri.parse('https://api.emailjs.com/api/v1.0/email/send');
     final response = await http.post(
