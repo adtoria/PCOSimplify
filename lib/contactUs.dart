@@ -15,68 +15,82 @@ class _ContactUsState extends State<ContactUs> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-    appBar: AppBar(
-      title: Text("Contact Us"),
-      centerTitle: true,
-      backgroundColor: Color(0xFF1E233C),
-    ),
-    body: SingleChildScrollView(
-      child: Column(
-        children: [
-          Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
-            child: Container(
-              color: Color(0xFFDDE3FD),
-              child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 15, 0, 20),
-                child: Text("If you have questions or just want to get in touch, use the form below. We look forward to hearing from you!",
-                  style: TextStyle(
-                    fontSize: 20,
+        appBar: AppBar(
+          title: Text("Contact Us"),
+          centerTitle: true,
+          backgroundColor: Color(0xFF1E233C),
+        ),
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                child: Container(
+                  color: Color(0xFFDDE3FD),
+                  child: Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 15, 0, 20),
+                    child: Text(
+                      "If you have questions or just want to get in touch, use the form below. We look forward to hearing from you!",
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
                   ),
-                  textAlign: TextAlign.center,
                 ),
               ),
-            ),
-          ),
-          Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(16, 5, 16, 5),
-            child: buildTextField(title: 'Name', controller: controllerName),
-          ),
-          const SizedBox(height: 16),
-          Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(16, 5, 16, 5),
-            child: buildTextField(title: 'Email', controller: controllerEmail),
-          ),
-          const SizedBox(height: 16),
-          Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(16, 5, 16, 5),
-            child: buildTextField(
-              title: 'Message',
-              controller: controllerMessage,
-              maxLines: 8,
-            ),
-          ),
-          const SizedBox(height: 32),
-          Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(16, 5, 16, 5),
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                minimumSize: Size.fromHeight(50),
-                textStyle: TextStyle(fontSize: 20),
-                primary: Color(0xFF1E233C),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(16, 5, 16, 5),
+                child: buildTextField(
+                  title: 'Name',
+                  controller: controllerName,
+                ),
               ),
-              child: Text('SEND'),
-              onPressed: () => sendEmail(
-                name: controllerName.text,
-                email: controllerEmail.text,
-                message: controllerMessage.text,
+              const SizedBox(height: 16),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(16, 5, 16, 5),
+                child: buildTextField(
+                  title: 'Email',
+                  controller: controllerEmail,
+                ),
               ),
-            ),
+              const SizedBox(height: 16),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(16, 5, 16, 5),
+                child: buildTextField(
+                  title: 'Message',
+                  controller: controllerMessage,
+                  maxLines: 5,
+                ),
+              ),
+              const SizedBox(height: 32),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(16, 5, 16, 5),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    minimumSize: Size.fromHeight(50),
+                    textStyle: TextStyle(fontSize: 20),
+                    primary: Color(0xFF1E233C),
+                  ),
+                  child: Text(
+                    'SEND',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      letterSpacing: 0.5,
+                    ),
+                  ),
+                  onPressed: () => sendEmail(
+                    name: controllerName.text,
+                    email: controllerEmail.text,
+                    message: controllerMessage.text,
+                  ),
+                ),
+              ),
+            ],
           ),
-        ],
-      ),
-    ),
-  );
+        ),
+      );
 
   Future sendEmail({
     required String name,
@@ -118,9 +132,9 @@ class _ContactUsState extends State<ContactUs> {
         children: [
           Text(
             title,
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
           ),
-          const SizedBox(height: 8),
+          const SizedBox(height: 4),
           TextField(
             controller: controller,
             maxLines: maxLines,
