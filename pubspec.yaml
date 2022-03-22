@@ -82,6 +82,9 @@ flutter:
     - assets/images/stress.png
     - assets/images/transgender.png
     - assets/images/workout.png
+    - assets/images/Community.png
+    - assets/images/Health.png
+    - assets/images/Tracker.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

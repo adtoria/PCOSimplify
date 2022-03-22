@@ -40,30 +40,44 @@ class _StartedState extends State<Started> {
                             //PageController(initialPage: 0),
                             scrollDirection: Axis.horizontal,
                             children: [
-                              Container(
-                                  // decoration: BoxDecoration(
-                                  //   gradient: LinearGradient(
-                                  //     colors: [
-                                  //       Color(0xFFFBC8D1),
-                                  //       Color(0xFF7D5847),
-                                  //     ],
-                                  //     stops: [0, 1],
-                                  //     begin: AlignmentDirectional(1, -1),
-                                  //     end: AlignmentDirectional(-1, 1),
-                                  //   ),
-                                  // ),
+                              Column(
+                                children: [
+                                  Image(
+                                    image: AssetImage('assets/images/Community.png'),
                                   ),
-                              Image.network(
-                                'https://picsum.photos/seed/94/600',
-                                width: 100,
-                                height: 100,
-                                fit: BoxFit.cover,
+                                  Column(
+                                    children: [
+                                      Text("BADA BLA BLA BLA"),
+                                      Text("Chota bla bla bla")
+                                    ],
+                                  )
+                                ],
                               ),
-                              Image.network(
-                                'https://picsum.photos/seed/509/600',
-                                width: 100,
-                                height: 100,
-                                fit: BoxFit.cover,
+                              Column(
+                                children: [
+                                  Image(
+                                    image: AssetImage('assets/images/Tracker.png'),
+                                  ),
+                                  Column(
+                                    children: [
+                                      Text("BADA BLA BLA BLA"),
+                                      Text("Chota bla bla bla")
+                                    ],
+                                  )
+                                ],
+                              ),
+                              Column(
+                                children: [
+                                  Image(
+                                    image: AssetImage('assets/images/Health.png'),
+                                  ),
+                                  Column(
+                                    children: [
+                                      Text("BADA BLA BLA BLA"),
+                                      Text("Chota bla bla bla")
+                                    ],
+                                  )
+                                ],
                               ),
                             ],
                           ),
