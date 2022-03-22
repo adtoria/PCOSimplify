@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:promject/LoginRegister/loginPage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:promject/contactUs.dart';
 import 'LoginRegister/forgotPassword.dart';
 
 class OurDrawer extends StatelessWidget {
@@ -49,7 +50,7 @@ class OurDrawer extends StatelessWidget {
                           style: TextStyle(
                             fontFamily: 'Lexend Deca',
                             fontSize: 24,
-                            color: Colors.white,
+                            color: Colors.black,
                             fontWeight: FontWeight.w500,
                           ),
                         )
@@ -79,19 +80,19 @@ class OurDrawer extends StatelessWidget {
                   const SizedBox(height: 16),
                   buildMenuItem(
                     text: 'Update Password',
-                    icon: Icons.settings,
+                    icon: Icons.settings_outlined,
                     onClicked: () => selectedItem(context, 1),
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
                     text: 'ADD',
-                    icon: Icons.add_comment_outlined,
+                    icon: Icons.update,
                     onClicked: () => selectedItem(context, 2),
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
-                    text: 'ADD',
-                    icon: Icons.update,
+                    text: 'Contact Us',
+                    icon: Icons.email_outlined,
                     onClicked: () => selectedItem(context, 3),
                   ),
                   const SizedBox(height: 24),
@@ -157,6 +158,11 @@ class OurDrawer extends StatelessWidget {
         //print("Favourites page");
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => ForgotPassword()));
+        break;
+      case 3:
+      //print("Favourites page");
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => ContactUs()));
         break;
       case 4:
         FirebaseAuth.instance.signOut();

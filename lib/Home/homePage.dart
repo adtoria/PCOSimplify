@@ -91,6 +91,7 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         foregroundColor: Colors.white,
         backgroundColor: Color(0xFF1E233C),
+        centerTitle: true,
         title: Text(
           "PCOSimplify",
           style: TextStyle(
