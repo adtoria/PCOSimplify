@@ -1,17 +1,19 @@
-import 'eventDataSource.dart';
-import 'eventViewingPage.dart';
-import 'eventProvider.dart';
+import 'package:flutter/cupertino.dart';
+
+import 'Tracker/eventDataSource.dart';
+import 'Tracker/eventViewingPage.dart';
+import 'Tracker/eventProvider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
 import 'package:syncfusion_flutter_core/theme.dart';
 
-class TasksWidget extends StatefulWidget {
+class HomeTasksWidget extends StatefulWidget {
   @override
-  _TasksWidgetState createState() => _TasksWidgetState();
+  _HomeTasksWidgetState createState() => _HomeTasksWidgetState();
 }
 
-class _TasksWidgetState extends State<TasksWidget> {
+class _HomeTasksWidgetState extends State<HomeTasksWidget> {
   CalendarController _calendarController = CalendarController();
 
   @override
@@ -27,12 +29,22 @@ class _TasksWidgetState extends State<TasksWidget> {
 
     if (selectedEvents.isEmpty) {
       return Center(
-        child: Text(
-          'Nothing to track today.',
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 24,
-          ),
+        child: Column(
+          children: [
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(15, 20, 0, 10),
+              child: Text(
+                'Nothing to track today.',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 15,
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+          ],
         ),
       );
     }
@@ -45,9 +57,16 @@ class _TasksWidgetState extends State<TasksWidget> {
         ),
       ),
       child: SfCalendar(
-        view: CalendarView.day,
+        view: CalendarView.week,
         controller: _calendarController,
         monthViewSettings: MonthViewSettings(showAgenda: true),
+        timeSlotViewSettings: TimeSlotViewSettings(
+          timeInterval: Duration(hours: 2),
+          timeTextStyle: TextStyle(
+            color: Colors.black,
+            fontSize: 13.5,
+          ),
+        ),
         dataSource: EventDataSource(provider.events),
         initialDisplayDate: provider.selectedDate,
         appointmentBuilder: appointmentBuilder,

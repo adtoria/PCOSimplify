@@ -26,7 +26,10 @@ class EventViewingPage extends StatelessWidget {
             SizedBox(height: 32),
             Text(
               event.title,
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
             ),
             const SizedBox(height: 24),
             Text(
@@ -47,15 +50,28 @@ class EventViewingPage extends StatelessWidget {
   }
 
   Widget buildDate(String title, DateTime date) {
-    final styleTitle = TextStyle(fontSize: 20, fontWeight: FontWeight.bold);
-    final styleDate = TextStyle(fontSize: 18);
+    final styleTitle = TextStyle(
+      fontSize: 20,
+      fontWeight: FontWeight.bold,
+    );
+    final styleDate = TextStyle(
+      fontSize: 18,
+    );
 
     return Container(
       padding: EdgeInsets.symmetric(vertical: 8),
       child: Row(
         children: [
-          Expanded(child: Text(title, style: styleTitle)),
-          Text(Utils.toDateTime(date), style: styleDate),
+          Expanded(
+            child: Text(
+              title,
+              style: styleTitle,
+            ),
+          ),
+          Text(
+            Utils.toDateTime(date),
+            style: styleDate,
+          ),
         ],
       ),
     );

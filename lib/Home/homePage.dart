@@ -6,10 +6,12 @@ import 'package:promject/Tracker/calendarWidget.dart';
 import 'package:promject/Health/foodMain.dart';
 import 'package:promject/ExplorePage/exploreMain.dart';
 import 'package:promject/Tracker/periodEditingPage.dart';
+import 'package:promject/Tracker/tasksWidget.dart';
 import 'package:promject/drawer.dart';
 import 'package:promject/ExplorePage/userClass.dart';
 import 'package:promject/ExplorePage/viewStory.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import '../homeTasksWidget.dart';
 import 'customAlertDialog.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -262,10 +264,17 @@ class _HomeState extends State<Home> {
                   thickness: 1,
                   color: Colors.black,
                 ),
+                Container(
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                        child: HomeTasksWidget(),
+                      )
+                    ],
+                  ),
+                ),
               ],
-            ),
-            SizedBox(
-              height: 30,
             ),
             Divider(
               height: 1,

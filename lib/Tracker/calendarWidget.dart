@@ -51,7 +51,10 @@ class _CalendarWidgetState extends State<CalendarWidget> {
           todayHighlightColor: Colors.pinkAccent,
           backgroundColor: Colors.white,
           onTap: (details) {
-            final provider = Provider.of<EventProvider>(context, listen: false);
+            final provider = Provider.of<EventProvider>(
+              context,
+              listen: false,
+            );
 
             provider.setDate(details.date!);
             showModalBottomSheet(
