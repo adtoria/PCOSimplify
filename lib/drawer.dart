@@ -4,6 +4,7 @@ import 'package:promject/LoginRegister/loginPage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:promject/contactUs.dart';
 import 'LoginRegister/forgotPassword.dart';
+import 'inviteFriend.dart';
 
 class OurDrawer extends StatelessWidget {
   final padding = EdgeInsets.symmetric(horizontal: 20);
@@ -85,8 +86,8 @@ class OurDrawer extends StatelessWidget {
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
-                    text: 'ADD',
-                    icon: Icons.update,
+                    text: 'Invite a friend',
+                    icon: Icons.people_outline_rounded,
                     onClicked: () => selectedItem(context, 2),
                   ),
                   const SizedBox(height: 16),
@@ -110,8 +111,8 @@ class OurDrawer extends StatelessWidget {
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
-                    text: 'ADD',
-                    icon: Icons.notifications_outlined,
+                    text: 'Privacy policy',
+                    icon: Icons.privacy_tip_outlined,
                     onClicked: () => selectedItem(context, 5),
                   ),
                 ],
@@ -128,14 +129,14 @@ class OurDrawer extends StatelessWidget {
     required IconData icon,
     VoidCallback? onClicked,
   }) {
-    final color = Colors.black;
+    final color = Colors.grey;
     final hoverColor = Colors.black;
 
     return ListTile(
       leading: Icon(icon, color: color),
       title: Text(text,
           style: TextStyle(
-            color: color,
+            color: Colors.black,
             fontSize: 18,
             fontWeight: FontWeight.w500,
           )),
@@ -158,6 +159,16 @@ class OurDrawer extends StatelessWidget {
         //print("Favourites page");
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => ForgotPassword()));
+        break;
+      case 2:
+      //print("Favourites page");
+        showDialog(
+          barrierColor: Colors.black26,
+          context: context,
+          builder: (context) {
+            return Invite();
+          },
+        );
         break;
       case 3:
       //print("Favourites page");

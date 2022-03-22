@@ -7,6 +7,7 @@ import 'package:promject/screenHolder.dart';
 import 'package:provider/provider.dart';
 import 'Home/homePage.dart';
 import 'getStarted.dart';
+import 'inviteFriend.dart';
 import 'screenHolder.dart';
 import 'profilePage.dart';
 import 'LoginRegister/loginPage.dart';
