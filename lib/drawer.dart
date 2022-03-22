@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:promject/LoginRegister/loginPage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:promject/contactUs.dart';
+import 'package:promject/privacyPolicy.dart';
+import 'package:promject/termsOfService.dart';
 import 'LoginRegister/forgotPassword.dart';
 import 'inviteFriend.dart';
 
@@ -96,6 +98,12 @@ class OurDrawer extends StatelessWidget {
                     icon: Icons.email_outlined,
                     onClicked: () => selectedItem(context, 3),
                   ),
+                  const SizedBox(height: 16),
+                  buildMenuItem(
+                    text: 'Log Out',
+                    icon: Icons.logout,
+                    onClicked: () => selectedItem(context, 4),
+                  ),
                   const SizedBox(height: 24),
                   Divider(
                     color: Colors.black,
@@ -105,15 +113,15 @@ class OurDrawer extends StatelessWidget {
                   ),
                   const SizedBox(height: 24),
                   buildMenuItem(
-                    text: 'Log Out',
-                    icon: Icons.logout,
-                    onClicked: () => selectedItem(context, 4),
-                  ),
-                  const SizedBox(height: 16),
-                  buildMenuItem(
                     text: 'Privacy policy',
                     icon: Icons.privacy_tip_outlined,
                     onClicked: () => selectedItem(context, 5),
+                  ),
+                  const SizedBox(height: 16),
+                  buildMenuItem(
+                    text: 'Terms of Service',
+                    icon: Icons.receipt_long_outlined,
+                    onClicked: () => selectedItem(context, 6),
                   ),
                 ],
               ),
@@ -180,6 +188,26 @@ class OurDrawer extends StatelessWidget {
         Navigator.of(context).push(MaterialPageRoute(
           builder: (context) => LoginPage(),
         ));
+        break;
+      case 5:
+      //print("Favourites page");
+        showDialog(
+          barrierColor: Colors.black26,
+          context: context,
+          builder: (context) {
+            return PrivacyPolicy();
+          },
+        );
+        break;
+      case 6:
+      //print("Favourites page");
+        showDialog(
+          barrierColor: Colors.black26,
+          context: context,
+          builder: (context) {
+            return Service();
+          },
+        );
         break;
     }
   }
