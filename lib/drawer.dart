@@ -24,12 +24,12 @@ class OurDrawer extends StatelessWidget {
 
     return Drawer(
       child: Material(
-        color: Color(0xFFDDE3FD),
+        color: Colors.white,
         child: ListView(
           children: <Widget>[
             Container(
               padding: padding.add(EdgeInsets.symmetric(vertical: 40)),
-              color: Color(0xFF1E233C),
+              color: Colors.white,
               child: Row(
                 //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 //mainAxisSize: MainAxisSize.min,
@@ -58,7 +58,7 @@ class OurDrawer extends StatelessWidget {
                           style: TextStyle(
                             fontFamily: 'Lexend Deca',
                             fontSize: 24,
-                            color: Colors.white,
+                            color: Colors.black,
                             fontWeight: FontWeight.w500,
                           ),
                         )
@@ -78,7 +78,7 @@ class OurDrawer extends StatelessWidget {
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
-                    text: 'Change Password',
+                    text: 'Update Password',
                     icon: Icons.settings,
                     onClicked: () => selectedItem(context, 1),
                   ),
@@ -97,7 +97,7 @@ class OurDrawer extends StatelessWidget {
                   const SizedBox(height: 24),
                   Divider(
                     color: Colors.black,
-                    thickness: 2.0,
+                    thickness: 1.0,
                     indent: 0,
                     endIndent: 0,
                   ),
@@ -121,32 +121,6 @@ class OurDrawer extends StatelessWidget {
       ),
     );
   }
-
-  // Widget buildHeader({
-  //   required String urlImage,
-  //   required String name,
-  // }) =>
-  //     Container(
-  //       padding: padding.add(EdgeInsets.symmetric(vertical: 40)),
-  //       color: Color(0xFF1E233C),
-  //       child: Row(
-  //         //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-  //         //mainAxisSize: MainAxisSize.min,
-  //         children: [
-  //           CircleAvatar(radius: 30, backgroundImage: NetworkImage(urlImage)),
-  //           SizedBox(width: 20),
-  //           Text(
-  //             name,
-  //             style: TextStyle(
-  //               fontFamily: 'Lexend Deca',
-  //               fontSize: 24,
-  //               color: Colors.white,
-  //               fontWeight: FontWeight.w500,
-  //             ),
-  //           ),
-  //         ],
-  //       ),
-  //     );
 
   Widget buildMenuItem({
     required String text,

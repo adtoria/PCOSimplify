@@ -177,7 +177,7 @@ class _AddPostState extends State<AddPost> {
         },
         child: Icon(
           Icons.add,
-          color: Colors.white,
+          size: 35,
         ),
         backgroundColor: Color(0xFF1E233C),
         tooltip: "Add Story",

@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:promject/ExplorePage/addStory.dart';
 import 'package:promject/Tracker/calendarWidget.dart';
 import 'package:promject/Health/foodMain.dart';
 import 'package:promject/ExplorePage/exploreMain.dart';
+import 'package:promject/Tracker/periodEditingPage.dart';
 import 'package:promject/drawer.dart';
 import 'package:promject/ExplorePage/userClass.dart';
 import 'package:promject/ExplorePage/viewStory.dart';
@@ -48,16 +50,19 @@ class _HomeState extends State<Home> {
             child: Text(
               user.title,
               style: TextStyle(
-                fontSize: 20,
+                fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),
             ),
           ),
           subtitle: Text(
             'By ' + user.name,
-            style: TextStyle(fontSize: 15),
+            style: TextStyle(
+              color: Colors.black87,
+              fontSize: 15,
+            ),
           ),
-          tileColor: Color(0xFFDDE3FD),
+          tileColor: Color(0xFFFFD3E1),
           onTap: () => Navigator.push(
             context,
             MaterialPageRoute(
@@ -73,7 +78,7 @@ class _HomeState extends State<Home> {
             borderRadius: BorderRadius.circular(10),
             side: BorderSide(
               color: Colors.grey,
-              width: 0.5,
+              width: 2.0,
             ),
           ),
         ),
@@ -155,94 +160,111 @@ class _HomeState extends State<Home> {
               thickness: 6,
               color: Color(0xFFedf1f7),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(15, 25, 0, 10),
-                  child: Text(
-                    "Latest User Story",
-                    style: TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-              ],
-            ),
             Column(
               children: [
-                StreamBuilder<List<User>>(
-                  stream: readData(),
-                  builder: (context, snapshot) {
-                    if (snapshot.hasError) {
-                      return Text('Something went wrong!');
-                    } else if (snapshot.hasData) {
-                      final users = snapshot.data!;
-
-                      return Container(
-                        child: users.map(buildUser).elementAt(0),
-                      );
-                    } else {
-                      return Center(child: CircularProgressIndicator());
-                    }
-                  },
+                Row(
+                  children: [
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(15, 27, 0, 0),
+                      child: Text(
+                        "Tracker Events",
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 25,
                 ),
-                TextButton(
+                Container(
+                  color: Color(0xFFDDE3FD),
+                  padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 10),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    mainAxisSize: MainAxisSize.min,
                     children: [
-                      Container(
-                        width: 35,
-                        height: 35,
-                        clipBehavior: Clip.antiAlias,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          shape: BoxShape.circle,
-                        ),
-                        child: Icon(
-                          Icons.add,
-                          color: Color(0xFF1E233C),
-                          size: 24,
+                      Expanded(
+                        flex: 1,
+                        child: Padding(
+                          padding:
+                              EdgeInsetsDirectional.fromSTEB(15, 15, 0, 10),
+                          child: Text(
+                            DateFormat("dd").format(
+                              DateTime.now(),
+                            ),
+                            style: TextStyle(
+                              color: Color(0xFF1E233C),
+                              fontSize: 40,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
                         ),
                       ),
-                      SizedBox(
-                        width: 4,
+                      Expanded(
+                        flex: 3,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(0, 3, 0, 0),
+                              child: Text(
+                                DateFormat('EEEE')
+                                    .format(DateTime.now())
+                                    .toUpperCase(),
+                                style: TextStyle(
+                                  fontSize: 15,
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                              child: Text(
+                                DateFormat.MMMM().format(DateTime.now()) +
+                                    " " +
+                                    DateFormat("yyyy").format(DateTime.now()),
+                                style: TextStyle(
+                                  fontSize: 15,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
-                        child: Text(
-                          "Share Your Story",
-                          style: TextStyle(
-                            color: Colors.white,
+                      Expanded(
+                        flex: 1,
+                        child: Padding(
+                          padding:
+                              EdgeInsetsDirectional.fromSTEB(15, 15, 10, 10),
+                          child: FloatingActionButton(
+                            backgroundColor: Color(0xFF1E233C),
+                            child: Icon(
+                              Icons.add,
+                              size: 35,
+                            ),
+                            onPressed: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => EventEditingPage(),
+                              ),
+                            ),
                           ),
                         ),
                       ),
                     ],
                   ),
-                  onPressed: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => AddPost()),
-                  ),
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(
-                      Color(0xFF1E233C),
-                    ),
-                    shape: MaterialStateProperty.all(
-                      RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30.0),
-                      ),
-                    ),
-                  ),
+                ),
+                Divider(
+                  height: 1,
+                  thickness: 1,
+                  color: Colors.black,
                 ),
               ],
             ),
             SizedBox(
-              height: 25,
+              height: 30,
             ),
             Divider(
               height: 1,
@@ -448,6 +470,99 @@ class _HomeState extends State<Home> {
               height: 1,
               thickness: 6,
               color: Color(0xFFedf1f7),
+            ),
+            Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(15, 25, 0, 10),
+                      child: Text(
+                        "Latest User Story",
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                Column(
+                  children: [
+                    StreamBuilder<List<User>>(
+                      stream: readData(),
+                      builder: (context, snapshot) {
+                        if (snapshot.hasError) {
+                          return Text('Something went wrong!');
+                        } else if (snapshot.hasData) {
+                          final users = snapshot.data!;
+
+                          return Container(
+                            child: users.map(buildUser).elementAt(0),
+                          );
+                        } else {
+                          return Center(child: CircularProgressIndicator());
+                        }
+                      },
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    TextButton(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Container(
+                            width: 35,
+                            height: 35,
+                            clipBehavior: Clip.antiAlias,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              shape: BoxShape.circle,
+                            ),
+                            child: Icon(
+                              Icons.add,
+                              color: Color(0xFF1E233C),
+                              size: 24,
+                            ),
+                          ),
+                          SizedBox(
+                            width: 4,
+                          ),
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
+                            child: Text(
+                              "Share Your Story",
+                              style: TextStyle(
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      onPressed: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => AddPost()),
+                      ),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                          Color(0xFF1E233C),
+                        ),
+                        shape: MaterialStateProperty.all(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30.0),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 25,
             ),
           ],
         ),
