@@ -11,6 +11,7 @@ import 'package:promject/drawer.dart';
 import 'package:promject/ExplorePage/userClass.dart';
 import 'package:promject/ExplorePage/viewStory.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../homeTasksWidget.dart';
 import 'customAlertDialog.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -28,6 +29,9 @@ class _HomeState extends State<Home> {
       ),
     ); // this has changed
   }
+
+  PageController pageViewController = PageController();
+  final scaffoldKey = GlobalKey<ScaffoldState>();
 
   final List<Widget> _children = [
     Home(),
@@ -612,6 +616,77 @@ class _HomeState extends State<Home> {
             ),
             SizedBox(
               height: 25,
+            ),
+            Divider(
+              height: 1,
+              thickness: 6,
+              color: Color(0xFFedf1f7),
+            ),
+            SizedBox(
+              height: 25,
+            ),
+            Container(
+              width: double.infinity,
+              height: 500,
+              child: Stack(
+                children: [
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 50),
+                    child: PageView(
+                      controller: pageViewController,
+                      scrollDirection: Axis.horizontal,
+                      children: [
+                        Image.network(
+                          'https://picsum.photos/seed/14/600',
+                          width: 100,
+                          height: 100,
+                          fit: BoxFit.cover,
+                        ),
+                        Image.network(
+                          'https://picsum.photos/seed/703/600',
+                          width: 100,
+                          height: 100,
+                          fit: BoxFit.cover,
+                        ),
+                        Image.network(
+                          'https://picsum.photos/seed/394/600',
+                          width: 100,
+                          height: 100,
+                          fit: BoxFit.cover,
+                        ),
+                      ],
+                    ),
+                  ),
+                  Align(
+                    alignment: AlignmentDirectional(0, 1),
+                    child: Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+                      child: SmoothPageIndicator(
+                        controller: pageViewController,
+                        count: 3,
+                        axisDirection: Axis.horizontal,
+                        onDotClicked: (i) {
+                          pageViewController.animateToPage(
+                            i,
+                            duration: Duration(milliseconds: 500),
+                            curve: Curves.ease,
+                          );
+                        },
+                        effect: ExpandingDotsEffect(
+                          expansionFactor: 2,
+                          spacing: 8,
+                          radius: 16,
+                          dotWidth: 16,
+                          dotHeight: 16,
+                          dotColor: Color(0xFF9E9E9E),
+                          activeDotColor: Color(0xFF3F51B5),
+                          paintStyle: PaintingStyle.fill,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
