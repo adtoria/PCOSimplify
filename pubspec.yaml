@@ -73,10 +73,14 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    - assets/images/logo.png
     - assets/images/acne.png
+    - assets/images/diabetes.png
+    - assets/images/guthealth.png
     - assets/images/hairfall.png
     - assets/images/hirsutism.png
     - assets/images/pain.png
+    - assets/images/period.png
     - assets/images/pregnancy.png
     - assets/images/sleepmanagement.png
     - assets/images/stress.png
@@ -85,6 +89,18 @@ flutter:
     - assets/images/Community.png
     - assets/images/Health.png
     - assets/images/Tracker.png
+    - assets/images/croppedacne.png
+    - assets/images/croppeddiabetes.png
+    - assets/images/croppedguthealth.png
+    - assets/images/croppedhairfall.png
+    - assets/images/croppedhirsutism.png
+    - assets/images/croppedpain.png
+    - assets/images/croppedperiod.png
+    - assets/images/croppedpregnancy.png
+    - assets/images/croppedsleepmanagement.png
+    - assets/images/croppedstress.png
+    - assets/images/croppedtransgender.png
+    - assets/images/croppedworkout.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

@@ -257,7 +257,8 @@ class _ExplorerState extends State<Explorer> {
                           LeftTiles(
                             articleUrl:
                                 'https://www.healthline.com/health/womens-health/ovarian-cyst-treatment-at-home',
-                            categoryName: "11 Home Treatments for Ovarian Cyst Symptoms",
+                            categoryName:
+                                "11 Home Treatments for Ovarian Cyst Symptoms",
                             source: "healthline.com",
                           ),
                           LeftTiles(
@@ -269,9 +270,9 @@ class _ExplorerState extends State<Explorer> {
                           ),
                           LeftTiles(
                             articleUrl:
-                            'https://www.healthline.com/health/womens-health/what-does-ovarian-cyst-pain-feel-like',
+                                'https://www.healthline.com/health/womens-health/what-does-ovarian-cyst-pain-feel-like',
                             categoryName:
-                            "What Does Ovarian Cyst Pain Feel Like?",
+                                "What Does Ovarian Cyst Pain Feel Like?",
                             source: "healthline.com",
                           ),
                         ],
@@ -284,7 +285,8 @@ class _ExplorerState extends State<Explorer> {
                           RightTiles(
                             articleUrl:
                                 'https://www.youtube.com/watch?v=Dy6sYZXOWus',
-                            categoryName: "Endometriosis Why Pelvic pain should not be Ignored",
+                            categoryName:
+                                "Endometriosis Why Pelvic pain should not be Ignored",
                             source: "youtube.com",
                           ),
                           RightTiles(
@@ -296,9 +298,8 @@ class _ExplorerState extends State<Explorer> {
                           ),
                           RightTiles(
                             articleUrl:
-                            'https://www.youtube.com/watch?v=qkIaToLO5U0',
-                            categoryName:
-                            "YOGA FOR PCOS + PERIOD PAIN",
+                                'https://www.youtube.com/watch?v=qkIaToLO5U0',
+                            categoryName: "YOGA FOR PCOS + PERIOD PAIN",
                             source: "youtube.com",
                           ),
                         ],
@@ -352,7 +353,7 @@ class _ExplorerState extends State<Explorer> {
                           LeftTiles(
                             //DONE
                             articleUrl:
-                            'https://www.youtube.com/watch?v=htJg4A-7BQo',
+                                'https://www.youtube.com/watch?v=htJg4A-7BQo',
                             categoryName: "PCOS & Skin | Dermatologist Review",
                             source: "youtube.com",
                           ),
@@ -366,22 +367,23 @@ class _ExplorerState extends State<Explorer> {
                           RightTiles(
                             //DONE
                             articleUrl:
-                            'https://www.health.harvard.edu/blog/polycystic-ovarian-syndrome-and-the-skin-2021042922502',
-                            categoryName: "Polycystic ovary syndrome and the skin",
+                                'https://www.health.harvard.edu/blog/polycystic-ovarian-syndrome-and-the-skin-2021042922502',
+                            categoryName:
+                                "Polycystic ovary syndrome and the skin",
                             source: "health.harvard.edu",
                           ),
                           RightTiles(
                             //DONE
                             articleUrl:
-                            'https://www.youtube.com/watch?v=nNYVPhzqnSU',
+                                'https://www.youtube.com/watch?v=nNYVPhzqnSU',
                             categoryName:
-                            "How I Healed My Cystic Acne NATURALLY (PCOS & Hormonal Acne)",
+                                "How I Healed My Cystic Acne NATURALLY (PCOS & Hormonal Acne)",
                             source: "youtube.com",
                           ),
                           RightTiles(
                             //DONE
                             articleUrl:
-                            'https://www.medicalnewstoday.com/articles/pcos-acne#pcos-and-acne',
+                                'https://www.medicalnewstoday.com/articles/pcos-acne#pcos-and-acne',
                             categoryName: "What to know about PCOS and Acne",
                             source: "medicalnewstoday.com",
                           ),
@@ -402,6 +404,12 @@ class _ExplorerState extends State<Explorer> {
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 10),
                 child: _exploreOptionList(context),
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 7),
+                child: Image(
+                  image: AssetImage('assets/images/guthealth.png'),
+                ),
               ),
               SingleChildScrollView(
                 child: Row(
@@ -665,6 +673,12 @@ class _ExplorerState extends State<Explorer> {
                 padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 10),
                 child: _exploreOptionList(context),
               ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 7),
+                child: Image(
+                  image: AssetImage('assets/images/period.png'),
+                ),
+              ),
               SingleChildScrollView(
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
@@ -867,8 +881,7 @@ class _ExplorerState extends State<Explorer> {
                           LeftTiles(
                             articleUrl:
                                 'https://www.gayparentstobe.com/gay-parenting-blog/pcos-and-lgbtqia/',
-                            categoryName:
-                                "PCOS and the LGBTQIA+ Community",
+                            categoryName: "PCOS and the LGBTQIA+ Community",
                             source: "gayparentstobe.com",
                           ),
                         ],
@@ -880,7 +893,8 @@ class _ExplorerState extends State<Explorer> {
                           RightTiles(
                             articleUrl:
                                 'https://www.youtube.com/watch?v=8UM9yVFu2lI',
-                            categoryName: "Case Discussion: PCOS Management in a Transgender Man",
+                            categoryName:
+                                "Case Discussion: PCOS Management in a Transgender Man",
                             source: "youtube.com",
                           ),
                           RightTiles(
@@ -892,16 +906,14 @@ class _ExplorerState extends State<Explorer> {
                           ),
                           RightTiles(
                             articleUrl:
-                            'https://www.youtube.com/watch?v=dRm9c2EOnXI',
-                            categoryName:
-                            "FTM Transgender With PCOS",
+                                'https://www.youtube.com/watch?v=dRm9c2EOnXI',
+                            categoryName: "FTM Transgender With PCOS",
                             source: "youtube.com",
                           ),
                           RightTiles(
                             articleUrl:
-                            'https://www.youtube.com/watch?v=6KxaI1c92O0',
-                            categoryName:
-                            "FTM Transgender With PCOS #2",
+                                'https://www.youtube.com/watch?v=6KxaI1c92O0',
+                            categoryName: "FTM Transgender With PCOS #2",
                             source: "youtube.com",
                           ),
                         ],
@@ -921,6 +933,12 @@ class _ExplorerState extends State<Explorer> {
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 10),
                 child: _exploreOptionList(context),
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 7),
+                child: Image(
+                  image: AssetImage('assets/images/diabetes.png'),
+                ),
               ),
               SingleChildScrollView(
                 child: Row(
@@ -1102,26 +1120,26 @@ class _ExplorerState extends State<Explorer> {
                         children: [
                           LeftTiles(
                             articleUrl:
-                            'https://www.womenshairlossproject.com/',
+                                'https://www.womenshairlossproject.com/',
                             categoryName: "The Women's Hair Loss Project",
                             source: "womenshairlossproject.com",
                           ),
                           LeftTiles(
                             articleUrl:
-                            'https://www.youtube.com/watch?v=CCxp8SsiIbQ',
+                                'https://www.youtube.com/watch?v=CCxp8SsiIbQ',
                             categoryName: "How I Got Rid of Acne & Facial Hair",
                             source: "youtube.com",
                           ),
                           LeftTiles(
                             articleUrl:
-                            'https://www.healthline.com/health/pcos-hair-loss-2',
+                                'https://www.healthline.com/health/pcos-hair-loss-2',
                             categoryName:
-                            "How to Manage PCOS Related Hair Loss",
+                                "How to Manage PCOS Related Hair Loss",
                             source: "Healthline.com",
                           ),
                           LeftTiles(
                             articleUrl:
-                            'https://www.youtube.com/watch?v=u1UY_MHFz2c',
+                                'https://www.youtube.com/watch?v=u1UY_MHFz2c',
                             categoryName: "PCOS Hair Loss Treatment",
                             source: "youtube.com",
                           ),
@@ -1141,15 +1159,16 @@ class _ExplorerState extends State<Explorer> {
                           ),
                           RightTiles(
                             articleUrl:
-                            'https://www.youtube.com/watch?v=dbY1LflgTl4',
+                                'https://www.youtube.com/watch?v=dbY1LflgTl4',
                             categoryName:
-                            "5 Haircare Secrets that MASSIVELY REDUCED MY PCOS Hairfall",
+                                "5 Haircare Secrets that MASSIVELY REDUCED MY PCOS Hairfall",
                             source: "youtube.com",
                           ),
                           RightTiles(
                             articleUrl:
                                 'https://www.health.com/condition/pcos/pcos-hair-loss',
-                            categoryName: "PCOS and Hair Loss: Why It Happens and What to Do About It, According to Experts",
+                            categoryName:
+                                "PCOS and Hair Loss: Why It Happens and What to Do About It, According to Experts",
                             source: "health.com",
                           ),
                         ],

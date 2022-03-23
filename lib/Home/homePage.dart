@@ -320,7 +320,8 @@ class _HomeState extends State<Home> {
                               shape: BoxShape.circle,
                             ),
                             child: Image(
-                              image: AssetImage('assets/images/pregnancy.png'),
+                              image: AssetImage(
+                                  'assets/images/croppedpregnancy.png'),
                             ),
                           ),
                         ),
@@ -340,12 +341,13 @@ class _HomeState extends State<Home> {
                               shape: BoxShape.circle,
                             ),
                             child: Image(
-                              image: AssetImage('assets/images/pregnancy.png'),
+                              image: AssetImage(
+                                  'assets/images/croppeddiabetes.png'),
                             ),
                           ),
                         ),
                       ),
-                      // Hirsutism
+                      // Hairfall
                       GestureDetector(
                         onTap: () {
                           launch("https://www.womenshairlossproject.com/");
@@ -360,7 +362,8 @@ class _HomeState extends State<Home> {
                               shape: BoxShape.circle,
                             ),
                             child: Image(
-                              image: AssetImage('assets/images/hirsutism.png'),
+                              image: AssetImage(
+                                  'assets/images/croppedhairfall.png'),
                             ),
                           ),
                         ),
@@ -380,7 +383,8 @@ class _HomeState extends State<Home> {
                               shape: BoxShape.circle,
                             ),
                             child: Image(
-                              image: AssetImage('assets/images/pregnancy.png'),
+                              image:
+                                  AssetImage('assets/images/croppedperiod.png'),
                             ),
                           ),
                         ),
@@ -401,7 +405,8 @@ class _HomeState extends State<Home> {
                               shape: BoxShape.circle,
                             ),
                             child: Image(
-                              image: AssetImage('assets/images/workout.png'),
+                              image: AssetImage(
+                                  'assets/images/croppedworkout.png'),
                             ),
                           ),
                         ),
@@ -421,7 +426,8 @@ class _HomeState extends State<Home> {
                               shape: BoxShape.circle,
                             ),
                             child: Image(
-                              image: AssetImage('assets/images/acne.png'),
+                              image:
+                                  AssetImage('assets/images/croppedacne.png'),
                             ),
                           ),
                         ),
@@ -442,7 +448,8 @@ class _HomeState extends State<Home> {
                               shape: BoxShape.circle,
                             ),
                             child: Image(
-                              image: AssetImage('assets/images/pregnancy.png'),
+                              image: AssetImage(
+                                  'assets/images/croppedguthealth.png'),
                             ),
                           ),
                         ),
@@ -463,7 +470,7 @@ class _HomeState extends State<Home> {
                             ),
                             child: Image(
                               image: AssetImage(
-                                  'assets/images/sleepmanagement.png'),
+                                  'assets/images/croppedsleepmanagement.png'),
                             ),
                           ),
                         ),
