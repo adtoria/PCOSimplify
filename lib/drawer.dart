@@ -63,28 +63,46 @@ class _OurDrawerState extends State<OurDrawer> {
                           builder: (context, snapshot) {
                             if (snapshot.hasData) {
                               final user = snapshot.data;
-                              return Text(
-                                '${user?.name}',
-                                style: TextStyle(
-                                  fontFamily: 'Lexend Deca',
-                                  fontSize: 30,
-                                  color: Color(0xFF1E233C),
-                                  fontWeight: FontWeight.w700,
+                              return Expanded(
+                                child: Center(
+                                  child: Text(
+                                    '${user?.name}',
+                                    style: TextStyle(
+                                      fontFamily: 'Lexend Deca',
+                                      fontSize: 30,
+                                      color: Color(0xFF1E233C),
+                                      fontWeight: FontWeight.w700,
+                                    ),
+                                  ),
                                 ),
                               );
                             } else {
-                              return Text("Nothing to display");
+                              return Expanded(
+                                child: Center(
+                                  child: Text("Nothing to display",
+                                    style: TextStyle(
+                                      fontFamily: 'Lexend Deca',
+                                      fontSize: 30,
+                                      color: Color(0xFF1E233C),
+                                      fontWeight: FontWeight.w700,
+                                    ),),
+                                ),
+                              );
                             }
                           })
-                      : Text(
-                          user.displayName!,
-                          style: TextStyle(
-                            fontFamily: 'Lexend Deca',
-                            fontSize: 30,
-                            color: Color(0xFF1E233C),
-                            fontWeight: FontWeight.w700,
-                          ),
-                        )
+                      : Expanded(
+                        child: Center(
+                          child: Text(
+                              user.displayName!,
+                              style: TextStyle(
+                                fontFamily: 'Lexend Deca',
+                                fontSize: 30,
+                                color: Color(0xFF1E233C),
+                                fontWeight: FontWeight.w700,
+                              ),
+                            ),
+                        ),
+                      )
                 ],
               ),
             ),
