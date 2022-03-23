@@ -294,7 +294,8 @@ class _HomeState extends State<Home> {
                       //mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(15, 27, 0, 10),
+                          padding:
+                              EdgeInsetsDirectional.fromSTEB(15, 27, 0, 10),
                           child: Text(
                             "Explore Articles",
                             style: TextStyle(
@@ -309,12 +310,14 @@ class _HomeState extends State<Home> {
                       //mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 27, 15, 10),
+                          padding:
+                              EdgeInsetsDirectional.fromSTEB(0, 27, 15, 10),
                           child: GestureDetector(
-                            onTap: (){
+                            onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => ExploreMain()),
+                                MaterialPageRoute(
+                                    builder: (context) => ExploreMain()),
                               );
                             },
                             child: Text(
@@ -655,69 +658,142 @@ class _HomeState extends State<Home> {
             SizedBox(
               height: 25,
             ),
-            Container(
-              width: double.infinity,
-              height: 500,
-              child: Stack(
-                children: [
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 50),
-                    child: PageView(
-                      controller: pageViewController,
-                      scrollDirection: Axis.horizontal,
+            TextButton(
+              onPressed: () => showDialog(
+                barrierColor: Colors.black26,
+                context: context,
+                builder: (context) {
+                  return Container(
+                    width: double.infinity,
+                    height: double.infinity,
+                    child: Stack(
                       children: [
-                        Image.network(
-                          'https://picsum.photos/seed/14/600',
-                          width: 100,
-                          height: 100,
-                          fit: BoxFit.cover,
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                          child: PageView(
+                            controller: pageViewController,
+                            scrollDirection: Axis.horizontal,
+                            children: [
+                              Image.network(
+                                'https://picsum.photos/seed/14/600',
+                                width: 100,
+                                height: 100,
+                                fit: BoxFit.cover,
+                              ),
+                              Image.network(
+                                'https://picsum.photos/seed/703/600',
+                                width: 100,
+                                height: 100,
+                                fit: BoxFit.cover,
+                              ),
+                              Image.network(
+                                'https://picsum.photos/seed/394/600',
+                                width: 100,
+                                height: 100,
+                                fit: BoxFit.cover,
+                              ),
+                            ],
+                          ),
                         ),
-                        Image.network(
-                          'https://picsum.photos/seed/703/600',
-                          width: 100,
-                          height: 100,
-                          fit: BoxFit.cover,
-                        ),
-                        Image.network(
-                          'https://picsum.photos/seed/394/600',
-                          width: 100,
-                          height: 100,
-                          fit: BoxFit.cover,
+                        Align(
+                          alignment: AlignmentDirectional(0, 1),
+                          child: Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+                            child: SmoothPageIndicator(
+                              controller: pageViewController,
+                              count: 3,
+                              axisDirection: Axis.horizontal,
+                              onDotClicked: (i) {
+                                pageViewController.animateToPage(
+                                  i,
+                                  duration: Duration(milliseconds: 500),
+                                  curve: Curves.ease,
+                                );
+                              },
+                              effect: ExpandingDotsEffect(
+                                expansionFactor: 2,
+                                spacing: 8,
+                                radius: 16,
+                                dotWidth: 16,
+                                dotHeight: 16,
+                                dotColor: Color(0xFF9E9E9E),
+                                activeDotColor: Color(0xFF3F51B5),
+                                paintStyle: PaintingStyle.fill,
+                              ),
+                            ),
+                          ),
                         ),
                       ],
                     ),
-                  ),
-                  Align(
-                    alignment: AlignmentDirectional(0, 1),
-                    child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
-                      child: SmoothPageIndicator(
-                        controller: pageViewController,
-                        count: 3,
-                        axisDirection: Axis.horizontal,
-                        onDotClicked: (i) {
-                          pageViewController.animateToPage(
-                            i,
-                            duration: Duration(milliseconds: 500),
-                            curve: Curves.ease,
-                          );
-                        },
-                        effect: ExpandingDotsEffect(
-                          expansionFactor: 2,
-                          spacing: 8,
-                          radius: 16,
-                          dotWidth: 16,
-                          dotHeight: 16,
-                          dotColor: Color(0xFF9E9E9E),
-                          activeDotColor: Color(0xFF3F51B5),
-                          paintStyle: PaintingStyle.fill,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
+                  );
+                },
               ),
+              child: Text("hello adimti"),
             ),
+            // Container(
+            //   width: double.infinity,
+            //   height: 500,
+            //   child: Stack(
+            //     children: [
+            //       Padding(
+            //         padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 50),
+            //         child: PageView(
+            //           controller: pageViewController,
+            //           scrollDirection: Axis.horizontal,
+            //           children: [
+            //             Image.network(
+            //               'https://picsum.photos/seed/14/600',
+            //               width: 100,
+            //               height: 100,
+            //               fit: BoxFit.cover,
+            //             ),
+            //             Image.network(
+            //               'https://picsum.photos/seed/703/600',
+            //               width: 100,
+            //               height: 100,
+            //               fit: BoxFit.cover,
+            //             ),
+            //             Image.network(
+            //               'https://picsum.photos/seed/394/600',
+            //               width: 100,
+            //               height: 100,
+            //               fit: BoxFit.cover,
+            //             ),
+            //           ],
+            //         ),
+            //       ),
+            //       Align(
+            //         alignment: AlignmentDirectional(0, 1),
+            //         child: Padding(
+            //           padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+            //           child: SmoothPageIndicator(
+            //             controller: pageViewController,
+            //             count: 3,
+            //             axisDirection: Axis.horizontal,
+            //             onDotClicked: (i) {
+            //               pageViewController.animateToPage(
+            //                 i,
+            //                 duration: Duration(milliseconds: 500),
+            //                 curve: Curves.ease,
+            //               );
+            //             },
+            //             effect: ExpandingDotsEffect(
+            //               expansionFactor: 2,
+            //               spacing: 8,
+            //               radius: 16,
+            //               dotWidth: 16,
+            //               dotHeight: 16,
+            //               dotColor: Color(0xFF9E9E9E),
+            //               activeDotColor: Color(0xFF3F51B5),
+            //               paintStyle: PaintingStyle.fill,
+            //             ),
+            //           ),
+            //         ),
+            //       ),
+            //     ],
+            //   ),
+            // ),
           ],
         ),
       ),
