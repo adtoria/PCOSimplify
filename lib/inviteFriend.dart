@@ -73,13 +73,19 @@ class _InviteState extends State<Invite> {
     ];
 
     final child = axis == Axis.vertical
-        ? Column(
-            mainAxisSize: MainAxisSize.min,
-            children: children,
+        ? SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: children,
+            ),
           )
-        : Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: children,
+        : SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: children,
+            ),
           );
     return Padding(
       padding: EdgeInsetsDirectional.fromSTEB(2.5, 5, 2.5, 5),

@@ -80,7 +80,7 @@ class _OurDrawerState extends State<OurDrawer> {
                               return Expanded(
                                 child: Center(
                                   child: Text(
-                                    "Nothing to display",
+                                    "",
                                     style: TextStyle(
                                       fontFamily: 'Lexend Deca',
                                       fontSize: 30,
