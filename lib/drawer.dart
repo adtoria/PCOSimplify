@@ -154,6 +154,46 @@ class _OurDrawerState extends State<OurDrawer> {
                     icon: Icons.receipt_long_outlined,
                     onClicked: () => selectedItem(context, 5),
                   ),
+                  const SizedBox(height: 24),
+                  Divider(
+                    thickness: 6,
+                    color: Color(0xFFedf1f7),
+                  ),
+                  const SizedBox(height: 28),
+                  Column(
+                    children: [
+                      Text(
+                        "from",
+                        style: TextStyle(
+                          fontSize: 13,
+                        ),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            width: 35,
+                            height: 35,
+                            clipBehavior: Clip.antiAlias,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                            ),
+                            child: Image(
+                              image: AssetImage('assets/images/logo.png'),
+                            ),
+                          ),
+                          Text(
+                            "PCOSimplify",
+                            style: TextStyle(
+                              color: Color(0xFF1E233C),
+                              fontStyle: FontStyle.italic,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),

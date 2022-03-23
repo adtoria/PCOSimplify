@@ -77,10 +77,10 @@ class _HomeState extends State<Home> {
           ),
           contentPadding: EdgeInsetsDirectional.fromSTEB(15, 5, 15, 5),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(0.0),
             side: BorderSide(
-              color: Colors.grey,
-              width: 2.0,
+              color: Color(0xFF1E233C),
+              width: 1.0,
             ),
           ),
         ),
@@ -317,6 +317,10 @@ class _HomeState extends State<Home> {
                             height: 120,
                             clipBehavior: Clip.antiAlias,
                             decoration: BoxDecoration(
+                              border: Border.all(
+                                color: Color(0xFF1E233C),
+                                width: 1,
+                              ),
                               shape: BoxShape.circle,
                             ),
                             child: Image(
@@ -338,6 +342,10 @@ class _HomeState extends State<Home> {
                             height: 120,
                             clipBehavior: Clip.antiAlias,
                             decoration: BoxDecoration(
+                              border: Border.all(
+                                color: Color(0xFF1E233C),
+                                width: 1,
+                              ),
                               shape: BoxShape.circle,
                             ),
                             child: Image(
@@ -359,6 +367,10 @@ class _HomeState extends State<Home> {
                             height: 120,
                             clipBehavior: Clip.antiAlias,
                             decoration: BoxDecoration(
+                              border: Border.all(
+                                color: Color(0xFF1E233C),
+                                width: 1,
+                              ),
                               shape: BoxShape.circle,
                             ),
                             child: Image(
@@ -380,6 +392,10 @@ class _HomeState extends State<Home> {
                             height: 120,
                             clipBehavior: Clip.antiAlias,
                             decoration: BoxDecoration(
+                              border: Border.all(
+                                color: Color(0xFF1E233C),
+                                width: 1,
+                              ),
                               shape: BoxShape.circle,
                             ),
                             child: Image(
@@ -402,6 +418,10 @@ class _HomeState extends State<Home> {
                             height: 120,
                             clipBehavior: Clip.antiAlias,
                             decoration: BoxDecoration(
+                              border: Border.all(
+                                color: Color(0xFF1E233C),
+                                width: 1,
+                              ),
                               shape: BoxShape.circle,
                             ),
                             child: Image(
@@ -423,6 +443,10 @@ class _HomeState extends State<Home> {
                             height: 120,
                             clipBehavior: Clip.antiAlias,
                             decoration: BoxDecoration(
+                              border: Border.all(
+                                color: Color(0xFF1E233C),
+                                width: 1,
+                              ),
                               shape: BoxShape.circle,
                             ),
                             child: Image(
@@ -445,6 +469,10 @@ class _HomeState extends State<Home> {
                             height: 120,
                             clipBehavior: Clip.antiAlias,
                             decoration: BoxDecoration(
+                              border: Border.all(
+                                color: Color(0xFF1E233C),
+                                width: 1,
+                              ),
                               shape: BoxShape.circle,
                             ),
                             child: Image(
@@ -466,6 +494,10 @@ class _HomeState extends State<Home> {
                             height: 120,
                             clipBehavior: Clip.antiAlias,
                             decoration: BoxDecoration(
+                              border: Border.all(
+                                color: Color(0xFF1E233C),
+                                width: 1,
+                              ),
                               shape: BoxShape.circle,
                             ),
                             child: Image(
