@@ -19,7 +19,13 @@ class _ForgotPasswordState extends State<ForgotPassword> {
           .sendPasswordResetEmail(email: emailController.text.trim());
 
       final snackbar = SnackBar(
-        content: Text("Password reset mail sent successfully"),
+        backgroundColor: Colors.green,
+        content: Text(
+          "Reset link sent successfully.",
+          style: TextStyle(
+            fontWeight: FontWeight.w500,
+          ),
+        ),
         duration: Duration(seconds: 5),
       );
 
@@ -27,7 +33,13 @@ class _ForgotPasswordState extends State<ForgotPassword> {
     } on FirebaseAuthException catch (e) {
       print(e);
       final snackbar = SnackBar(
-        content: Text("An error occured"),
+        backgroundColor: Colors.red,
+        content: Text(
+          "An error occured.",
+          style: TextStyle(
+            fontWeight: FontWeight.w500,
+          ),
+        ),
         duration: Duration(seconds: 5),
       );
 

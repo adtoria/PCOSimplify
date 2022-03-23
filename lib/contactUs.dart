@@ -87,9 +87,19 @@ class _ContactUsState extends State<ContactUs> {
                       email: controllerEmail.text,
                       message: controllerMessage.text,
                     );
-                    Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => Home()));
-                  }
+                    final snackbar = SnackBar(
+                      backgroundColor: Colors.green,
+                      content: Text(
+                        "Email sent successfully.",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      duration: Duration(seconds: 5),
+                    );
+
+                    ScaffoldMessenger.of(context).showSnackBar(snackbar);
+                  },
                 ),
               ),
             ],
