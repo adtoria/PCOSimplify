@@ -14,30 +14,42 @@ class Invite extends StatefulWidget {
 class _InviteState extends State<Invite> {
   @override
   Widget build(BuildContext context) {
-      return Dialog(
-        elevation: 0,
-        backgroundColor: Color(0xffffffff),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(15.0),
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Text("Let your friends and family know about PCOSimplify!",
+    return Dialog(
+      elevation: 500,
+      backgroundColor: Colors.white,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(1.0),
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Padding(
+            padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 30),
+            child: Text(
+              "Let your friends and family know about PCOSimplify!",
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 20,
               ),
             ),
-            buildSocialButtons(axis: Axis.horizontal),
-          ],
-        ),
-      );
+          ),
+          Padding(
+            padding: EdgeInsetsDirectional.fromSTEB(5, 0, 5, 50),
+            child: buildSocialButtons(axis: Axis.horizontal),
+          ),
+        ],
+      ),
+    );
   }
 
   Widget buildSocialButtons({required Axis axis}) {
     final children = [
+      buildSocialButton(
+        icon: FontAwesomeIcons.whatsappSquare,
+        color: Color(0xFF00d856),
+        onClicked: () => share(SocialMedia.whatsapp),
+      ),
       buildSocialButton(
         icon: FontAwesomeIcons.facebookSquare,
         color: Color(0xFF0075fc),
@@ -58,11 +70,6 @@ class _InviteState extends State<Invite> {
         color: Color(0xFF0064c9),
         onClicked: () => share(SocialMedia.linkedin),
       ),
-      buildSocialButton(
-        icon: FontAwesomeIcons.whatsappSquare,
-        color: Color(0xFF00d856),
-        onClicked: () => share(SocialMedia.whatsapp),
-      ),
     ];
 
     final child = axis == Axis.vertical
@@ -74,8 +81,13 @@ class _InviteState extends State<Invite> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: children,
           );
-
-    return Card(child: child);
+    return Padding(
+      padding: EdgeInsetsDirectional.fromSTEB(2.5, 5, 2.5, 5),
+      child: Card(
+        child: child,
+        color: Colors.white70,
+      ),
+    );
   }
 
   Widget buildSocialButton({
@@ -88,26 +100,38 @@ class _InviteState extends State<Invite> {
             ? Container(
                 width: 96,
                 height: 96,
-                child: Center(child: FaIcon(icon, color: color, size: 64)),
+                child: Center(
+                  child: FaIcon(
+                    icon,
+                    color: color,
+                    size: 64,
+                  ),
+                ),
               )
             : Container(
                 width: 64,
                 height: 64,
-                child: Center(child: FaIcon(icon, color: color, size: 40)),
+                child: Center(
+                  child: FaIcon(
+                    icon,
+                    color: color,
+                    size: 40,
+                  ),
+                ),
               ),
         onTap: onClicked,
       );
 
   Future share(SocialMedia socialPlatform) async {
-    final subject = 'Best Flutter Video Ever!';
+    final subject = 'Download PCOSimplify';
     final text =
-        '. Get it at';
+        'I had a great experience using PCOSimplify App. Download it from Google Playstore.';
     final urlShare =
-        Uri.encodeComponent('https://www.youtube.com/watch?v=bWehAFTFc9o');
+        Uri.encodeComponent('https://www.instagram.com/adityyyyadav/');
 
     final urls = {
       SocialMedia.facebook:
-          'https://www.facebook.com/sharer/sharer.php?u=$urlShare&t=$text',
+          'https://www.facebook.com/sharer/sharer.php?u=$urlShare&text=$text',
       SocialMedia.twitter:
           'https://twitter.com/intent/tweet?url=$urlShare&text=$text',
       SocialMedia.email: 'mailto:?subject=$subject&body=$text\n\n$urlShare',
@@ -117,12 +141,6 @@ class _InviteState extends State<Invite> {
     };
     final url = urls[socialPlatform]!;
 
-    // if (await canLaunch(url)) {
-    //   print("HI");
-      await launch(url);
-    // }
-    // else{
-    //   print("bye");
-    // }
+    await launch(url);
   }
 }
