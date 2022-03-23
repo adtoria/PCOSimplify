@@ -79,20 +79,22 @@ class _OurDrawerState extends State<OurDrawer> {
                             } else {
                               return Expanded(
                                 child: Center(
-                                  child: Text("Nothing to display",
+                                  child: Text(
+                                    "Nothing to display",
                                     style: TextStyle(
                                       fontFamily: 'Lexend Deca',
                                       fontSize: 30,
                                       color: Color(0xFF1E233C),
                                       fontWeight: FontWeight.w700,
-                                    ),),
+                                    ),
+                                  ),
                                 ),
                               );
                             }
                           })
                       : Expanded(
-                        child: Center(
-                          child: Text(
+                          child: Center(
+                            child: Text(
                               user.displayName!,
                               style: TextStyle(
                                 fontFamily: 'Lexend Deca',
@@ -101,8 +103,8 @@ class _OurDrawerState extends State<OurDrawer> {
                                 fontWeight: FontWeight.w700,
                               ),
                             ),
-                        ),
-                      )
+                          ),
+                        )
                 ],
               ),
             ),
@@ -113,33 +115,27 @@ class _OurDrawerState extends State<OurDrawer> {
                   Divider(color: Colors.white70),
                   const SizedBox(height: 12),
                   buildMenuItem(
-                    text: 'ADD',
-                    icon: Icons.people,
-                    onClicked: () => selectedItem(context, 0),
-                  ),
-                  const SizedBox(height: 16),
-                  buildMenuItem(
                     text: 'Update Password',
                     icon: Icons.settings_outlined,
-                    onClicked: () => selectedItem(context, 1),
+                    onClicked: () => selectedItem(context, 0),
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
                     text: 'Invite a Friend',
                     icon: Icons.people_outline_rounded,
-                    onClicked: () => selectedItem(context, 2),
+                    onClicked: () => selectedItem(context, 1),
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
                     text: 'Contact Us',
                     icon: Icons.email_outlined,
-                    onClicked: () => selectedItem(context, 3),
+                    onClicked: () => selectedItem(context, 2),
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
                     text: 'Log Out',
                     icon: Icons.logout,
-                    onClicked: () => selectedItem(context, 4),
+                    onClicked: () => selectedItem(context, 3),
                   ),
                   const SizedBox(height: 24),
                   Divider(
@@ -150,13 +146,13 @@ class _OurDrawerState extends State<OurDrawer> {
                   buildMenuItem(
                     text: 'Privacy Policy',
                     icon: Icons.privacy_tip_outlined,
-                    onClicked: () => selectedItem(context, 5),
+                    onClicked: () => selectedItem(context, 4),
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
                     text: 'Terms of Service',
                     icon: Icons.receipt_long_outlined,
-                    onClicked: () => selectedItem(context, 6),
+                    onClicked: () => selectedItem(context, 5),
                   ),
                 ],
               ),
@@ -199,9 +195,6 @@ class _OurDrawerState extends State<OurDrawer> {
   void selectedItem(BuildContext context, int index) {
     switch (index) {
       case 0:
-        print("Aditi Shivam Productions.");
-        break;
-      case 1:
         Navigator.push(
           context,
           MaterialPageRoute(
@@ -209,7 +202,7 @@ class _OurDrawerState extends State<OurDrawer> {
           ),
         );
         break;
-      case 2:
+      case 1:
         showDialog(
           barrierColor: Colors.black26,
           context: context,
@@ -218,20 +211,26 @@ class _OurDrawerState extends State<OurDrawer> {
           },
         );
         break;
-      case 3:
+      case 2:
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => ContactUs()));
+          context,
+          MaterialPageRoute(
+            builder: (context) => ContactUs(),
+          ),
+        );
         break;
-      case 4:
+      case 3:
         FirebaseAuth.instance.signOut();
         final provider =
             Provider.of<GoogleSignInProvider>(context, listen: false);
         provider.logout();
-        Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => LoginPage(),
-        ));
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => LoginPage(),
+          ),
+        );
         break;
-      case 5:
+      case 4:
         showDialog(
           barrierColor: Colors.black26,
           context: context,
@@ -240,7 +239,7 @@ class _OurDrawerState extends State<OurDrawer> {
           },
         );
         break;
-      case 6:
+      case 5:
         showDialog(
           barrierColor: Colors.black26,
           context: context,
