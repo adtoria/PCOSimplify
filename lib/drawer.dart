@@ -1,15 +1,25 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:promject/LoginRegister/googleSignIn.dart';
 import 'package:promject/LoginRegister/loginPage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:promject/contactUs.dart';
 import 'package:promject/privacyPolicy.dart';
 import 'package:promject/termsOfService.dart';
+import 'package:provider/provider.dart';
 import 'LoginRegister/forgotPassword.dart';
 import 'inviteFriend.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:promject/drawerUser.dart';
 
-class OurDrawer extends StatelessWidget {
+class OurDrawer extends StatefulWidget {
+  @override
+  State<OurDrawer> createState() => _OurDrawerState();
+}
+
+class _OurDrawerState extends State<OurDrawer> {
   final padding = EdgeInsets.symmetric(horizontal: 20);
+
   @override
   Widget build(BuildContext context) {
     final user = FirebaseAuth.instance.currentUser!;
@@ -23,10 +33,18 @@ class OurDrawer extends StatelessWidget {
     final String check = "password";
     getAuthType();
 
-    print(flag);
-    print(check);
+    Future<Users?> getData() async{
+      String userId = (await FirebaseAuth.instance.currentUser!).uid;
+      final docuser = FirebaseFirestore.instance.collection('Name').doc(userId);
+      final snapshot = await docuser.get();
 
-    return Drawer(
+      if(snapshot.exists){
+        print(Users.fromJson(snapshot.data()!).name);
+        return Users.fromJson(snapshot.data()!);
+      }
+    };
+
+      return Drawer(
       child: Material(
         color: Colors.white,
         child: ListView(
@@ -39,24 +57,32 @@ class OurDrawer extends StatelessWidget {
                 //mainAxisSize: MainAxisSize.min,
                 children: [
                   check == flag
-                      ? CircleAvatar(
-                          radius: 30,
-                          backgroundImage: NetworkImage(
-                              'https://picsum.photos/seed/509/600'))
-                      : CircleAvatar(
-                          radius: 30,
-                          backgroundImage: NetworkImage(user.photoURL!)),
-                  SizedBox(width: 20),
-                  check == flag
-                      ? Text(
-                          "skh",
-                          style: TextStyle(
-                            fontFamily: 'Lexend Deca',
-                            fontSize: 24,
-                            color: Colors.black,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        )
+                      ?
+                      FutureBuilder<Users?>(
+                        future: getData(),
+                        builder: (context, snapshot) {
+                          if(snapshot.hasData){
+                            final user=snapshot.data;
+                            return Text('${user?.name}',style: TextStyle(
+                              fontFamily: 'Lexend Deca',
+                              fontSize: 24,
+                              color: Colors.black,
+                              fontWeight: FontWeight.w500,
+                            ),);
+                          }
+                          else{
+                            return Text("Nothing to display");
+                          }
+                        })
+                  // Text(
+                  //        "",
+                  //         style: TextStyle(
+                  //           fontFamily: 'Lexend Deca',
+                  //           fontSize: 24,
+                  //           color: Colors.black,
+                  //           fontWeight: FontWeight.w500,
+                  //         ),
+                  //       )
                       : Text(
                           user.displayName!,
                           style: TextStyle(
@@ -159,9 +185,6 @@ class OurDrawer extends StatelessWidget {
     switch (index) {
       case 0:
         print("People page");
-        // Navigator.of(context).push(MaterialPageRoute(
-        //   builder: (context) => PeoplePage(),
-        // ));
         break;
       case 1:
         //print("Favourites page");
@@ -185,6 +208,8 @@ class OurDrawer extends StatelessWidget {
         break;
       case 4:
         FirebaseAuth.instance.signOut();
+        final provider=Provider.of<GoogleSignInProvider>(context,listen: false);
+        provider.logout();
         Navigator.of(context).push(MaterialPageRoute(
           builder: (context) => LoginPage(),
         ));

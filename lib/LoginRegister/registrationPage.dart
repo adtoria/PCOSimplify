@@ -6,6 +6,7 @@ import 'package:provider/provider.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:promject/Home/homePage.dart';
 import 'googleSignIn.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Register extends StatefulWidget {
   static const String id = 'registration_page';
@@ -29,6 +30,18 @@ class _RegisterState extends State<Register> {
   GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   bool passwordVisibility = false;
   final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  // Future saveToDatabase(
+  //     {required String name,required String id}) async {
+  //   final user = FirebaseFirestore.instance.collection('Name').doc();
+  //
+  //   final json = {
+  //     'id': id,
+  //     'Name': name,
+  //   };
+  //
+  //   await user.set(json);
+  // }
 
   @override
   void initState() {
@@ -133,20 +146,27 @@ class _RegisterState extends State<Register> {
                       children: [
                         Expanded(
                           child: TextFormField(
+                            validator: (String? value) {
+                              if (value == null) {
+                                return "* Required";
+                              } else {
+                                return null;
+                              }
+                            },
                             onChanged: (value) {
                               username = value;
                             },
                             controller: usernameController,
                             //obscureText: !passwordVisibility,
                             decoration: InputDecoration(
-                              labelText: 'Username',
+                              labelText: 'Name',
                               labelStyle: TextStyle(
                                 fontFamily: 'Lexend Deca',
                                 color: Color(0xFF95A1AC),
                                 fontSize: 14,
                                 fontWeight: FontWeight.normal,
                               ),
-                              hintText: 'Enter your username...',
+                              hintText: 'Enter your Name...',
                               hintStyle: TextStyle(
                                 fontFamily: 'Lexend Deca',
                                 color: Color(0xFF95A1AC),
@@ -361,6 +381,12 @@ class _RegisterState extends State<Register> {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) => Home()));
+                                  String userId = (await FirebaseAuth.instance.currentUser!).uid;
+                                  print(userId);
+                                  FirebaseFirestore.instance.collection('Name').doc(userId).set({
+                                    "name": username,
+                                    "id": userId,
+                                  });
                                 }
                               } catch (e) {
                                 print(e);

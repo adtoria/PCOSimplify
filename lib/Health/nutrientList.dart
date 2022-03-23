@@ -11,39 +11,31 @@ class Items {
 
 List<Items> allItems = [
   Items(
-    title: "High fibre food",
+    title: "Diet plans",
     route: Fibre(),
   ),
   Items(
-    title: "Iron",
+    title: "High Fibre",
     route: Protein(),
   ),
   Items(
-    title: "Fats",
+    title: "Lean Protein",
     route: Protein(),
   ),
   Items(
-    title: "Fiber",
+    title: "Anti Inflammatory",
     route: Protein(),
   ),
   Items(
-    title: "Irons",
+    title: "Dash Diet",
     route: Protein(),
   ),
   Items(
-    title: "Fatss",
+    title: "Low Fat",
     route: Protein(),
   ),
   Items(
-    title: "Proteinss",
-    route: Protein(),
-  ),
-  Items(
-    title: "Ironss",
-    route: Protein(),
-  ),
-  Items(
-    title: "Fatsss",
+    title: "Low Starch",
     route: Protein(),
   ),
 ];

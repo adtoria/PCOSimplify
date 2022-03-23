@@ -28,4 +28,14 @@ class GoogleSignInProvider extends ChangeNotifier {
 
     notifyListeners();
   }
+
+  Future logout() async{
+    try{
+      await googleSignIn.disconnect();
+    }
+    catch(e){
+      print(e);
+    }
+  }
+
 }
