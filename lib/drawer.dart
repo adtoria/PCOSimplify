@@ -18,7 +18,7 @@ class OurDrawer extends StatefulWidget {
 }
 
 class _OurDrawerState extends State<OurDrawer> {
-  final padding = EdgeInsets.symmetric(horizontal: 20);
+  final padding = EdgeInsets.symmetric(horizontal: 0);
 
   @override
   Widget build(BuildContext context) {
@@ -33,63 +33,56 @@ class _OurDrawerState extends State<OurDrawer> {
     final String check = "password";
     getAuthType();
 
-    Future<Users?> getData() async{
+    Future<Users?> getData() async {
       String userId = (await FirebaseAuth.instance.currentUser!).uid;
       final docuser = FirebaseFirestore.instance.collection('Name').doc(userId);
       final snapshot = await docuser.get();
 
-      if(snapshot.exists){
+      if (snapshot.exists) {
         print(Users.fromJson(snapshot.data()!).name);
         return Users.fromJson(snapshot.data()!);
       }
-    };
+    }
 
-      return Drawer(
+    ;
+
+    return Drawer(
       child: Material(
         color: Colors.white,
         child: ListView(
           children: <Widget>[
             Container(
               padding: padding.add(EdgeInsets.symmetric(vertical: 40)),
-              color: Colors.white,
+              color: Color(0xFFFFD3E1),
               child: Row(
-                //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                //mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   check == flag
-                      ?
-                      FutureBuilder<Users?>(
-                        future: getData(),
-                        builder: (context, snapshot) {
-                          if(snapshot.hasData){
-                            final user=snapshot.data;
-                            return Text('${user?.name}',style: TextStyle(
-                              fontFamily: 'Lexend Deca',
-                              fontSize: 24,
-                              color: Colors.black,
-                              fontWeight: FontWeight.w500,
-                            ),);
-                          }
-                          else{
-                            return Text("Nothing to display");
-                          }
-                        })
-                  // Text(
-                  //        "",
-                  //         style: TextStyle(
-                  //           fontFamily: 'Lexend Deca',
-                  //           fontSize: 24,
-                  //           color: Colors.black,
-                  //           fontWeight: FontWeight.w500,
-                  //         ),
-                  //       )
+                      ? FutureBuilder<Users?>(
+                          future: getData(),
+                          builder: (context, snapshot) {
+                            if (snapshot.hasData) {
+                              final user = snapshot.data;
+                              return Text(
+                                '${user?.name}',
+                                style: TextStyle(
+                                  fontFamily: 'Lexend Deca',
+                                  fontSize: 30,
+                                  color: Color(0xFF1E233C),
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              );
+                            } else {
+                              return Text("Nothing to display");
+                            }
+                          })
                       : Text(
                           user.displayName!,
                           style: TextStyle(
                             fontFamily: 'Lexend Deca',
-                            fontSize: 24,
-                            color: Colors.black,
-                            fontWeight: FontWeight.w500,
+                            fontSize: 30,
+                            color: Color(0xFF1E233C),
+                            fontWeight: FontWeight.w700,
                           ),
                         )
                 ],
@@ -114,7 +107,7 @@ class _OurDrawerState extends State<OurDrawer> {
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
-                    text: 'Invite a friend',
+                    text: 'Invite a Friend',
                     icon: Icons.people_outline_rounded,
                     onClicked: () => selectedItem(context, 2),
                   ),
@@ -132,14 +125,12 @@ class _OurDrawerState extends State<OurDrawer> {
                   ),
                   const SizedBox(height: 24),
                   Divider(
-                    color: Colors.black,
-                    thickness: 1.0,
-                    indent: 0,
-                    endIndent: 0,
+                    thickness: 6,
+                    color: Color(0xFFedf1f7),
                   ),
                   const SizedBox(height: 24),
                   buildMenuItem(
-                    text: 'Privacy policy',
+                    text: 'Privacy Policy',
                     icon: Icons.privacy_tip_outlined,
                     onClicked: () => selectedItem(context, 5),
                   ),
@@ -163,36 +154,44 @@ class _OurDrawerState extends State<OurDrawer> {
     required IconData icon,
     VoidCallback? onClicked,
   }) {
-    final color = Colors.grey;
+    final color = Colors.black54;
     final hoverColor = Colors.black;
 
-    return ListTile(
-      leading: Icon(icon, color: color),
-      title: Text(text,
+    return Padding(
+      padding: EdgeInsetsDirectional.fromSTEB(12, 0, 0, 0),
+      child: ListTile(
+        leading: Icon(
+          icon,
+          color: color,
+        ),
+        title: Text(
+          text,
           style: TextStyle(
             color: Colors.black,
             fontSize: 18,
             fontWeight: FontWeight.w500,
-          )),
-      hoverColor: hoverColor,
-      onTap: onClicked,
+          ),
+        ),
+        hoverColor: hoverColor,
+        onTap: onClicked,
+      ),
     );
   }
 
   void selectedItem(BuildContext context, int index) {
-    //Navigator.of(context).pop();
-
     switch (index) {
       case 0:
-        print("People page");
+        print("Aditi Shivam Productions.");
         break;
       case 1:
-        //print("Favourites page");
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => ForgotPassword()));
+          context,
+          MaterialPageRoute(
+            builder: (context) => ForgotPassword(),
+          ),
+        );
         break;
       case 2:
-      //print("Favourites page");
         showDialog(
           barrierColor: Colors.black26,
           context: context,
@@ -202,20 +201,19 @@ class _OurDrawerState extends State<OurDrawer> {
         );
         break;
       case 3:
-      //print("Favourites page");
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => ContactUs()));
         break;
       case 4:
         FirebaseAuth.instance.signOut();
-        final provider=Provider.of<GoogleSignInProvider>(context,listen: false);
+        final provider =
+            Provider.of<GoogleSignInProvider>(context, listen: false);
         provider.logout();
         Navigator.of(context).push(MaterialPageRoute(
           builder: (context) => LoginPage(),
         ));
         break;
       case 5:
-      //print("Favourites page");
         showDialog(
           barrierColor: Colors.black26,
           context: context,
@@ -225,7 +223,6 @@ class _OurDrawerState extends State<OurDrawer> {
         );
         break;
       case 6:
-      //print("Favourites page");
         showDialog(
           barrierColor: Colors.black26,
           context: context,

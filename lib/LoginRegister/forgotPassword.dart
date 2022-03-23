@@ -14,10 +14,10 @@ class _ForgotPasswordState extends State<ForgotPassword> {
   final emailController = TextEditingController();
 
   Future resetPassword() async {
-
     try {
       await FirebaseAuth.instance
           .sendPasswordResetEmail(email: emailController.text.trim());
+
       final snackbar = SnackBar(
         content: Text("Password reset mail sent successfully"),
         duration: Duration(seconds: 5),
@@ -48,7 +48,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
         appBar: AppBar(
           elevation: 0,
           backgroundColor: Color(0xFF1E233C),
-          title: Text("Reset Password"),
+          title: Text("Update Password"),
         ),
         body: Padding(
           padding: EdgeInsets.all(16),
@@ -65,13 +65,16 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                       "Enter your email address that you used to register. "
                       "We'll send you an email with a link to reset your password.",
                       textAlign: TextAlign.center,
-                      style:
-                          TextStyle(fontSize: 17, fontWeight: FontWeight.w700),
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 17,
+                        fontWeight: FontWeight.w700,
+                      ),
                     ),
                   ),
                 ),
                 SizedBox(
-                  height: 20.0,
+                  height: 35.0,
                 ),
                 TextFormField(
                     keyboardType: TextInputType.emailAddress,
@@ -94,20 +97,24 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                       }
                     }),
                 SizedBox(
-                  height: 45.0,
+                  height: 60.0,
                 ),
                 SizedBox(
-                  width: 155,
+                  width: 170,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                        minimumSize: Size.fromHeight(50),
-                        primary: Color(0xFF1E233C),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20))),
+                      minimumSize: Size.fromHeight(50),
+                      primary: Color(0xFF1E233C),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(40),
+                      ),
+                    ),
                     //icon: Icon(Icons.email_outlined),
                     child: Text(
-                      "Send",
-                      style: TextStyle(fontSize: 24),
+                      "Send Email",
+                      style: TextStyle(
+                        fontSize: 24,
+                      ),
                     ),
                     onPressed: resetPassword,
                   ),
