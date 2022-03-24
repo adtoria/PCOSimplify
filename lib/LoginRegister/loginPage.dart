@@ -54,29 +54,28 @@ class _LoginPageState extends State<LoginPage> {
                 children: [
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0, 16, 0, 0),
-                    child: Row(
+                    child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Expanded(
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
                           child: Image(
                             image: AssetImage('assets/images/logo.png'),
-                            height: 50,
-                            width: 50,
+                            height: 80,
+                            width: 80,
                           ),
                         ),
-                        Expanded(
-                          flex: 3,
-                          child: Padding(
-                            padding: const EdgeInsets.all(0.0),
-                            child: Text(
-                              "PCOSimplify",
-                              style: TextStyle(
-                                fontSize: 30,
-                                fontWeight: FontWeight.bold,
-                              ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            "PCOSimplify",
+                            style: TextStyle(
+                              fontSize: 32,
+                              fontWeight: FontWeight.w900,
+                              letterSpacing: 0.75,
                             ),
                           ),
-                        )
+                        ),
                       ],
                     ),
                   ),

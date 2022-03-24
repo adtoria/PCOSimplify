@@ -70,29 +70,27 @@ class _RegisterState extends State<Register> {
                 children: [
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0, 16, 0, 0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                    child: Column(
                       children: [
-                        Expanded(
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
                           child: Image(
                             image: AssetImage('assets/images/logo.png'),
-                            height: 50,
-                            width: 50,
+                            height: 80,
+                            width: 80,
                           ),
                         ),
-                        Expanded(
-                          flex: 3,
-                          child: Padding(
-                            padding: const EdgeInsets.all(0.0),
-                            child: Text(
-                              "PCOSimplify",
-                              style: TextStyle(
-                                fontSize: 30,
-                                fontWeight: FontWeight.bold,
-                              ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            "PCOSimplify",
+                            style: TextStyle(
+                              fontSize: 32,
+                              fontWeight: FontWeight.w900,
+                              letterSpacing: 0.75,
                             ),
                           ),
-                        )
+                        ),
                       ],
                     ),
                   ),
@@ -409,9 +407,14 @@ class _RegisterState extends State<Register> {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) => Home()));
-                                  String userId = (await FirebaseAuth.instance.currentUser!).uid;
+                                  String userId =
+                                      (await FirebaseAuth.instance.currentUser!)
+                                          .uid;
                                   print(userId);
-                                  FirebaseFirestore.instance.collection('Name').doc(userId).set({
+                                  FirebaseFirestore.instance
+                                      .collection('Name')
+                                      .doc(userId)
+                                      .set({
                                     "name": username,
                                     "id": userId,
                                   });
@@ -442,7 +445,7 @@ class _RegisterState extends State<Register> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 25),
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 15, 0, 15),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,

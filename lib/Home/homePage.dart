@@ -516,6 +516,7 @@ class _HomeState extends State<Home> {
                                                 "Statin to control cholesterol"),
                                         ListWidget(
                                             content: "Hair growth inhibitor"),
+                                        SizedBox(height: 50),
                                       ],
                                     )
                                   ],
@@ -1050,7 +1051,7 @@ class SubHeading extends StatelessWidget {
       children: [
         Expanded(
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(15, 20, 10, 10),
+            padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 10),
             child: Text(
               content,
               style: TextStyle(
@@ -1076,7 +1077,7 @@ class Content extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsetsDirectional.fromSTEB(15, 7, 15, 7),
+      padding: EdgeInsetsDirectional.fromSTEB(20, 7, 20, 7),
       child: Text(
         content,
         style: TextStyle(
