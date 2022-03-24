@@ -39,36 +39,45 @@ class _StartedState extends State<Started> {
                             controller: pageViewController,
                             scrollDirection: Axis.horizontal,
                             children: [
-                              Column(
-                                children: [
-                                  Image(
-                                    image: AssetImage(
-                                        'assets/images/Community.png'),
-                                  ),
-                                  StartedText(
-                                      content:
-                                          "Connect with people, share stories.")
-                                ],
+                              Expanded(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image(
+                                      image: AssetImage(
+                                          'assets/images/Community.png'),
+                                    ),
+                                    StartedText(
+                                        content:
+                                            "Connect with people, share stories.")
+                                  ],
+                                ),
                               ),
-                              Column(
-                                children: [
-                                  Image(
-                                    image:
-                                        AssetImage('assets/images/Tracker.png'),
-                                  ),
-                                  StartedText(
-                                      content:
-                                          "Track your periods, medicines, \ndoctor appointments.")
-                                ],
+                              Expanded(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image(
+                                      image:
+                                          AssetImage('assets/images/Tracker.png'),
+                                    ),
+                                    StartedText(
+                                        content:
+                                            "Track your periods, medicines, \ndoctor appointments.")
+                                  ],
+                                ),
                               ),
-                              Column(
-                                children: [
-                                  Image(
-                                    image:
-                                        AssetImage('assets/images/Health.png'),
-                                  ),
-                                  StartedText(content: "Manage your diet.")
-                                ],
+                              Expanded(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image(
+                                      image:
+                                          AssetImage('assets/images/Health.png'),
+                                    ),
+                                    StartedText(content: "Manage your diet.")
+                                  ],
+                                ),
                               ),
                             ],
                           ),
@@ -160,6 +169,7 @@ class StartedText extends StatelessWidget {
                 padding: EdgeInsetsDirectional.fromSTEB(10, 20, 10, 0),
                 child: Text(
                   content,
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.black,
                     decoration: TextDecoration.none,

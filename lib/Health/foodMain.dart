@@ -5,6 +5,7 @@ import 'nutrientList.dart';
 import 'package:promject/Tracker/calendarWidget.dart';
 import 'package:promject/ExplorePage/exploreMain.dart';
 import 'package:promject/Home/homePage.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class FoodMain extends StatefulWidget {
   @override
@@ -163,28 +164,24 @@ class _FoodMainState extends State<FoodMain> {
                       itemBuilder: (context, index) {
                         final item = items[index];
 
-                        return Padding(
-                          padding:
-                              EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
-                          child: ListTile(
-                            leading: CircleAvatar(
-                              child: Icon(Icons.food_bank),
+                        return Column(
+                          children: [
+                            Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
+                              child: ListTile(
+                                title: Text(item.title),
+                                tileColor: Colors.pinkAccent,
+                                contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                    10, 10, 10, 10),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                              ),
                             ),
-                            title: Text(item.title),
-                            tileColor: Colors.pinkAccent,
-                            onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => item.route,
-                                  ));
-                            },
-                            contentPadding: EdgeInsetsDirectional.fromSTEB(
-                                10, 10, 10, 10),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(30),
-                            ),
-                          ),
+
+                            item.route,
+                          ],
                         );
                       },
                     )

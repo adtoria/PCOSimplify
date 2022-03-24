@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'protein.dart';
-import 'fiber.dart';
+import 'package:promject/Health/dietPlans.dart';
+
+import 'fibre.dart';
 
 class Items {
   final String title;
@@ -12,30 +13,30 @@ class Items {
 List<Items> allItems = [
   Items(
     title: "Diet plans",
-    route: Fibre(),
+    route: DietPlans(),
   ),
   Items(
     title: "High Fibre",
-    route: Protein(),
+    route: Fibre(),
   ),
   Items(
     title: "Lean Protein",
-    route: Protein(),
+    route: DietPlans(),
   ),
   Items(
     title: "Anti Inflammatory",
-    route: Protein(),
+    route: DietPlans(),
   ),
   Items(
     title: "Dash Diet",
-    route: Protein(),
+    route: DietPlans(),
   ),
   Items(
     title: "Low Fat",
-    route: Protein(),
+    route: DietPlans(),
   ),
   Items(
     title: "Low Starch",
-    route: Protein(),
+    route: DietPlans(),
   ),
 ];

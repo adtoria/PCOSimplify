@@ -11,7 +11,15 @@ class ProfilePageIcons extends StatelessWidget {
       padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
       child: MaterialButton(
         onPressed: () {
-          print('Button pressed ...');
+          print("hi");
+          DropdownMenuItem(
+            child: Column(
+              children: [
+                Text("hi"),
+              Text("Hloo"),
+              ],
+            ),
+          );
         },
         minWidth: double.maxFinite,
         height: 50.0,

@@ -392,95 +392,84 @@ class _HomeState extends State<Home> {
                               SingleChildScrollView(
                                 child: Column(
                                   children: [
-                                    Column(
-                                      children: [
-                                        Heading(content: "Diagnosis"),
-                                        Image(
-                                          image: AssetImage(
-                                              'assets/images/diabetes.png'),
-                                        ),
-                                        SubHeading(
-                                            content:
-                                                "Requires a Medical Diagnosis"),
-                                        SizedBox(height: 20),
-                                        ListWidget(
-                                            content:
-                                                "Consult an Obstetrician-Gynecologist (OB-GYN)"),
-                                        Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: TextButton(
-                                            onPressed: () {
-                                              launch(
-                                                  "https://www.google.com/search?sxsrf=APq-WBso8tfi1EFpkS73mX0QTofhAViMhg:1648105464671&q=obgyn+doctor+near+me&sa=X&sqi=2&pjf=1&ved=2ahUKEwisiP-ll972AhX_DkQIHUIyChgQ0EB6BAgAEAQ&biw=1280&bih=605&dpr=1.5");
-                                            },
-                                            child: Text(
-                                              "Find OB-GYNs near you",
-                                              style: TextStyle(
-                                                color: Colors.white,
-                                                fontSize: 15,
-                                              ),
-                                            ),
-                                            style: ButtonStyle(
-                                              backgroundColor:
-                                                  MaterialStateProperty.all(
-                                                      Color(0xFF1E233C)),
-                                              shape: MaterialStateProperty.all(
-                                                RoundedRectangleBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          30.0),
-                                                ),
-                                              ),
-                                              elevation:
-                                                  MaterialStateProperty.all(
-                                                      5.0),
-                                              padding: MaterialStateProperty
-                                                  .all<EdgeInsets>(
-                                                      EdgeInsets.all(14)),
-                                            ),
+                                    Heading(content: "Diagnosis"),
+                                    Image(
+                                      image: AssetImage(
+                                          'assets/images/diabetes.png'),
+                                    ),
+                                    SubHeading(
+                                        content:
+                                            "Requires a Medical Diagnosis"),
+                                    SizedBox(height: 20),
+                                    ListWidget(
+                                        content:
+                                            "Consult an Obstetrician-Gynecologist (OB-GYN)"),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: TextButton(
+                                        onPressed: () {
+                                          launch(
+                                              "https://www.google.com/search?sxsrf=APq-WBso8tfi1EFpkS73mX0QTofhAViMhg:1648105464671&q=obgyn+doctor+near+me&sa=X&sqi=2&pjf=1&ved=2ahUKEwisiP-ll972AhX_DkQIHUIyChgQ0EB6BAgAEAQ&biw=1280&bih=605&dpr=1.5");
+                                        },
+                                        child: Text(
+                                          "Find OB-GYNs near you",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 15,
                                           ),
                                         ),
-                                        SizedBox(height: 20),
-                                        ListWidget(
-                                            content:
-                                                "Consult an Endocrinologist"),
-                                        Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: TextButton(
-                                            onPressed: () {
-                                              launch(
-                                                  "https://www.google.com/search?q=endocrinologist+near+me&oq=endocrinologist+near+me&aqs=chrome..69i57.4506j0j1&sourceid=chrome&ie=UTF-8");
-                                            },
-                                            child: Text(
-                                              "Find Endocrinologists near you",
-                                              style: TextStyle(
-                                                color: Colors.white,
-                                                fontSize: 15,
-                                              ),
-                                            ),
-                                            style: ButtonStyle(
-                                              backgroundColor:
-                                                  MaterialStateProperty.all(
-                                                      Color(0xFF1E233C)),
-                                              shape: MaterialStateProperty.all(
-                                                RoundedRectangleBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          30.0),
-                                                ),
-                                              ),
-                                              elevation:
-                                                  MaterialStateProperty.all(
-                                                      5.0),
-                                              padding: MaterialStateProperty
-                                                  .all<EdgeInsets>(
-                                                      EdgeInsets.all(14)),
+                                        style: ButtonStyle(
+                                          backgroundColor:
+                                              MaterialStateProperty.all(
+                                                  Color(0xFF1E233C)),
+                                          shape: MaterialStateProperty.all(
+                                            RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(30.0),
                                             ),
                                           ),
+                                          elevation:
+                                              MaterialStateProperty.all(5.0),
+                                          padding: MaterialStateProperty.all<
+                                              EdgeInsets>(EdgeInsets.all(14)),
                                         ),
-                                        SizedBox(height: 20),
-                                      ],
-                                    )
+                                      ),
+                                    ),
+                                    SizedBox(height: 20),
+                                    ListWidget(
+                                        content: "Consult an Endocrinologist"),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: TextButton(
+                                        onPressed: () {
+                                          launch(
+                                              "https://www.google.com/search?q=endocrinologist+near+me&oq=endocrinologist+near+me&aqs=chrome..69i57.4506j0j1&sourceid=chrome&ie=UTF-8");
+                                        },
+                                        child: Text(
+                                          "Find Endocrinologists near you",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 15,
+                                          ),
+                                        ),
+                                        style: ButtonStyle(
+                                          backgroundColor:
+                                              MaterialStateProperty.all(
+                                                  Color(0xFF1E233C)),
+                                          shape: MaterialStateProperty.all(
+                                            RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(30.0),
+                                            ),
+                                          ),
+                                          elevation:
+                                              MaterialStateProperty.all(5.0),
+                                          padding: MaterialStateProperty.all<
+                                              EdgeInsets>(EdgeInsets.all(14)),
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(height: 20),
                                   ],
                                 ),
                               ),
@@ -1109,23 +1098,31 @@ class ListWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Padding(
+    return Material(
+      color: Colors.white,
+      child: Padding(
           padding: EdgeInsetsDirectional.fromSTEB(11, 0, 15, 0),
-          child: Text(
-            "   • " + content,
-            style: TextStyle(
-              color: Colors.black,
-              decoration: TextDecoration.none,
-              fontSize: 15,
-              fontFamily: 'RaleWay',
-              fontWeight: FontWeight.normal,
-              letterSpacing: 0.75,
-            ),
-          ),
-        ),
-      ],
+          child: Row(
+            children: [
+              Expanded(
+                child: Text("   • "),
+              ),
+              Expanded(
+                flex: 12,
+                child: Text(
+                  content,
+                  style: TextStyle(
+                    color: Colors.black,
+                    decoration: TextDecoration.none,
+                    fontSize: 15,
+                    fontFamily: 'RaleWay',
+                    fontWeight: FontWeight.normal,
+                    letterSpacing: 0.75,
+                  ),
+                ),
+              ),
+            ],
+          )),
     );
   }
 }
