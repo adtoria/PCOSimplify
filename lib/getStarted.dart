@@ -36,47 +36,38 @@ class _StartedState extends State<Started> {
                         Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 50),
                           child: PageView(
-                            controller: pageViewController, //??=
-                            //PageController(initialPage: 0),
+                            controller: pageViewController,
                             scrollDirection: Axis.horizontal,
                             children: [
                               Column(
                                 children: [
                                   Image(
-                                    image: AssetImage('assets/images/Community.png'),
+                                    image: AssetImage(
+                                        'assets/images/Community.png'),
                                   ),
-                                  Column(
-                                    children: [
-                                      Text("BADA BLA BLA BLA"),
-                                      Text("Chota bla bla bla")
-                                    ],
-                                  )
+                                  StartedText(
+                                      content:
+                                          "Connect with people, share stories.")
                                 ],
                               ),
                               Column(
                                 children: [
                                   Image(
-                                    image: AssetImage('assets/images/Tracker.png'),
+                                    image:
+                                        AssetImage('assets/images/Tracker.png'),
                                   ),
-                                  Column(
-                                    children: [
-                                      Text("BADA BLA BLA BLA"),
-                                      Text("Chota bla bla bla")
-                                    ],
-                                  )
+                                  StartedText(
+                                      content:
+                                          "Track your periods, medicines, \ndoctor appointments.")
                                 ],
                               ),
                               Column(
                                 children: [
                                   Image(
-                                    image: AssetImage('assets/images/Health.png'),
+                                    image:
+                                        AssetImage('assets/images/Health.png'),
                                   ),
-                                  Column(
-                                    children: [
-                                      Text("BADA BLA BLA BLA"),
-                                      Text("Chota bla bla bla")
-                                    ],
-                                  )
+                                  StartedText(content: "Manage your diet.")
                                 ],
                               ),
                             ],
@@ -129,6 +120,7 @@ class _StartedState extends State<Started> {
                       fontSize: 24.0,
                       color: Colors.white,
                       fontWeight: FontWeight.w700,
+                      letterSpacing: 0.5,
                     ),
                   ),
                   minWidth: 225.0,
@@ -147,6 +139,41 @@ class _StartedState extends State<Started> {
           ),
         ),
       ),
+    );
+  }
+}
+
+class StartedText extends StatelessWidget {
+  final String content;
+  StartedText({required this.content});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        Expanded(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(10, 20, 10, 0),
+                child: Text(
+                  content,
+                  style: TextStyle(
+                    color: Colors.black,
+                    decoration: TextDecoration.none,
+                    fontFamily: 'RaleWay',
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 0.5,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }

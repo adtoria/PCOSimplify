@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -285,13 +287,309 @@ class _HomeState extends State<Home> {
               thickness: 6,
               color: Color(0xFFedf1f7),
             ),
+            SizedBox(
+              height: 20,
+            ),
+            TextButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Color(0xFFD4F4F6)),
+                elevation: MaterialStateProperty.all(10.0),
+                padding:
+                    MaterialStateProperty.all<EdgeInsets>(EdgeInsets.all(20)),
+                shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30.0))),
+              ),
+              onPressed: () => showDialog(
+                barrierColor: Colors.black26,
+                context: context,
+                builder: (context) {
+                  return Container(
+                    color: Colors.white,
+                    width: double.infinity,
+                    height: double.infinity,
+                    child: Stack(
+                      children: [
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                          child: PageView(
+                            controller: pageViewController,
+                            scrollDirection: Axis.horizontal,
+                            children: [
+                              SingleChildScrollView(
+                                child: Column(
+                                  children: [
+                                    Column(
+                                      children: [
+                                        Heading(content: "Overview"),
+                                        Image(
+                                          image: AssetImage(
+                                              'assets/images/period.png'),
+                                        ),
+                                        Content(
+                                            content:
+                                                "Polycystic Ovary Syndrome (PCOS) is a hormonal disorder causing enlarged ovaries with small cysts on the outer edges."),
+                                        Content(
+                                            content:
+                                                "The cause of polycystic ovary syndrome isn\'t well understood, but may involve a combination of genetic and environmental factors."),
+                                        Content(
+                                            content:
+                                                "Symptoms include menstrual irregularity, excess hair growth, acne and obesity."),
+                                        Content(
+                                            content:
+                                                "Treatments include birth control pills to regularise periods, medication called metformin to prevent diabetes, statins to control high cholesterol, hormones to increase fertility and procedures to remove excess hair."),
+                                      ],
+                                    )
+                                  ],
+                                ),
+                              ),
+                              SingleChildScrollView(
+                                child: Column(
+                                  children: [
+                                    Column(
+                                      children: [
+                                        Heading(content: "Symptoms"),
+                                        Image(
+                                          image: AssetImage(
+                                              'assets/images/hirsutism.png'),
+                                        ),
+                                        SubHeading(
+                                            content: "Menstrual Symptoms"),
+                                        ListWidget(
+                                            content: "Abnormal menstruation"),
+                                        ListWidget(
+                                            content: "Absence of menstruation"),
+                                        ListWidget(
+                                            content: "Heavy menstruation"),
+                                        ListWidget(
+                                            content: "Irregular menstruation"),
+                                        ListWidget(
+                                            content:
+                                                "Short and light menstruation"),
+                                        ListWidget(content: "Spotting"),
+                                        SubHeading(content: "Weight"),
+                                        ListWidget(content: "Obesity"),
+                                        ListWidget(content: "Weight gain"),
+                                        ListWidget(
+                                            content: "Weight fluctuation"),
+                                        SubHeading(
+                                            content:
+                                                "Other very common symptoms"),
+                                        ListWidget(content: "Infertility"),
+                                        ListWidget(content: "Depression"),
+                                        ListWidget(
+                                            content: "Loss of scalp hair"),
+                                        SubHeading(
+                                            content: "Lesser common symptoms"),
+                                        ListWidget(content: "Acne"),
+                                        ListWidget(content: "Hirsutism"),
+                                        ListWidget(content: "Oily skin"),
+                                        SizedBox(height: 40),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              SingleChildScrollView(
+                                child: Column(
+                                  children: [
+                                    Column(
+                                      children: [
+                                        Heading(content: "Diagnosis"),
+                                        Image(
+                                          image: AssetImage(
+                                              'assets/images/diabetes.png'),
+                                        ),
+                                        SubHeading(
+                                            content:
+                                                "Requires a Medical Diagnosis"),
+                                        SizedBox(height: 20),
+                                        ListWidget(
+                                            content:
+                                                "Consult an Obstetrician-Gynecologist (OB-GYN)"),
+                                        Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: TextButton(
+                                            onPressed: () {
+                                              launch(
+                                                  "https://www.google.com/search?sxsrf=APq-WBso8tfi1EFpkS73mX0QTofhAViMhg:1648105464671&q=obgyn+doctor+near+me&sa=X&sqi=2&pjf=1&ved=2ahUKEwisiP-ll972AhX_DkQIHUIyChgQ0EB6BAgAEAQ&biw=1280&bih=605&dpr=1.5");
+                                            },
+                                            child: Text(
+                                              "Find OB-GYNs near you",
+                                              style: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 15,
+                                              ),
+                                            ),
+                                            style: ButtonStyle(
+                                              backgroundColor:
+                                                  MaterialStateProperty.all(
+                                                      Color(0xFF1E233C)),
+                                              shape: MaterialStateProperty.all(
+                                                RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          30.0),
+                                                ),
+                                              ),
+                                              elevation:
+                                                  MaterialStateProperty.all(
+                                                      5.0),
+                                              padding: MaterialStateProperty
+                                                  .all<EdgeInsets>(
+                                                      EdgeInsets.all(14)),
+                                            ),
+                                          ),
+                                        ),
+                                        SizedBox(height: 20),
+                                        ListWidget(
+                                            content:
+                                                "Consult an Endocrinologist"),
+                                        Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: TextButton(
+                                            onPressed: () {
+                                              launch(
+                                                  "https://www.google.com/search?q=endocrinologist+near+me&oq=endocrinologist+near+me&aqs=chrome..69i57.4506j0j1&sourceid=chrome&ie=UTF-8");
+                                            },
+                                            child: Text(
+                                              "Find Endocrinologists near you",
+                                              style: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 15,
+                                              ),
+                                            ),
+                                            style: ButtonStyle(
+                                              backgroundColor:
+                                                  MaterialStateProperty.all(
+                                                      Color(0xFF1E233C)),
+                                              shape: MaterialStateProperty.all(
+                                                RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          30.0),
+                                                ),
+                                              ),
+                                              elevation:
+                                                  MaterialStateProperty.all(
+                                                      5.0),
+                                              padding: MaterialStateProperty
+                                                  .all<EdgeInsets>(
+                                                      EdgeInsets.all(14)),
+                                            ),
+                                          ),
+                                        ),
+                                        SizedBox(height: 20),
+                                      ],
+                                    )
+                                  ],
+                                ),
+                              ),
+                              SingleChildScrollView(
+                                child: Column(
+                                  children: [
+                                    Column(
+                                      children: [
+                                        Heading(content: "Treatment"),
+                                        Image(
+                                          image: AssetImage(
+                                              'assets/images/Health.png'),
+                                        ),
+                                        Content(
+                                            content:
+                                                "Treatment and change in lifestyle can regulate the symptoms but PCOS is not completely curable."),
+                                        SubHeading(
+                                            content: "Hormonal treatment"),
+                                        ListWidget(
+                                            content: "Physical exercise"),
+                                        ListWidget(
+                                            content:
+                                                "Birth control pills for regular periods"),
+                                        ListWidget(
+                                            content:
+                                                "Metformin to prevent diabetes"),
+                                        ListWidget(
+                                            content:
+                                                "Hormones to increase fertility"),
+                                        SubHeading(content: "Self-care"),
+                                        ListWidget(
+                                            content: "Physical exercise"),
+                                        ListWidget(content: "Weight loss"),
+                                        ListWidget(content: "Yoga"),
+                                        ListWidget(
+                                            content:
+                                                "Electrolysis to remove unwanted hair"),
+                                        SubHeading(content: "Medications"),
+                                        ListWidget(
+                                            content:
+                                                "Anti-diabetic medication"),
+                                        ListWidget(
+                                            content:
+                                                "Statin to control cholesterol"),
+                                        ListWidget(
+                                            content: "Hair growth inhibitor"),
+                                      ],
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Align(
+                          alignment: AlignmentDirectional(0, 1),
+                          child: Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+                            child: SmoothPageIndicator(
+                              controller: pageViewController,
+                              count: 4,
+                              axisDirection: Axis.horizontal,
+                              onDotClicked: (i) {
+                                pageViewController.animateToPage(
+                                  i,
+                                  duration: Duration(milliseconds: 500),
+                                  curve: Curves.ease,
+                                );
+                              },
+                              effect: ExpandingDotsEffect(
+                                expansionFactor: 2,
+                                spacing: 8,
+                                radius: 16,
+                                dotWidth: 16,
+                                dotHeight: 16,
+                                dotColor: Color(0xFFDDE3FD),
+                                activeDotColor: Color(0xFF3F51B5),
+                                paintStyle: PaintingStyle.fill,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+              ),
+              child: Text(
+                "Information about PCOS",
+                style: TextStyle(
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 29,
+            ),
+            Divider(
+              height: 1,
+              thickness: 6,
+              color: Color(0xFFedf1f7),
+            ),
             Column(
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Row(
-                      //mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Padding(
                           padding:
@@ -307,7 +605,6 @@ class _HomeState extends State<Home> {
                       ],
                     ),
                     Row(
-                      //mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         Padding(
                           padding:
@@ -324,8 +621,8 @@ class _HomeState extends State<Home> {
                               "See all",
                               style: TextStyle(
                                 color: Colors.blue,
-                                fontSize: 15,
-                                fontWeight: FontWeight.bold,
+                                fontSize: 14.5,
+                                fontWeight: FontWeight.w500,
                               ),
                             ),
                           ),
@@ -641,6 +938,9 @@ class _HomeState extends State<Home> {
                             borderRadius: BorderRadius.circular(30.0),
                           ),
                         ),
+                        elevation: MaterialStateProperty.all(10.0),
+                        padding: MaterialStateProperty.all<EdgeInsets>(
+                            EdgeInsets.all(10)),
                       ),
                     ),
                   ],
@@ -658,142 +958,6 @@ class _HomeState extends State<Home> {
             SizedBox(
               height: 25,
             ),
-            TextButton(
-              onPressed: () => showDialog(
-                barrierColor: Colors.black26,
-                context: context,
-                builder: (context) {
-                  return Container(
-                    width: double.infinity,
-                    height: double.infinity,
-                    child: Stack(
-                      children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                          child: PageView(
-                            controller: pageViewController,
-                            scrollDirection: Axis.horizontal,
-                            children: [
-                              Image.network(
-                                'https://picsum.photos/seed/14/600',
-                                width: 100,
-                                height: 100,
-                                fit: BoxFit.cover,
-                              ),
-                              Image.network(
-                                'https://picsum.photos/seed/703/600',
-                                width: 100,
-                                height: 100,
-                                fit: BoxFit.cover,
-                              ),
-                              Image.network(
-                                'https://picsum.photos/seed/394/600',
-                                width: 100,
-                                height: 100,
-                                fit: BoxFit.cover,
-                              ),
-                            ],
-                          ),
-                        ),
-                        Align(
-                          alignment: AlignmentDirectional(0, 1),
-                          child: Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
-                            child: SmoothPageIndicator(
-                              controller: pageViewController,
-                              count: 3,
-                              axisDirection: Axis.horizontal,
-                              onDotClicked: (i) {
-                                pageViewController.animateToPage(
-                                  i,
-                                  duration: Duration(milliseconds: 500),
-                                  curve: Curves.ease,
-                                );
-                              },
-                              effect: ExpandingDotsEffect(
-                                expansionFactor: 2,
-                                spacing: 8,
-                                radius: 16,
-                                dotWidth: 16,
-                                dotHeight: 16,
-                                dotColor: Color(0xFF9E9E9E),
-                                activeDotColor: Color(0xFF3F51B5),
-                                paintStyle: PaintingStyle.fill,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  );
-                },
-              ),
-              child: Text("hello adimti"),
-            ),
-            // Container(
-            //   width: double.infinity,
-            //   height: 500,
-            //   child: Stack(
-            //     children: [
-            //       Padding(
-            //         padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 50),
-            //         child: PageView(
-            //           controller: pageViewController,
-            //           scrollDirection: Axis.horizontal,
-            //           children: [
-            //             Image.network(
-            //               'https://picsum.photos/seed/14/600',
-            //               width: 100,
-            //               height: 100,
-            //               fit: BoxFit.cover,
-            //             ),
-            //             Image.network(
-            //               'https://picsum.photos/seed/703/600',
-            //               width: 100,
-            //               height: 100,
-            //               fit: BoxFit.cover,
-            //             ),
-            //             Image.network(
-            //               'https://picsum.photos/seed/394/600',
-            //               width: 100,
-            //               height: 100,
-            //               fit: BoxFit.cover,
-            //             ),
-            //           ],
-            //         ),
-            //       ),
-            //       Align(
-            //         alignment: AlignmentDirectional(0, 1),
-            //         child: Padding(
-            //           padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
-            //           child: SmoothPageIndicator(
-            //             controller: pageViewController,
-            //             count: 3,
-            //             axisDirection: Axis.horizontal,
-            //             onDotClicked: (i) {
-            //               pageViewController.animateToPage(
-            //                 i,
-            //                 duration: Duration(milliseconds: 500),
-            //                 curve: Curves.ease,
-            //               );
-            //             },
-            //             effect: ExpandingDotsEffect(
-            //               expansionFactor: 2,
-            //               spacing: 8,
-            //               radius: 16,
-            //               dotWidth: 16,
-            //               dotHeight: 16,
-            //               dotColor: Color(0xFF9E9E9E),
-            //               activeDotColor: Color(0xFF3F51B5),
-            //               paintStyle: PaintingStyle.fill,
-            //             ),
-            //           ),
-            //         ),
-            //       ),
-            //     ],
-            //   ),
-            // ),
           ],
         ),
       ),
@@ -847,6 +1011,121 @@ class _HomeState extends State<Home> {
           ),
         ],
       ),
+    );
+  }
+}
+
+class Heading extends StatelessWidget {
+  final String content;
+  Heading({required this.content});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        Expanded(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(10, 20, 10, 0),
+                child: Text(
+                  content,
+                  style: TextStyle(
+                    color: Colors.black,
+                    decoration: TextDecoration.none,
+                    fontFamily: 'RaleWay',
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 0.5,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class SubHeading extends StatelessWidget {
+  final String content;
+  SubHeading({required this.content});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        Expanded(
+          child: Padding(
+            padding: EdgeInsetsDirectional.fromSTEB(15, 20, 10, 10),
+            child: Text(
+              content,
+              style: TextStyle(
+                color: Colors.black,
+                decoration: TextDecoration.none,
+                fontFamily: 'RaleWay',
+                fontSize: 17,
+                fontWeight: FontWeight.w600,
+                letterSpacing: 0.5,
+              ),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class Content extends StatelessWidget {
+  final String content;
+  Content({required this.content});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsetsDirectional.fromSTEB(15, 7, 15, 7),
+      child: Text(
+        content,
+        style: TextStyle(
+          color: Colors.black,
+          decoration: TextDecoration.none,
+          fontSize: 15,
+          fontFamily: 'RaleWay',
+          fontWeight: FontWeight.normal,
+          letterSpacing: 0.75,
+        ),
+      ),
+    );
+  }
+}
+
+class ListWidget extends StatelessWidget {
+  final String content;
+  ListWidget({required this.content});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Padding(
+          padding: EdgeInsetsDirectional.fromSTEB(11, 0, 15, 0),
+          child: Text(
+            "   • " + content,
+            style: TextStyle(
+              color: Colors.black,
+              decoration: TextDecoration.none,
+              fontSize: 15,
+              fontFamily: 'RaleWay',
+              fontWeight: FontWeight.normal,
+              letterSpacing: 0.75,
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
