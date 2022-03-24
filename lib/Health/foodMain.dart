@@ -62,7 +62,7 @@ class _FoodMainState extends State<FoodMain> {
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 6),
                         child: Text(
-                          'Food',
+                          'Nutrition',
                           style: TextStyle(
                             fontFamily: 'Lexend Deca',
                             color: Colors.white,

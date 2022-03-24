@@ -59,7 +59,7 @@ class _WorkoutMainState extends State<WorkoutMain> {
                               ));
                         },
                         child: Text(
-                          'Food',
+                          'Nutrition',
                           style: TextStyle(
                             fontFamily: 'Lexend Deca',
                             color: Color(0xFF9F86C0),

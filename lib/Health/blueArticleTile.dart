@@ -1,22 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:promject/Health/viewingPage.dart';
+import 'package:url_launcher/url_launcher.dart';
 
-class ArticleTile extends StatelessWidget {
-  final String text;
+class BlueArticleTile extends StatelessWidget {
+  final String url;
   final String title;
 
-  ArticleTile({required this.title, required this.text});
+  BlueArticleTile({required this.title, required this.url});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => ViewingPage(title: title, text: text),
-          ),
-        );
+        launch(url);
       },
       child: Padding(
         padding: EdgeInsetsDirectional.fromSTEB(10, 0, 8, 0),
@@ -25,6 +20,7 @@ class ArticleTile extends StatelessWidget {
           height: 120,
           clipBehavior: Clip.antiAlias,
           decoration: BoxDecoration(
+            color: Color(0xFFDDE3FD),
             border: Border.all(
               color: Color(0xFF1E233C),
               width: 1,

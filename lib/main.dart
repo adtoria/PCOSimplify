@@ -30,7 +30,7 @@ class AppName extends StatelessWidget {
         ChangeNotifierProvider(create: (context) => GoogleSignInProvider()),
       ],
       child: MaterialApp(
-        home: Started(),
+        home: Home(),
         //initialRoute: Started.id,
         routes: {
           Started.id: (context) => Started(),

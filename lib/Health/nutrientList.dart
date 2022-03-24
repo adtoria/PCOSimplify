@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:promject/Health/antiInflammatory.dart';
+import 'package:promject/Health/dashDiet.dart';
 import 'package:promject/Health/dietPlans.dart';
+import 'package:promject/Health/leanProtein.dart';
+import 'package:promject/Health/lowCarbs.dart';
+import 'package:promject/Health/lowFat.dart';
 
 import 'fibre.dart';
 
@@ -12,31 +17,31 @@ class Items {
 
 List<Items> allItems = [
   Items(
-    title: "Diet plans",
+    title: "Diet & PCOS",
     route: DietPlans(),
   ),
   Items(
-    title: "High Fibre",
+    title: "High Fiber",
     route: Fibre(),
   ),
   Items(
     title: "Lean Protein",
-    route: DietPlans(),
+    route: LeanProtein(),
+  ),
+  Items(  //DONE
+    title: "Dash Diet",
+    route: DashDiet(),
+  ),
+  Items(  //DONE
+    title: "Low Fat",
+    route: LowFat(),
   ),
   Items(
     title: "Anti Inflammatory",
-    route: DietPlans(),
+    route: AntiInflammatory(),
   ),
   Items(
-    title: "Dash Diet",
-    route: DietPlans(),
-  ),
-  Items(
-    title: "Low Fat",
-    route: DietPlans(),
-  ),
-  Items(
-    title: "Low Starch",
-    route: DietPlans(),
+    title: "Low Carbs",
+    route: LowCarbs(),
   ),
 ];

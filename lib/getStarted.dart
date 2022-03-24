@@ -39,45 +39,39 @@ class _StartedState extends State<Started> {
                             controller: pageViewController,
                             scrollDirection: Axis.horizontal,
                             children: [
-                              Expanded(
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Image(
-                                      image: AssetImage(
-                                          'assets/images/Community.png'),
-                                    ),
-                                    StartedText(
-                                        content:
-                                            "Connect with people, share stories.")
-                                  ],
-                                ),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Image(
+                                    image: AssetImage(
+                                        'assets/images/Community.png'),
+                                  ),
+                                  StartedText(
+                                      content:
+                                          "Connect with people, share stories.")
+                                ],
                               ),
-                              Expanded(
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Image(
-                                      image:
-                                          AssetImage('assets/images/Tracker.png'),
-                                    ),
-                                    StartedText(
-                                        content:
-                                            "Track your periods, medicines, doctor appointments.")
-                                  ],
-                                ),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Image(
+                                    image:
+                                        AssetImage('assets/images/Tracker.png'),
+                                  ),
+                                  StartedText(
+                                      content:
+                                          "Track your periods, medicines, doctor appointments.")
+                                ],
                               ),
-                              Expanded(
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Image(
-                                      image:
-                                          AssetImage('assets/images/Health.png'),
-                                    ),
-                                    StartedText(content: "Manage your diet.")
-                                  ],
-                                ),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Image(
+                                    image:
+                                        AssetImage('assets/images/Health.png'),
+                                  ),
+                                  StartedText(content: "Manage your diet.")
+                                ],
                               ),
                             ],
                           ),

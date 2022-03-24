@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'circularTile.dart';
+import 'pinkArticleTile.dart';
 
 class DietPlans extends StatefulWidget {
   const DietPlans({Key? key}) : super(key: key);
@@ -15,29 +15,21 @@ class _DietPlansState extends State<DietPlans> {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: [
-          ArticleTile(
-              title: "Pcos diet",
-              text: "https://www.healthline.com/health/pcos-diet"
+          PinkArticleTile(
+              title: "PCOS Diet",
+              url: "https://www.healthline.com/health/pcos-diet"
           ),
-          ArticleTile(
-              title: "Pcos diet",
-              text: "https://www.healthline.com/health/pcos-diet"
+          PinkArticleTile(
+              title: "Nutrition Tips For PCOS",
+              url: "https://www.unlockfood.ca/en/Articles/Women-s-Health/Nutrition-Tips-for-Polycystic-Ovary-Syndrome-PCOS.aspx"
           ),
-          ArticleTile(
-              title: "Pcos diet",
-              text: "https://www.healthline.com/health/pcos-diet"
+          PinkArticleTile(
+              title: "Why Your Diet Matters",
+              url: "https://www.onpoint-nutrition.com/pcos-diet"
           ),
-          ArticleTile(
-              title: "Pcos diet",
-              text: "https://www.healthline.com/health/pcos-diet"
-          ),
-          ArticleTile(
-              title: "Pcos diet",
-              text: "https://www.healthline.com/health/pcos-diet"
-          ),
-          ArticleTile(
-              title: "Pcos diet",
-              text: "https://www.medicalnewstoday.com/articles/323002"
+          PinkArticleTile(
+              title: "What To Eat If You Have PCOS",
+              url: "https://www.medicalnewstoday.com/articles/323002"
           ),
         ],
       ),
