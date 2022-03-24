@@ -63,7 +63,7 @@ class _StartedState extends State<Started> {
                                     ),
                                     StartedText(
                                         content:
-                                            "Track your periods, medicines, \ndoctor appointments.")
+                                            "Track your periods, medicines, doctor appointments.")
                                   ],
                                 ),
                               ),
@@ -162,25 +162,20 @@ class StartedText extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Expanded(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(10, 20, 10, 0),
-                child: Text(
-                  content,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Colors.black,
-                    decoration: TextDecoration.none,
-                    fontFamily: 'RaleWay',
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    letterSpacing: 0.5,
-                  ),
-                ),
+          child: Padding(
+            padding: EdgeInsetsDirectional.fromSTEB(10, 20, 10, 0),
+            child: Text(
+              content,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.black,
+                decoration: TextDecoration.none,
+                fontFamily: 'RaleWay',
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 0.5,
               ),
-            ],
+            ),
           ),
         ),
       ],
