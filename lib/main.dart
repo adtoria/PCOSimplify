@@ -3,7 +3,6 @@ import 'package:promject/ExplorePage/exploreMain.dart';
 import 'package:promject/Health/foodMain.dart';
 import 'package:promject/LoginRegister/googleSignIn.dart';
 import 'package:promject/Tracker/eventProvider.dart';
-import 'package:promject/contactUs.dart';
 import 'package:promject/screenHolder.dart';
 import 'package:provider/provider.dart';
 import 'Home/homePage.dart';
