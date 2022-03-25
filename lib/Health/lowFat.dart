@@ -17,20 +17,19 @@ class _LowFatState extends State<LowFat> {
         children: [
           BlueArticleTile(
               title: "Lose Weight With PCOS By Eating Healthy",
-              url: "https://www.healthline.com/nutrition/how-to-lose-weight-with-pcos"
-          ),
+              url:
+                  "https://www.healthline.com/nutrition/how-to-lose-weight-with-pcos"),
           BlueArticleTile(
               title: "PCOS Weight Loss Recipes",
-              url: "https://www.tarladalal.com/recipes-for-pcos-weight-loss-1042"
-          ),
+              url:
+                  "https://www.tarladalal.com/recipes-for-pcos-weight-loss-1042"),
           BlueArticleTile(
               title: "Low Fat Foods That Are Good For Health",
-              url: "https://www.healthline.com/nutrition/healthy-low-fat-foods"
-          ),
+              url:
+                  "https://www.healthline.com/nutrition/healthy-low-fat-foods"),
           BlueArticleTile(
               title: "A Guide To Low Fat Foods",
-              url: "https://www.medicalnewstoday.com/articles/325860"
-          ),
+              url: "https://www.medicalnewstoday.com/articles/325860"),
         ],
       ),
     );

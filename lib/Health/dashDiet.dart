@@ -17,16 +17,15 @@ class _DashDietState extends State<DashDiet> {
         children: [
           PinkArticleTile(
               title: "Why Dash Diet Is Good For PCOS",
-              url: "https://www.verywellhealth.com/reasons-why-the-dash-diet-is-good-for-pcos-2616288"
-          ),
+              url:
+                  "https://www.verywellhealth.com/reasons-why-the-dash-diet-is-good-for-pcos-2616288"),
           PinkArticleTile(
               title: "All About Dash Diet",
-              url: "https://www.healthline.com/nutrition/dash-diet"
-          ),
+              url: "https://www.healthline.com/nutrition/dash-diet"),
           PinkArticleTile(
               title: "Dash Diet Tips",
-              url: "https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/dash-diet/art-20045913"
-          ),
+              url:
+                  "https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/dash-diet/art-20045913"),
         ],
       ),
     );

@@ -17,12 +17,10 @@ class _LeanProteinState extends State<LeanProtein> {
         children: [
           GreenArticleTile(
               title: "Protein & PCOS",
-              url: "https://www.verywellhealth.com/all-about-protein-2616481"
-          ),
+              url: "https://www.verywellhealth.com/all-about-protein-2616481"),
           GreenArticleTile(
               title: "Lean Protein Foods",
-              url: "https://www.healthline.com/nutrition/lean-protein-foods"
-          ),
+              url: "https://www.healthline.com/nutrition/lean-protein-foods"),
         ],
       ),
     );

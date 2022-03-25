@@ -15,13 +15,14 @@ class RightTiles extends StatelessWidget {
       child: ListTile(
         tileColor: Color(0xFFFFD3E1),
         title: Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(0, 15, 0, 5),
+          padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 5),
           child: Text(
             categoryName,
             style: TextStyle(
-                color: Color(0xFF1E233C),
-                fontSize: 20,
-                fontWeight: FontWeight.bold),
+              color: Color(0xFF1E233C),
+              fontSize: 15.5,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
         subtitle: Padding(
@@ -29,9 +30,11 @@ class RightTiles extends StatelessWidget {
           child: Text(
             "Source: $source",
             style: TextStyle(
-                color: Color(0xFF1E233C),
-                fontSize: 14,
-                fontWeight: FontWeight.w600),
+              color: Colors.black54,
+              fontSize: 13,
+              fontStyle: FontStyle.italic,
+              fontWeight: FontWeight.w500,
+            ),
           ),
         ),
         contentPadding: EdgeInsetsDirectional.fromSTEB(15, 5, 15, 5),

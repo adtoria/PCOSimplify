@@ -17,16 +17,16 @@ class _LowCarbsState extends State<LowCarbs> {
         children: [
           PinkArticleTile(
               title: "Low-Carb Diet To Tackle PCOS",
-              url: "https://consultqd.clevelandclinic.org/reducing-pcos-symptoms-with-a-low-carb-diet/"
-          ),
+              url:
+                  "https://consultqd.clevelandclinic.org/reducing-pcos-symptoms-with-a-low-carb-diet/"),
           PinkArticleTile(
-              title: "Carbs For PCOS ",
-              url: "https://www.verywellhealth.com/all-about-carbohydrates-2616475"
-          ),
+              title: "Carbs For PCOS",
+              url:
+                  "https://www.verywellhealth.com/all-about-carbohydrates-2616475"),
           PinkArticleTile(
               title: "List Of Non-Starchy Food",
-              url: "https://www.livestrong.com/article/315391-list-of-foods-with-no-starch-or-sugar/"
-          ),
+              url:
+                  "https://www.livestrong.com/article/315391-list-of-foods-with-no-starch-or-sugar/"),
         ],
       ),
     );

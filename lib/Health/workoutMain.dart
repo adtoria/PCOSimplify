@@ -31,7 +31,6 @@ class _WorkoutMainState extends State<WorkoutMain> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        // drawer: OurDrawer(),
         appBar: AppBar(
           foregroundColor: Colors.white,
           backgroundColor: Color(0xFF1E233C),
@@ -52,8 +51,9 @@ class _WorkoutMainState extends State<WorkoutMain> {
                           Navigator.pushReplacement(
                               context,
                               PageRouteBuilder(
-                                pageBuilder: (context, animation1, animation2) =>
-                                    FoodMain(),
+                                pageBuilder:
+                                    (context, animation1, animation2) =>
+                                        FoodMain(),
                                 transitionDuration: Duration.zero,
                                 reverseTransitionDuration: Duration.zero,
                               ));

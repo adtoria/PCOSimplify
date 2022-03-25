@@ -17,12 +17,12 @@ class _AntiInflammatoryState extends State<AntiInflammatory> {
         children: [
           GreenArticleTile(
               title: "Anti-Inflammatory Diet Benefits for PCOS",
-              url: "https://www.verywellhealth.com/anti-inflammatory-diet-benefits-women-with-pcos-2616296"
-          ),
+              url:
+                  "https://www.verywellhealth.com/anti-inflammatory-diet-benefits-women-with-pcos-2616296"),
           GreenArticleTile(
               title: "List Of Anti-Inflammatory Foods",
-              url: "https://www.healthline.com/nutrition/13-anti-inflammatory-foods"
-          ),
+              url:
+                  "https://www.healthline.com/nutrition/13-anti-inflammatory-foods"),
         ],
       ),
     );
