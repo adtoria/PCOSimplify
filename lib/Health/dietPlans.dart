@@ -16,20 +16,21 @@ class _DietPlansState extends State<DietPlans> {
       child: Row(
         children: [
           PinkArticleTile(
-              title: "PCOS Diet",
-              url: "https://www.healthline.com/health/pcos-diet"
+            title: "PCOS Diet",
+            url: "https://www.healthline.com/health/pcos-diet",
           ),
           PinkArticleTile(
-              title: "Nutrition Tips For PCOS",
-              url: "https://www.unlockfood.ca/en/Articles/Women-s-Health/Nutrition-Tips-for-Polycystic-Ovary-Syndrome-PCOS.aspx"
+            title: "Nutrition Tips For PCOS",
+            url:
+                "https://www.unlockfood.ca/en/Articles/Women-s-Health/Nutrition-Tips-for-Polycystic-Ovary-Syndrome-PCOS.aspx",
           ),
           PinkArticleTile(
-              title: "Why Your Diet Matters",
-              url: "https://www.onpoint-nutrition.com/pcos-diet"
+            title: "Why Your Diet Matters",
+            url: "https://www.onpoint-nutrition.com/pcos-diet",
           ),
           PinkArticleTile(
-              title: "What To Eat If You Have PCOS",
-              url: "https://www.medicalnewstoday.com/articles/323002"
+            title: "What To Eat If You Have PCOS",
+            url: "https://www.medicalnewstoday.com/articles/323002",
           ),
         ],
       ),

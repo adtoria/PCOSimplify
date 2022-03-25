@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:promject/ExplorePage/exploreMain.dart';
-import 'package:promject/Health/foodMain.dart';
 import 'package:promject/LoginRegister/googleSignIn.dart';
 import 'package:promject/Tracker/eventProvider.dart';
 import 'package:promject/screenHolder.dart';
 import 'package:provider/provider.dart';
 import 'Home/homePage.dart';
 import 'getStarted.dart';
-import 'inviteFriend.dart';
 import 'screenHolder.dart';
 import 'profilePage.dart';
 import 'LoginRegister/loginPage.dart';

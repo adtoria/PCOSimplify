@@ -16,7 +16,7 @@ class _DashDietState extends State<DashDiet> {
       child: Row(
         children: [
           PinkArticleTile(
-              title: "Why the DASH Diet Is Good for PCOS",
+              title: "Why Dash Diet Is Good For PCOS",
               url: "https://www.verywellhealth.com/reasons-why-the-dash-diet-is-good-for-pcos-2616288"
           ),
           PinkArticleTile(

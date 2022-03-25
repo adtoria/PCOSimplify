@@ -16,11 +16,11 @@ class _LowCarbsState extends State<LowCarbs> {
       child: Row(
         children: [
           PinkArticleTile(
-              title: "Low-Carb Diet For Reducing PCOS Symptoms",
+              title: "Low-Carb Diet To Tackle PCOS",
               url: "https://consultqd.clevelandclinic.org/reducing-pcos-symptoms-with-a-low-carb-diet/"
           ),
           PinkArticleTile(
-              title: "Carbohydrates And Their Role In Nutrition For PCOS ",
+              title: "Carbs For PCOS ",
               url: "https://www.verywellhealth.com/all-about-carbohydrates-2616475"
           ),
           PinkArticleTile(

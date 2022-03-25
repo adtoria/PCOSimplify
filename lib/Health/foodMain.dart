@@ -43,7 +43,6 @@ class _FoodMainState extends State<FoodMain> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        // drawer: OurDrawer(),
         appBar: AppBar(
           foregroundColor: Colors.white,
           backgroundColor: Color(0xFF1E233C),
@@ -84,14 +83,15 @@ class _FoodMainState extends State<FoodMain> {
                         child: MaterialButton(
                           onPressed: () {
                             Navigator.pushReplacement(
-                                context,
-                                PageRouteBuilder(
-                                  pageBuilder:
-                                      (context, animation1, animation2) =>
-                                          WorkoutMain(),
-                                  transitionDuration: Duration.zero,
-                                  reverseTransitionDuration: Duration.zero,
-                                ));
+                              context,
+                              PageRouteBuilder(
+                                pageBuilder:
+                                    (context, animation1, animation2) =>
+                                        WorkoutMain(),
+                                transitionDuration: Duration.zero,
+                                reverseTransitionDuration: Duration.zero,
+                              ),
+                            );
                           },
                           child: Text(
                             'Workout',
@@ -102,8 +102,6 @@ class _FoodMainState extends State<FoodMain> {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          //minWidth: 100,
-                          //height: 50,
                         ),
                       ),
                     ],
@@ -118,16 +116,16 @@ class _FoodMainState extends State<FoodMain> {
           child: Column(
             children: [
               Container(
-                margin: EdgeInsets.fromLTRB(16, 16, 16, 16),
+                margin: EdgeInsets.fromLTRB(16, 16, 16, 0),
                 child: TextField(
                   controller: _controller,
                   decoration: InputDecoration(
-                      prefixIcon: Icon(Icons.search),
-                      hintText: "Search",
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          borderSide:
-                              BorderSide(color: Colors.deepOrange))),
+                    prefixIcon: Icon(Icons.search),
+                    hintText: "Search",
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                  ),
                   onChanged: searchItem,
                 ),
               ),
@@ -149,8 +147,9 @@ class _FoodMainState extends State<FoodMain> {
                               child: Text(
                                 'No results found.',
                                 style: TextStyle(
-                                    fontSize: 30,
-                                    fontWeight: FontWeight.w600),
+                                  fontSize: 30,
+                                  fontWeight: FontWeight.w600,
+                                ),
                               ),
                             ),
                           ],
@@ -168,19 +167,32 @@ class _FoodMainState extends State<FoodMain> {
                           children: [
                             Padding(
                               padding:
-                                  EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
+                                  EdgeInsetsDirectional.fromSTEB(0, 5, 0, 5),
                               child: ListTile(
-                                title: Text(item.title),
-                                tileColor: Colors.pinkAccent,
-                                contentPadding: EdgeInsetsDirectional.fromSTEB(
-                                    10, 10, 10, 10),
+                                title: Text(
+                                  item.title,
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
+                                    letterSpacing: 0.25,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
                                 shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(30),
+                                  borderRadius: BorderRadius.circular(0.0),
                                 ),
                               ),
                             ),
-
                             item.route,
+                            SizedBox(
+                              height: 25,
+                            ),
+                            Divider(
+                              height: 1,
+                              thickness: 6,
+                              color: Color(0xFFedf1f7),
+                            ),
                           ],
                         );
                       },

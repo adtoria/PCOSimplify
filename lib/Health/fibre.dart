@@ -15,8 +15,8 @@ class _FibreState extends State<Fibre> {
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         BlueArticleTile(
-            title: "Fiber & PCOS",
-            url: "https://healthyeating.sfgate.com/fiber-pcos-7651.html"
+          title: "Fiber & PCOS",
+          url: "https://healthyeating.sfgate.com/fiber-pcos-7651.html",
         ),
       ],
     );

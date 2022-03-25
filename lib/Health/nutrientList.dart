@@ -5,7 +5,6 @@ import 'package:promject/Health/dietPlans.dart';
 import 'package:promject/Health/leanProtein.dart';
 import 'package:promject/Health/lowCarbs.dart';
 import 'package:promject/Health/lowFat.dart';
-
 import 'fibre.dart';
 
 class Items {
@@ -28,11 +27,13 @@ List<Items> allItems = [
     title: "Lean Protein",
     route: LeanProtein(),
   ),
-  Items(  //DONE
+  Items(
+    //DONE
     title: "Dash Diet",
     route: DashDiet(),
   ),
-  Items(  //DONE
+  Items(
+    //DONE
     title: "Low Fat",
     route: LowFat(),
   ),
