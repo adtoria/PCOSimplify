@@ -20,7 +20,7 @@ List<Items> allItems = [
     route: DietPlans(),
   ),
   Items(
-    title: "High Fiber",
+    title: "High Fibre",
     route: Fibre(),
   ),
   Items(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:promject/content.dart';
 import 'package:promject/heading.dart';
-import 'package:promject/subheading.dart';
+import 'package:promject/subHeading.dart';
 import 'package:promject/listWidget.dart';
 
 class BajraRoti extends StatefulWidget {
@@ -17,13 +17,15 @@ class _BajraRotiState extends State<BajraRoti> {
         title: Text(
           "Bajra and Cauliflower Roti",
           style: TextStyle(
-              fontSize: 23.5,
-              letterSpacing: 0.5,
-              fontWeight: FontWeight.w500
+            color: Color(0xFF1E233C),
+            fontSize: 21.5,
+            letterSpacing: 0.5,
+            fontWeight: FontWeight.w500,
           ),
         ),
         centerTitle: true,
-        backgroundColor: Color(0xFF1E233C),
+        backgroundColor: Color(0xFFFFD3E1),
+        foregroundColor: Color(0xFF1E233C),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -37,10 +39,15 @@ class _BajraRotiState extends State<BajraRoti> {
             ListWidget(content: "2 tablespoon chopped coriander leaves"),
             ListWidget(content: "1/2 teaspoon garlic paste"),
             SubHeading(content: "Instructions"),
-            Content(content: "1. Combine all the ingredients in a deep bowl and knead into soft-smooth dough, using enough water."),
+            Content(
+                content:
+                    "1. Combine all the ingredients in a deep bowl and knead into soft-smooth dough, using enough water."),
             Content(content: "2. Divide the dough into small balls."),
-            Content(content: "3. Roll out one portion of the dough and make roti."),
-            Content(content: "4. Place the roti on a hot tava. Turn over in a few seconds."),
+            Content(
+                content: "3. Roll out one portion of the dough and make roti."),
+            Content(
+                content:
+                    "4. Place the roti on a hot tava. Turn over in a few seconds."),
             Content(content: "5. Cook the other side for a few more seconds."),
             Content(content: "6. Serve hot with curry of your choice."),
             SizedBox(

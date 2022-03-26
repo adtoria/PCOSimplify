@@ -34,21 +34,28 @@ class _FibreState extends State<Fibre> {
             child: Padding(
               padding: EdgeInsetsDirectional.fromSTEB(10, 0, 8, 0),
               child: Container(
-                width: 120,
-                height: 120,
+                width: 125,
+                height: 125,
                 clipBehavior: Clip.antiAlias,
                 decoration: BoxDecoration(
-                  color: Color(0xFFD4F4F6),
+                  color: Color(0xFFDDE3FD),
                   border: Border.all(
-                    color: Color(0xFF1E233C),
-                    width: 1,
+                    color: Color(0xFF7C90A0),
+                    width: 2.5,
                   ),
                   shape: BoxShape.circle,
                 ),
                 child: Center(
-                  child: Text(
-                    "Cauliflower Peas Masala (Gobi Matar)",
-                    textAlign: TextAlign.center,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      "Gobi Matar",
+                      style: TextStyle(
+                        fontSize: 15.5,
+                        fontWeight: FontWeight.w500,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
                   ),
                 ),
               ),
@@ -64,21 +71,28 @@ class _FibreState extends State<Fibre> {
             child: Padding(
               padding: EdgeInsetsDirectional.fromSTEB(10, 0, 8, 0),
               child: Container(
-                width: 120,
-                height: 120,
+                width: 125,
+                height: 125,
                 clipBehavior: Clip.antiAlias,
                 decoration: BoxDecoration(
-                  color: Color(0xFFD4F4F6),
+                  color: Color(0xFFDDE3FD),
                   border: Border.all(
-                    color: Color(0xFF1E233C),
-                    width: 1,
+                    color: Color(0xFF7C90A0),
+                    width: 2.5,
                   ),
                   shape: BoxShape.circle,
                 ),
                 child: Center(
-                  child: Text(
-                    "Vegan Keto Bread",
-                    textAlign: TextAlign.center,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      "Vegan Keto Bread",
+                      style: TextStyle(
+                        fontSize: 15.5,
+                        fontWeight: FontWeight.w500,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
                   ),
                 ),
               ),
@@ -94,21 +108,28 @@ class _FibreState extends State<Fibre> {
             child: Padding(
               padding: EdgeInsetsDirectional.fromSTEB(10, 0, 8, 0),
               child: Container(
-                width: 120,
-                height: 120,
+                width: 125,
+                height: 125,
                 clipBehavior: Clip.antiAlias,
                 decoration: BoxDecoration(
-                  color: Color(0xFFD4F4F6),
+                  color: Color(0xFFDDE3FD),
                   border: Border.all(
-                    color: Color(0xFF1E233C),
-                    width: 1,
+                    color: Color(0xFF7C90A0),
+                    width: 2.5,
                   ),
                   shape: BoxShape.circle,
                 ),
                 child: Center(
-                  child: Text(
-                    "Bajra and Cauliflower Roti",
-                    textAlign: TextAlign.center,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      "Bajra & Cauliflower Roti",
+                      style: TextStyle(
+                        fontSize: 15.5,
+                        fontWeight: FontWeight.w500,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
                   ),
                 ),
               ),
@@ -124,21 +145,28 @@ class _FibreState extends State<Fibre> {
             child: Padding(
               padding: EdgeInsetsDirectional.fromSTEB(10, 0, 8, 0),
               child: Container(
-                width: 120,
-                height: 120,
+                width: 125,
+                height: 125,
                 clipBehavior: Clip.antiAlias,
                 decoration: BoxDecoration(
-                  color: Color(0xFFD4F4F6),
+                  color: Color(0xFFDDE3FD),
                   border: Border.all(
-                    color: Color(0xFF1E233C),
-                    width: 1,
+                    color: Color(0xFF7C90A0),
+                    width: 2.5,
                   ),
                   shape: BoxShape.circle,
                 ),
                 child: Center(
-                  child: Text(
-                    "Jowar Vegetable Porridge",
-                    textAlign: TextAlign.center,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      "Jowar Vegetable Porridge",
+                      style: TextStyle(
+                        fontSize: 15.5,
+                        fontWeight: FontWeight.w500,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
                   ),
                 ),
               ),
