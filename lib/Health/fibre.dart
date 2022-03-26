@@ -49,7 +49,7 @@ class _FibreState extends State<Fibre> {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
-                      "Gobi Matar",
+                      "RECIPE: Gobi Matar",
                       style: TextStyle(
                         fontSize: 15.5,
                         fontWeight: FontWeight.w500,
@@ -86,7 +86,7 @@ class _FibreState extends State<Fibre> {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
-                      "Vegan Keto Bread",
+                      "RECIPE: Vegan Keto Bread",
                       style: TextStyle(
                         fontSize: 15.5,
                         fontWeight: FontWeight.w500,
@@ -123,7 +123,7 @@ class _FibreState extends State<Fibre> {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
-                      "Bajra & Cauliflower Roti",
+                      "RECIPE: Bajra & Cauliflower Roti",
                       style: TextStyle(
                         fontSize: 15.5,
                         fontWeight: FontWeight.w500,
@@ -160,7 +160,7 @@ class _FibreState extends State<Fibre> {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
-                      "Jowar Vegetable Porridge",
+                      "RECIPE: Jowar Vegetable Porridge",
                       style: TextStyle(
                         fontSize: 15.5,
                         fontWeight: FontWeight.w500,

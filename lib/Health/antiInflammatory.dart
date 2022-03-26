@@ -50,7 +50,7 @@ class _AntiInflammatoryState extends State<AntiInflammatory> {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
-                      "Turmeric Scrambled Eggs",
+                      "RECIPE: Turmeric Scrambled Eggs",
                       style: TextStyle(
                         fontSize: 15.5,
                         fontWeight: FontWeight.w500,
@@ -87,7 +87,7 @@ class _AntiInflammatoryState extends State<AntiInflammatory> {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
-                      "Pineapple Smoothie",
+                      "RECIPE: Pineapple Smoothie",
                       style: TextStyle(
                         fontSize: 15.5,
                         fontWeight: FontWeight.w500,
