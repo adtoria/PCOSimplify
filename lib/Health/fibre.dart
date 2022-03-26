@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:promject/Health/gobiMatar.dart';
-import 'package:promject/Health/jowarPorridge.dart';
-import 'package:promject/Health/veganKetoBread.dart';
-import 'package:promject/Health/bajraCauliflower.dart';
+import 'package:promject/Health/fibreGobiMatar.dart';
+import 'package:promject/Health/fibreJowarPorridge.dart';
+import 'package:promject/Health/fibreVeganKetoBread.dart';
+import 'package:promject/Health/fibreBajraCauliflower.dart';
 import 'blueArticleTile.dart';
 
 class Fibre extends StatefulWidget {
