@@ -24,13 +24,13 @@ class _VeganKetoBreadState extends State<VeganKetoBread> {
           ),
         ),
         centerTitle: true,
-        backgroundColor: Color(0xFFFFD3E1),
+        backgroundColor: Color(0xFFDDE3FD),
         foregroundColor: Color(0xFF1E233C),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Heading(content: "Instructions"),
+            Heading(content: "Directions"),
             SubHeading(content: "1. Making the Bread Dough"),
             Content(
                 content:

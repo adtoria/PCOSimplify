@@ -24,7 +24,7 @@ class _BajraRotiState extends State<BajraRoti> {
           ),
         ),
         centerTitle: true,
-        backgroundColor: Color(0xFFFFD3E1),
+        backgroundColor: Color(0xFFDDE3FD),
         foregroundColor: Color(0xFF1E233C),
       ),
       body: SingleChildScrollView(
@@ -38,7 +38,7 @@ class _BajraRotiState extends State<BajraRoti> {
             ListWidget(content: "3/4 cup grated cauliflower"),
             ListWidget(content: "2 tablespoon chopped coriander leaves"),
             ListWidget(content: "1/2 teaspoon garlic paste"),
-            SubHeading(content: "Instructions"),
+            SubHeading(content: "Directions"),
             Content(
                 content:
                     "1. Combine all the ingredients in a deep bowl and knead into soft-smooth dough, using enough water."),

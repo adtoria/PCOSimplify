@@ -24,7 +24,7 @@ class _GobiMatarState extends State<GobiMatar> {
           ),
         ),
         centerTitle: true,
-        backgroundColor: Color(0xFFFFD3E1),
+        backgroundColor: Color(0xFFDDE3FD),
         foregroundColor: Color(0xFF1E233C),
       ),
       body: SingleChildScrollView(
@@ -48,7 +48,7 @@ class _GobiMatarState extends State<GobiMatar> {
             ListWidget(content: "2 tsp coriander powder"),
             ListWidget(content: "Salt, to taste"),
             ListWidget(content: "2 Tbsp cilantro, to garnish"),
-            SubHeading(content: "Instructions"),
+            SubHeading(content: "Directions"),
             Content(
                 content:
                     "1. Cut the cauliflower into florets and wash .Chop onions, tomatoes and green chili. Make a rough paste of ginger and garlic."),

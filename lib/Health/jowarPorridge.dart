@@ -24,7 +24,7 @@ class _JowarPorridgeState extends State<JowarPorridge> {
           ),
         ),
         centerTitle: true,
-        backgroundColor: Color(0xFFFFD3E1),
+        backgroundColor: Color(0xFFDDE3FD),
         foregroundColor: Color(0xFF1E233C),
       ),
       body: SingleChildScrollView(
@@ -46,7 +46,7 @@ class _JowarPorridgeState extends State<JowarPorridge> {
             ListWidget(content: "2 tbsp finely chopped tomatoes"),
             ListWidget(content: "2 tbsp finely chopped onions"),
             ListWidget(content: "2 tbsp finely chopped coriander"),
-            SubHeading(content: "Instructions"),
+            SubHeading(content: "Directions"),
             Content(
                 content:
                     "1. Combine the powedered jowar, salt with 3 cups of water in a pressure cooker, mix well and pressure cook for 3 whistles."),
