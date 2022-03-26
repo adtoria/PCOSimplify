@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:promject/Health/fibreAppleJuice.dart';
 import 'package:promject/Health/fibreGobiMatar.dart';
 import 'package:promject/Health/fibreJowarPorridge.dart';
+import 'package:promject/Health/fibreJowarRoti.dart';
+import 'package:promject/Health/fibreMeethiKhakra.dart';
 import 'package:promject/Health/fibreVeganKetoBread.dart';
 import 'package:promject/Health/fibreBajraCauliflower.dart';
 import 'blueArticleTile.dart';
@@ -161,6 +164,119 @@ class _FibreState extends State<Fibre> {
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
                       "RECIPE: Jowar Vegetable Porridge",
+                      style: TextStyle(
+                        fontSize: 15.5,
+                        fontWeight: FontWeight.w500,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => JowarRoti()),
+              );
+            },
+            child: Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(10, 0, 8, 0),
+              child: Container(
+                width: 125,
+                height: 125,
+                clipBehavior: Clip.antiAlias,
+                decoration: BoxDecoration(
+                  color: Color(0xFFDDE3FD),
+                  border: Border.all(
+                    color: Color(0xFF7C90A0),
+                    width: 2.5,
+                  ),
+                  shape: BoxShape.circle,
+                ),
+                child: Center(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      "RECIPE: Jowar Bajra Garlic Roti",
+                      style: TextStyle(
+                        fontSize: 15.5,
+                        fontWeight: FontWeight.w500,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => AppleJuice()),
+              );
+            },
+            child: Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(10, 0, 8, 0),
+              child: Container(
+                width: 125,
+                height: 125,
+                clipBehavior: Clip.antiAlias,
+                decoration: BoxDecoration(
+                  color: Color(0xFFDDE3FD),
+                  border: Border.all(
+                    color: Color(0xFF7C90A0),
+                    width: 2.5,
+                  ),
+                  shape: BoxShape.circle,
+                ),
+                child: Center(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      "RECIPE: Palak, Kale and Apple juice",
+                      style: TextStyle(
+                        fontSize: 15.5,
+                        fontWeight: FontWeight.w500,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Khakra()),
+              );
+            },
+            child: Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(10, 0, 8, 0),
+              child: Container(
+                width: 125,
+                height: 125,
+                clipBehavior: Clip.antiAlias,
+                decoration: BoxDecoration(
+                  color: Color(0xFFDDE3FD),
+                  border: Border.all(
+                    color: Color(0xFF7C90A0),
+                    width: 2.5,
+                  ),
+                  shape: BoxShape.circle,
+                ),
+                child: Center(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      "RECIPE: Methi Khakhra",
                       style: TextStyle(
                         fontSize: 15.5,
                         fontWeight: FontWeight.w500,
