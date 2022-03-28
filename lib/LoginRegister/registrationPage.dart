@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:promject/LoginRegister/googleSignIn.dart';
+import 'package:promject/LoginRegister/verifyEmail.dart';
 import 'package:promject/drawer.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -406,7 +407,7 @@ class _RegisterState extends State<Register> {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => Home()));
+                                          builder: (context) => VerifyEmail()));
                                   String userId =
                                       (await FirebaseAuth.instance.currentUser!)
                                           .uid;
