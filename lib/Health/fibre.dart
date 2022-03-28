@@ -3,7 +3,7 @@ import 'package:promject/Health/fibreAppleJuice.dart';
 import 'package:promject/Health/fibreGobiMatar.dart';
 import 'package:promject/Health/fibreJowarPorridge.dart';
 import 'package:promject/Health/fibreJowarRoti.dart';
-import 'package:promject/Health/fibreMeethiKhakra.dart';
+import 'package:promject/Health/fibreMethiKhakra.dart';
 import 'package:promject/Health/fibreVeganKetoBread.dart';
 import 'package:promject/Health/fibreBajraCauliflower.dart';
 import 'blueArticleTile.dart';

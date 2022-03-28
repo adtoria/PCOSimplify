@@ -30,13 +30,14 @@ class _AppleJuiceState extends State<AppleJuice> {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            SizedBox(height: 20),
             Content(content: "Kale is considered by experts to be one of the most nutrient-dense ingredient in the world, and fortunately for us, it's tasty too, especially when we use the mildly flavoured, small leaved variety."),
             Content(content: "The ingredients of this juice are rich in iron, vitamin C and fibre, which makes it a nutritious snack for weight watchers. While people with obesity and heart problems can enjoy this juice, it is recommended that diabetics should avoid the use of honey."),
             SubHeading(content: "Ingredients"),
-            Content(content: "•   2 cups of roughly chopped spinach(palak), washed and drained"),
-            Content(content: "•   1 cup kale, torn into pieces, washed and drained"),
-            ListWidget(content: "1 cup bottle gourd (doodhi/lauki) cubes"),
-            Content(content: "•   1/4 cup chopped amla (indian gooseberries)"),
+            ListWidget(content: "2 cups of spinach, washed and drained"),
+            ListWidget(content: "1 cup kale, pieced, washed and drained"),
+            ListWidget(content: "1 cup bottle gourd cubes"),
+            ListWidget(content: "1/4 cup chopped amla (indian gooseberries)"),
             ListWidget(content: "1 cup green apple cubes"),
             ListWidget(content: "1 tbsp honey"),
             SubHeading(content: "Directions"),
