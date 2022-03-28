@@ -4,6 +4,8 @@ import 'package:flutter/rendering.dart';
 import 'package:promject/Home/homePage.dart';
 import 'dart:async';
 
+import 'package:promject/LoginRegister/loginPage.dart';
+
 class VerifyEmail extends StatefulWidget {
   const VerifyEmail({Key? key}) : super(key: key);
 
@@ -57,7 +59,7 @@ class _VerifyEmailState extends State<VerifyEmail> {
       final snackbar = SnackBar(
         backgroundColor: Colors.red,
         content: Text(
-          e.toString(),
+          "An error occurred!",
           style: TextStyle(
             fontWeight: FontWeight.w500,
           ),
@@ -101,7 +103,13 @@ class _VerifyEmailState extends State<VerifyEmail> {
                       style: ElevatedButton.styleFrom(
                         minimumSize: Size.fromHeight(50),
                       ),
-                      onPressed: () => FirebaseAuth.instance.signOut(),
+                      onPressed: (){
+                        //FirebaseAuth.instance.signOut();
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => LoginPage()));
+                      },
                       child: Text("Cancel",style: TextStyle(fontSize: 24),),
                   ),
                 ],

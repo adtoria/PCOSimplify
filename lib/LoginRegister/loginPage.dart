@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:promject/LoginRegister/forgotPassword.dart';
+import 'package:promject/LoginRegister/verifyEmail.dart';
 import 'package:provider/provider.dart';
 import '../screenHolder.dart';
 import 'googleSignIn.dart';
 import 'registrationPage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:promject/Home/homePage.dart';
+import 'dart:async';
 
 class LoginPage extends StatefulWidget {
   static const String id = 'login_page';
@@ -22,6 +24,7 @@ class _LoginPageState extends State<LoginPage> {
   String email = "";
   String password = "";
   bool loginFail = false;
+  bool isVerified=false;
 
   TextEditingController emailAddressController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
@@ -36,6 +39,16 @@ class _LoginPageState extends State<LoginPage> {
     passwordController = TextEditingController();
     passwordVisibility = false;
   }
+
+  // Future CheckEmailVerified() async {
+  //   await FirebaseAuth.instance.currentUser!.reload();
+  //   setState(() {
+  //     isVerified = FirebaseAuth.instance.currentUser!.emailVerified;
+  //   });
+  //
+  //
+  // }
+
 
   @override
   Widget build(BuildContext context) {
@@ -248,10 +261,22 @@ class _LoginPageState extends State<LoginPage> {
                                     await _auth.signInWithEmailAndPassword(
                                         email: email, password: password);
                                 if (newUser != null) {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) => Home()));
+                                  await FirebaseAuth.instance.currentUser!.reload();
+                                  setState(() {
+                                    isVerified = FirebaseAuth.instance.currentUser!.emailVerified;
+                                  });
+                                  if(isVerified){
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => Home()));
+                                  }
+                                  else{
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => VerifyEmail()));
+                                  }
                                 }
                               } catch (e) {
                                 setState(() {
