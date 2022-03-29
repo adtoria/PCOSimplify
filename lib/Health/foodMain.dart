@@ -17,11 +17,10 @@ class _FoodMainState extends State<FoodMain> {
   List<Items> items = allItems;
 
   _onTap() {
-    Navigator.of(context).pushAndRemoveUntil(
+    Navigator.of(context).pushReplacement(
       MaterialPageRoute(
         builder: (BuildContext context) => _children[_currentIndex],
       ),
-          (Route<dynamic> route) => false,
     ); // this has changed
   }
 

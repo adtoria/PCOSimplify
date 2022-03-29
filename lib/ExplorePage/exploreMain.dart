@@ -14,11 +14,10 @@ class ExploreMain extends StatefulWidget {
 
 class _ExploreMainState extends State<ExploreMain> {
   _onTap() {
-    Navigator.of(context).pushAndRemoveUntil(
+    Navigator.of(context).pushReplacement(
       MaterialPageRoute(
         builder: (BuildContext context) => _children[_currentIndex],
       ),
-          (Route<dynamic> route) => false,
     ); // this has changed
   }
 

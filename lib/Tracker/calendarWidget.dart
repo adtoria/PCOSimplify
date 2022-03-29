@@ -19,11 +19,10 @@ class CalendarWidget extends StatefulWidget {
 
 class _CalendarWidgetState extends State<CalendarWidget> {
   _onTap() {
-    Navigator.of(context).pushAndRemoveUntil(
+    Navigator.of(context).pushReplacement(
       MaterialPageRoute(
         builder: (BuildContext context) => _children[_currentIndex],
       ),
-          (Route<dynamic> route) => false,
     ); // this has changed
   }
 
@@ -121,9 +120,8 @@ class _CalendarWidgetState extends State<CalendarWidget> {
             size: 35,
           ),
           backgroundColor: Color(0xFF1E233C),
-          onPressed: () => Navigator.of(context).pushAndRemoveUntil(
+          onPressed: () => Navigator.of(context).push(
             MaterialPageRoute(builder: (context) => EventEditingPage()),
-                (Route<dynamic> route) => false,
           ),
         ),
       ),

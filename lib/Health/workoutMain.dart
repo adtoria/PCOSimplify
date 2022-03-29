@@ -11,11 +11,10 @@ class WorkoutMain extends StatefulWidget {
 
 class _WorkoutMainState extends State<WorkoutMain> {
   _onTap() {
-    Navigator.of(context).pushAndRemoveUntil(
+    Navigator.of(context).pushReplacement(
       MaterialPageRoute(
         builder: (BuildContext context) => _children[_currentIndex],
       ),
-          (Route<dynamic> route) => false,
     ); // this has changed
   }
 

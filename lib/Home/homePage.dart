@@ -25,11 +25,10 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   _onTap() {
-    Navigator.of(context).pushAndRemoveUntil(
+    Navigator.of(context).pushReplacement(
       MaterialPageRoute(
         builder: (BuildContext context) => _children[_currentIndex],
       ),
-      (Route<dynamic> route) => false,
     ); // this has changed
   }
 
@@ -72,7 +71,7 @@ class _HomeState extends State<Home> {
             ),
           ),
           tileColor: Color(0xFFFFD3E1),
-          onTap: () => Navigator.pushAndRemoveUntil(
+          onTap: () => Navigator.push(
             context,
             MaterialPageRoute(
               builder: (context) => SeeStories(
@@ -81,7 +80,6 @@ class _HomeState extends State<Home> {
                 body: user.body,
               ),
             ),
-            (Route<dynamic> route) => false,
           ),
           contentPadding: EdgeInsetsDirectional.fromSTEB(15, 5, 15, 5),
           shape: RoundedRectangleBorder(
