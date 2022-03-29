@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:promject/ExplorePage/addStory.dart';
 import 'package:promject/Tracker/calendarWidget.dart';
@@ -102,7 +103,8 @@ class _HomeState extends State<Home> {
         centerTitle: true,
         title: Text(
           "PCOSimplify",
-          style: TextStyle(
+          style: GoogleFonts.montserrat(
+            fontSize: 25,
             fontWeight: FontWeight.bold,
             letterSpacing: 1.0,
           ),
