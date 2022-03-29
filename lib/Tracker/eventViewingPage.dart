@@ -1,4 +1,6 @@
+import 'package:promject/Tracker/appointmentEditingPage.dart';
 import 'package:promject/Tracker/calendarWidget.dart';
+import 'package:promject/Tracker/medicineEditingPage.dart';
 
 import 'periodEvent.dart';
 import 'periodEditingPage.dart';
@@ -82,11 +84,29 @@ class EventViewingPage extends StatelessWidget {
   List<Widget> buildViewingActions(BuildContext context, Event event) => [
         IconButton(
           icon: Icon(Icons.edit),
-          onPressed: () => Navigator.of(context).pushReplacement(
-            MaterialPageRoute(
-              builder: (context) => EventEditingPage(event: event),
-            ),
-          ),
+          onPressed: (){
+            if(event.backgroundColor==Colors.red){
+              Navigator.of(context).pushReplacement(
+                MaterialPageRoute(
+                  builder: (context) => PeriodEventEditingPage(event: event),
+                ),
+              );
+            }
+            else if(event.backgroundColor==Colors.lightBlue){
+              Navigator.of(context).pushReplacement(
+                MaterialPageRoute(
+                  builder: (context) => MedicineEventEditingPage(event: event),
+                ),
+              );
+            }
+            else{
+              Navigator.of(context).pushReplacement(
+                MaterialPageRoute(
+                  builder: (context) => AppointmentEventEditingPage(event: event),
+                ),
+              );
+            }
+          }
         ),
         IconButton(
           icon: Icon(Icons.delete),

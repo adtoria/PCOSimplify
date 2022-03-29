@@ -1,24 +1,26 @@
+import 'package:promject/Tracker/calendarWidget.dart';
+
 import 'periodEvent.dart';
 import 'eventProvider.dart';
 import 'utils.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class EventEditingPage extends StatefulWidget {
+class PeriodEventEditingPage extends StatefulWidget {
   final Event? event;
 
-  const EventEditingPage({
+  const PeriodEventEditingPage({
     Key? key,
     this.event,
   }) : super(key: key);
 
   @override
-  _EventEditingPageState createState() => _EventEditingPageState();
+  _PeriodEventEditingPageState createState() => _PeriodEventEditingPageState();
 }
 
-class _EventEditingPageState extends State<EventEditingPage> {
+class _PeriodEventEditingPageState extends State<PeriodEventEditingPage> {
   final _formKey = GlobalKey<FormState>();
-  final titleController = TextEditingController();
+  // final titleController = TextEditingController();
   final descriptionController = TextEditingController();
   late DateTime fromDate;
   late DateTime toDate;
@@ -34,7 +36,7 @@ class _EventEditingPageState extends State<EventEditingPage> {
     } else {
       final event = widget.event!;
 
-      titleController.text = event.title;
+      //titleController.text = event.title;
       descriptionController.text = event.description;
       fromDate = event.from;
       toDate = event.to;
@@ -44,7 +46,7 @@ class _EventEditingPageState extends State<EventEditingPage> {
 
   @override
   void dispose() {
-    titleController.dispose();
+    //titleController.dispose();
     descriptionController.dispose();
 
     super.dispose();
@@ -64,7 +66,9 @@ class _EventEditingPageState extends State<EventEditingPage> {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                buildTitle(),
+                Text("Periods",
+              style: TextStyle(fontSize: 24),
+                    ),
                 SizedBox(height: 12),
                 buildDateTimePickers(),
                 SizedBox(height: 12),
@@ -87,17 +91,17 @@ class _EventEditingPageState extends State<EventEditingPage> {
         ),
       ];
 
-  Widget buildTitle() => TextFormField(
-        style: TextStyle(fontSize: 24),
-        decoration: InputDecoration(
-          border: UnderlineInputBorder(),
-          hintText: 'Add Title',
-        ),
-        onFieldSubmitted: (_) => saveForm(),
-        validator: (title) =>
-            title != null && title.isEmpty ? 'Title cannot be empty' : null,
-        controller: titleController,
-      );
+  // Widget buildTitle() => TextFormField(
+  //       style: TextStyle(fontSize: 24),
+  //       decoration: InputDecoration(
+  //         border: UnderlineInputBorder(),
+  //         hintText: 'Add Title',
+  //       ),
+  //       onFieldSubmitted: (_) => saveForm(),
+  //       validator: (title) =>
+  //           title != null && title.isEmpty ? 'Title cannot be empty' : null,
+  //       controller: titleController,
+  //     );
 
   Widget buildDescription() => TextFormField(
         decoration: InputDecoration(
@@ -255,11 +259,12 @@ class _EventEditingPageState extends State<EventEditingPage> {
 
     if (isValid) {
       final event = Event(
-        title: titleController.text,
+        title: "Periods",
         description: descriptionController.text,
         from: fromDate,
         to: isAllDay ? fromDate : toDate,
         isAllDay: isAllDay,
+        backgroundColor: Colors.red
       );
 
       final isEditing = widget.event != null;
@@ -273,7 +278,9 @@ class _EventEditingPageState extends State<EventEditingPage> {
         provider.addEvent(event);
       }
 
-      Navigator.of(context).pop();
+      Navigator.of(context).push(
+        MaterialPageRoute(builder: (context) => CalendarWidget()),
+      );
     }
   }
 }
