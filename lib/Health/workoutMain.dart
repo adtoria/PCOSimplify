@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart';
 import 'package:promject/Health/foodMain.dart';
 import 'package:promject/Tracker/calendarWidget.dart';
 import 'package:promject/ExplorePage/exploreMain.dart';
 import 'package:promject/Home/homePage.dart';
-
 import 'dart:math';
 import 'package:sensors_plus/sensors_plus.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -31,13 +31,13 @@ class _WorkoutMainState extends State<WorkoutMain> {
   double calories = 0.0;
   double addValue = 0.025;
   int steps = 0;
-  double previousDistacne = 0.0;
+  double previousDistance = 0.0;
   double distance = 0.0;
 
   double getValue(double x, double y, double z) {
     double magnitude = sqrt(x * x + y * y + z * z);
     getPreviousValue();
-    double modDistance = magnitude - previousDistacne;
+    double modDistance = magnitude - previousDistance;
     setPreviousValue(magnitude);
     return modDistance;
   }
@@ -50,7 +50,7 @@ class _WorkoutMainState extends State<WorkoutMain> {
   void getPreviousValue() async {
     SharedPreferences _pref = await SharedPreferences.getInstance();
     setState(() {
-      previousDistacne = _pref.getDouble("preValue") ?? 0.0;
+      previousDistance = _pref.getDouble("preValue") ?? 0.0;
     });
   }
 
@@ -101,14 +101,14 @@ class _WorkoutMainState extends State<WorkoutMain> {
                       MaterialButton(
                         onPressed: () {
                           Navigator.pushReplacement(
-                              context,
-                              PageRouteBuilder(
-                                pageBuilder:
-                                    (context, animation1, animation2) =>
-                                        FoodMain(),
-                                transitionDuration: Duration.zero,
-                                reverseTransitionDuration: Duration.zero,
-                              ));
+                            context,
+                            PageRouteBuilder(
+                              pageBuilder: (context, animation1, animation2) =>
+                                  FoodMain(),
+                              transitionDuration: Duration.zero,
+                              reverseTransitionDuration: Duration.zero,
+                            ),
+                          );
                         },
                         child: Text(
                           'Nutrition',
@@ -159,30 +159,103 @@ class _WorkoutMainState extends State<WorkoutMain> {
                 steps++;
               }
             }
-            return Column(
-              children: [
-                Text(
-                  "Steps: " + steps.toString(),
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.cyan,
+            return SingleChildScrollView(
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: IconButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => FoodMain()),
+                            );
+                          },
+                          color: Color(0xFF1E233C),
+                          icon: Icon(
+                            Icons.self_improvement,
+                            size: 35,
+                          ),
+                          highlightColor: Color(0xFFDDE3FD),
+                        ),
+                      ),
+                    ],
                   ),
-                ),
-                Text(
-                  "Calories: " + calculateCalories(steps).toString(),
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.cyan,
+                  Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: 150,
+                    child: Card(
+                      child: Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 40),
+                        child: Text(
+                          "Steps: " + steps.toString(),
+                          style: GoogleFonts.montserrat(
+                            fontSize: 25,
+                            color: Color(0xFF1E233C),
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                      elevation: 50,
+                      margin: EdgeInsetsDirectional.fromSTEB(30, 20, 30, 20),
+                      shadowColor: Color(0xFFDDE3FD),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                      ),
+                    ),
                   ),
-                ),
-                Text(
-                  "Miles: " + calculateMiles(steps).toString(),
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.cyan,
+                  Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: 150,
+                    child: Card(
+                      child: Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 40),
+                        child: Text(
+                          "Calories: " + calculateCalories(steps).toString(),
+                          style: GoogleFonts.montserrat(
+                            fontSize: 25,
+                            color: Color(0xFF1E233C),
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                      elevation: 50,
+                      margin: EdgeInsetsDirectional.fromSTEB(30, 20, 30, 20),
+                      shadowColor: Color(0xFFDDE3FD),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                      ),
+                    ),
                   ),
-                ),
-              ],
+                  Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: 150,
+                    child: Card(
+                      child: Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 40),
+                        child: Text(
+                          "Kilometres: " + calculateMiles(steps).toString(),
+                          style: GoogleFonts.montserrat(
+                            fontSize: 25,
+                            color: Color(0xFF1E233C),
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                      elevation: 50,
+                      margin: EdgeInsetsDirectional.fromSTEB(30, 20, 30, 20),
+                      shadowColor: Color(0xFFDDE3FD),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             );
           },
         ),
