@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:promject/Tracker/tasksWidget.dart';
+import 'package:promject/Tracker/trackerOption.dart';
 import 'package:provider/provider.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
 import 'eventDataSource.dart';
@@ -121,7 +122,7 @@ class _CalendarWidgetState extends State<CalendarWidget> {
           ),
           backgroundColor: Color(0xFF1E233C),
           onPressed: () => Navigator.of(context).push(
-            MaterialPageRoute(builder: (context) => EventEditingPage()),
+            MaterialPageRoute(builder: (context) => TrackerOption()),
           ),
         ),
       ),
