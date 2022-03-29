@@ -264,10 +264,11 @@ class _OurDrawerState extends State<OurDrawer> {
         final provider =
             Provider.of<GoogleSignInProvider>(context, listen: false);
         provider.logout();
-        Navigator.of(context).push(
+        Navigator.of(context).pushAndRemoveUntil(
           MaterialPageRoute(
             builder: (context) => LoginPage(),
           ),
+              (Route<dynamic> route) => false,
         );
         break;
       case 4:

@@ -41,8 +41,9 @@ class _ExplorerState extends State<Explorer> {
             'Written by - ' + user.name,
             style: TextStyle(fontSize: 15),
           ),
+          trailing: Text(user.timestamp),
           tileColor: Color(0xFFDDE3FD),
-          onTap: () => Navigator.push(
+          onTap: () => Navigator.pushAndRemoveUntil(
             context,
             MaterialPageRoute(
               builder: (context) => SeeStories(
@@ -50,7 +51,7 @@ class _ExplorerState extends State<Explorer> {
                 name: user.name,
                 body: user.body,
               ),
-            ),
+            ), (Route<dynamic> route) => false,
           ),
           contentPadding: EdgeInsetsDirectional.fromSTEB(15, 5, 15, 5),
           shape: RoundedRectangleBorder(
@@ -111,11 +112,12 @@ class _ExplorerState extends State<Explorer> {
                         ),
                       ),
                     ),
-                    onTap: () => Navigator.push(
+                    onTap: () => Navigator.pushAndRemoveUntil(
                       context,
                       MaterialPageRoute(
                         builder: (context) => AddPost(),
                       ),
+                          (Route<dynamic> route) => false,
                     ),
                     contentPadding:
                         EdgeInsetsDirectional.fromSTEB(15, 5, 15, 5),

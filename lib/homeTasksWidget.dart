@@ -80,10 +80,11 @@ class _HomeTasksWidgetState extends State<HomeTasksWidget> {
 
           final event = details.appointments!.first;
 
-          Navigator.of(context).push(
+          Navigator.of(context).pushAndRemoveUntil(
             MaterialPageRoute(
               builder: (context) => EventViewingPage(event: event),
             ),
+                (Route<dynamic> route) => false,
           );
         },
       ),

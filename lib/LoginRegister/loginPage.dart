@@ -266,16 +266,16 @@ class _LoginPageState extends State<LoginPage> {
                                     isVerified = FirebaseAuth.instance.currentUser!.emailVerified;
                                   });
                                   if(isVerified){
-                                    Navigator.push(
+                                    Navigator.pushAndRemoveUntil(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (context) => Home()));
+                                            builder: (context) => Home()),(Route<dynamic> route) => false,);
                                   }
                                   else{
-                                    Navigator.push(
+                                    Navigator.pushAndRemoveUntil(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (context) => VerifyEmail()));
+                                            builder: (context) => VerifyEmail()),(Route<dynamic> route) => false,);
                                   }
                                 }
                               } catch (e) {

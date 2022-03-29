@@ -29,10 +29,10 @@ class _AntiInflammatoryState extends State<AntiInflammatory> {
                   "https://www.healthline.com/nutrition/13-anti-inflammatory-foods"),
           GestureDetector(
             onTap: () {
-              Navigator.push(
+              Navigator.pushAndRemoveUntil(
                 context,
                 MaterialPageRoute(builder: (context) => TurmericScrambledEggs()),
-              );
+                    (Route<dynamic> route) => false,);
             },
             child: Padding(
               padding: EdgeInsetsDirectional.fromSTEB(10, 0, 8, 0),
@@ -66,10 +66,10 @@ class _AntiInflammatoryState extends State<AntiInflammatory> {
           ),
           GestureDetector(
             onTap: () {
-              Navigator.push(
+              Navigator.pushAndRemoveUntil(
                 context,
                 MaterialPageRoute(builder: (context) => PineappleSmoothie()),
-              );
+                    (Route<dynamic> route) => false,);
             },
             child: Padding(
               padding: EdgeInsetsDirectional.fromSTEB(10, 0, 8, 0),
@@ -103,9 +103,10 @@ class _AntiInflammatoryState extends State<AntiInflammatory> {
           ),
           GestureDetector(
             onTap: () {
-              Navigator.push(
+              Navigator.pushAndRemoveUntil(
                 context,
                 MaterialPageRoute(builder: (context) => OatPorridge()),
+                    (Route<dynamic> route) => false,
               );
             },
             child: Padding(
@@ -140,10 +141,10 @@ class _AntiInflammatoryState extends State<AntiInflammatory> {
           ),
           GestureDetector(
             onTap: () {
-              Navigator.push(
+              Navigator.pushAndRemoveUntil(
                 context,
                 MaterialPageRoute(builder: (context) => LentilSalad()),
-              );
+                    (Route<dynamic> route) => false,);
             },
             child: Padding(
               padding: EdgeInsetsDirectional.fromSTEB(10, 0, 8, 0),

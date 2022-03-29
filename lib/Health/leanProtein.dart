@@ -28,10 +28,10 @@ class _LeanProteinState extends State<LeanProtein> {
               url: "https://timesofindia.indiatimes.com/life-style/food-news/10-types-of-protein-rich-indian-dals-and-their-benefits/photostory/88505811.cms"),
           GestureDetector(
             onTap: () {
-              Navigator.push(
+              Navigator.pushAndRemoveUntil(
                 context,
                 MaterialPageRoute(builder: (context) => Tofu()),
-              );
+                    (Route<dynamic> route) => false,);
             },
             child: Padding(
               padding: EdgeInsetsDirectional.fromSTEB(10, 0, 8, 0),
@@ -66,10 +66,10 @@ class _LeanProteinState extends State<LeanProtein> {
 
           GestureDetector(
             onTap: () {
-              Navigator.push(
+              Navigator.pushAndRemoveUntil(
                 context,
                 MaterialPageRoute(builder: (context) => Stew()),
-              );
+                    (Route<dynamic> route) => false,);
             },
             child: Padding(
               padding: EdgeInsetsDirectional.fromSTEB(10, 0, 8, 0),

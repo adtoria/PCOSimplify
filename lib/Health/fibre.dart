@@ -29,10 +29,10 @@ class _FibreState extends State<Fibre> {
           ),
           GestureDetector(
             onTap: () {
-              Navigator.push(
+              Navigator.pushAndRemoveUntil(
                 context,
                 MaterialPageRoute(builder: (context) => GobiMatar()),
-              );
+                    (Route<dynamic> route) => false,);
             },
             child: Padding(
               padding: EdgeInsetsDirectional.fromSTEB(10, 0, 8, 0),
@@ -66,10 +66,10 @@ class _FibreState extends State<Fibre> {
           ),
           GestureDetector(
             onTap: () {
-              Navigator.push(
+              Navigator.pushAndRemoveUntil(
                 context,
                 MaterialPageRoute(builder: (context) => VeganKetoBread()),
-              );
+                    (Route<dynamic> route) => false,);
             },
             child: Padding(
               padding: EdgeInsetsDirectional.fromSTEB(10, 0, 8, 0),
@@ -103,10 +103,10 @@ class _FibreState extends State<Fibre> {
           ),
           GestureDetector(
             onTap: () {
-              Navigator.push(
+              Navigator.pushAndRemoveUntil(
                 context,
                 MaterialPageRoute(builder: (context) => BajraRoti()),
-              );
+                    (Route<dynamic> route) => false,);
             },
             child: Padding(
               padding: EdgeInsetsDirectional.fromSTEB(10, 0, 8, 0),
@@ -140,10 +140,10 @@ class _FibreState extends State<Fibre> {
           ),
           GestureDetector(
             onTap: () {
-              Navigator.push(
+              Navigator.pushAndRemoveUntil(
                 context,
                 MaterialPageRoute(builder: (context) => JowarPorridge()),
-              );
+                    (Route<dynamic> route) => false,);
             },
             child: Padding(
               padding: EdgeInsetsDirectional.fromSTEB(10, 0, 8, 0),
@@ -177,10 +177,10 @@ class _FibreState extends State<Fibre> {
           ),
           GestureDetector(
             onTap: () {
-              Navigator.push(
+              Navigator.pushAndRemoveUntil(
                 context,
                 MaterialPageRoute(builder: (context) => JowarRoti()),
-              );
+                    (Route<dynamic> route) => false,);
             },
             child: Padding(
               padding: EdgeInsetsDirectional.fromSTEB(10, 0, 8, 0),
@@ -215,10 +215,10 @@ class _FibreState extends State<Fibre> {
 
           GestureDetector(
             onTap: () {
-              Navigator.push(
+              Navigator.pushAndRemoveUntil(
                 context,
                 MaterialPageRoute(builder: (context) => AppleJuice()),
-              );
+                    (Route<dynamic> route) => false,);
             },
             child: Padding(
               padding: EdgeInsetsDirectional.fromSTEB(10, 0, 8, 0),
@@ -253,10 +253,10 @@ class _FibreState extends State<Fibre> {
 
           GestureDetector(
             onTap: () {
-              Navigator.push(
+              Navigator.pushAndRemoveUntil(
                 context,
                 MaterialPageRoute(builder: (context) => Khakra()),
-              );
+                    (Route<dynamic> route) => false,);
             },
             child: Padding(
               padding: EdgeInsetsDirectional.fromSTEB(10, 0, 8, 0),

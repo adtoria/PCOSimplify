@@ -61,10 +61,11 @@ class _TasksWidgetState extends State<TasksWidget> {
 
           final event = details.appointments!.first;
 
-          Navigator.of(context).push(
+          Navigator.of(context).pushAndRemoveUntil(
             MaterialPageRoute(
               builder: (context) => EventViewingPage(event: event),
             ),
+                (Route<dynamic> route) => false,
           );
         },
       ),

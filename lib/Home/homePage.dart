@@ -25,10 +25,11 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   _onTap() {
-    Navigator.of(context).push(
+    Navigator.of(context).pushAndRemoveUntil(
       MaterialPageRoute(
         builder: (BuildContext context) => _children[_currentIndex],
       ),
+          (Route<dynamic> route) => false,
     ); // this has changed
   }
 
@@ -71,7 +72,7 @@ class _HomeState extends State<Home> {
             ),
           ),
           tileColor: Color(0xFFFFD3E1),
-          onTap: () => Navigator.push(
+          onTap: () => Navigator.pushAndRemoveUntil(
             context,
             MaterialPageRoute(
               builder: (context) => SeeStories(
@@ -80,6 +81,7 @@ class _HomeState extends State<Home> {
                 body: user.body,
               ),
             ),
+                (Route<dynamic> route) => false,
           ),
           contentPadding: EdgeInsetsDirectional.fromSTEB(15, 5, 15, 5),
           shape: RoundedRectangleBorder(
@@ -253,11 +255,12 @@ class _HomeState extends State<Home> {
                               Icons.add,
                               size: 35,
                             ),
-                            onPressed: () => Navigator.push(
+                            onPressed: () => Navigator.pushAndRemoveUntil(
                               context,
                               MaterialPageRoute(
                                 builder: (context) => EventEditingPage(),
                               ),
+                                  (Route<dynamic> route) => false,
                             ),
                           ),
                         ),
@@ -601,10 +604,11 @@ class _HomeState extends State<Home> {
                               EdgeInsetsDirectional.fromSTEB(0, 27, 15, 10),
                           child: GestureDetector(
                             onTap: () {
-                              Navigator.push(
+                              Navigator.pushAndRemoveUntil(
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) => ExploreMain()),
+                                    (Route<dynamic> route) => false,
                               );
                             },
                             child: Text(
@@ -915,9 +919,10 @@ class _HomeState extends State<Home> {
                           ),
                         ],
                       ),
-                      onPressed: () => Navigator.push(
+                      onPressed: () => Navigator.pushAndRemoveUntil(
                         context,
                         MaterialPageRoute(builder: (context) => AddPost()),
+                            (Route<dynamic> route) => false,
                       ),
                       style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all(

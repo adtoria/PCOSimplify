@@ -404,10 +404,10 @@ class _RegisterState extends State<Register> {
                                     await _auth.createUserWithEmailAndPassword(
                                         email: email, password: password);
                                 if (newUser != null) {
-                                  Navigator.push(
+                                  Navigator.pushAndRemoveUntil(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => VerifyEmail()));
+                                          builder: (context) => VerifyEmail()),(Route<dynamic> route) => false,);
                                   String userId =
                                       (await FirebaseAuth.instance.currentUser!)
                                           .uid;

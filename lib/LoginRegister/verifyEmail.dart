@@ -14,7 +14,7 @@ class VerifyEmail extends StatefulWidget {
 }
 
 class _VerifyEmailState extends State<VerifyEmail> {
-  bool isVerified = false;
+  bool verify = false;
   Timer? timer;
   bool canResend = false;
 
@@ -22,9 +22,9 @@ class _VerifyEmailState extends State<VerifyEmail> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    isVerified = FirebaseAuth.instance.currentUser!.emailVerified;
+    verify = FirebaseAuth.instance.currentUser!.emailVerified;
 
-    if (!isVerified) {
+    if (!verify) {
       sendVerificationEmail();
 
       timer =
@@ -41,10 +41,10 @@ class _VerifyEmailState extends State<VerifyEmail> {
   Future CheckEmailVerified() async {
     await FirebaseAuth.instance.currentUser!.reload();
     setState(() {
-      isVerified = FirebaseAuth.instance.currentUser!.emailVerified;
+      verify = FirebaseAuth.instance.currentUser!.emailVerified;
     });
 
-    if (isVerified) timer?.cancel();
+    if (verify) timer?.cancel();
   }
 
   Future sendVerificationEmail() async {
@@ -72,7 +72,7 @@ class _VerifyEmailState extends State<VerifyEmail> {
   }
 
   @override
-  Widget build(BuildContext context) => isVerified
+  Widget build(BuildContext context) => verify
       ? Home()
       : Scaffold(
           appBar: AppBar(
@@ -127,11 +127,12 @@ class _VerifyEmailState extends State<VerifyEmail> {
                     style: TextStyle(fontSize: 24),
                   ),
                   onPressed: () {
-                    Navigator.push(
+                    Navigator.pushAndRemoveUntil(
                       context,
                       MaterialPageRoute(
                         builder: (context) => LoginPage(),
                       ),
+                          (Route<dynamic> route) => false,
                     );
                   },
                   style: ElevatedButton.styleFrom(

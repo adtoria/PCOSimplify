@@ -28,14 +28,15 @@ class _PostViewState extends State<PostView> {
             style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
           ),
           tileColor: Colors.pinkAccent,
-          onTap: () => Navigator.push(
+          onTap: () => Navigator.pushAndRemoveUntil(
               context,
               MaterialPageRoute(
                   builder: (context) => SeeStories(
                         title: user.title,
                         name: user.name,
                         body: user.body,
-                      ))),
+                      )),
+                (Route<dynamic> route) => false,),
           contentPadding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30),
@@ -64,9 +65,10 @@ class _PostViewState extends State<PostView> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => AddPost()));
-        },
+          Navigator.pushAndRemoveUntil(
+              context, MaterialPageRoute(builder: (context) => AddPost()),
+                (Route<dynamic> route) => false,);
+          },
         child: Icon(
           Icons.edit,
           color: Colors.white,

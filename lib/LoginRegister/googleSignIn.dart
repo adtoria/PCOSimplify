@@ -24,7 +24,7 @@ class GoogleSignInProvider extends ChangeNotifier {
 
     await FirebaseAuth.instance.signInWithCredential(credential);
 
-    Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));
+    Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => Home()),(Route<dynamic> route) => false,);
 
     notifyListeners();
   }

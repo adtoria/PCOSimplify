@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:promject/ExplorePage/exploreMain.dart';
 import 'package:promject/Tracker/calendarWidget.dart';
+import 'Health/foodMain.dart';
+import 'Home/homePage.dart';
 import 'profilePage.dart';
 import 'drawer.dart';
 
@@ -14,11 +16,9 @@ class _ScreenHolderState extends State<ScreenHolder> {
   int currentIndex = 0;
 
   final screens = [
-    Center(child: Text("A", style: TextStyle(fontSize: 60.0))),
-    //Center(child: Text("B", style: TextStyle(fontSize: 60.0))),
+    Home(),
     CalendarWidget(),
-    Center(child: Text("C", style: TextStyle(fontSize: 60.0))),
-    //ProfilePage()
+    FoodMain(),
     ExploreMain()
   ];
 
