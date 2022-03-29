@@ -43,7 +43,7 @@ class _ExplorerState extends State<Explorer> {
           ),
           trailing: Text(user.timestamp),
           tileColor: Color(0xFFDDE3FD),
-          onTap: () => Navigator.pushAndRemoveUntil(
+          onTap: () => Navigator.push(
             context,
             MaterialPageRoute(
               builder: (context) => SeeStories(
@@ -51,7 +51,7 @@ class _ExplorerState extends State<Explorer> {
                 name: user.name,
                 body: user.body,
               ),
-            ), (Route<dynamic> route) => false,
+            ),
           ),
           contentPadding: EdgeInsetsDirectional.fromSTEB(15, 5, 15, 5),
           shape: RoundedRectangleBorder(
@@ -112,12 +112,11 @@ class _ExplorerState extends State<Explorer> {
                         ),
                       ),
                     ),
-                    onTap: () => Navigator.pushAndRemoveUntil(
+                    onTap: () => Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) => AddPost(),
                       ),
-                          (Route<dynamic> route) => false,
                     ),
                     contentPadding:
                         EdgeInsetsDirectional.fromSTEB(15, 5, 15, 5),
@@ -194,7 +193,6 @@ class _ExplorerState extends State<Explorer> {
                     ),
                     Expanded(
                       child: Column(
-                        //crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           RightTiles(
                             articleUrl:
@@ -254,7 +252,6 @@ class _ExplorerState extends State<Explorer> {
                   children: [
                     Expanded(
                       child: Column(
-                        //crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           LeftTiles(
                             articleUrl:
@@ -282,7 +279,6 @@ class _ExplorerState extends State<Explorer> {
                     ),
                     Expanded(
                       child: Column(
-                        //crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           RightTiles(
                             articleUrl:
@@ -335,10 +331,8 @@ class _ExplorerState extends State<Explorer> {
                   children: [
                     Expanded(
                       child: Column(
-                        //crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           LeftTiles(
-                            //DONE
                             articleUrl:
                                 'https://www.healthline.com/health/pcos-acne',
                             categoryName:
@@ -346,14 +340,12 @@ class _ExplorerState extends State<Explorer> {
                             source: "healthline.com",
                           ),
                           LeftTiles(
-                            //DONE
                             articleUrl:
                                 'https://www.youtube.com/watch?v=CCxp8SsiIbQ',
                             categoryName: "How I Got Rid of Acne & Facial Hair",
                             source: "youtube.com",
                           ),
                           LeftTiles(
-                            //DONE
                             articleUrl:
                                 'https://www.youtube.com/watch?v=htJg4A-7BQo',
                             categoryName: "PCOS & Skin | Dermatologist Review",
@@ -364,10 +356,8 @@ class _ExplorerState extends State<Explorer> {
                     ),
                     Expanded(
                       child: Column(
-                        //crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           RightTiles(
-                            //DONE
                             articleUrl:
                                 'https://www.health.harvard.edu/blog/polycystic-ovarian-syndrome-and-the-skin-2021042922502',
                             categoryName:
@@ -375,7 +365,6 @@ class _ExplorerState extends State<Explorer> {
                             source: "health.harvard.edu",
                           ),
                           RightTiles(
-                            //DONE
                             articleUrl:
                                 'https://www.youtube.com/watch?v=nNYVPhzqnSU',
                             categoryName:
@@ -383,7 +372,6 @@ class _ExplorerState extends State<Explorer> {
                             source: "youtube.com",
                           ),
                           RightTiles(
-                            //DONE
                             articleUrl:
                                 'https://www.medicalnewstoday.com/articles/pcos-acne#pcos-and-acne',
                             categoryName: "What to know about PCOS and Acne",
@@ -420,7 +408,6 @@ class _ExplorerState extends State<Explorer> {
                   children: [
                     Expanded(
                       child: Column(
-                        //crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           LeftTiles(
                             articleUrl:
@@ -429,12 +416,6 @@ class _ExplorerState extends State<Explorer> {
                                 "Is Your Gut Bacteria The Secret To Your PCOS Weight Loss?",
                             source: "thepcosnutritionist.com",
                           ),
-                          // LeftTiles(
-                          //   articleUrl:
-                          //       'https://jilliangreaves.com/blog/2020/5/5/the-pcos-gut-health-connection',
-                          //   categoryName: "The PCOS Gut Health Connection",
-                          //   source: "jilliangreaves.com",
-                          // ),
                           LeftTiles(
                             articleUrl:
                                 'https://www.youtube.com/watch?v=vLJvCTIcUVw',
@@ -453,7 +434,6 @@ class _ExplorerState extends State<Explorer> {
                     ),
                     Expanded(
                       child: Column(
-                        //crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           RightTiles(
                             articleUrl:
@@ -474,13 +454,6 @@ class _ExplorerState extends State<Explorer> {
                             categoryName: "The PCOS Gut Health Connection",
                             source: "jilliangreaves.com",
                           ),
-                          // RightTiles(
-                          //   articleUrl:
-                          //       'https://thepcosnutritionist.com/blog/pcos-and-gut-health/',
-                          //   categoryName:
-                          //       "Is Your Gut Bacteria The Secret To Your PCOS Weight Loss?",
-                          //   source: "thepcosnutritionist.com",
-                          // ),
                           RightTiles(
                             articleUrl:
                                 'https://www.youtube.com/watch?v=dqA6LXNkgXE',
@@ -519,7 +492,6 @@ class _ExplorerState extends State<Explorer> {
                   children: [
                     Expanded(
                       child: Column(
-                        //crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           LeftTiles(
                             articleUrl:
@@ -546,7 +518,6 @@ class _ExplorerState extends State<Explorer> {
                     ),
                     Expanded(
                       child: Column(
-                        //crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           RightTiles(
                             articleUrl:
@@ -603,7 +574,6 @@ class _ExplorerState extends State<Explorer> {
                   children: [
                     Expanded(
                       child: Column(
-                        //crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           LeftTiles(
                             articleUrl:
@@ -629,7 +599,6 @@ class _ExplorerState extends State<Explorer> {
                     ),
                     Expanded(
                       child: Column(
-                        //crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           RightTiles(
                             articleUrl:
@@ -688,7 +657,6 @@ class _ExplorerState extends State<Explorer> {
                   children: [
                     Expanded(
                       child: Column(
-                        //crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           LeftTiles(
                             articleUrl:
@@ -716,7 +684,6 @@ class _ExplorerState extends State<Explorer> {
                     ),
                     Expanded(
                       child: Column(
-                        //crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           RightTiles(
                             articleUrl:
@@ -777,7 +744,6 @@ class _ExplorerState extends State<Explorer> {
                   children: [
                     Expanded(
                       child: Column(
-                        //crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           LeftTiles(
                             articleUrl:
@@ -810,7 +776,6 @@ class _ExplorerState extends State<Explorer> {
                     ),
                     Expanded(
                       child: Column(
-                        //crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           RightTiles(
                             articleUrl:
@@ -864,7 +829,6 @@ class _ExplorerState extends State<Explorer> {
                   children: [
                     Expanded(
                       child: Column(
-                        //crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           LeftTiles(
                             articleUrl:
@@ -981,7 +945,6 @@ class _ExplorerState extends State<Explorer> {
                     ),
                     Expanded(
                       child: Column(
-                        //crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           RightTiles(
                             articleUrl:
@@ -1067,7 +1030,6 @@ class _ExplorerState extends State<Explorer> {
                     ),
                     Expanded(
                       child: Column(
-                        //crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           RightTiles(
                             articleUrl:
@@ -1150,7 +1112,6 @@ class _ExplorerState extends State<Explorer> {
                     ),
                     Expanded(
                       child: Column(
-                        //crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           RightTiles(
                             articleUrl:

@@ -29,7 +29,7 @@ class _HomeState extends State<Home> {
       MaterialPageRoute(
         builder: (BuildContext context) => _children[_currentIndex],
       ),
-          (Route<dynamic> route) => false,
+      (Route<dynamic> route) => false,
     ); // this has changed
   }
 
@@ -81,7 +81,7 @@ class _HomeState extends State<Home> {
                 body: user.body,
               ),
             ),
-                (Route<dynamic> route) => false,
+            (Route<dynamic> route) => false,
           ),
           contentPadding: EdgeInsetsDirectional.fromSTEB(15, 5, 15, 5),
           shape: RoundedRectangleBorder(
@@ -255,12 +255,11 @@ class _HomeState extends State<Home> {
                               Icons.add,
                               size: 35,
                             ),
-                            onPressed: () => Navigator.pushAndRemoveUntil(
+                            onPressed: () => Navigator.push(
                               context,
                               MaterialPageRoute(
                                 builder: (context) => EventEditingPage(),
                               ),
-                                  (Route<dynamic> route) => false,
                             ),
                           ),
                         ),
@@ -604,11 +603,11 @@ class _HomeState extends State<Home> {
                               EdgeInsetsDirectional.fromSTEB(0, 27, 15, 10),
                           child: GestureDetector(
                             onTap: () {
-                              Navigator.pushAndRemoveUntil(
+                              Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => ExploreMain()),
-                                    (Route<dynamic> route) => false,
+                                  builder: (context) => ExploreMain(),
+                                ),
                               );
                             },
                             child: Text(
@@ -919,10 +918,9 @@ class _HomeState extends State<Home> {
                           ),
                         ],
                       ),
-                      onPressed: () => Navigator.pushAndRemoveUntil(
+                      onPressed: () => Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => AddPost()),
-                            (Route<dynamic> route) => false,
                       ),
                       style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all(
@@ -1107,28 +1105,29 @@ class ListWidget extends StatelessWidget {
     return Material(
       color: Colors.white,
       child: Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(11, 0, 15, 0),
-          child: Row(
-            children: [
-              Expanded(
-                child: Text("   • "),
-              ),
-              Expanded(
-                flex: 12,
-                child: Text(
-                  content,
-                  style: TextStyle(
-                    color: Colors.black,
-                    decoration: TextDecoration.none,
-                    fontSize: 15,
-                    fontFamily: 'RaleWay',
-                    fontWeight: FontWeight.normal,
-                    letterSpacing: 0.75,
-                  ),
+        padding: EdgeInsetsDirectional.fromSTEB(11, 0, 15, 0),
+        child: Row(
+          children: [
+            Expanded(
+              child: Text("   • "),
+            ),
+            Expanded(
+              flex: 12,
+              child: Text(
+                content,
+                style: TextStyle(
+                  color: Colors.black,
+                  decoration: TextDecoration.none,
+                  fontSize: 15,
+                  fontFamily: 'RaleWay',
+                  fontWeight: FontWeight.normal,
+                  letterSpacing: 0.75,
                 ),
               ),
-            ],
-          )),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

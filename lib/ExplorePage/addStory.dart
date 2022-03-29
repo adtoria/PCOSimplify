@@ -42,130 +42,130 @@ class _AddPostState extends State<AddPost> {
         elevation: 3.0,
       ),
       body: Form(
-          key: _formKey,
-          child: ListView(
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: TextFormField(
-                  decoration: InputDecoration(
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Color(0xFF9F86C0),
-                        width: 2.0,
-                      ),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Color(0xFF1E233C),
-                        width: 3.0,
-                      ),
-                    ),
-                    labelText: "Title of Your Story",
-                    labelStyle: TextStyle(
-                      fontSize: 17.0,
+        key: _formKey,
+        child: ListView(
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextFormField(
+                decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
                       color: Color(0xFF9F86C0),
+                      width: 2.0,
                     ),
-                    border: OutlineInputBorder(),
                   ),
-                  validator: (String? value) {
-                    if (value == null) {
-                      return "* Required";
-                    } else if (value.length < 1) {
-                      accept = false;
-                      return "* Required";
-                    } else {
-                      return null;
-                    }
-                  },
-                  onChanged: (val) {
-                    title = val;
-                  },
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Color(0xFF1E233C),
+                      width: 3.0,
+                    ),
+                  ),
+                  labelText: "Title of Your Story",
+                  labelStyle: TextStyle(
+                    fontSize: 17.0,
+                    color: Color(0xFF9F86C0),
+                  ),
+                  border: OutlineInputBorder(),
                 ),
+                validator: (String? value) {
+                  if (value == null) {
+                    return "* Required";
+                  } else if (value.length < 1) {
+                    accept = false;
+                    return "* Required";
+                  } else {
+                    return null;
+                  }
+                },
+                onChanged: (val) {
+                  title = val;
+                },
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: TextFormField(
-                  decoration: InputDecoration(
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Color(0xFF9F86C0),
-                        width: 2.0,
-                      ),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Color(0xFF1E233C),
-                        width: 3.0,
-                      ),
-                    ),
-                    labelText: "Your Name",
-                    labelStyle: TextStyle(
-                      fontSize: 17.0,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextFormField(
+                decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
                       color: Color(0xFF9F86C0),
+                      width: 2.0,
                     ),
-                    border: OutlineInputBorder(),
                   ),
-                  validator: (String? value) {
-                    if (value == null) {
-                      name = "Anonymous";
-                      return null;
-                    } else if (value.length < 1) {
-                      name = "Anonymous";
-                      return null;
-                    } else {
-                      return null;
-                    }
-                  },
-                  onChanged: (val) {
-                    //post.title = val
-                    name = val;
-                  },
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Color(0xFF1E233C),
+                      width: 3.0,
+                    ),
+                  ),
+                  labelText: "Your Name",
+                  labelStyle: TextStyle(
+                    fontSize: 17.0,
+                    color: Color(0xFF9F86C0),
+                  ),
+                  border: OutlineInputBorder(),
                 ),
+                validator: (String? value) {
+                  if (value == null) {
+                    name = "Anonymous";
+                    return null;
+                  } else if (value.length < 1) {
+                    name = "Anonymous";
+                    return null;
+                  } else {
+                    return null;
+                  }
+                },
+                onChanged: (val) {
+                  name = val;
+                },
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: TextFormField(
-                  maxLines: 20,
-                  decoration: InputDecoration(
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Color(0xFF9F86C0),
-                        width: 2.0,
-                      ),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Color(0xFF1E233C),
-                        width: 3.0,
-                      ),
-                    ),
-                    labelText: "Your Story",
-                    labelStyle: TextStyle(
-                      fontSize: 17.0,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextFormField(
+                maxLines: 20,
+                decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
                       color: Color(0xFF9F86C0),
+                      width: 2.0,
                     ),
-                    border: OutlineInputBorder(),
                   ),
-                  validator: (String? value) {
-                    if (value == null) {
-                      accept = false;
-                      return "* Required";
-                    } else if (value.length < 1) {
-                      accept = false;
-                      return "* Required";
-                    } else {
-                      return null;
-                    }
-                  },
-                  onChanged: (val) {
-                    //post.body = val
-                    body = val;
-                  },
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Color(0xFF1E233C),
+                      width: 3.0,
+                    ),
+                  ),
+                  labelText: "Your Story",
+                  labelStyle: TextStyle(
+                    fontSize: 17.0,
+                    color: Color(0xFF9F86C0),
+                  ),
+                  border: OutlineInputBorder(),
                 ),
+                validator: (String? value) {
+                  if (value == null) {
+                    accept = false;
+                    return "* Required";
+                  } else if (value.length < 1) {
+                    accept = false;
+                    return "* Required";
+                  } else {
+                    return null;
+                  }
+                },
+                onChanged: (val) {
+                  //post.body = val
+                  body = val;
+                },
               ),
-            ],
-          )),
+            ),
+          ],
+        ),
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           if (_formKey.currentState!.validate()) {
