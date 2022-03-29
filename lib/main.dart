@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:pedometer/pedometer.dart';
 import 'package:promject/LoginRegister/googleSignIn.dart';
 import 'package:promject/Tracker/eventProvider.dart';
-import 'package:promject/pedometer.dart';
 import 'package:promject/screenHolder.dart';
 import 'package:provider/provider.dart';
 import 'Home/homePage.dart';
