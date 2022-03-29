@@ -167,21 +167,27 @@ class _WorkoutMainState extends State<WorkoutMain> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: IconButton(
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => HealthData()),
-                            );
-                          },
-                          color: Color(0xFF1E233C),
-                          icon: Icon(
-                            Icons.self_improvement,
-                            size: 35,
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 15, 15, 5),
+                        child: Container(
+                          child: IconButton(
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => HealthData()),
+                              );
+                            },
+                            color: Color(0xFF1E233C),
+                            icon: Icon(
+                              Icons.self_improvement,
+                              size: 35,
+                            ),
+                            highlightColor: Color(0xFFDDE3FD),
                           ),
-                          highlightColor: Color(0xFFDDE3FD),
+                          decoration: BoxDecoration(
+                            border: Border.all(width: 2),
+                            shape: BoxShape.circle,
+                          ),
                         ),
                       ),
                     ],

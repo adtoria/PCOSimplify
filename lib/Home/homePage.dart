@@ -138,7 +138,7 @@ class _HomeState extends State<Home> {
                           "Polycystic Ovary Syndrome (PCOS) is a hormonal disorder common among people of reproductive age. People with PCOS often experience menstrual cycles or excess androgen (male hormone) levels. Not only women but transgender people also experience this condition.",
                           style: TextStyle(
                             color: Colors.black87,
-                            fontSize: 16.5,
+                            fontSize: 15,
                           ),
                         ),
                       ),
