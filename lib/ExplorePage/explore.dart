@@ -41,7 +41,7 @@ class _ExplorerState extends State<Explorer> {
             'Written by - ' + user.name,
             style: TextStyle(fontSize: 15),
           ),
-          trailing: Text(user.timestamp),
+          //trailing: Text(user.timestamp),
           tileColor: Color(0xFFDDE3FD),
           onTap: () => Navigator.push(
             context,
@@ -130,6 +130,8 @@ class _ExplorerState extends State<Explorer> {
                 stream: readData(),
                 builder: (context, snapshot) {
                   if (snapshot.hasError) {
+                    print(snapshot.error);
+                    print("HI");
                     return Text('Something went wrong!');
                   } else if (snapshot.hasData) {
                     final users = snapshot.data!;

@@ -48,6 +48,7 @@ dependencies:
   google_sign_in: ^5.2.4
   font_awesome_flutter: ^9.2.0
   http: ^0.13.4
+  pedometer: ^3.0.0
 
 dev_dependencies:
   flutter_test:
