@@ -21,10 +21,10 @@ class User {
       };
 
   static User fromJson(Map<String, dynamic> json) => User(
-        id: json['id'],
-        name: json['name'],
-        title: json['title'],
-        body: json['body'],
-        timestamp: json['timestamp'],
+        id: (json['id'] ?? '').toString(),
+        name: (json['name'] ?? '').toString(),
+        title: (json['title'] ?? '').toString(),
+        body: (json['body'] ?? '').toString(),
+        timestamp: (json['timestamp'] ?? '').toString(),
       );
 }
