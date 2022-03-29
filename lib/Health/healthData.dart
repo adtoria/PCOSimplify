@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HealthData extends StatefulWidget {
   const HealthData({Key? key}) : super(key: key);
@@ -9,7 +10,7 @@ class HealthData extends StatefulWidget {
 }
 
 class _HealthDataState extends State<HealthData> {
-  List<int> Age=[
+  List<int> Age = [
     7,
     8,
     9,
@@ -70,9 +71,9 @@ class _HealthDataState extends State<HealthData> {
     64,
     65,
   ];
-  int selectedAge=25;
+  int selectedAge = 25;
 
-  List<int> Weight=[
+  List<int> Weight = [
     20,
     21,
     22,
@@ -245,9 +246,9 @@ class _HealthDataState extends State<HealthData> {
     189,
     190,
   ];
-  int selectedWeight=60;
+  int selectedWeight = 50;
 
-  List<int> Height=[
+  List<int> Height = [
     70,
     71,
     72,
@@ -380,78 +381,186 @@ class _HealthDataState extends State<HealthData> {
     199,
     200,
   ];
-  int selectedHeight=162;
+  int selectedHeight = 155;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Data"),
+        title: Text(
+          "Health Data",
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 21.5,
+            letterSpacing: 0.5,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
         centerTitle: true,
+        backgroundColor: Color(0xFF1E233C),
+        foregroundColor: Colors.white,
       ),
-
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Center(
-              child: DropdownButton<int>(
-                menuMaxHeight: 500,
-                value: selectedAge,
-                items: Age.map(
-                    (item) => DropdownMenuItem<int>(
-                      value: item,
-                      child: Text(item.toString(),),
-                    )
-                ).toList(),
-                onChanged: (item){
-                  setState(() {
-                    selectedAge=item!;
-                  });
-                },
+            SizedBox(height: 25),
+            Container(
+              child: Card(
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(20, 20, 0, 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Age : ",
+                        style: GoogleFonts.montserrat(
+                          fontSize: 25,
+                          color: Color(0xFF1E233C),
+                        ),
+                      ),
+                      DropdownButton<int>(
+                        dropdownColor: Color(0xFFDDE3FD),
+                        menuMaxHeight: 250,
+                        value: selectedAge,
+                        items: Age.map((item) => DropdownMenuItem<int>(
+                            value: item,
+                            child: Text(
+                              item.toString(),
+                              style: GoogleFonts.montserrat(
+                                fontSize: 25,
+                                color: Color(0xFF1E233C),
+                              ),
+                            ))).toList(),
+                        onChanged: (item) {
+                          setState(() {
+                            selectedAge = item!;
+                          });
+                        },
+                      ),
+                    ],
+                  ),
+                ),
+                elevation: 10,
+                margin: EdgeInsetsDirectional.fromSTEB(80, 20, 80, 20),
+                shadowColor: Color(0xFFDDE3FD),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                ),
               ),
             ),
-
-            Center(
-              child: DropdownButton<int>(
-                menuMaxHeight: 500,
-                value: selectedWeight,
-                items: Weight.map(
-                        (item) => DropdownMenuItem<int>(
-                      value: item,
-                      child: Text(item.toString(),),
-                    )
-                ).toList(),
-                onChanged: (item){
-                  setState(() {
-                    selectedWeight=item!;
-                  });
-                },
+            Container(
+              child: Card(
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(20, 20, 0, 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Weight : ",
+                        style: GoogleFonts.montserrat(
+                          fontSize: 25,
+                          color: Color(0xFF1E233C),
+                        ),
+                      ),
+                      DropdownButton<int>(
+                        dropdownColor: Color(0xFFDDE3FD),
+                        menuMaxHeight: 250,
+                        value: selectedWeight,
+                        items: Weight.map((item) => DropdownMenuItem<int>(
+                            value: item,
+                            child: Text(
+                              item.toString(),
+                              style: GoogleFonts.montserrat(
+                                fontSize: 25,
+                                color: Color(0xFF1E233C),
+                              ),
+                            ))).toList(),
+                        onChanged: (item) {
+                          setState(() {
+                            selectedWeight = item!;
+                          });
+                        },
+                      ),
+                    ],
+                  ),
+                ),
+                elevation: 10,
+                margin: EdgeInsetsDirectional.fromSTEB(80, 20, 80, 20),
+                shadowColor: Color(0xFFDDE3FD),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                ),
               ),
             ),
-
-            Center(
-              child: DropdownButton<int>(
-                menuMaxHeight: 500,
-                value: selectedHeight,
-                items: Height.map(
-                        (item) => DropdownMenuItem<int>(
-                      value: item,
-                      child: Text(item.toString(),),
-                    )
-                ).toList(),
-                onChanged: (item){
-                  setState(() {
-                    selectedHeight=item!;
-                  });
-                },
+            Container(
+              child: Card(
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(20, 20, 0, 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Height : ",
+                        style: GoogleFonts.montserrat(
+                          fontSize: 25,
+                          color: Color(0xFF1E233C),
+                        ),
+                      ),
+                      DropdownButton<int>(
+                        dropdownColor: Color(0xFFDDE3FD),
+                        menuMaxHeight: 250,
+                        value: selectedHeight,
+                        items: Height.map((item) => DropdownMenuItem<int>(
+                            value: item,
+                            child: Text(
+                              item.toString(),
+                              style: GoogleFonts.montserrat(
+                                fontSize: 25,
+                                color: Color(0xFF1E233C),
+                              ),
+                            ))).toList(),
+                        onChanged: (item) {
+                          setState(() {
+                            selectedHeight = item!;
+                          });
+                        },
+                      ),
+                    ],
+                  ),
+                ),
+                elevation: 10,
+                margin: EdgeInsetsDirectional.fromSTEB(80, 20, 80, 20),
+                shadowColor: Color(0xFFDDE3FD),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                ),
               ),
             ),
-
-            Center(
-              child: Text(
-                "BMI: " + ((selectedWeight * 10000)/(selectedHeight * selectedHeight)).toStringAsFixed(2),
+            Container(
+              child: Card(
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(40, 30, 40, 30),
+                  child: Text(
+                    "BMI : " +
+                        ((selectedWeight * 10000) /
+                                (selectedHeight * selectedHeight))
+                            .toStringAsFixed(2),
+                    style: GoogleFonts.montserrat(
+                      fontSize: 28,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                color: Color(0xFF1E233C),
+                margin: EdgeInsetsDirectional.fromSTEB(30, 60, 30, 5),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(50.0)),
+                ),
               ),
             ),
+            Text("BMI = Body Mass Index."),
           ],
         ),
       ),

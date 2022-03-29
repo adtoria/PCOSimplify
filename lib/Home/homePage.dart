@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -149,7 +148,7 @@ class _HomeState extends State<Home> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       TextButton(
-                        child: Text("Read more..."),
+                        child: Text("Read more.."),
                         onPressed: () => showDialog(
                           barrierColor: Colors.black26,
                           context: context,

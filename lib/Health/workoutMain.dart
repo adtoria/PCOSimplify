@@ -193,7 +193,7 @@ class _WorkoutMainState extends State<WorkoutMain> {
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 40),
                         child: Text(
-                          "Steps: " + (steps/3).toInt().toString(),
+                          "Steps: " + (steps / 3).toInt().toString(),
                           style: GoogleFonts.montserrat(
                             fontSize: 25,
                             color: Color(0xFF1E233C),
@@ -216,7 +216,9 @@ class _WorkoutMainState extends State<WorkoutMain> {
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 40),
                         child: Text(
-                          "Calories: " + calculateCalories((steps/3).toInt()).toString(),
+                          "Calories: " +
+                              calculateCalories((steps / 3).toInt())
+                                  .toStringAsFixed(0),
                           style: GoogleFonts.montserrat(
                             fontSize: 25,
                             color: Color(0xFF1E233C),
@@ -239,7 +241,9 @@ class _WorkoutMainState extends State<WorkoutMain> {
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 40),
                         child: Text(
-                          "Kilometres: " + calculateMiles((steps/3).toInt()).toString(),
+                          "Kilometres: " +
+                              calculateMiles((steps / 3).toInt())
+                                  .toStringAsFixed(3),
                           style: GoogleFonts.montserrat(
                             fontSize: 25,
                             color: Color(0xFF1E233C),
