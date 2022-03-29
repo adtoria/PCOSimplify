@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart';
 import 'package:promject/Health/foodMain.dart';
+import 'package:promject/Health/healthData.dart';
 import 'package:promject/Tracker/calendarWidget.dart';
 import 'package:promject/ExplorePage/exploreMain.dart';
 import 'package:promject/Home/homePage.dart';
@@ -56,7 +57,7 @@ class _WorkoutMainState extends State<WorkoutMain> {
 
   // void calculate data
   double calculateMiles(int steps) {
-    double milesValue = (2.2 * steps) / 5280;
+    double milesValue = (steps * 0.000762);
     return milesValue;
   }
 
@@ -172,7 +173,7 @@ class _WorkoutMainState extends State<WorkoutMain> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => FoodMain()),
+                                  builder: (context) => HealthData()),
                             );
                           },
                           color: Color(0xFF1E233C),
@@ -192,7 +193,7 @@ class _WorkoutMainState extends State<WorkoutMain> {
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 40),
                         child: Text(
-                          "Steps: " + steps.toString(),
+                          "Steps: " + (steps/3).toInt().toString(),
                           style: GoogleFonts.montserrat(
                             fontSize: 25,
                             color: Color(0xFF1E233C),
@@ -215,7 +216,7 @@ class _WorkoutMainState extends State<WorkoutMain> {
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 40),
                         child: Text(
-                          "Calories: " + calculateCalories(steps).toString(),
+                          "Calories: " + calculateCalories((steps/3).toInt()).toString(),
                           style: GoogleFonts.montserrat(
                             fontSize: 25,
                             color: Color(0xFF1E233C),
@@ -238,7 +239,7 @@ class _WorkoutMainState extends State<WorkoutMain> {
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 40),
                         child: Text(
-                          "Kilometres: " + calculateMiles(steps).toString(),
+                          "Kilometres: " + calculateMiles((steps/3).toInt()).toString(),
                           style: GoogleFonts.montserrat(
                             fontSize: 25,
                             color: Color(0xFF1E233C),

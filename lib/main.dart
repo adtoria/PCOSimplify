@@ -28,7 +28,7 @@ class AppName extends StatelessWidget {
         ChangeNotifierProvider(create: (context) => GoogleSignInProvider()),
       ],
       child: MaterialApp(
-        home: WorkoutMain(),
+        home: Home(),
         //initialRoute: Started.id,
         routes: {
           Started.id: (context) => Started(),

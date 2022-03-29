@@ -1,3 +1,5 @@
+import 'package:promject/Tracker/calendarWidget.dart';
+
 import 'periodEvent.dart';
 import 'periodEditingPage.dart';
 import 'eventProvider.dart';
@@ -92,7 +94,11 @@ class EventViewingPage extends StatelessWidget {
             final provider = Provider.of<EventProvider>(context, listen: false);
 
             provider.deleteEvent(event);
-            Navigator.of(context).pop();
+            Navigator.of(context).pushReplacement(
+              MaterialPageRoute(
+                builder: (context) => CalendarWidget(),
+              ),
+            );
           },
         ),
       ];
