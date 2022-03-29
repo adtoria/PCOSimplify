@@ -49,6 +49,10 @@ dependencies:
   font_awesome_flutter: ^9.2.0
   http: ^0.13.4
   pedometer: ^3.0.0
+  percent_indicator: ^4.0.0
+  shared_preferences: ^2.0.13
+  sensors_plus: ^1.3.0
+  google_fonts: ^2.3.1
 
 dev_dependencies:
   flutter_test:

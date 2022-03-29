@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pedometer/pedometer.dart';
+import 'package:promject/Health/workoutMain.dart';
 import 'package:promject/LoginRegister/googleSignIn.dart';
 import 'package:promject/Tracker/eventProvider.dart';
 import 'package:promject/screenHolder.dart';
@@ -27,7 +28,7 @@ class AppName extends StatelessWidget {
         ChangeNotifierProvider(create: (context) => GoogleSignInProvider()),
       ],
       child: MaterialApp(
-        home: Home(),
+        home: WorkoutMain(),
         //initialRoute: Started.id,
         routes: {
           Started.id: (context) => Started(),

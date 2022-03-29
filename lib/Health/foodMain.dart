@@ -94,7 +94,7 @@ class _FoodMainState extends State<FoodMain> {
                             );
                           },
                           child: Text(
-                            'Workout',
+                            'Pedometer',
                             style: TextStyle(
                               fontFamily: 'Lexend Deca',
                               color: Color(0xFF9F86C0),

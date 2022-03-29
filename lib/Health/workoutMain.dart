@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart';
 import 'package:promject/Health/foodMain.dart';
 import 'package:promject/Tracker/calendarWidget.dart';
 import 'package:promject/ExplorePage/exploreMain.dart';
 import 'package:promject/Home/homePage.dart';
+
+import 'dart:math';
+import 'package:sensors_plus/sensors_plus.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class WorkoutMain extends StatefulWidget {
   @override
@@ -16,6 +21,53 @@ class _WorkoutMainState extends State<WorkoutMain> {
         builder: (BuildContext context) => _children[_currentIndex],
       ),
     ); // this has changed
+  }
+
+  double x = 0.0;
+  double y = 0.0;
+  double z = 0.0;
+  double miles = 0.0;
+  double duration = 0.0;
+  double calories = 0.0;
+  double addValue = 0.025;
+  int steps = 0;
+  double previousDistacne = 0.0;
+  double distance = 0.0;
+
+  double getValue(double x, double y, double z) {
+    double magnitude = sqrt(x * x + y * y + z * z);
+    getPreviousValue();
+    double modDistance = magnitude - previousDistacne;
+    setPreviousValue(magnitude);
+    return modDistance;
+  }
+
+  void setPreviousValue(double distance) async {
+    SharedPreferences _pref = await SharedPreferences.getInstance();
+    _pref.setDouble("preValue", distance);
+  }
+
+  void getPreviousValue() async {
+    SharedPreferences _pref = await SharedPreferences.getInstance();
+    setState(() {
+      previousDistacne = _pref.getDouble("preValue") ?? 0.0;
+    });
+  }
+
+  // void calculate data
+  double calculateMiles(int steps) {
+    double milesValue = (2.2 * steps) / 5280;
+    return milesValue;
+  }
+
+  double calculateDuration(int steps) {
+    double durationValue = (steps * 1 / 1000);
+    return durationValue;
+  }
+
+  double calculateCalories(int steps) {
+    double caloriesValue = (steps * 0.0566);
+    return caloriesValue;
   }
 
   final List<Widget> _children = [
@@ -79,7 +131,7 @@ class _WorkoutMainState extends State<WorkoutMain> {
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 6),
                         child: Text(
-                          'Workout',
+                          'Pedometer',
                           style: TextStyle(
                             fontFamily: 'Lexend Deca',
                             color: Colors.white,
@@ -94,6 +146,45 @@ class _WorkoutMainState extends State<WorkoutMain> {
               ],
             ),
           ),
+        ),
+        body: StreamBuilder<AccelerometerEvent>(
+          stream: SensorsPlatform.instance.accelerometerEvents,
+          builder: (context, snapshort) {
+            if (snapshort.hasData) {
+              x = snapshort.data!.x;
+              y = snapshort.data!.y;
+              z = snapshort.data!.z;
+              distance = getValue(x, y, z);
+              if (distance > 6) {
+                steps++;
+              }
+            }
+            return Column(
+              children: [
+                Text(
+                  "Steps: " + steps.toString(),
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.cyan,
+                  ),
+                ),
+                Text(
+                  "Calories: " + calculateCalories(steps).toString(),
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.cyan,
+                  ),
+                ),
+                Text(
+                  "Miles: " + calculateMiles(steps).toString(),
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.cyan,
+                  ),
+                ),
+              ],
+            );
+          },
         ),
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: _currentIndex,
