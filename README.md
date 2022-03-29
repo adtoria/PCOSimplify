@@ -38,9 +38,9 @@ Clone the project
     <td>Share Your Stories</td>
   </tr>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/87179624/160604068-db042895-6f71-473a-af62-2231e5d59986.jpg" width=303 height=605></td>
-    <td><img src="https://user-images.githubusercontent.com/87179624/160605039-424d27fc-d5c4-4271-90db-8c79e0126af3.jpg" width=303 height=605></td>
-    <td><img src="https://user-images.githubusercontent.com/87179624/160605248-aa218cbd-ec05-42e4-99cd-82e47048a921.jpg" width=303 height=605></td>
+    <td><img src="https://user-images.githubusercontent.com/87179624/160604068-db042895-6f71-473a-af62-2231e5d59986.jpg" width=303 height=550></td>
+    <td><img src="https://user-images.githubusercontent.com/87179624/160605039-424d27fc-d5c4-4271-90db-8c79e0126af3.jpg" width=303 height=550></td>
+    <td><img src="https://user-images.githubusercontent.com/87179624/160605248-aa218cbd-ec05-42e4-99cd-82e47048a921.jpg" width=303 height=550></td>
   </tr>
  </table>
  
@@ -51,9 +51,9 @@ Clone the project
     <td>Diagnosis</td>
   </tr>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/87179624/160605685-85aa87cf-f664-4b32-90a3-c00107988bbd.jpg" width=303 height=605></td>
-    <td><img src="https://user-images.githubusercontent.com/87179624/160605772-c0cc488d-2438-4ec2-8882-32c4618de3dc.jpg" width=303 height=605></td>
-    <td><img src="https://user-images.githubusercontent.com/87179624/160605837-1a4dbbd3-3c20-4a59-9695-8d13dbfe18f8.jpg" width=303 height=605></td>
+    <td><img src="https://user-images.githubusercontent.com/87179624/160605685-85aa87cf-f664-4b32-90a3-c00107988bbd.jpg" width=303 height=550></td>
+    <td><img src="https://user-images.githubusercontent.com/87179624/160605772-c0cc488d-2438-4ec2-8882-32c4618de3dc.jpg" width=303 height=550></td>
+    <td><img src="https://user-images.githubusercontent.com/87179624/160605837-1a4dbbd3-3c20-4a59-9695-8d13dbfe18f8.jpg" width=303 height=550></td>
   </tr>
  </table>
  
@@ -64,9 +64,9 @@ Clone the project
     <td>Pedometer</td>
   </tr>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/87179624/160606398-d48eaad7-1499-4578-ad91-beff0f752958.jpg" width=303 height=605></td>
-    <td><img src="https://user-images.githubusercontent.com/87179624/160606448-05d1395a-6b95-41ed-8825-cc4cb9457a9d.jpg" width=303 height=605></td>
-    <td><img src="https://user-images.githubusercontent.com/87179624/160606491-0914aa10-5815-46df-a588-13f1311a395a.jpg" width=303 height=605></td>
+    <td><img src="https://user-images.githubusercontent.com/87179624/160606398-d48eaad7-1499-4578-ad91-beff0f752958.jpg" width=303 height=550></td>
+    <td><img src="https://user-images.githubusercontent.com/87179624/160606448-05d1395a-6b95-41ed-8825-cc4cb9457a9d.jpg" width=303 height=550></td>
+    <td><img src="https://user-images.githubusercontent.com/87179624/160606491-0914aa10-5815-46df-a588-13f1311a395a.jpg" width=303 height=550></td>
   </tr>
  </table>
 
