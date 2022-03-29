@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:promject/content.dart';
 import 'package:promject/heading.dart';
@@ -28,6 +29,7 @@ class _GobiMatarState extends State<GobiMatar> {
         foregroundColor: Color(0xFF1E233C),
       ),
       body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
         child: Column(
           children: [
             SubHeading(content: "Ingredients"),
@@ -68,7 +70,7 @@ class _GobiMatarState extends State<GobiMatar> {
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Content(content: "Amount Per Serving"),
+                Expanded(child: Content(content: "Amount Per Serving")),
               ],
             ),
             ListWidget(content: "Calories 232"),
