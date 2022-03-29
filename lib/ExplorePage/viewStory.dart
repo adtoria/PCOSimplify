@@ -23,24 +23,34 @@ class SeeStories extends StatelessWidget {
           child: Column(
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(10, 15, 10, 5),
                 child: Center(
                   child: Text(
                     title,
                     textAlign: TextAlign.center,
                     style: TextStyle(
+                      color: Color(0xFF1E233C),
                       fontSize: 25,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
               ),
               Divider(
-                thickness: 2,
-                indent: 170,
-                endIndent: 170,
+                thickness: 1.5,
+                indent: 120,
+                endIndent: 120,
                 color: Colors.black,
               ),
-              Text(body),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(15, 10, 15, 50),
+                child: Text(
+                  body,
+                  style: TextStyle(
+                    fontSize: 18,
+                  ),
+                ),
+              ),
             ],
           ),
         ),
