@@ -134,10 +134,10 @@ class _HomeState extends State<Home> {
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
                         child: Text(
-                          "Polycystic Ovary Syndrome (PCOS) is a hormonal disorder common among women of reproductive age. Women with PCOS may have disturbed menstrual periods or excess androgen (male hormone) levels.",
+                          "Polycystic Ovary Syndrome (PCOS) is a hormonal disorder common among people of reproductive age. People with PCOS often experience menstrual cycles or excess androgen (male hormone) levels. Not only women but transgender people also experience this condition.",
                           style: TextStyle(
                             color: Colors.black87,
-                            fontSize: 14,
+                            fontSize: 16.5,
                           ),
                         ),
                       ),
@@ -155,7 +155,7 @@ class _HomeState extends State<Home> {
                             return CustomAlertDialog(
                               title: "Polycystic Ovary Syndrome",
                               description:
-                                  "Polycystic Ovary Syndrome (PCOS) is a hormonal disorder common among women of reproductive age. Women with PCOS may have disturbed menstrual periods or excess androgen (male hormone) levels. The ovaries may develop numerous small collections of fluid and fail to regularly release eggs.",
+                                  "Polycystic Ovary Syndrome (PCOS) is a hormonal disorder common among people of reproductive age. People with PCOS often experience menstrual cycles or excess androgen (male hormone) levels. Not only women but transgender people also experience this condition. The ovaries may develop numerous small collections of fluid and fail to regularly release eggs.",
                             );
                           },
                         ),
