@@ -865,24 +865,29 @@ class _HomeState extends State<Home> {
                 ),
                 Column(
                   children: [
-                    StreamBuilder<List<User>>(
-                      stream: readData(),
-                      builder: (context, snapshot) {
-                        if (snapshot.hasError) {
-                          return Text('Something went wrong!');
-                        } else if (snapshot.hasData) {
-                          final users = snapshot.data!;
+                    Card(
+                      child: StreamBuilder<List<User>>(
+                        stream: readData(),
+                        builder: (context, snapshot) {
+                          if (snapshot.hasError) {
+                            return Text('Something went wrong!');
+                          } else if (snapshot.hasData) {
+                            final users = snapshot.data!;
 
-                          return Container(
-                            child: users.map(buildUser).elementAt(0),
-                          );
-                        } else {
-                          return Center(child: CircularProgressIndicator());
-                        }
-                      },
+                            return Container(
+                              child: users.map(buildUser).elementAt(0),
+                            );
+                          } else {
+                            return Center(child: CircularProgressIndicator());
+                          }
+                        },
+                      ),
+                      color: Colors.transparent,
+                      elevation: 15,
+                      shadowColor: Color(0xFFedf1f7),
                     ),
                     SizedBox(
-                      height: 10,
+                      height: 20,
                     ),
                     TextButton(
                       child: Row(
