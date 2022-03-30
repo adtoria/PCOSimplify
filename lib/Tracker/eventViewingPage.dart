@@ -1,8 +1,8 @@
+import 'package:google_fonts/google_fonts.dart';
 import 'package:promject/Tracker/appointmentEditingPage.dart';
 import 'package:promject/Tracker/calendarWidget.dart';
 import 'package:promject/Tracker/medicineEditingPage.dart';
-
-import 'periodEvent.dart';
+import 'event.dart';
 import 'periodEditingPage.dart';
 import 'eventProvider.dart';
 import 'utils.dart';
@@ -20,25 +20,32 @@ class EventViewingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
+          backgroundColor: Color(0xFF1E233C),
+          foregroundColor: Colors.white,
           leading: CloseButton(),
           actions: buildViewingActions(context, event),
         ),
         body: ListView(
-          padding: EdgeInsets.all(32),
+          padding: EdgeInsetsDirectional.fromSTEB(30, 0, 30, 0),
           children: <Widget>[
-            buildDateTime(event),
             SizedBox(height: 32),
             Text(
               event.title,
-              style: TextStyle(
+              style: GoogleFonts.openSans(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),
+              textAlign: TextAlign.center,
             ),
             const SizedBox(height: 24),
+            buildDateTime(event),
+            const SizedBox(height: 32),
             Text(
               event.description,
-              style: TextStyle(color: Colors.white, fontSize: 18),
+              style: GoogleFonts.openSans(
+                color: Colors.black,
+                fontSize: 18,
+              ),
             ),
           ],
         ),
@@ -83,31 +90,30 @@ class EventViewingPage extends StatelessWidget {
 
   List<Widget> buildViewingActions(BuildContext context, Event event) => [
         IconButton(
-          icon: Icon(Icons.edit),
-          onPressed: (){
-            if(event.backgroundColor==Colors.red){
-              Navigator.of(context).pushReplacement(
-                MaterialPageRoute(
-                  builder: (context) => PeriodEventEditingPage(event: event),
-                ),
-              );
-            }
-            else if(event.backgroundColor==Colors.lightBlue){
-              Navigator.of(context).pushReplacement(
-                MaterialPageRoute(
-                  builder: (context) => MedicineEventEditingPage(event: event),
-                ),
-              );
-            }
-            else{
-              Navigator.of(context).pushReplacement(
-                MaterialPageRoute(
-                  builder: (context) => AppointmentEventEditingPage(event: event),
-                ),
-              );
-            }
-          }
-        ),
+            icon: Icon(Icons.edit),
+            onPressed: () {
+              if (event.backgroundColor == Colors.red) {
+                Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(
+                    builder: (context) => PeriodEventEditingPage(event: event),
+                  ),
+                );
+              } else if (event.backgroundColor == Colors.lightBlue) {
+                Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        MedicineEventEditingPage(event: event),
+                  ),
+                );
+              } else {
+                Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        AppointmentEventEditingPage(event: event),
+                  ),
+                );
+              }
+            }),
         IconButton(
           icon: Icon(Icons.delete),
           onPressed: () {

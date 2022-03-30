@@ -1,6 +1,6 @@
+import 'package:google_fonts/google_fonts.dart';
 import 'package:promject/Tracker/calendarWidget.dart';
-
-import 'periodEvent.dart';
+import 'event.dart';
 import 'eventProvider.dart';
 import 'utils.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +20,6 @@ class PeriodEventEditingPage extends StatefulWidget {
 
 class _PeriodEventEditingPageState extends State<PeriodEventEditingPage> {
   final _formKey = GlobalKey<FormState>();
-  // final titleController = TextEditingController();
   final descriptionController = TextEditingController();
   late DateTime fromDate;
   late DateTime toDate;
@@ -35,8 +34,6 @@ class _PeriodEventEditingPageState extends State<PeriodEventEditingPage> {
       toDate = DateTime.now().add(Duration(days: 7));
     } else {
       final event = widget.event!;
-
-      //titleController.text = event.title;
       descriptionController.text = event.description;
       fromDate = event.from;
       toDate = event.to;
@@ -46,7 +43,6 @@ class _PeriodEventEditingPageState extends State<PeriodEventEditingPage> {
 
   @override
   void dispose() {
-    //titleController.dispose();
     descriptionController.dispose();
 
     super.dispose();
@@ -66,10 +62,21 @@ class _PeriodEventEditingPageState extends State<PeriodEventEditingPage> {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                Text("Periods",
-              style: TextStyle(fontSize: 24),
+                Container(
+                  color: Colors.red,
+                  child: Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(30, 10, 30, 10),
+                    child: Text(
+                      "Menstrual Cycle",
+                      style: GoogleFonts.openSans(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                SizedBox(height: 12),
+                  ),
+                ),
+                SizedBox(height: 30),
                 buildDateTimePickers(),
                 SizedBox(height: 12),
                 buildDescription(),
@@ -90,18 +97,6 @@ class _PeriodEventEditingPageState extends State<PeriodEventEditingPage> {
           label: Text('SAVE'),
         ),
       ];
-
-  // Widget buildTitle() => TextFormField(
-  //       style: TextStyle(fontSize: 24),
-  //       decoration: InputDecoration(
-  //         border: UnderlineInputBorder(),
-  //         hintText: 'Add Title',
-  //       ),
-  //       onFieldSubmitted: (_) => saveForm(),
-  //       validator: (title) =>
-  //           title != null && title.isEmpty ? 'Title cannot be empty' : null,
-  //       controller: titleController,
-  //     );
 
   Widget buildDescription() => TextFormField(
         decoration: InputDecoration(
@@ -259,13 +254,12 @@ class _PeriodEventEditingPageState extends State<PeriodEventEditingPage> {
 
     if (isValid) {
       final event = Event(
-        title: "Periods",
-        description: descriptionController.text,
-        from: fromDate,
-        to: isAllDay ? fromDate : toDate,
-        isAllDay: isAllDay,
-        backgroundColor: Colors.red
-      );
+          title: "Menstrual Cycle",
+          description: descriptionController.text,
+          from: fromDate,
+          to: isAllDay ? fromDate : toDate,
+          isAllDay: isAllDay,
+          backgroundColor: Colors.red);
 
       final isEditing = widget.event != null;
       final provider = Provider.of<EventProvider>(context, listen: false);

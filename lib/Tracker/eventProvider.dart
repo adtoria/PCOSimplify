@@ -1,4 +1,4 @@
-import 'periodEvent.dart';
+import 'event.dart';
 import 'utils.dart';
 import 'package:flutter/cupertino.dart';
 

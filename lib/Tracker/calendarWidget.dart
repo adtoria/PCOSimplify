@@ -168,7 +168,7 @@ class _CalendarWidgetState extends State<CalendarWidget> {
                 size: 20,
                 color: Colors.green,
               ),
-              label: "Doctor Appointments",
+              label: "Doctor Appointment",
               labelStyle: GoogleFonts.openSans(
                 fontSize: 18,
                 fontWeight: FontWeight.w600,
