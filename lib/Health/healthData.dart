@@ -383,6 +383,21 @@ class _HealthDataState extends State<HealthData> {
   ];
   int selectedHeight = 155;
 
+  Widget BMI(double steps){
+    if(steps<18.5){
+      return Text("Underweight");
+    }
+    else if(steps>=18.5 && steps<25){
+      return Text("Normal");
+    }
+    else if(steps>=25 && steps<30){
+      return Text("Overweight");
+    }
+    else{
+      return Text("Obese");
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -561,180 +576,7 @@ class _HealthDataState extends State<HealthData> {
               ),
             ),
             Text("BMI = Body Mass Index."),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(7, 30, 7, 7),
-                    child: SizedBox(
-                      width: 150,
-                      child: ListTile(
-                        tileColor: Colors.lightBlueAccent,
-                        title: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 5),
-                          child: Text(
-                            "Underweight",
-                            style: TextStyle(
-                              color: Color(0xFF1E233C),
-                              fontSize: 15.5,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                        subtitle: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 10),
-                          child: Text(
-                            "BMI: < 18.5",
-                            style: TextStyle(
-                              color: Colors.black54,
-                              fontSize: 13,
-                              //fontStyle: FontStyle.italic,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                        ),
-                        contentPadding:
-                            EdgeInsetsDirectional.fromSTEB(15, 5, 15, 5),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                          side: BorderSide(
-                            color: Color(0xFF595B82),
-                            width: 0.5,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(7, 30, 7, 7),
-                    child: SizedBox(
-                      width: 150,
-                      child: ListTile(
-                        tileColor: Colors.green,
-                        title: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 5),
-                          child: Text(
-                            "Normal",
-                            style: TextStyle(
-                              color: Color(0xFF1E233C),
-                              fontSize: 15.5,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                        subtitle: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 10),
-                          child: Text(
-                            "BMI: 18.5 - 24.9",
-                            style: TextStyle(
-                              color: Colors.black54,
-                              fontSize: 13,
-                              //fontStyle: FontStyle.italic,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                        ),
-                        contentPadding:
-                        EdgeInsetsDirectional.fromSTEB(15, 5, 15, 5),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                          side: BorderSide(
-                            color: Color(0xFF595B82),
-                            width: 0.5,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(7, 30, 7, 7),
-                    child: SizedBox(
-                      width: 150,
-                      child: ListTile(
-                        tileColor: Colors.yellow,
-                        title: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 5),
-                          child: Text(
-                            "Overweight",
-                            style: TextStyle(
-                              color: Color(0xFF1E233C),
-                              fontSize: 15.5,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                        subtitle: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 10),
-                          child: Text(
-                            "BMI: 25 - 29.9",
-                            style: TextStyle(
-                              color: Colors.black54,
-                              fontSize: 13,
-                              //fontStyle: FontStyle.italic,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                        ),
-                        contentPadding:
-                        EdgeInsetsDirectional.fromSTEB(15, 5, 15, 5),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                          side: BorderSide(
-                            color: Color(0xFF595B82),
-                            width: 0.5,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(7, 30, 7, 7),
-                    child: SizedBox(
-                      width: 150,
-                      child: ListTile(
-                        tileColor: Colors.red,
-                        title: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 5),
-                          child: Text(
-                            "Obese",
-                            style: TextStyle(
-                              color: Color(0xFF1E233C),
-                              fontSize: 15.5,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                        subtitle: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 10),
-                          child: Text(
-                            "BMI: > 30",
-                            style: TextStyle(
-                              color: Colors.black54,
-                              fontSize: 13,
-                              //fontStyle: FontStyle.italic,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                        ),
-                        contentPadding:
-                        EdgeInsetsDirectional.fromSTEB(15, 5, 15, 5),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                          side: BorderSide(
-                            color: Color(0xFF595B82),
-                            width: 0.5,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            )
+            BMI(((selectedWeight * 10000) / (selectedHeight * selectedHeight))),
           ],
         ),
       ),
