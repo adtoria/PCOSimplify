@@ -27,7 +27,7 @@ class _FoodMainState extends State<FoodMain> {
   final List<Widget> _children = [
     Home(),
     CalendarWidget(),
-    FoodMain(),
+    WorkoutMain(),
     ExploreMain()
   ];
 
