@@ -80,10 +80,14 @@ $ git clone https://github.com/adtoria/PCOSimplify.git
 
 Then, download either Android Studio or Visual Studio Code, with their respective [Flutter editor plugins](https://flutter.io/get-started/editor/). For more information about Flutter installation procedure, check the [official install guide](https://flutter.io/get-started/install/).
 
+After installing, open the project in your respective flutter editor.
+
 Install dependencies:
 - <b>From the terminal:</b> Run flutter pub get
 - <b>From Android Studio/IntelliJ:</b> Click Packages get in the action ribbon at the top of pubspec.yaml.
 - <b>From VS Code:</b> Click Get Packages located in right side of the action ribbon at the top of pubspec.yaml.
+
+After all the packages are loaded, connect the device/emulator and type the command Flutter Run on your terminal and wait for the App to install.
 
 ## Tech Stack
 
