@@ -16,6 +16,7 @@ import 'package:promject/ExplorePage/userClass.dart';
 import 'package:promject/ExplorePage/viewStory.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import '../Health/workoutMain.dart';
 import '../Tracker/appointmentEditingPage.dart';
 import '../Tracker/medicineEditingPage.dart';
 import '../homeTasksWidget.dart';
@@ -42,7 +43,7 @@ class _HomeState extends State<Home> {
   final List<Widget> _children = [
     Home(),
     CalendarWidget(),
-    FoodMain(),
+    WorkoutMain(),
     ExploreMain()
   ];
 

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:promject/Health/workoutMain.dart';
 import 'package:promject/Tracker/appointmentEditingPage.dart';
 import 'package:promject/Tracker/medicineEditingPage.dart';
 import 'package:promject/Tracker/tasksWidget.dart';
@@ -34,7 +35,7 @@ class _CalendarWidgetState extends State<CalendarWidget> {
   final List<Widget> _children = [
     Home(),
     CalendarWidget(),
-    FoodMain(),
+    WorkoutMain(),
     ExploreMain()
   ];
 

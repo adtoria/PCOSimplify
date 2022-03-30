@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:promject/Health/workoutMain.dart';
 import 'explore.dart';
 import 'package:promject/drawer.dart';
 import 'package:promject/Health/foodMain.dart';
@@ -24,7 +25,7 @@ class _ExploreMainState extends State<ExploreMain> {
   final List<Widget> _children = [
     Home(),
     CalendarWidget(),
-    FoodMain(),
+    WorkoutMain(),
     ExploreMain()
   ];
 
