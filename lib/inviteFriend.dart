@@ -131,9 +131,9 @@ class _InviteState extends State<Invite> {
   Future share(SocialMedia socialPlatform) async {
     final subject = 'Download PCOSimplify';
     final text =
-        'I had a great experience using PCOSimplify App. Download it from Google Playstore.';
+        'I had a great experience using PCOSimplify App. Get the app here.';
     final urlShare =
-        Uri.encodeComponent('https://www.instagram.com/adityyyyadav/');
+        Uri.encodeComponent('https://github.com/adtoria/PCOSimplify');
 
     final urls = {
       SocialMedia.facebook:
