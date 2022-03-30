@@ -259,6 +259,7 @@ class _HomeState extends State<Home> {
                             spaceBetweenChildren: 10,
                             backgroundColor: Color(0xFF1E233C),
                             elevation: 10,
+                            overlayOpacity: 0.9,
                             children: [
                               SpeedDialChild(
                                 child: Icon(
