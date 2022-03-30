@@ -494,7 +494,7 @@ class _HomeState extends State<Home> {
                 Row(
                   children: [
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(15, 27, 0, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(15, 20, 0, 0),
                       child: Text(
                         "Tracker Events",
                         style: TextStyle(

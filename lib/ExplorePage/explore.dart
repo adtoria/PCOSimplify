@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'leftArticleTile.dart';
 import 'userClass.dart';
 import 'addStory.dart';
@@ -34,14 +35,16 @@ class _ExplorerState extends State<Explorer> {
             padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
             child: Text(
               user.title,
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              style: GoogleFonts.openSans(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
           subtitle: Text(
             'Written by - ' + user.name,
-            style: TextStyle(fontSize: 15),
+            style: GoogleFonts.openSans(fontSize: 15),
           ),
-          //trailing: Text(user.timestamp),
           tileColor: Color(0xFFDDE3FD),
           onTap: () => Navigator.push(
             context,
@@ -79,7 +82,7 @@ class _ExplorerState extends State<Explorer> {
                 child: _exploreOptionList(context),
               ),
               SizedBox(
-                width: 260,
+                width: 280,
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(12, 8, 12, 12),
                   child: ListTile(
@@ -105,7 +108,7 @@ class _ExplorerState extends State<Explorer> {
                       padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                       child: Text(
                         "Share Your Story",
-                        style: TextStyle(
+                        style: GoogleFonts.openSans(
                           color: Colors.white,
                           fontSize: 18,
                           fontWeight: FontWeight.w600,
@@ -1263,7 +1266,7 @@ class _ExplorerState extends State<Explorer> {
                   padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
                   child: Text(
                     title,
-                    style: TextStyle(
+                    style: GoogleFonts.openSans(
                       color: Colors.white,
                       fontWeight: FontWeight.w600,
                       fontSize: 14.5,
