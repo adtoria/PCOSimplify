@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_dial/flutter_speed_dial.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:promject/Tracker/appointmentEditingPage.dart';
+import 'package:promject/Tracker/medicineEditingPage.dart';
 import 'package:promject/Tracker/tasksWidget.dart';
-import 'package:promject/Tracker/trackerOption.dart';
 import 'package:provider/provider.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
 import 'eventDataSource.dart';
@@ -114,16 +118,66 @@ class _CalendarWidgetState extends State<CalendarWidget> {
             ),
           ],
         ),
-        floatingActionButton: FloatingActionButton(
-          child: Icon(
-            Icons.add,
-            color: Colors.white,
-            size: 35,
-          ),
+        floatingActionButton: SpeedDial(
+          animatedIcon: AnimatedIcons.add_event,
+          buttonSize: Size(70, 70),
+          childrenButtonSize: Size(55, 55),
+          spaceBetweenChildren: 10,
           backgroundColor: Color(0xFF1E233C),
-          onPressed: () => Navigator.of(context).push(
-            MaterialPageRoute(builder: (context) => TrackerOption()),
-          ),
+          elevation: 10,
+          children: [
+            SpeedDialChild(
+              child: Icon(
+                FontAwesomeIcons.pills,
+                size: 20,
+                color: Colors.lightBlue,
+              ),
+              label: "Medicines",
+              labelStyle: GoogleFonts.openSans(
+                fontSize: 18,
+                fontWeight: FontWeight.w600,
+              ),
+              labelBackgroundColor: Color(0xFFedf1f7),
+              onTap: () => Navigator.of(context).push(
+                MaterialPageRoute(
+                    builder: (context) => MedicineEventEditingPage()),
+              ),
+            ),
+            SpeedDialChild(
+              child: Icon(
+                Icons.water_drop,
+                size: 20,
+                color: Colors.red,
+              ),
+              label: "Menstrual Cycle",
+              labelStyle: GoogleFonts.openSans(
+                fontSize: 18,
+                fontWeight: FontWeight.w600,
+              ),
+              labelBackgroundColor: Color(0xFFedf1f7),
+              onTap: () => Navigator.of(context).push(
+                MaterialPageRoute(
+                    builder: (context) => PeriodEventEditingPage()),
+              ),
+            ),
+            SpeedDialChild(
+              child: Icon(
+                FontAwesomeIcons.briefcaseMedical,
+                size: 20,
+                color: Colors.green,
+              ),
+              label: "Doctor Appointments",
+              labelStyle: GoogleFonts.openSans(
+                fontSize: 18,
+                fontWeight: FontWeight.w600,
+              ),
+              labelBackgroundColor: Color(0xFFedf1f7),
+              onTap: () => Navigator.of(context).push(
+                MaterialPageRoute(
+                    builder: (context) => AppointmentEventEditingPage()),
+              ),
+            ),
+          ],
         ),
       ),
     );

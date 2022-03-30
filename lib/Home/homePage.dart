@@ -1,6 +1,8 @@
 import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_dial/flutter_speed_dial.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:promject/ExplorePage/addStory.dart';
@@ -14,6 +16,8 @@ import 'package:promject/ExplorePage/userClass.dart';
 import 'package:promject/ExplorePage/viewStory.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import '../Tracker/appointmentEditingPage.dart';
+import '../Tracker/medicineEditingPage.dart';
 import '../homeTasksWidget.dart';
 import 'customAlertDialog.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -248,19 +252,80 @@ class _HomeState extends State<Home> {
                         child: Padding(
                           padding:
                               EdgeInsetsDirectional.fromSTEB(15, 15, 10, 10),
-                          child: FloatingActionButton(
+                          child: SpeedDial(
+                            animatedIcon: AnimatedIcons.add_event,
+                            buttonSize: Size(60, 60),
+                            childrenButtonSize: Size(55, 55),
+                            spaceBetweenChildren: 10,
                             backgroundColor: Color(0xFF1E233C),
-                            child: Icon(
-                              Icons.add,
-                              size: 35,
-                            ),
-                            onPressed: () => Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => PeriodEventEditingPage(),
+                            elevation: 10,
+                            children: [
+                              SpeedDialChild(
+                                child: Icon(
+                                  FontAwesomeIcons.pills,
+                                  size: 20,
+                                  color: Colors.lightBlue,
+                                ),
+                                label: "Medicines",
+                                labelStyle: GoogleFonts.openSans(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                                labelBackgroundColor: Color(0xFFedf1f7),
+                                onTap: () => Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                      builder: (context) => MedicineEventEditingPage()),
+                                ),
                               ),
-                            ),
+                              SpeedDialChild(
+                                child: Icon(
+                                  Icons.water_drop,
+                                  size: 20,
+                                  color: Colors.red,
+                                ),
+                                label: "Menstrual Cycle",
+                                labelStyle: GoogleFonts.openSans(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                                labelBackgroundColor: Color(0xFFedf1f7),
+                                onTap: () => Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                      builder: (context) => PeriodEventEditingPage()),
+                                ),
+                              ),
+                              SpeedDialChild(
+                                child: Icon(
+                                  FontAwesomeIcons.briefcaseMedical,
+                                  size: 20,
+                                  color: Colors.green,
+                                ),
+                                label: "Doctor Appointments",
+                                labelStyle: GoogleFonts.openSans(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                                labelBackgroundColor: Color(0xFFedf1f7),
+                                onTap: () => Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                      builder: (context) => AppointmentEventEditingPage()),
+                                ),
+                              ),
+                            ],
                           ),
+                          // child: FloatingActionButton(
+                          //   backgroundColor: Color(0xFF1E233C),
+                          //   child: Icon(
+                          //     Icons.add,
+                          //     size: 35,
+                          //   ),
+                          //   onPressed: () => Navigator.push(
+                          //     context,
+                          //     MaterialPageRoute(
+                          //       builder: (context) => PeriodEventEditingPage(),
+                          //     ),
+                          //   ),
+                          // ),
                         ),
                       ),
                     ],
