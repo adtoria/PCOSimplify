@@ -383,18 +383,63 @@ class _HealthDataState extends State<HealthData> {
   ];
   int selectedHeight = 155;
 
-  Widget BMI(double steps){
-    if(steps<18.5){
-      return Text("Underweight");
-    }
-    else if(steps>=18.5 && steps<25){
-      return Text("Normal");
-    }
-    else if(steps>=25 && steps<30){
-      return Text("Overweight");
-    }
-    else{
-      return Text("Obese");
+  Widget BMI(double steps) {
+    if (steps < 18.5) {
+      return Container(
+        color: Colors.lightBlue,
+        child: Padding(
+          padding: EdgeInsetsDirectional.fromSTEB(30, 10, 30, 10),
+          child: Text(
+            "Underweight",
+            style: GoogleFonts.openSans(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+      );
+    } else if (steps >= 18.5 && steps < 25) {
+      return Container(
+        color: Colors.green,
+        child: Padding(
+          padding: EdgeInsetsDirectional.fromSTEB(30, 10, 30, 10),
+          child: Text(
+            "Normal",
+            style: GoogleFonts.openSans(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+      );
+    } else if (steps >= 25 && steps < 30) {
+      return Container(
+        color: Colors.yellow,
+        child: Padding(
+          padding: EdgeInsetsDirectional.fromSTEB(30, 10, 30, 10),
+          child: Text(
+            "Overweight",
+            style: GoogleFonts.openSans(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+      );
+    } else {
+      return Container(
+        color: Colors.redAccent,
+        child: Padding(
+          padding: EdgeInsetsDirectional.fromSTEB(30, 10, 30, 10),
+          child: Text(
+            "Obese",
+            style: GoogleFonts.openSans(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+      );
     }
   }
 
@@ -576,6 +621,7 @@ class _HealthDataState extends State<HealthData> {
               ),
             ),
             Text("BMI = Body Mass Index."),
+            SizedBox(height: 35),
             BMI(((selectedWeight * 10000) / (selectedHeight * selectedHeight))),
           ],
         ),
