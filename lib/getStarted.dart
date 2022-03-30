@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:promject/LoginRegister/loginPage.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -119,7 +120,7 @@ class _StartedState extends State<Started> {
                   },
                   child: Text(
                     "Get Started",
-                    style: TextStyle(
+                    style: GoogleFonts.openSans(
                       fontSize: 24.0,
                       color: Colors.white,
                       fontWeight: FontWeight.w700,
@@ -161,10 +162,9 @@ class StartedText extends StatelessWidget {
             child: Text(
               content,
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: GoogleFonts.openSans(
                 color: Colors.black,
                 decoration: TextDecoration.none,
-                fontFamily: 'RaleWay',
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
                 letterSpacing: 0.5,

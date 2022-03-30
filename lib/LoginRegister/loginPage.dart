@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:promject/LoginRegister/forgotPassword.dart';
 import 'package:promject/LoginRegister/verifyEmail.dart';
 import 'package:provider/provider.dart';
@@ -40,16 +41,6 @@ class _LoginPageState extends State<LoginPage> {
     passwordVisibility = false;
   }
 
-  // Future CheckEmailVerified() async {
-  //   await FirebaseAuth.instance.currentUser!.reload();
-  //   setState(() {
-  //     isVerified = FirebaseAuth.instance.currentUser!.emailVerified;
-  //   });
-  //
-  //
-  // }
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -82,7 +73,7 @@ class _LoginPageState extends State<LoginPage> {
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
                             "PCOSimplify",
-                            style: TextStyle(
+                            style: GoogleFonts.openSans(
                               fontSize: 32,
                               fontWeight: FontWeight.w900,
                               letterSpacing: 0.75,

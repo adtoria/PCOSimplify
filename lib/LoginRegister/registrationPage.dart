@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:promject/LoginRegister/googleSignIn.dart';
 import 'package:promject/LoginRegister/verifyEmail.dart';
 import 'package:promject/drawer.dart';
@@ -31,18 +32,6 @@ class _RegisterState extends State<Register> {
   GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   bool passwordVisibility = false;
   final scaffoldKey = GlobalKey<ScaffoldState>();
-
-  // Future saveToDatabase(
-  //     {required String name,required String id}) async {
-  //   final user = FirebaseFirestore.instance.collection('Name').doc();
-  //
-  //   final json = {
-  //     'id': id,
-  //     'Name': name,
-  //   };
-  //
-  //   await user.set(json);
-  // }
 
   @override
   void initState() {
@@ -85,7 +74,7 @@ class _RegisterState extends State<Register> {
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
                             "PCOSimplify",
-                            style: TextStyle(
+                            style: GoogleFonts.openSans(
                               fontSize: 32,
                               fontWeight: FontWeight.w900,
                               letterSpacing: 0.75,

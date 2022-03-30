@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SeeStories extends StatelessWidget {
   final String title;
@@ -14,7 +15,12 @@ class SeeStories extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
-          title: Text("$name's Story"),
+          title: Text(
+            "$name's Story",
+            style: GoogleFonts.openSans(
+              fontWeight: FontWeight.w600,
+            ),
+          ),
           backgroundColor: Color(0xFF1E233C),
           foregroundColor: Colors.white,
           elevation: 3.0,
@@ -28,7 +34,7 @@ class SeeStories extends StatelessWidget {
                   child: Text(
                     title,
                     textAlign: TextAlign.center,
-                    style: TextStyle(
+                    style: GoogleFonts.openSans(
                       color: Color(0xFF1E233C),
                       fontSize: 25,
                       fontWeight: FontWeight.bold,
@@ -46,7 +52,7 @@ class SeeStories extends StatelessWidget {
                 padding: EdgeInsetsDirectional.fromSTEB(15, 10, 15, 50),
                 child: Text(
                   body,
-                  style: TextStyle(
+                  style: GoogleFonts.openSans(
                     fontSize: 18,
                   ),
                 ),

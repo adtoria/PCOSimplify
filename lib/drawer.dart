@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:promject/LoginRegister/googleSignIn.dart';
 import 'package:promject/LoginRegister/loginPage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -67,8 +68,7 @@ class _OurDrawerState extends State<OurDrawer> {
                                 child: Center(
                                   child: Text(
                                     '${user?.name}',
-                                    style: TextStyle(
-                                      fontFamily: 'Lexend Deca',
+                                    style: GoogleFonts.openSans(
                                       fontSize: 30,
                                       color: Color(0xFF1E233C),
                                       fontWeight: FontWeight.w700,
@@ -81,8 +81,7 @@ class _OurDrawerState extends State<OurDrawer> {
                                 child: Center(
                                   child: Text(
                                     "",
-                                    style: TextStyle(
-                                      fontFamily: 'Lexend Deca',
+                                    style: GoogleFonts.openSans(
                                       fontSize: 30,
                                       color: Color(0xFF1E233C),
                                       fontWeight: FontWeight.w700,
@@ -96,8 +95,7 @@ class _OurDrawerState extends State<OurDrawer> {
                           child: Center(
                             child: Text(
                               user.displayName!,
-                              style: TextStyle(
-                                fontFamily: 'Lexend Deca',
+                              style: GoogleFonts.openSans(
                                 fontSize: 30,
                                 color: Color(0xFF1E233C),
                                 fontWeight: FontWeight.w700,
@@ -164,7 +162,7 @@ class _OurDrawerState extends State<OurDrawer> {
                     children: [
                       Text(
                         "from",
-                        style: TextStyle(
+                        style: GoogleFonts.openSans(
                           fontSize: 13,
                         ),
                       ),
@@ -184,7 +182,7 @@ class _OurDrawerState extends State<OurDrawer> {
                           ),
                           Text(
                             "PCOSimplify",
-                            style: TextStyle(
+                            style: GoogleFonts.openSans(
                               color: Color(0xFF1E233C),
                               fontStyle: FontStyle.italic,
                               fontWeight: FontWeight.w600,
@@ -220,7 +218,7 @@ class _OurDrawerState extends State<OurDrawer> {
         ),
         title: Text(
           text,
-          style: TextStyle(
+          style: GoogleFonts.openSans(
             color: Colors.black,
             fontSize: 18,
             fontWeight: FontWeight.w500,
@@ -268,7 +266,7 @@ class _OurDrawerState extends State<OurDrawer> {
           MaterialPageRoute(
             builder: (context) => LoginPage(),
           ),
-              (Route<dynamic> route) => false,
+          (Route<dynamic> route) => false,
         );
         break;
       case 4:
