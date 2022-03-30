@@ -23,21 +23,25 @@ class _CustomAlertDialogState extends State<CustomAlertDialog> {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(15.0),
       ),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          SizedBox(height: 15),
-          Text(
-            "${widget.title}",
-            style: TextStyle(
-              fontSize: 19.0,
-              fontWeight: FontWeight.bold,
+      child: SingleChildScrollView(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            SizedBox(height: 15),
+            Text(
+              "${widget.title}",
+              style: TextStyle(
+                fontSize: 19.0,
+                fontWeight: FontWeight.bold,
+              ),
             ),
-          ),
-          SizedBox(height: 15),
-          SingleChildScrollView(
-            child: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(16, 4, 16, 0),
+            SizedBox(height: 15),
+            Divider(
+              height: 1,
+            ),
+            SizedBox(height: 5),
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(16, 4, 12, 0),
               child: Text(
                 "${widget.description}",
                 style: GoogleFonts.openSans(
@@ -45,36 +49,46 @@ class _CustomAlertDialogState extends State<CustomAlertDialog> {
                 ),
               ),
             ),
-          ),
-          SizedBox(height: 20),
-          Divider(
-            height: 1,
-          ),
-          Container(
-            width: MediaQuery.of(context).size.width,
-            height: 50,
-            child: InkWell(
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(15.0),
-                bottomRight: Radius.circular(15.0),
+            SizedBox(height: 20),
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 15),
+              child: Text(
+                "Happy PCOSimplifying!",
+                style: GoogleFonts.openSans(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
-              highlightColor: Colors.grey[200],
-              onTap: () {
-                Navigator.of(context).pop();
-              },
-              child: Center(
-                child: Text(
-                  "Okay",
-                  style: TextStyle(
-                    fontSize: 18.0,
-                    color: Theme.of(context).primaryColor,
-                    fontWeight: FontWeight.bold,
+            ),
+            Divider(
+              height: 1,
+            ),
+            Container(
+              width: MediaQuery.of(context).size.width,
+              height: 50,
+              child: InkWell(
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(15.0),
+                  bottomRight: Radius.circular(15.0),
+                ),
+                highlightColor: Colors.grey[200],
+                onTap: () {
+                  Navigator.of(context).pop();
+                },
+                child: Center(
+                  child: Text(
+                    "Okay",
+                    style: TextStyle(
+                      fontSize: 18.0,
+                      color: Theme.of(context).primaryColor,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

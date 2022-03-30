@@ -62,7 +62,7 @@ class _HomeState extends State<Home> {
             padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
             child: Text(
               user.title,
-              style: TextStyle(
+              style: GoogleFonts.openSans(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),
@@ -70,7 +70,7 @@ class _HomeState extends State<Home> {
           ),
           subtitle: Text(
             'By ' + user.name,
-            style: TextStyle(
+            style: GoogleFonts.openSans(
               color: Colors.black87,
               fontSize: 15,
             ),
@@ -86,7 +86,7 @@ class _HomeState extends State<Home> {
               ),
             ),
           ),
-          contentPadding: EdgeInsetsDirectional.fromSTEB(15, 5, 15, 5),
+          contentPadding: EdgeInsetsDirectional.fromSTEB(15, 5, 15, 10),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(0.0),
             side: BorderSide(
@@ -106,380 +106,408 @@ class _HomeState extends State<Home> {
         backgroundColor: Color(0xFF1E233C),
         centerTitle: true,
         title: Text(
-          "PCOSimplify",
-          style: GoogleFonts.montserrat(
+          "Home",
+          style: GoogleFonts.openSans(
             fontSize: 25,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 1.0,
+            fontWeight: FontWeight.w700,
+            letterSpacing: 0,
           ),
         ),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(
-              height: 13,
-            ),
-            ListTile(
-              title: Center(
-                child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+            Row(
+              children: [
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(15, 20, 0, 0),
                   child: Text(
-                    "",
-                    style: TextStyle(
-                      fontSize: 1,
+                    "Welcome to PCOSimplify",
+                    style: GoogleFonts.openSans(
+                      fontSize: 18,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
-              ),
-              subtitle: Column(
-                children: [
-                  SizedBox(
-                    child: Center(
-                      child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
-                        child: TextButton(
-                          style: ButtonStyle(
-                            backgroundColor:
-                                MaterialStateProperty.all(Color(0xFFD4F4F6)),
-                            elevation: MaterialStateProperty.all(10.0),
-                            padding: MaterialStateProperty.all<EdgeInsets>(
-                                EdgeInsets.all(20)),
-                            shape: MaterialStateProperty.all(
-                                RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(30.0))),
-                          ),
-                          onPressed: () => showDialog(
-                            barrierColor: Colors.black26,
-                            context: context,
-                            builder: (context) {
-                              return Container(
-                                color: Colors.white,
-                                width: double.infinity,
-                                height: double.infinity,
-                                child: Stack(
+              ],
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Expanded(
+                  child: Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(15, 0, 15, 0),
+                    child: Text(
+                      "Polycystic Ovary Syndrome (PCOS) is a common hormonal disorder that affects over 10 million people. Public awareness of PCOS is necessary because over half of the people that have it, are unaware of it.\n\nWe have developed this app to help people know about PCOS and manage it, if they have it. It has been designed with and for people with polycystic ovary syndrome, keeping in mind their every need.",
+                      style: TextStyle(
+                        color: Colors.black,
+                        decoration: TextDecoration.none,
+                        fontSize: 15,
+                        fontWeight: FontWeight.normal,
+                        letterSpacing: 0.75,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Expanded(
+                  child: Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(15, 20, 0, 0),
+                    child: Text(
+                      "Happy PCOSimplifying!",
+                      style: TextStyle(
+                        color: Colors.black,
+                        decoration: TextDecoration.none,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w700,
+                        letterSpacing: 0.75,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 0, 8, 0),
+                  child: TextButton(
+                    child: Text("Read more.."),
+                    onPressed: () => showDialog(
+                      barrierColor: Colors.black26,
+                      context: context,
+                      builder: (context) {
+                        return CustomAlertDialog(
+                          title: "Polycystic Ovary Syndrome",
+                          description:
+                              "Polycystic Ovary Syndrome (PCOS) is a common hormonal disorder. It affects over 10 million people. That's more than the number of people diagnosed with breast cancer, rheumatoid arthritis, multiple sclerosis, and lupus combined.\n\nPublic awareness of PCOS is necessary because over half of the people that have it, are unaware of it. Awareness helps people understand that symptoms like irregular periods and pelvic pain are not something to be ignored and getting it checked is necessary.\n\nWhile there is no cure for PCOS, there are treatments that can help ease the stress and complications of specific symptoms. The more people that are informed of PCOS the better chances for early diagnosis.\n\nWe have developed this app to help people know about PCOS and manage it, if they have it. It has been designed with and for people with polycystic ovary syndrome, keeping in mind their every need.",
+                        );
+                      },
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              child: Center(
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
+                  child: TextButton(
+                    style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all(Color(0xFFD4F4F6)),
+                      elevation: MaterialStateProperty.all(10.0),
+                      padding: MaterialStateProperty.all<EdgeInsets>(
+                          EdgeInsets.all(20)),
+                      shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0))),
+                    ),
+                    onPressed: () => showDialog(
+                      barrierColor: Colors.black26,
+                      context: context,
+                      builder: (context) {
+                        return Container(
+                          color: Colors.white,
+                          width: double.infinity,
+                          height: double.infinity,
+                          child: Stack(
+                            children: [
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                                child: PageView(
+                                  controller: pageViewController,
+                                  scrollDirection: Axis.horizontal,
                                   children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 0, 0, 0),
-                                      child: PageView(
-                                        controller: pageViewController,
-                                        scrollDirection: Axis.horizontal,
+                                    SingleChildScrollView(
+                                      child: Column(
                                         children: [
-                                          SingleChildScrollView(
-                                            child: Column(
-                                              children: [
-                                                Column(
-                                                  children: [
-                                                    Heading(
-                                                        content: "Overview"),
-                                                    Image(
-                                                      image: AssetImage(
-                                                          'assets/images/period.png'),
-                                                    ),
-                                                    Content(
-                                                        content:
-                                                            "Polycystic ovary syndrome (PCOS), also known as polycystic ovarian syndrome, is a common health problem caused by an imbalance of reproductive hormones."),
-                                                    Content(
-                                                        content:
-                                                            "The hormonal imbalance creates problems in the ovaries. The ovaries make the egg that is released each month as part of a healthy menstrual cycle. With PCOS, the egg may not develop as it should or it may not be released during ovulation as it should be."),
-                                                    Content(
-                                                        content:
-                                                            "PCOS can cause missed or irregular menstrual periods. Irregular periods can lead to infertility, the inability to get pregnant. In fact, PCOS is one of the most common causes of infertility in women. Development of cysts (small fluid-filled sacs) in the ovaries."),
-                                                    SizedBox(height: 50),
-                                                  ],
-                                                )
-                                              ],
-                                            ),
-                                          ),
-                                          SingleChildScrollView(
-                                            child: Column(
-                                              children: [
-                                                Column(
-                                                  children: [
-                                                    Heading(
-                                                        content: "Symptoms"),
-                                                    Image(
-                                                      image: AssetImage(
-                                                          'assets/images/hirsutism.png'),
-                                                    ),
-                                                    SubHeading(
-                                                        content:
-                                                            "Menstrual Symptoms"),
-                                                    ListWidget(
-                                                        content:
-                                                            "Abnormal menstruation"),
-                                                    ListWidget(
-                                                        content:
-                                                            "Absence of menstruation"),
-                                                    ListWidget(
-                                                        content:
-                                                            "Heavy menstruation"),
-                                                    ListWidget(
-                                                        content:
-                                                            "Irregular menstruation"),
-                                                    ListWidget(
-                                                        content:
-                                                            "Short and light menstruation"),
-                                                    ListWidget(
-                                                        content: "Spotting"),
-                                                    SubHeading(
-                                                        content: "Weight"),
-                                                    ListWidget(
-                                                        content: "Obesity"),
-                                                    ListWidget(
-                                                        content: "Weight gain"),
-                                                    ListWidget(
-                                                        content:
-                                                            "Weight fluctuation"),
-                                                    SubHeading(
-                                                        content:
-                                                            "Other very common symptoms"),
-                                                    ListWidget(
-                                                        content: "Infertility"),
-                                                    ListWidget(
-                                                        content: "Depression"),
-                                                    ListWidget(
-                                                        content:
-                                                            "Loss of scalp hair"),
-                                                    SubHeading(
-                                                        content:
-                                                            "Lesser common symptoms"),
-                                                    ListWidget(content: "Acne"),
-                                                    ListWidget(
-                                                        content: "Hirsutism"),
-                                                    ListWidget(
-                                                        content: "Oily skin"),
-                                                    SizedBox(height: 40),
-                                                  ],
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                          SingleChildScrollView(
-                                            child: Column(
-                                              children: [
-                                                Heading(content: "Diagnosis"),
-                                                Image(
-                                                  image: AssetImage(
-                                                      'assets/images/diabetes.png'),
-                                                ),
-                                                SubHeading(
-                                                    content:
-                                                        "Requires a Medical Diagnosis"),
-                                                SizedBox(height: 20),
-                                                ListWidget(
-                                                    content:
-                                                        "Consult an Obstetrician-Gynecologist (OB-GYN)"),
-                                                Padding(
-                                                  padding:
-                                                      const EdgeInsets.all(8.0),
-                                                  child: TextButton(
-                                                    onPressed: () {
-                                                      launch(
-                                                          "https://www.google.com/search?sxsrf=APq-WBso8tfi1EFpkS73mX0QTofhAViMhg:1648105464671&q=obgyn+doctor+near+me&sa=X&sqi=2&pjf=1&ved=2ahUKEwisiP-ll972AhX_DkQIHUIyChgQ0EB6BAgAEAQ&biw=1280&bih=605&dpr=1.5");
-                                                    },
-                                                    child: Text(
-                                                      "Find OB-GYNs near you",
-                                                      style:
-                                                          GoogleFonts.openSans(
-                                                        color: Colors.white,
-                                                        decoration:
-                                                            TextDecoration.none,
-                                                        fontSize: 15,
-                                                        fontWeight:
-                                                            FontWeight.w700,
-                                                      ),
-                                                    ),
-                                                    style: ButtonStyle(
-                                                      backgroundColor:
-                                                          MaterialStateProperty
-                                                              .all(Color(
-                                                                  0xFF1E233C)),
-                                                      shape:
-                                                          MaterialStateProperty
-                                                              .all(
-                                                        RoundedRectangleBorder(
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      30.0),
-                                                        ),
-                                                      ),
-                                                      elevation:
-                                                          MaterialStateProperty
-                                                              .all(5.0),
-                                                      padding:
-                                                          MaterialStateProperty
-                                                              .all<
-                                                                      EdgeInsets>(
-                                                                  EdgeInsets
-                                                                      .all(14)),
-                                                    ),
-                                                  ),
-                                                ),
-                                                SizedBox(height: 20),
-                                                ListWidget(
-                                                    content:
-                                                        "Consult an Endocrinologist"),
-                                                Padding(
-                                                  padding:
-                                                      const EdgeInsets.all(8.0),
-                                                  child: TextButton(
-                                                    onPressed: () {
-                                                      launch(
-                                                          "https://www.google.com/search?q=endocrinologist+near+me&oq=endocrinologist+near+me&aqs=chrome..69i57.4506j0j1&sourceid=chrome&ie=UTF-8");
-                                                    },
-                                                    child: Text(
-                                                      "Find Endocrinologists near you",
-                                                      style:
-                                                          GoogleFonts.openSans(
-                                                        color: Colors.white,
-                                                        decoration:
-                                                            TextDecoration.none,
-                                                        fontSize: 15,
-                                                        fontWeight:
-                                                            FontWeight.w700,
-                                                      ),
-                                                    ),
-                                                    style: ButtonStyle(
-                                                      backgroundColor:
-                                                          MaterialStateProperty
-                                                              .all(Color(
-                                                                  0xFF1E233C)),
-                                                      shape:
-                                                          MaterialStateProperty
-                                                              .all(
-                                                        RoundedRectangleBorder(
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      30.0),
-                                                        ),
-                                                      ),
-                                                      elevation:
-                                                          MaterialStateProperty
-                                                              .all(5.0),
-                                                      padding:
-                                                          MaterialStateProperty
-                                                              .all<
-                                                                      EdgeInsets>(
-                                                                  EdgeInsets
-                                                                      .all(14)),
-                                                    ),
-                                                  ),
-                                                ),
-                                                SizedBox(height: 20),
-                                              ],
-                                            ),
-                                          ),
-                                          SingleChildScrollView(
-                                            child: Column(
-                                              children: [
-                                                Column(
-                                                  children: [
-                                                    Heading(
-                                                        content: "Treatment"),
-                                                    Image(
-                                                      image: AssetImage(
-                                                          'assets/images/Health.png'),
-                                                    ),
-                                                    Content(
-                                                        content:
-                                                            "Treatment and change in lifestyle can regulate the symptoms but PCOS is not completely curable."),
-                                                    SubHeading(
-                                                        content:
-                                                            "Hormonal treatment"),
-                                                    ListWidget(
-                                                        content:
-                                                            "Physical exercise"),
-                                                    ListWidget(
-                                                        content:
-                                                            "Birth control pills for regular periods"),
-                                                    ListWidget(
-                                                        content:
-                                                            "Metformin to prevent diabetes"),
-                                                    ListWidget(
-                                                        content:
-                                                            "Hormones to increase fertility"),
-                                                    SubHeading(
-                                                        content: "Self-care"),
-                                                    ListWidget(
-                                                        content:
-                                                            "Physical exercise"),
-                                                    ListWidget(
-                                                        content: "Weight loss"),
-                                                    ListWidget(content: "Yoga"),
-                                                    ListWidget(
-                                                        content:
-                                                            "Electrolysis to remove unwanted hair"),
-                                                    SubHeading(
-                                                        content: "Medications"),
-                                                    ListWidget(
-                                                        content:
-                                                            "Anti-diabetic medication"),
-                                                    ListWidget(
-                                                        content:
-                                                            "Statin to control cholesterol"),
-                                                    ListWidget(
-                                                        content:
-                                                            "Hair growth inhibitor"),
-                                                    SizedBox(height: 50),
-                                                  ],
-                                                )
-                                              ],
-                                            ),
+                                          Column(
+                                            children: [
+                                              Heading(content: "Overview"),
+                                              Image(
+                                                image: AssetImage(
+                                                    'assets/images/period.png'),
+                                              ),
+                                              Content(
+                                                  content:
+                                                      "Polycystic ovary syndrome (PCOS), also known as polycystic ovarian syndrome, is a common health problem caused by an imbalance of reproductive hormones."),
+                                              Content(
+                                                  content:
+                                                      "The hormonal imbalance creates problems in the ovaries. The ovaries make the egg that is released each month as part of a healthy menstrual cycle. With PCOS, the egg may not develop as it should or it may not be released during ovulation as it should be."),
+                                              Content(
+                                                  content:
+                                                      "PCOS can cause missed or irregular menstrual periods. Irregular periods can lead to infertility, the inability to get pregnant. In fact, PCOS is one of the most common causes of infertility in women. Development of cysts (small fluid-filled sacs) in the ovaries."),
+                                              SizedBox(height: 50),
+                                            ],
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                    SingleChildScrollView(
+                                      child: Column(
+                                        children: [
+                                          Column(
+                                            children: [
+                                              Heading(content: "Symptoms"),
+                                              Image(
+                                                image: AssetImage(
+                                                    'assets/images/hirsutism.png'),
+                                              ),
+                                              SubHeading(
+                                                  content:
+                                                      "Menstrual Symptoms"),
+                                              ListWidget(
+                                                  content:
+                                                      "Abnormal menstruation"),
+                                              ListWidget(
+                                                  content:
+                                                      "Absence of menstruation"),
+                                              ListWidget(
+                                                  content:
+                                                      "Heavy menstruation"),
+                                              ListWidget(
+                                                  content:
+                                                      "Irregular menstruation"),
+                                              ListWidget(
+                                                  content:
+                                                      "Short and light menstruation"),
+                                              ListWidget(content: "Spotting"),
+                                              SubHeading(content: "Weight"),
+                                              ListWidget(content: "Obesity"),
+                                              ListWidget(
+                                                  content: "Weight gain"),
+                                              ListWidget(
+                                                  content:
+                                                      "Weight fluctuation"),
+                                              SubHeading(
+                                                  content:
+                                                      "Other very common symptoms"),
+                                              ListWidget(
+                                                  content: "Infertility"),
+                                              ListWidget(content: "Depression"),
+                                              ListWidget(
+                                                  content:
+                                                      "Loss of scalp hair"),
+                                              SubHeading(
+                                                  content:
+                                                      "Lesser common symptoms"),
+                                              ListWidget(content: "Acne"),
+                                              ListWidget(content: "Hirsutism"),
+                                              ListWidget(content: "Oily skin"),
+                                              SizedBox(height: 40),
+                                            ],
                                           ),
                                         ],
                                       ),
                                     ),
-                                    Align(
-                                      alignment: AlignmentDirectional(0, 1),
-                                      child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0, 0, 0, 10),
-                                        child: SmoothPageIndicator(
-                                          controller: pageViewController,
-                                          count: 4,
-                                          axisDirection: Axis.horizontal,
-                                          onDotClicked: (i) {
-                                            pageViewController.animateToPage(
-                                              i,
-                                              duration:
-                                                  Duration(milliseconds: 500),
-                                              curve: Curves.ease,
-                                            );
-                                          },
-                                          effect: ExpandingDotsEffect(
-                                            expansionFactor: 2,
-                                            spacing: 8,
-                                            radius: 16,
-                                            dotWidth: 16,
-                                            dotHeight: 16,
-                                            dotColor: Color(0xFFDDE3FD),
-                                            activeDotColor: Color(0xFF3F51B5),
-                                            paintStyle: PaintingStyle.fill,
+                                    SingleChildScrollView(
+                                      child: Column(
+                                        children: [
+                                          Heading(content: "Diagnosis"),
+                                          Image(
+                                            image: AssetImage(
+                                                'assets/images/diabetes.png'),
                                           ),
-                                        ),
+                                          SubHeading(
+                                              content:
+                                                  "Requires a Medical Diagnosis"),
+                                          SizedBox(height: 20),
+                                          ListWidget(
+                                              content:
+                                                  "Consult an Obstetrician-Gynecologist (OB-GYN)"),
+                                          Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: TextButton(
+                                              onPressed: () {
+                                                launch(
+                                                    "https://www.google.com/search?sxsrf=APq-WBso8tfi1EFpkS73mX0QTofhAViMhg:1648105464671&q=obgyn+doctor+near+me&sa=X&sqi=2&pjf=1&ved=2ahUKEwisiP-ll972AhX_DkQIHUIyChgQ0EB6BAgAEAQ&biw=1280&bih=605&dpr=1.5");
+                                              },
+                                              child: Text(
+                                                "Find OB-GYNs near you",
+                                                style: GoogleFonts.openSans(
+                                                  color: Colors.white,
+                                                  decoration:
+                                                      TextDecoration.none,
+                                                  fontSize: 15,
+                                                  fontWeight: FontWeight.w700,
+                                                ),
+                                              ),
+                                              style: ButtonStyle(
+                                                backgroundColor:
+                                                    MaterialStateProperty.all(
+                                                        Color(0xFF1E233C)),
+                                                shape:
+                                                    MaterialStateProperty.all(
+                                                  RoundedRectangleBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            30.0),
+                                                  ),
+                                                ),
+                                                elevation:
+                                                    MaterialStateProperty.all(
+                                                        5.0),
+                                                padding: MaterialStateProperty
+                                                    .all<EdgeInsets>(
+                                                        EdgeInsets.all(14)),
+                                              ),
+                                            ),
+                                          ),
+                                          SizedBox(height: 20),
+                                          ListWidget(
+                                              content:
+                                                  "Consult an Endocrinologist"),
+                                          Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: TextButton(
+                                              onPressed: () {
+                                                launch(
+                                                    "https://www.google.com/search?q=endocrinologist+near+me&oq=endocrinologist+near+me&aqs=chrome..69i57.4506j0j1&sourceid=chrome&ie=UTF-8");
+                                              },
+                                              child: Text(
+                                                "Find Endocrinologists near you",
+                                                style: GoogleFonts.openSans(
+                                                  color: Colors.white,
+                                                  decoration:
+                                                      TextDecoration.none,
+                                                  fontSize: 15,
+                                                  fontWeight: FontWeight.w700,
+                                                ),
+                                              ),
+                                              style: ButtonStyle(
+                                                backgroundColor:
+                                                    MaterialStateProperty.all(
+                                                        Color(0xFF1E233C)),
+                                                shape:
+                                                    MaterialStateProperty.all(
+                                                  RoundedRectangleBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            30.0),
+                                                  ),
+                                                ),
+                                                elevation:
+                                                    MaterialStateProperty.all(
+                                                        5.0),
+                                                padding: MaterialStateProperty
+                                                    .all<EdgeInsets>(
+                                                        EdgeInsets.all(14)),
+                                              ),
+                                            ),
+                                          ),
+                                          SizedBox(height: 20),
+                                        ],
+                                      ),
+                                    ),
+                                    SingleChildScrollView(
+                                      child: Column(
+                                        children: [
+                                          Column(
+                                            children: [
+                                              Heading(content: "Treatment"),
+                                              Image(
+                                                image: AssetImage(
+                                                    'assets/images/Health.png'),
+                                              ),
+                                              Content(
+                                                  content:
+                                                      "Treatment and change in lifestyle can regulate the symptoms but PCOS is not completely curable."),
+                                              SubHeading(
+                                                  content:
+                                                      "Hormonal treatment"),
+                                              ListWidget(
+                                                  content: "Physical exercise"),
+                                              ListWidget(
+                                                  content:
+                                                      "Birth control pills for regular periods"),
+                                              ListWidget(
+                                                  content:
+                                                      "Metformin to prevent diabetes"),
+                                              ListWidget(
+                                                  content:
+                                                      "Hormones to increase fertility"),
+                                              SubHeading(content: "Self-care"),
+                                              ListWidget(
+                                                  content: "Physical exercise"),
+                                              ListWidget(
+                                                  content: "Weight loss"),
+                                              ListWidget(content: "Yoga"),
+                                              ListWidget(
+                                                  content:
+                                                      "Electrolysis to remove unwanted hair"),
+                                              SubHeading(
+                                                  content: "Medications"),
+                                              ListWidget(
+                                                  content:
+                                                      "Anti-diabetic medication"),
+                                              ListWidget(
+                                                  content:
+                                                      "Statin to control cholesterol"),
+                                              ListWidget(
+                                                  content:
+                                                      "Hair growth inhibitor"),
+                                              SizedBox(height: 50),
+                                            ],
+                                          )
+                                        ],
                                       ),
                                     ),
                                   ],
                                 ),
-                              );
-                            },
+                              ),
+                              Align(
+                                alignment: AlignmentDirectional(0, 1),
+                                child: Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 0, 0, 10),
+                                  child: SmoothPageIndicator(
+                                    controller: pageViewController,
+                                    count: 4,
+                                    axisDirection: Axis.horizontal,
+                                    onDotClicked: (i) {
+                                      pageViewController.animateToPage(
+                                        i,
+                                        duration: Duration(milliseconds: 500),
+                                        curve: Curves.ease,
+                                      );
+                                    },
+                                    effect: ExpandingDotsEffect(
+                                      expansionFactor: 2,
+                                      spacing: 8,
+                                      radius: 16,
+                                      dotWidth: 16,
+                                      dotHeight: 16,
+                                      dotColor: Color(0xFFDDE3FD),
+                                      activeDotColor: Color(0xFF3F51B5),
+                                      paintStyle: PaintingStyle.fill,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
-                          child: Text(
-                            "Information about PCOS",
-                            style: TextStyle(
-                              color: Colors.black,
-                            ),
-                          ),
-                        ),
+                        );
+                      },
+                    ),
+                    child: Text(
+                      "Information about PCOS",
+                      style: GoogleFonts.openSans(
+                        color: Colors.black,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
-                ],
+                ),
               ),
             ),
             SizedBox(
@@ -497,8 +525,8 @@ class _HomeState extends State<Home> {
                       padding: EdgeInsetsDirectional.fromSTEB(15, 20, 0, 0),
                       child: Text(
                         "Tracker Events",
-                        style: TextStyle(
-                          fontSize: 15,
+                        style: GoogleFonts.openSans(
+                          fontSize: 18,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -506,7 +534,7 @@ class _HomeState extends State<Home> {
                   ],
                 ),
                 SizedBox(
-                  height: 25,
+                  height: 20,
                 ),
                 Container(
                   color: Color(0xFFDDE3FD),
@@ -671,8 +699,8 @@ class _HomeState extends State<Home> {
                               EdgeInsetsDirectional.fromSTEB(15, 27, 0, 10),
                           child: Text(
                             "Explore Articles",
-                            style: TextStyle(
-                              fontSize: 15,
+                            style: GoogleFonts.openSans(
+                              fontSize: 18,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -939,8 +967,8 @@ class _HomeState extends State<Home> {
                       padding: EdgeInsetsDirectional.fromSTEB(15, 25, 0, 10),
                       child: Text(
                         "Latest User Story",
-                        style: TextStyle(
-                          fontSize: 15,
+                        style: GoogleFonts.openSans(
+                          fontSize: 18,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -967,8 +995,7 @@ class _HomeState extends State<Home> {
                         },
                       ),
                       color: Colors.transparent,
-                      elevation: 15,
-                      shadowColor: Color(0xFFedf1f7),
+                      elevation: 100,
                     ),
                     SizedBox(
                       height: 20,
@@ -999,8 +1026,9 @@ class _HomeState extends State<Home> {
                             padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
                             child: Text(
                               "Share Your Story",
-                              style: TextStyle(
+                              style: GoogleFonts.openSans(
                                 color: Colors.white,
+                                fontWeight: FontWeight.w600,
                               ),
                             ),
                           ),

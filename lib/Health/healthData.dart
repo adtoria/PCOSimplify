@@ -623,6 +623,7 @@ class _HealthDataState extends State<HealthData> {
             Text("BMI = Body Mass Index."),
             SizedBox(height: 35),
             BMI(((selectedWeight * 10000) / (selectedHeight * selectedHeight))),
+            SizedBox(height: 50),
           ],
         ),
       ),
