@@ -69,6 +69,18 @@ Clone the project
     <td><img src="https://user-images.githubusercontent.com/87179624/160606491-0914aa10-5815-46df-a588-13f1311a395a.jpg" width=303 height=500></td>
   </tr>
  </table>
+ 
+## Download & install
+
+First, clone the repository with the 'clone' command, or just download the zip.
+
+```
+$ git clone https://github.com/adtoria/PCOSimplify.git
+```
+
+Then, download either Android Studio or Visual Studio Code, with their respective [Flutter editor plugins](https://flutter.io/get-started/editor/). For more information about Flutter installation procedure, check the [official install guide](https://flutter.io/get-started/install/).
+
+Install dependencies from `pubspec.yaml` by running `flutter packages get` from the project root (see [using packages documentation](https://flutter.io/using-packages/#adding-a-package-dependency-to-an-app) for details and how to do this in the editor).
 
 
 ## Tech Stack
