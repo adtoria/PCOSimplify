@@ -139,10 +139,10 @@ class _HomeState extends State<Home> {
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
                         child: Text(
-                          "Polycystic Ovary Syndrome (PCOS) is a hormonal disorder common among people of reproductive age. People with PCOS often experience menstrual cycles or excess androgen (male hormone) levels. Not only women but transgender people also experience this condition.",
-                          style: TextStyle(
-                            color: Colors.black87,
-                            fontSize: 15,
+                          "Polycystic Ovary Syndrome (PCOS) is a hormonal disorder common among people of reproductive age. People with PCOS often experience disturbed menstrual cycles or excess androgen (male hormone) levels. Not only women but transgender people also experience this condition.",
+                          style: GoogleFonts.openSans(
+                            color: Colors.black,
+                            fontSize: 15.5,
                           ),
                         ),
                       ),
@@ -160,7 +160,7 @@ class _HomeState extends State<Home> {
                             return CustomAlertDialog(
                               title: "Polycystic Ovary Syndrome",
                               description:
-                                  "Polycystic Ovary Syndrome (PCOS) is a hormonal disorder common among people of reproductive age. People with PCOS often experience menstrual cycles or excess androgen (male hormone) levels. Not only women but transgender people also experience this condition. The ovaries may develop numerous small collections of fluid and fail to regularly release eggs.",
+                                  "Polycystic Ovary Syndrome (PCOS) is a hormonal disorder common among people of reproductive age. People with PCOS often experience disturbed menstrual cycles or excess androgen (male hormone) levels. Not only women but transgender people also experience this condition. The ovaries may develop numerous small collections of fluid and fail to regularly release eggs.",
                             );
                           },
                         ),

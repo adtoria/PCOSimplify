@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CustomAlertDialog extends StatefulWidget {
   const CustomAlertDialog({
@@ -34,12 +35,14 @@ class _CustomAlertDialogState extends State<CustomAlertDialog> {
             ),
           ),
           SizedBox(height: 15),
-          Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(16, 4, 16, 0),
-            child: Text(
-              "${widget.description}",
-              style: TextStyle(
-                fontSize: 15.2,
+          SingleChildScrollView(
+            child: Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(16, 4, 16, 0),
+              child: Text(
+                "${widget.description}",
+                style: GoogleFonts.openSans(
+                  fontSize: 15.2,
+                ),
               ),
             ),
           ),
