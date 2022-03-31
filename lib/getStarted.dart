@@ -71,7 +71,7 @@ class _StartedState extends State<Started> {
                                     image:
                                         AssetImage('assets/images/Health.png'),
                                   ),
-                                  StartedText(content: "Manage your diet.")
+                                  StartedText(content: "Manage your diet, health and daily physical activity.")
                                 ],
                               ),
                             ],
@@ -83,8 +83,7 @@ class _StartedState extends State<Started> {
                             padding:
                                 EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
                             child: SmoothPageIndicator(
-                              controller: pageViewController, //??=
-                              //PageController(initialPage: 0),
+                              controller: pageViewController,
                               count: 3,
                               axisDirection: Axis.horizontal,
                               onDotClicked: (i) {

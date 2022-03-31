@@ -27,6 +27,10 @@ Install dependencies:
 
 After all the packages are loaded, connect the device/emulator and type the command Flutter Run on your terminal and wait for the App to install.
 
+## Demonstration Video
+
+https://www.youtube.com/watch?v=x1K-Lm8sVe4
+
 ## Tech Stack
 
 **Client:** Flutter

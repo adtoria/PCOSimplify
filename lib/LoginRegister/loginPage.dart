@@ -322,25 +322,26 @@ class _LoginPageState extends State<LoginPage> {
                       ],
                     ),
                   ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 15),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'Sign in with Google',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontFamily: 'Lexend Deca',
-                            color: Colors.white,
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+                  SizedBox(height: 80),
+                  // Padding(
+                  //   padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 15),
+                  //   child: Row(
+                  //     mainAxisSize: MainAxisSize.max,
+                  //     mainAxisAlignment: MainAxisAlignment.center,
+                  //     children: [
+                  //       Text(
+                  //         'Sign in with Google',
+                  //         textAlign: TextAlign.center,
+                  //         style: TextStyle(
+                  //           fontFamily: 'Lexend Deca',
+                  //           color: Colors.white,
+                  //           fontSize: 18,
+                  //           fontWeight: FontWeight.bold,
+                  //         ),
+                  //       ),
+                  //     ],
+                  //   ),
+                  // ),
                   FractionallySizedBox(
                     widthFactor: 0.55,
                     child: Padding(
