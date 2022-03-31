@@ -55,6 +55,17 @@ class _WorkoutMainState extends State<WorkoutMain> {
     });
   }
 
+  getSteps() async{
+    SharedPreferences _stepsPref = await SharedPreferences.getInstance();
+    int? count = _stepsPref.getInt('steps_value');
+    return count;
+  }
+
+  setSteps() async{
+    SharedPreferences _stepsPref = await SharedPreferences.getInstance();
+    _stepsPref.setInt('steps_value', steps);
+  }
+
   // void calculate data
   double calculateMiles(int steps) {
     double milesValue = (steps * 0.000762);
@@ -79,6 +90,21 @@ class _WorkoutMainState extends State<WorkoutMain> {
   ];
 
   int _currentIndex = 2;
+
+  @override
+  void initState() {
+    super.initState();
+
+    checkForSteps();
+  }
+
+  checkForSteps() async {
+    int count = await getSteps() ?? 0;
+
+    setState(() {
+      steps=count;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -158,6 +184,7 @@ class _WorkoutMainState extends State<WorkoutMain> {
               distance = getValue(x, y, z);
               if (distance > 6) {
                 steps++;
+                setSteps();
               }
             }
             return SingleChildScrollView(
@@ -199,7 +226,7 @@ class _WorkoutMainState extends State<WorkoutMain> {
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 40),
                         child: Text(
-                          "Steps: " + (steps / 3).toInt().toString(),
+                          "Steps: " + (steps / 2).toInt().toString(),
                           style: GoogleFonts.montserrat(
                             fontSize: 25,
                             color: Color(0xFF1E233C),
@@ -223,8 +250,8 @@ class _WorkoutMainState extends State<WorkoutMain> {
                         padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 40),
                         child: Text(
                           "Calories: " +
-                              calculateCalories((steps / 3).toInt())
-                                  .toStringAsFixed(0),
+                              calculateCalories((steps / 2).toInt())
+                                  .toStringAsFixed(1),
                           style: GoogleFonts.montserrat(
                             fontSize: 25,
                             color: Color(0xFF1E233C),
@@ -248,7 +275,7 @@ class _WorkoutMainState extends State<WorkoutMain> {
                         padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 40),
                         child: Text(
                           "Kilometres: " +
-                              calculateMiles((steps / 3).toInt())
+                              calculateMiles((steps / 2).toInt())
                                   .toStringAsFixed(3),
                           style: GoogleFonts.montserrat(
                             fontSize: 25,
@@ -265,6 +292,34 @@ class _WorkoutMainState extends State<WorkoutMain> {
                       ),
                     ),
                   ),
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                    child: TextButton(
+                      style: ButtonStyle(
+                        backgroundColor:
+                        MaterialStateProperty.all(Color(0xFFD4F4F6)),
+                        elevation: MaterialStateProperty.all(10.0),
+                        padding: MaterialStateProperty.all<EdgeInsets>(
+                            EdgeInsets.all(20)),
+                        shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30.0))),
+                      ),
+                      onPressed: (){
+                        setState(() {
+                          steps=0;
+                          setSteps();
+                        });
+                      },
+                      child: Text(
+                        "Reset",
+                        style: GoogleFonts.openSans(
+                          color: Colors.black,
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  )
                 ],
               ),
             );
