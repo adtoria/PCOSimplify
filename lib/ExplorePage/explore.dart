@@ -23,7 +23,7 @@ class _ExplorerState extends State<Explorer> {
   PageController pageViewController = PageController();
 
   Stream<List<User>> readData() => FirebaseFirestore.instance
-      .collection('stories')
+      .collection('stories').orderBy('timestamp', descending: true)
       .snapshots()
       .map((snapshot) =>
           snapshot.docs.map((doc) => User.fromJson(doc.data())).toList());

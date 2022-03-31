@@ -16,7 +16,8 @@ class _AddPostState extends State<AddPost> {
   Future saveToDatabase(
       {required String title,
       required String name,
-      required String body}) async {
+      required String body,
+      required FieldValue timestamp}) async {
     final user = FirebaseFirestore.instance.collection('stories').doc();
 
     final json = {
@@ -24,6 +25,7 @@ class _AddPostState extends State<AddPost> {
       'name': name,
       'title': title,
       'body': body,
+      'timestamp': timestamp
     };
 
     await user.set(json);
@@ -169,7 +171,7 @@ class _AddPostState extends State<AddPost> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           if (_formKey.currentState!.validate()) {
-            saveToDatabase(title: title, name: name, body: body);
+            saveToDatabase(title: title, name: name, body: body,timestamp: FieldValue.serverTimestamp());
             Navigator.pop(context);
           }
         },

@@ -987,7 +987,7 @@ class _HomeState extends State<Home> {
                             final users = snapshot.data!;
 
                             return Container(
-                              child: users.map(buildUser).elementAt(0),
+                              child: users.map(buildUser).last,
                             );
                           } else {
                             return Center(child: CircularProgressIndicator());
